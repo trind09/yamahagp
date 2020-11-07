@@ -916,7 +916,7 @@ input {
 .btn {
   width: 250px;
   height: 50px;
-  background: url(http://www.yamahagp.vn/static/images/btn.png) no-repeat center;
+  background: url(images/btn.png) no-repeat center;
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -930,7 +930,7 @@ input {
 }
 /* line 16, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/partials/_buttons.scss */
 .btn:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn2.png) no-repeat center;
+  background: url(images/btn2.png) no-repeat center;
   background-size: cover;
 }
 /* line 21, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/partials/_buttons.scss */
@@ -941,7 +941,7 @@ input {
 }
 /* line 25, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/partials/_buttons.scss */
 .btn.disable:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn.png) no-repeat center;
+  background: url(images/btn.png) no-repeat center;
   background-size: cover;
 }
 
@@ -1424,7 +1424,7 @@ a {
   text-indent: -99999px;
   width: 74px;
   height: 63px;
-  background: url(http://www.yamahagp.vn/static/images/btn-next.png) no-repeat;
+  background: url(images/btn-next.png) no-repeat;
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -1437,7 +1437,7 @@ a {
 }
 /* line 144, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/partials/_slick.scss */
 .slick-next:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn-next2.png) no-repeat;
+  background: url(images/btn-next2.png) no-repeat;
   background-size: cover;
 }
 
@@ -1446,7 +1446,7 @@ a {
   text-indent: -99999px;
   width: 74px;
   height: 63px;
-  background: url(http://www.yamahagp.vn/static/images/btn-prev.png) no-repeat;
+  background: url(images/btn-prev.png) no-repeat;
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -1459,7 +1459,7 @@ a {
 }
 /* line 165, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/partials/_slick.scss */
 .slick-prev:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn-prev.png) no-repeat;
+  background: url(images/btn-prev.png) no-repeat;
   background-size: cover;
 }
 
@@ -1585,7 +1585,7 @@ header {
 #nav li.logo a {
   width: 280px;
   height: 92px;
-  background: url(http://www.yamahagp.vn/static/images/logo.png) no-repeat center;
+  background: url(images/logo.png) no-repeat center;
   background-size: cover;
 }
 /* line 106, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_header.scss */
@@ -1646,7 +1646,7 @@ header {
 .btn-close {
   width: 25px;
   height: 25px;
-  background: url(http://www.yamahagp.vn/static/images/btn-close.png) no-repeat center;
+  background: url(images/btn-close.png) no-repeat center;
   background-size: cover;
   position: absolute;
   top: 10px;
@@ -1656,7 +1656,7 @@ header {
 }
 /* line 164, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_header.scss */
 .btn-close:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn-close2.png) no-repeat center;
+  background: url(images/btn-close2.png) no-repeat center;
   background-size: cover;
 }
 
@@ -1670,12 +1670,12 @@ footer .socials .fb {
   display: inline-block;
   width: 39px;
   height: 30px;
-  background: url(http://www.yamahagp.vn/static/images/fb.png) no-repeat center;
+  background: url(images/fb.png) no-repeat center;
   background-size: cover;
 }
 /* line 183, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_header.scss */
 footer .socials .fb:hover {
-  background: url(http://www.yamahagp.vn/static/images/fb2.png) no-repeat center;
+  background: url(images/fb2.png) no-repeat center;
   background-size: cover;
 }
 /* line 189, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_header.scss */
@@ -1683,12 +1683,12 @@ footer .socials .ytb {
   display: inline-block;
   width: 39px;
   height: 30px;
-  background: url(http://www.yamahagp.vn/static/images/ytb.png) no-repeat center;
+  background: url(images/ytb.png) no-repeat center;
   background-size: cover;
 }
 /* line 196, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_header.scss */
 footer .socials .ytb:hover {
-  background: url(http://www.yamahagp.vn/static/images/ytb2.png) no-repeat center;
+  background: url(images/ytb2.png) no-repeat center;
   background-size: cover;
 }
 /* line 202, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_header.scss */
@@ -1780,7 +1780,7 @@ footer .copyright a:hover {
 #main {
   height: 110vh;
   width: 100%;
-  background: url(http://www.yamahagp.vn/static/images/bg-h.jpg) no-repeat right -2vh;
+  background: url(images/bg-h.jpg) no-repeat right -2vh;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1870,14 +1870,14 @@ footer .copyright a:hover {
 }
 /* line 84, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .ticket span.arrow-left {
-  background: url(http://www.yamahagp.vn/static/images/ar-l.png) no-repeat center;
+  background: url(images/ar-l.png) no-repeat center;
   background-size: 15px auto;
 }
 /* line 89, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .ticket span.arrow-right {
   left: auto;
   right: 0;
-  background: url(http://www.yamahagp.vn/static/images/ar-r.png) no-repeat center;
+  background: url(images/ar-r.png) no-repeat center;
   background-size: 15px auto;
 }
 
@@ -1944,7 +1944,7 @@ footer .copyright a:hover {
   right: 12vw;
   width: 398px;
   height: 106px;
-  background: url(http://www.yamahagp.vn/static/images/bg-sponsor.png) no-repeat center;
+  background: url(images/bg-sponsor.png) no-repeat center;
   background-size: cover;
   text-align: center;
   padding: 30px 0 0 0;
@@ -1976,7 +1976,7 @@ footer .copyright a:hover {
 #register {
   height: 120vh;
   width: 100%;
-  background: url(http://www.yamahagp.vn/static/images/bg-rgt.png) no-repeat center top;
+  background: url(images/bg-rgt.png) no-repeat center top;
   background-size: cover;
   padding: 13vh 0 10vh 0;
   position: relative;
@@ -2003,7 +2003,7 @@ footer .copyright a:hover {
   width: 349px;
   height: 408px;
   position: relative;
-  background: url(http://www.yamahagp.vn/static/images/shape.png) no-repeat center;
+  background: url(images/shape.png) no-repeat center;
   background-size: cover;
   display: inline-block;
   vertical-align: top;
@@ -2034,7 +2034,7 @@ footer .copyright a:hover {
   height: 54px;
   font-size: 18px;
   letter-spacing: 1px;
-  background: url(http://www.yamahagp.vn/static/images/shape-title.png) no-repeat center;
+  background: url(images/shape-title.png) no-repeat center;
   background-size: cover;
   color: #fff;
   text-transform: uppercase;
@@ -2062,14 +2062,14 @@ footer .copyright a:hover {
   left: 50%;
   width: 211px;
   height: 51px;
-  background: url(http://www.yamahagp.vn/static/images/btn3.png) no-repeat center;
+  background: url(images/btn3.png) no-repeat center;
   background-size: cover;
   margin-left: -105px;
   font-size: 18px;
 }
 /* line 250, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .race-league > li .btn:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn4.png) no-repeat center;
+  background: url(images/btn4.png) no-repeat center;
   background-size: cover;
 }
 /* line 258, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
@@ -2101,7 +2101,7 @@ footer .copyright a:hover {
 }
 /* line 280, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .race-league .note h6 {
-  background: url(http://www.yamahagp.vn/static/images/line.png) no-repeat center;
+  background: url(images/line.png) no-repeat center;
   background-size: 100%;
   font-size: 14px;
   text-transform: none;
@@ -2134,7 +2134,7 @@ footer .copyright a:hover {
 #term {
   height: 110vh;
   width: 100%;
-  background: url(http://www.yamahagp.vn/static/images/bg-term.png) no-repeat center top;
+  background: url(images/bg-term.png) no-repeat center top;
   background-size: cover;
   padding: 10vh 0;
   position: relative;
@@ -2232,7 +2232,7 @@ footer .copyright a:hover {
   height: 100%;
   min-height: 100%;
   height: auto;
-  background: url(http://www.yamahagp.vn/static/images/bg-register.jpg) no-repeat center;
+  background: url(images/bg-register.jpg) no-repeat center;
   background-size: cover;
   padding-top: 20vh;
 }
@@ -2240,7 +2240,7 @@ footer .copyright a:hover {
 /* line 402, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .form-register {
   width: 783px;
-  background: url(http://www.yamahagp.vn/static/images/bg-register.png) no-repeat center;
+  background: url(images/bg-register.png) no-repeat center;
   background-size: 100%  100%;
   margin: 0 auto;
   position: relative;
@@ -2260,7 +2260,7 @@ footer .copyright a:hover {
   height: 54px;
   font-size: 18px;
   letter-spacing: 1px;
-  background: url(http://www.yamahagp.vn/static/images/shape-title.png) no-repeat center;
+  background: url(images/shape-title.png) no-repeat center;
   background-size: cover;
   color: #fff;
   text-transform: uppercase;
@@ -2445,7 +2445,7 @@ footer .copyright a:hover {
   content: '';
   width: 12px;
   height: 8px;
-  background: url(http://www.yamahagp.vn/static/images/ar.png) no-repeat center;
+  background: url(images/ar.png) no-repeat center;
   background-size: cover;
   position: absolute;
   right: -10px;
@@ -2469,7 +2469,7 @@ footer .copyright a:hover {
   content: '';
   width: 12px;
   height: 14px;
-  background: url(http://www.yamahagp.vn/static/images/ar1.png) no-repeat center;
+  background: url(images/ar1.png) no-repeat center;
   background-size: cover;
   position: absolute;
   top: 10px;
@@ -2498,12 +2498,12 @@ footer .copyright a:hover {
 }
 /* line 632, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .form-register .buttons a.btn-back {
-  background: url(http://www.yamahagp.vn/static/images/btn5.png) no-repeat;
+  background: url(images/btn5.png) no-repeat;
   background-size: cover;
 }
 /* line 636, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .form-register .buttons a.btn-back:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn6.png) no-repeat;
+  background: url(images/btn6.png) no-repeat;
   background-size: cover;
 }
 
@@ -2552,7 +2552,7 @@ footer .copyright a:hover {
 #about {
   height: 130vh;
   width: 100%;
-  background: url(http://www.yamahagp.vn/static/images/bg-a.png) no-repeat center top;
+  background: url(images/bg-a.png) no-repeat center top;
   background-size: cover;
   padding: 15vh 0;
   position: relative;
@@ -2674,7 +2674,7 @@ footer .copyright a:hover {
 #plan {
   height: 120vh;
   width: 100%;
-  background: url(http://www.yamahagp.vn/static/images/bg-rgt.png) no-repeat center top;
+  background: url(images/bg-rgt.png) no-repeat center top;
   background-size: cover;
   padding: 13vh 0 10vh 0;
   position: relative;
@@ -2865,7 +2865,7 @@ footer .copyright a:hover {
 
 /* line 948, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .cld-detail {
-  background: url(http://www.yamahagp.vn/static/images/bg-register.png) no-repeat center;
+  background: url(images/bg-register.png) no-repeat center;
   background-size: 100% 100%;
   position: absolute;
   top: 50%;
@@ -2930,7 +2930,7 @@ footer .copyright a:hover {
 /* line 999, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .cld-item {
   width: 100%;
-  background: url(http://www.yamahagp.vn/static/images/line.png) no-repeat center top;
+  background: url(images/line.png) no-repeat center top;
   background-size: 100% 35px;
   position: relative;
 }
@@ -2980,7 +2980,7 @@ footer .copyright a:hover {
 
 /* line 1045, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .contestant-detail {
-  background: url(http://www.yamahagp.vn/static/images/bg-register.png) no-repeat center;
+  background: url(images/bg-register.png) no-repeat center;
   background-size: 100% 100%;
   position: absolute;
   top: 50%;
@@ -3064,7 +3064,7 @@ footer .copyright a:hover {
 #news {
   height: 120vh;
   width: 100%;
-  background: url(http://www.yamahagp.vn/static/images/n-bg.png) no-repeat center top;
+  background: url(images/n-bg.png) no-repeat center top;
   background-size: cover;
   padding: 13vh 0 10vh 0;
   position: relative;
@@ -3163,7 +3163,7 @@ footer .copyright a:hover {
 #gallery {
   width: 100%;
   min-height: 130vh;
-  background: url(http://www.yamahagp.vn/static/images/p-bg.png) no-repeat center top;
+  background: url(images/p-bg.png) no-repeat center top;
   background-size: cover;
   padding: 13vh 0 20px 0;
   position: relative;
@@ -3272,7 +3272,7 @@ footer .copyright a:hover {
   font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: url(http://www.yamahagp.vn/static/images/ar2.png) no-repeat 80% center;
+  background: url(images/ar2.png) no-repeat 80% center;
   background-size: 9px auto;
 }
 /* line 1307, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
@@ -3580,14 +3580,14 @@ footer .copyright a:hover {
   display: block;
   width: 91px;
   height: 51px;
-  background: url(http://www.yamahagp.vn/static/images/btn-close3.png) no-repeat center;
+  background: url(images/btn-close3.png) no-repeat center;
   background-size: cover;
   z-index: 100;
   cursor: pointer;
 }
 /* line 1591, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .gallery-detail .btn-close:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn-close4.png) no-repeat center;
+  background: url(images/btn-close4.png) no-repeat center;
   background-size: cover;
 }
 
@@ -3621,7 +3621,7 @@ footer .copyright a:hover {
   display: block;
   width: 91px;
   height: 51px;
-  background: url(http://www.yamahagp.vn/static/images/btn-close3.png) no-repeat center;
+  background: url(images/btn-close3.png) no-repeat center;
   background-size: cover;
   z-index: 100;
   cursor: pointer;
@@ -3631,7 +3631,7 @@ footer .copyright a:hover {
 }
 /* line 1630, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .news-detail .btn-close:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn-close4.png) no-repeat center;
+  background: url(images/btn-close4.png) no-repeat center;
   background-size: cover;
 }
 /* line 1636, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
@@ -3649,7 +3649,7 @@ footer .copyright a:hover {
 }
 /* line 1645, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .news-detail p.time {
-  background: url(http://www.yamahagp.vn/static/images/i-time2.png) no-repeat left top;
+  background: url(images/i-time2.png) no-repeat left top;
   background-size: 30px 30px;
   padding-left: 40px;
   opacity: .8;
@@ -3661,7 +3661,7 @@ footer .copyright a:hover {
   text-indent: -99999px;
   width: 74px;
   height: 63px;
-  background: url(http://www.yamahagp.vn/static/images/btn-next.png) no-repeat;
+  background: url(images/btn-next.png) no-repeat;
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -3674,7 +3674,7 @@ footer .copyright a:hover {
 }
 /* line 1669, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .btn-next:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn-next2.png) no-repeat;
+  background: url(images/btn-next2.png) no-repeat;
   background-size: cover;
 }
 
@@ -3683,7 +3683,7 @@ footer .copyright a:hover {
   text-indent: -99999px;
   width: 74px;
   height: 63px;
-  background: url(http://www.yamahagp.vn/static/images/btn-prev.png) no-repeat;
+  background: url(images/btn-prev.png) no-repeat;
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -3696,7 +3696,7 @@ footer .copyright a:hover {
 }
 /* line 1690, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .btn-prev:hover {
-  background: url(http://www.yamahagp.vn/static/images/btn-prev.png) no-repeat;
+  background: url(images/btn-prev.png) no-repeat;
   background-size: cover;
 }
 
@@ -3732,7 +3732,7 @@ footer .copyright a:hover {
 @media screen and (max-width: 1280px) {
   /* line 1728, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
   #main {
-    background: url(http://www.yamahagp.vn/static/images/bg-h.jpg) no-repeat right -2vh;
+    background: url(images/bg-h.jpg) no-repeat right -2vh;
     background-size: cover;
   }
 
@@ -3775,7 +3775,7 @@ footer .copyright a:hover {
   z-index: 999;
   width: 233px;
   height: 75px;
-  background: url(http://www.yamahagp.vn/static/images/logo.png) no-repeat center;
+  background: url(images/logo.png) no-repeat center;
   background-size: cover;
   margin: 0 auto;
   display: block;
@@ -3871,7 +3871,7 @@ footer .copyright a:hover {
 
   /* line 92, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
   #main {
-    background: url(http://www.yamahagp.vn/static/images/bg-htable.jpg) no-repeat 0 0;
+    background: url(images/bg-htable.jpg) no-repeat 0 0;
     background-size: cover;
     height: 100vh;
   }
@@ -4114,7 +4114,7 @@ footer .copyright a:hover {
 
   /* line 280, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
   #main {
-    background: url(http://www.yamahagp.vn/static/images/bg-hmb3.jpg) no-repeat center bottom;
+    background: url(images/bg-hmb3.jpg) no-repeat center bottom;
     background-size: cover;
     height: 100vh;
   }
@@ -4143,7 +4143,7 @@ footer .copyright a:hover {
 @media screen and (max-width: 1000px) {
   /* line 306, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
   #main {
-    background: url(http://www.yamahagp.vn/static/images/bg-hmb4.jpg) no-repeat center bottom;
+    background: url(images/bg-hmb4.jpg) no-repeat center bottom;
     background-size: cover;
     height: 100vh;
   }
@@ -4190,7 +4190,7 @@ footer .copyright a:hover {
     width: 100%;
     height: 40vh;
     position: absolute;
-    background: url(http://www.yamahagp.vn/static/images/bg-rgt2.png) no-repeat center 0;
+    background: url(images/bg-rgt2.png) no-repeat center 0;
     background-size: 100% auto;
     z-index: 2;
   }
@@ -4267,7 +4267,7 @@ footer .copyright a:hover {
   }
   /* line 412, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
   .btn:hover {
-    background: url(http://www.yamahagp.vn/static/images/btn.png) no-repeat center;
+    background: url(images/btn.png) no-repeat center;
     background-size: 100% 100%;
   }
 
@@ -4348,7 +4348,7 @@ footer .copyright a:hover {
     height: auto;
     min-height: 465px;
     position: relative;
-    background: url(http://www.yamahagp.vn/static/images/shape.png) no-repeat center;
+    background: url(images/shape.png) no-repeat center;
     background-size: 100% 100%;
     text-align: center;
     margin: 0 20px;
@@ -4363,7 +4363,7 @@ footer .copyright a:hover {
     height: 54px;
     font-size: 18px;
     letter-spacing: 1px;
-    background: url(http://www.yamahagp.vn/static/images/shape-title.png) no-repeat center;
+    background: url(images/shape-title.png) no-repeat center;
     background-size: cover;
     color: #fff;
     text-transform: uppercase;
@@ -4391,14 +4391,14 @@ footer .copyright a:hover {
     left: 50%;
     width: 211px;
     height: 51px;
-    background: url(http://www.yamahagp.vn/static/images/btn3.png) no-repeat center;
+    background: url(images/btn3.png) no-repeat center;
     background-size: cover;
     margin-left: -105px;
     font-size: 18px;
   }
   /* line 524, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
   .race-league .slick-slide .btn:hover {
-    background: url(http://www.yamahagp.vn/static/images/btn4.png) no-repeat center;
+    background: url(images/btn4.png) no-repeat center;
     background-size: cover;
   }
 
@@ -4646,7 +4646,7 @@ footer .copyright a:hover {
     top: 3vh;
     bottom: 3vh;
     height: auto;
-    background: url(http://www.yamahagp.vn/static/images/r-ct.png) repeat center bottom;
+    background: url(images/r-ct.png) repeat center bottom;
     background-size: 100%;
     display: block;
     visibility: visible;
@@ -4659,7 +4659,7 @@ footer .copyright a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(http://www.yamahagp.vn/static/images/rt.png) no-repeat center top;
+    background: url(images/rt.png) no-repeat center top;
     background-size: 100% 100%;
   }
   /* line 738, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
@@ -4670,7 +4670,7 @@ footer .copyright a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: url(http://www.yamahagp.vn/static/images/r-bt.png) no-repeat center bottom;
+    background: url(images/r-bt.png) no-repeat center bottom;
     background-size: 100% 100%;
   }
 
@@ -4798,7 +4798,7 @@ footer .copyright a:hover {
   }
   /* line 840, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
   .race-league > li .btn:hover {
-    background: url(http://www.yamahagp.vn/static/images/btn3.png) no-repeat center;
+    background: url(images/btn3.png) no-repeat center;
     background-size: cover;
   }
 
@@ -4963,7 +4963,7 @@ footer .copyright a:hover {
 
   /* line 957, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
   .gallery-filter .select_filter {
-    background: url(http://www.yamahagp.vn/static/images/ar2.png) no-repeat 100% center;
+    background: url(images/ar2.png) no-repeat 100% center;
     background-size: 9px auto;
   }
 
@@ -5051,7 +5051,7 @@ footer .copyright a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(http://www.yamahagp.vn/static/images/rt.png) no-repeat center top;
+    background: url(images/rt.png) no-repeat center top;
     background-size: 100% 100%;
   }
   /* line 1030, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
@@ -5065,7 +5065,7 @@ footer .copyright a:hover {
     top: 3vh;
     bottom: 3vh;
     height: auto;
-    background: url(http://www.yamahagp.vn/static/images/r-ct.png) repeat center bottom;
+    background: url(images/r-ct.png) repeat center bottom;
     background-size: 100%;
     display: block;
     visibility: visible;
@@ -5079,7 +5079,7 @@ footer .copyright a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: url(http://www.yamahagp.vn/static/images/r-bt.png) no-repeat center bottom;
+    background: url(images/r-bt.png) no-repeat center bottom;
     background-size: 100% 100%;
   }
   /* line 1055, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_reponsive.scss */
@@ -5528,7 +5528,7 @@ footer .copyright a:hover {
 @media screen and (max-width: 1024px) {
   /* line 49, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_v2.scss */
   #main {
-    background: url(http://www.yamahagp.vn/static/images//2018/bg-htable.jpg) no-repeat right bottom;
+    background: url(images/bg-htable-a.jpg) no-repeat right bottom;
     background-size: cover;
   }
 
