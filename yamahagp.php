@@ -40,9 +40,9 @@
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
             <li><a href="#" class="nav-left" role="main"><span>trang chủ</span></a></li>
-            <li><a href="#about" class="nav-left" role="about"><span>yamaha gp <br>2018</span></a></li>
+            <li><a href="#sukien" class="nav-left" role="sukien"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
-            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="#"></a></li>
+            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="https://www.facebook.com/vietnamracingacademy"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
             <li><a href="#news" class="nav-right" role="news"><span>tin tức</span></a></li>
             <li><a href="#gallery" class="nav-right" role="gallery"><span>HÌNH ẢNH <br>&amp; KẾT QUẢ</span></a></li>
@@ -105,109 +105,19 @@
 	<img src="yamahagp/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
 		<img src="yamahagp/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-		<a href="#" class="btn js-joinnow" role="about" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ NGAY</a> 
+		<a href="#sukien" class="btn js-joinnow" role="about" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ NGAY</a> 
 	</div>
 </section>
+
 
 <section id="about" class="display">
 	<div class="contain">
 		<h2><img src="yamahagp/images/a-title.png"></h2>
 
-		<ul class="gallery-tabs js-about--tabs" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
-			<li class="active">hạng mục thi đấu</li>
-			<li>giới thiệu giải đua</li>
+		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
+			<li class="active" style="width: 100%;">giới thiệu giải đua</li>
 		</ul>
-
-		<div class="about-contain display" id="race">
-			<ul class="race-league">
-				<li>
-					<h2>Giải mở rộng</h2>
-					<div class="copy">
-						<p>
-							Chỉ dành cho <strong>VĐV chuyên nghiệp</strong> <sup>(1)</sup><br> 
-							<span>Vui lòng đăng ký qua Liên Đoàn.<br> Liên hệ anh Nguyễn Công Sang (0949.292.292)</span>
-						</p>
-						<ol>
-							<li>
-								<img src="yamahagp/images/i11.png">
-								<p>Hệ xe số 150</p>
-							</li>
-						</ol>
-						<div class="note">
-							<h6>Sử dụng xe VĐV</h6>
-							<p>- Động cơ tối đa 150cc</p>
-							<p>- Xe số do Yamaha Việt Nam sản xuất <br>(Exciter, Jupiter, Sirius)</p>
-							<p><span><sup>(1)</sup> VĐV thuộc Liên Đoàn Xe Đạp – Môtô Thể Thao Việt Nam quản lý  </span></p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<h2>Giải xe hãng</h2>
-					<div class="copy">
-						<p>
-							Dành cho <strong>VĐV chuyên nghiệp</strong> và <br><strong>VĐV bán chuyên</strong> <sup>(2)</sup>
-						</p>
-
-						<ol>
-							<li>
-								<img src="yamahagp/images/i2.png">
-								<p>Exciter<br>150i</p>
-							</li>
-							<li>
-								<img src="yamahagp/images/i3.png">
-								<p>Sirius<br>115i</p>
-							</li>
-							<li>
-								<img src="yamahagp/images/i4.png">
-								<p>Janus<br>125i</p>
-							</li>
-						</ol>
-						<div class="note">
-							<h6>Sử dụng xe hãng cung cấp</h6>
-							<p><span><sup>(2)</sup> VĐV Bán chuyên: đã có kinh nghiệm tập huấn và tham gia thi đua xe, từng thi Revkhana</span></p>
-						</div>
-
-					</div>
-
-<!--					--><!--                        <a href="--><!--?//= PATH_URL; ?--><!--dang-ky-giai-xe-hang" class="btn">đăng ký</a>-->
-<!--					--><!--					    <a href="javascript:(0)" onclick="alert('Đã hết thời gian đăng ký giải Xe hãng');return false;" class="btn">đăng ký</a>-->
-<!--					-->				</li>
-				<li>
-					<h2>Giải Câu lạc bộ</h2>
-					<div class="copy">
-						<p>
-							Dành cho <br>
-							<strong>VDV không chuyên thuộc các CLB</strong> <sup>(3)</sup><br>
-							<span>Vui lòng đăng ký với trưởng CLB</span>
-						</p>
-
-						<ol>
-						 <!-- <li>
-								<img src="yamahagp/images/i6.png">
-								<p>Xe <br/>tay ga</p>
-							</li> -->
-							<li>
-								<img src="yamahagp/images/i5.png">
-								<p>Xe số<br>thông thường</p>
-							</li>
-						</ol>
-						<div class="note">
-							<h6>Sử dụng xe VĐV</h6>
-							<p>Xe số do Yamaha Motor Việt Nam sản xuất (động cơ tối đa 155cc)</p>
-							<p><span><sup>(3)</sup> Thí sinh chưa có kinh nghiệm, muốn thử sức đua xe, là thành viên CLB Exciter đã đăng ký với Yamaha Motor Việt Nam.</span></p>
-						</div>
-					</div>
-					<!-- 					<a href="http://www.yamahagp.vn/dang-ky-giai-tu-do" class="btn">đăng ký</a>
-					 -->
-				</li>
-			</ul>
-<!--			<p class="race-note">-->
-<!--				- Đăng ký có thể đóng trước thời hạn khi nhận đủ số lượng đăng ký.<br/>-->
-<!--				- Nếu thông tin hợp lệ, bạn sẽ nhận được email xác nhận đăng ký. Vui lòng cung cấp chính xác thông tin của bạn<br/>-->
-<!--				- Hotline hỗ trợ đăng ký: Mr. Vinh (<span>0122</span>.419.<span>0082</span>)-->
-<!--			</p>-->
-		</div>
-		<div class="about-contain ">
+		<div class="about-contain display">
 			<div class="copy-about">
 				<h3><img src="yamahagp/images/tagline.png"></h3>
 				<p>Giải đua xe thể thao chuyên nghiệp do Yamaha Motor Việt Nam tổ chức tại các tỉnh thành lớn trên toàn quốc với thể thức đua đa dạng, trang thiết bị hiện đại. Cơ hội thể hiện đam mê dành cho các tay đua tốc độ bao gồm vận động viên chuyên nghiệp lẫn không chuyên, không phân biệt nam nữ.</p>
@@ -221,12 +131,70 @@
 			</div>
 			<div class="video">
 				<div class="ytb">
-					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/B6V9m_8WjrE?controls=0&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
-		
-		
+	</div>
+</section>
+<section id="sukien"></section>
+<section id="about" class="display">
+	<div class="contain">
+		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
+			<li class="active" style="width: 100%;">hạng mục thi đấu</li>
+		</ul>
+
+		<div class="about-contain display">
+			<ul class="race-league">
+				<li>
+					<h2>Moto</h2>
+					<div class="copy">
+						<div class="note">
+							<h6>300 - 400cc</h6>
+							<p>- Pro</p>
+							<p>- Semi-Pro</p>
+						</div>
+						<div class="note">
+							<h6>UB150</h6>
+							<p>- Pro</p>
+							<p>- Semi-Pro</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<h2>go kart</h2>
+					<div class="copy">
+						<div class="note">
+							<p>4 Thì</p>
+							<p>2 Thì</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<h2>Oto</h2>
+					<div class="copy">
+						<div class="note">
+							<p>GymKhana</p>
+							<p>Track Attack</p>
+							<p>Driyt</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<h2>Roller Sport</h2>
+					<div class="copy">
+						<div class="note">
+							<p>Rider sport</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+<!--			<p class="race-note">-->
+<!--				- Đăng ký có thể đóng trước thời hạn khi nhận đủ số lượng đăng ký.<br/>-->
+<!--				- Nếu thông tin hợp lệ, bạn sẽ nhận được email xác nhận đăng ký. Vui lòng cung cấp chính xác thông tin của bạn<br/>-->
+<!--				- Hotline hỗ trợ đăng ký: Mr. Vinh (<span>0122</span>.419.<span>0082</span>)-->
+<!--			</p>-->
+		</div>
 	</div>
 </section>
 
@@ -420,7 +388,7 @@
 		<div class="term-contain display">
 			<div class="video">
 				<div class="ytb">
-					<iframe src="https://www.facebook.com/plugins/video.php?height=316&href=https%3A%2F%2Fwww.facebook.com%2Fvietnamracingacademy%2Fvideos%2F352875875919256%2F&show_text=false&width=560" width="560" height="316" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+					<iframe src="https://www.facebook.com/plugins/video.php?height=316&href=https%3A%2F%2Fwww.facebook.com%2Fvietnamracingacademy%2Fvideos%2F352875875919256%2F&show_text=false&width=560" width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
 				</div>
 			</div>
 		</div>
@@ -555,118 +523,128 @@
 <section id="news">
 	<div class="contain">
 		<h2><img src="yamahagp/images/n-tittle.png"></h2>
-		<div class="js-news slick-initialized slick-slider slick-dotted" role="toolbar"><button type="button" data-role="none" class="slick-prev slick-arrow slick-disabled helper-force-hide" aria-label="Previous" role="button" aria-disabled="true" style="display: block;">Previous</button>
-		
-							<div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 3948px; transform: translate3d(0px, 0px, 0px);"><div class="js-news--detail slick-slide slick-current slick-active" data-id="26" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="0"><img src="yamahagp/images/b2fcf11e9f90d69e611c4056e190c93e.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="0">Cảnh rượt đuổi và ngã nhào tại giải đua xe ở TP.HCM</a></h4>
-							<p>Giải đua xe Yamaha GP Feel The Speed diễn ra ngày 04/02/2018 tại trường đua Phú Thọ, quận 11. Đây là cũng giải đua xe đường nhựa đầu tiên được tổ chức tại TP.HCM.</p>
-							<a href="#" class="viewmore" tabindex="0">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide slick-active" data-id="25" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="0"><img src="yamahagp/images/d879ff31d52e6c278e0aef1e41205490.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="0">“Bóng hồng” tại giải đua Yamaha GP2018</a></h4>
-							<p>Phái nữ thường được xem là những cô gái “chân yếu tay mềm” và không thích hợp cho những môn thể thao thiên về mạo hiểm, tốc độ. Nhưng qua giải đua Yamaha GP có lẽ chúng ta không nên “xem thường” họ.</p>
-							<a href="#" class="viewmore" tabindex="0">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide slick-active" data-id="24" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="0"><img src="yamahagp/images/b4a83c6c43c5ae9ce97298bb140b0e73.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="0">Nhìn lại những điểm nổi bật của giải đua xe Yamaha GP 2018 tại SVĐ Phú Thọ</a></h4>
-							<p>Giải đua xe Yamaha GP 2018 lần này là một trong chuỗi sự kiện thể dục - thể thao nhân dịp kỷ niệm 50 năm cuộc tổng tiến công và nổi dây xuân Mậu Thân 1968, kỷ niệm 88 năm ngày thành lập đảng công sản Việt Nam và chào mừng tết nguyên đán Mậu Tuất 2018 tại Tp.Hồ Chí Minh.</p>
-							<a href="#" class="viewmore" tabindex="0">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="23" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/2cba0279de8960dc7db62a2b707974f0.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Tranh tài nảy lửa ở chặng đua Yamaha GP 2017 tại Đà Nẵng</a></h4>
-							<p>3 dòng xe Exciter, Janus và Sirius được sử dụng cho giải đua Yamaha GP 2017. Chặng đua mới nhất diễn ra tại thành phố Đà Nẵng.</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="22" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/99b5ebb3aa5b157e728ff2c8e44966eb.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Yamaha GP 2017 đến Đà Nẵng – Mãn nhãn người hâm mộ</a></h4>
-							<p>Đối với những “tín đồ” đam mê bộ môn thể thao đua xe tốc độ thì khó lòng bỏ qua giải đua xe Yamaha GP tại Việt Nam do Yamaha Motor Việt Nam tổ chức và đây là lần đầu tiên giải đua xe này đến với khán giả Đà Nẵng.</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="21" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide05" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/a94aa67317c6b20311a7c707528ab30f.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Yamaha GP 2017 chặng 2 chính thức diễn ra tại Đà Nẵng</a></h4>
-							<p> Giải đua xe mô tô chuyên nghiệp Yamaha GP 2017 tiếp tục chặng thi đấu thứ 2 tại thành phố Đà Nẵng</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="20" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide06" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/b3d1dd58010bdb81354f6d2ed775c5dd.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Giải đua xe Yamaha GP 2017 lần đầu đến Cần Thơ</a></h4>
-							<p>Yamaha Motor Việt Nam đã khuấy động TP. Cần Thơ bằng giải đua xe Yamaha GP 2017 mùa thứ 2, quy tụ hàng trăm tay đua từ khắp các tỉnh thành cùng tranh tài trong ngày 28/5 vừa qua.</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="19" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide07" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/dc16d9107d7631f147377f380c184eb1.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Khán giả Cần Thơ thích thú với giải đua xe Yamaha GP 2017</a></h4>
-							<p>Ngày 28/5, sự kiện đua xe Yamaha GP 2017 đã diễn ra tại Quảng trường Tây Nam Bộ, đường Mai Chí Thọ, P. Phú Thứ, Q. Cái Răng, Tp. Cần Thơ. Đây là sự kiện mở màn mùa giải đua xe Yamaha GP 2017 do Công ty TNHH Yamaha Motor Việt Nam tổ chức.</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="18" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide08" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/5c1822bd501639594590d39b9b305dca.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Nam nữ đua chung trong giải đua Yamaha GP ở Cần Thơ</a></h4>
-							<p> Bốn cô gái cùng tranh tài cùng các vận động viên nam trong cuộc đua xe Yamaha GP tại Cần Thơ. Tuy nhiên phần thắng nghiêng về những tay đua nam giàu kinh nghiệm.</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="17" data-slick-index="9" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide09" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/fafe5601b49a09c91f56420b7cbbdbc8.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Toàn cảnh giải đua xe chuyên nghiệp Yamaha GP Racing</a></h4>
-							<p>Cuối tuần qua, giới trẻ đam mê môn thể thao xe đua sốt rần rần khi check in ở Khu Du Lịch Đại Nam – Bình Dương cùng hàng trăm tay đua chuyên nghiệp lẫn bán chuyên tại giải đua xe Yamaha GP Racing Việt Nam.</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="16" data-slick-index="10" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide010" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/8b1251f95c4b7cffe197f2fd22304306.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Yamaha GP - Trải nghiệm ngắm nhìn và khám phá đường đua mini GP</a></h4>
-							<p>Là một người yêu thích bộ môn đua xe, không ít lần mình đã có cơ hội để đi đến xem đua xe máy tại các sân đua ở Việt Nam</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div><div class="js-news--detail slick-slide" data-id="15" data-slick-index="11" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide011" style="width: 329px;">
-					<div class="news-item">
-						<p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/744b76bd40bca12ecc499a2b057a6a9b.jpg"></a></p>
-						<div class="copy">
-							<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Yamaha GP 2016 - thêm một làn gió mới cho đua xe mô tô ở Việt Nam</a></h4>
-							<p>Ngày  06/11/2016, tại KDL Đại Nam, Bình Dương, Yamaha Việt Nam đã tổ chức Giải đua xe Yamaha GP 2016. Là kẻ đi sau Suzuki và Honda nên Yamaha đã tìm ra một hướng đi mới hơn và kết quả là họ đã thành công khi mang thêm một làn gió mới cho đua xe Việt Nam.</p>
-							<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-						</div>
-					</div>
-				</div></div></div>
-					<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;" aria-disabled="false">Next</button><ul class="slick-dots" style="display: block;" role="tablist"><li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01"><button type="button" data-role="none" role="button" tabindex="0">2</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02"><button type="button" data-role="none" role="button" tabindex="0">3</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation03" id="slick-slide03"><button type="button" data-role="none" role="button" tabindex="0">4</button></li></ul></div>
+		<div class="js-news" role="toolbar">
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="0"><img src="yamahagp/images/b2fcf11e9f90d69e611c4056e190c93e.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="0">Cảnh rượt đuổi và ngã nhào tại giải đua xe ở TP.HCM</a></h4>
+					<p>Giải đua xe Yamaha GP Feel The Speed diễn ra ngày 04/02/2018 tại trường đua Phú Thọ, quận 11. Đây là cũng giải đua xe đường nhựa đầu tiên được tổ chức tại TP.HCM.</p>
+					<a href="#" class="viewmore" tabindex="0">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="0"><img src="yamahagp/images/d879ff31d52e6c278e0aef1e41205490.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="0">“Bóng hồng” tại giải đua Yamaha GP2018</a></h4>
+					<p>Phái nữ thường được xem là những cô gái “chân yếu tay mềm” và không thích hợp cho những môn thể thao thiên về mạo hiểm, tốc độ. Nhưng qua giải đua Yamaha GP có lẽ chúng ta không nên “xem thường” họ.</p>
+					<a href="#" class="viewmore" tabindex="0">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="0"><img src="yamahagp/images/b4a83c6c43c5ae9ce97298bb140b0e73.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="0">Nhìn lại những điểm nổi bật của giải đua xe Yamaha GP 2018 tại SVĐ Phú Thọ</a></h4>
+					<p>Giải đua xe Yamaha GP 2018 lần này là một trong chuỗi sự kiện thể dục - thể thao nhân dịp kỷ niệm 50 năm cuộc tổng tiến công và nổi dây xuân Mậu Thân 1968, kỷ niệm 88 năm ngày thành lập đảng công sản Việt Nam và chào mừng tết nguyên đán Mậu Tuất 2018 tại Tp.Hồ Chí Minh.</p>
+					<a href="#" class="viewmore" tabindex="0">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/2cba0279de8960dc7db62a2b707974f0.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Tranh tài nảy lửa ở chặng đua Yamaha GP 2017 tại Đà Nẵng</a></h4>
+					<p>3 dòng xe Exciter, Janus và Sirius được sử dụng cho giải đua Yamaha GP 2017. Chặng đua mới nhất diễn ra tại thành phố Đà Nẵng.</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/99b5ebb3aa5b157e728ff2c8e44966eb.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Yamaha GP 2017 đến Đà Nẵng – Mãn nhãn người hâm mộ</a></h4>
+					<p>Đối với những “tín đồ” đam mê bộ môn thể thao đua xe tốc độ thì khó lòng bỏ qua giải đua xe Yamaha GP tại Việt Nam do Yamaha Motor Việt Nam tổ chức và đây là lần đầu tiên giải đua xe này đến với khán giả Đà Nẵng.</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/a94aa67317c6b20311a7c707528ab30f.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Yamaha GP 2017 chặng 2 chính thức diễn ra tại Đà Nẵng</a></h4>
+					<p> Giải đua xe mô tô chuyên nghiệp Yamaha GP 2017 tiếp tục chặng thi đấu thứ 2 tại thành phố Đà Nẵng</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/b3d1dd58010bdb81354f6d2ed775c5dd.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Giải đua xe Yamaha GP 2017 lần đầu đến Cần Thơ</a></h4>
+					<p>Yamaha Motor Việt Nam đã khuấy động TP. Cần Thơ bằng giải đua xe Yamaha GP 2017 mùa thứ 2, quy tụ hàng trăm tay đua từ khắp các tỉnh thành cùng tranh tài trong ngày 28/5 vừa qua.</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/dc16d9107d7631f147377f380c184eb1.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Khán giả Cần Thơ thích thú với giải đua xe Yamaha GP 2017</a></h4>
+					<p>Ngày 28/5, sự kiện đua xe Yamaha GP 2017 đã diễn ra tại Quảng trường Tây Nam Bộ, đường Mai Chí Thọ, P. Phú Thứ, Q. Cái Răng, Tp. Cần Thơ. Đây là sự kiện mở màn mùa giải đua xe Yamaha GP 2017 do Công ty TNHH Yamaha Motor Việt Nam tổ chức.</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/5c1822bd501639594590d39b9b305dca.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Nam nữ đua chung trong giải đua Yamaha GP ở Cần Thơ</a></h4>
+					<p> Bốn cô gái cùng tranh tài cùng các vận động viên nam trong cuộc đua xe Yamaha GP tại Cần Thơ. Tuy nhiên phần thắng nghiêng về những tay đua nam giàu kinh nghiệm.</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/fafe5601b49a09c91f56420b7cbbdbc8.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Toàn cảnh giải đua xe chuyên nghiệp Yamaha GP Racing</a></h4>
+					<p>Cuối tuần qua, giới trẻ đam mê môn thể thao xe đua sốt rần rần khi check in ở Khu Du Lịch Đại Nam – Bình Dương cùng hàng trăm tay đua chuyên nghiệp lẫn bán chuyên tại giải đua xe Yamaha GP Racing Việt Nam.</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/8b1251f95c4b7cffe197f2fd22304306.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Yamaha GP - Trải nghiệm ngắm nhìn và khám phá đường đua mini GP</a></h4>
+					<p>Là một người yêu thích bộ môn đua xe, không ít lần mình đã có cơ hội để đi đến xem đua xe máy tại các sân đua ở Việt Nam</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/744b76bd40bca12ecc499a2b057a6a9b.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Yamaha GP 2016 - thêm một làn gió mới cho đua xe mô tô ở Việt Nam</a></h4>
+					<p>Ngày  06/11/2016, tại KDL Đại Nam, Bình Dương, Yamaha Việt Nam đã tổ chức Giải đua xe Yamaha GP 2016. Là kẻ đi sau Suzuki và Honda nên Yamaha đã tìm ra một hướng đi mới hơn và kết quả là họ đã thành công khi mang thêm một làn gió mới cho đua xe Việt Nam.</p>
+					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
+		</div>
 	</div>
 </section>
 

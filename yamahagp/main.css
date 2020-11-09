@@ -2000,8 +2000,8 @@ footer .copyright a:hover {
 }
 /* line 179, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .race-league > li {
-  width: 349px;
-  height: 408px;
+  width: 249px;
+  height: 308px;
   position: relative;
   background: url(images/shape.png) no-repeat center;
   background-size: cover;
@@ -2028,19 +2028,19 @@ footer .copyright a:hover {
 /* line 209, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .race-league > li h2 {
   position: absolute;
-  top: -14px;
+  top: -8px;
   left: 50%;
-  width: 270px;
-  height: 54px;
-  font-size: 18px;
+  width: 170px;
+  height: 34px;
+  font-size: 15px;
   letter-spacing: 1px;
   background: url(images/shape-title.png) no-repeat center;
   background-size: cover;
   color: #fff;
   text-transform: uppercase;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  line-height: 50px;
-  margin-left: -135px;
+  line-height: 30px;
+  margin-left: -84px;
 }
 /* line 226, ../../../../../../Users/Bop/_Bop/_Work/Digitop/2017/Yamaha/assets/scss/module/_home.scss */
 .race-league > li .copy {

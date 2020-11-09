@@ -16,7 +16,6 @@ $(function(){
     path_resource + "debug.addIndicators.min.js"
 
   ], function(result){
-	console.log($('.js-news'));
     YMH.init();
   })
 
@@ -390,7 +389,6 @@ var YMH = {
   },
 
   news: function() {
-
     $('.js-news').slick({
       arrows: true,
       dots: true,
