@@ -1,19 +1,19 @@
 /* TEST FIREBASE REALTIME
 Author: Goon Nguyen
 ================================================== */
-var path_resource = "http://www.yamahagp.vn/static/";
+var path_resource = "yamahagp/js/";
 $(function(){
   if(typeof path_resource == "undefined" || !path_resource) path_resource = "";
   GScript.loadList([
 
     // external libraries
-    path_resource + "js/libraries/plugin.js",
-    path_resource + "js/libraries/datepicker.min.js",
-    path_resource + "js/libraries/tweenmax/TweenMax.min.js",
-    path_resource + "js/libraries/tweenmax/plugins/ScrollToPlugin.min.js",
-    path_resource + "js/libraries/scrollmagic/minified/ScrollMagic.min.js", 
-    path_resource + "js/libraries/scrollmagic/minified/plugins/animation.gsap.min.js", 
-    path_resource + "js/libraries/scrollmagic/minified/plugins/debug.addIndicators.min.js"
+    path_resource + "plugin.js",
+    path_resource + "datepicker.min.js",
+    path_resource + "TweenMax.min.js",
+    path_resource + "ScrollToPlugin.min.js",
+    path_resource + "ScrollMagic.min.js", 
+    path_resource + "animation.gsap.min.js", 
+    path_resource + "debug.addIndicators.min.js"
 
   ], function(result){
 	console.log($('.js-news'));
@@ -391,7 +391,7 @@ var YMH = {
 
   news: function() {
 
-    $('.js-news').not('.slick-initialized').slick({
+    $('.js-news').slick({
       arrows: true,
       dots: true,
       infinite: false,
