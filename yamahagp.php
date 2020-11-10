@@ -333,6 +333,15 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			text-decoration: underline;
 			margin-top: 10px;
 		}
+		.red_link:hover {
+			color: #343520;
+		}
+		#term {
+			height: auto;
+		}
+		.race-league > li {
+			margin-bottom: 30px
+		}
 	</style>
 	<div class="contain">
 		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="yamahagp/images/title-term.png"></h2>
@@ -345,14 +354,14 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<div class="copy">
 						<h5>Điều lệ giải Vinfast AutoGymkhana CUP</h5>
 						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải (VIETNAM VR – ROLLER SPORTS 2020)</p>
-						<p><a class="red_link" href="yamahagp/docs/GIAY_CAM_KET_VINFAST_AUTO_GYMKHANA.docx" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="yamahagp/docs/Đieu_le_Vinfast_Fadil_AutoGymkhanaCup.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
 						<h5>Điều lệ giải Vinfast Track Attact Cup</h5>
 						<p>Các quy định, nội dung và thể thức thi đấu</p>
-						<p><a class="red_link" href="yamahagp/docs/Đieu_le_Vinfast_LuxA_Track_Attack_.docx" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="yamahagp/docs/Đieu_le_Vinfast_LuxA_Track_Attack_.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
@@ -366,14 +375,14 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<div class="copy">
 						<h5>Điều lệ giải Motul Motor Racing Cup hệ UB150</h5>
 						<p>Các quy định thi đấu và lịch tập luyện trong quá trình tham gia thi đấu giải VR Gokart và yêu cầu kỹ thuật</p>
-						<p><a class="red_link" href="yamahagp/docs/ĐIEU_LE_CAC_GIAI_GOKART_CUA_VMA_VA_YEU_CAU_ KY_ THUAT.docx" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="yamahagp/docs/ĐIEU_LE_CAC_GIAI_GOKART_CUA_VMA_VA_YEU_CAU_ KY_ THUAT.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
 						<h5>Điều lệ hệ UB150</h5>
 						<p>Các quy định chung hệ UB150</p>
-						<p><a class="red_link" href="yamahagp/docs/QUY_ĐINH_CHUNG_He_UB150.docx" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="yamahagp/docs/QUY_ĐINH_CHUNG_He_UB150.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 			</ul>
