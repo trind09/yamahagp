@@ -424,16 +424,8 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 	<div class="contain">
 		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="yamahagp/images/title-term.png"></h2>
 		<ul class="gallery-tabs js-term--tabs">
-			<li class="active">QUY ĐỊNH TRANG PHỤC VÀ XE THI ĐẤU</li>
-			<li class="">QUY ĐỊNH CHUNG</li>	
+			<li class="active" style="width: 100%;">QUY ĐỊNH CHUNG</li>	
 		</ul>
-		<div class="term-contain display">
-			<div class="video">
-				<div class="ytb">
-					<iframe src="https://www.facebook.com/plugins/video.php?height=316&href=https%3A%2F%2Fwww.facebook.com%2Fvietnamracingacademy%2Fvideos%2F352875875919256%2F&show_text=false&width=560" width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-				</div>
-			</div>
-		</div>
 		<style>
 			.thai-scroll.g-overview {
 			    top: 0px;
@@ -504,7 +496,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			}
 
 					</style>
-		<div class="term-contain">
+		<div class="term-contain display">
 			<div class="copy" style="transform: matrix(1, 0, 0, 1, 0, 0);">
 				<div class="wrap-scroll-thai">
 					<div class="g-scrollbar" style="height: 0px;">
