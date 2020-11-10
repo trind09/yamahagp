@@ -420,208 +420,122 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 	</div>
 </section> -->
 
-<section id="term" class="display">
+<style type="text/css">
+	.rule-thai.display .gallery-tabs.js-term--tabs li{
+		width: 100%!important;
+		
+		}
+	#term.rule-thai{
+		height: auto;
+	}
+	.rule-thai .race-league {
+		display: flex;
+    	flex-wrap: wrap;
+    	margin-left: -20px;
+    	justify-content: center;
+	}
+	.rule-thai .race-league li{
+		margin-bottom: 50px;
+		width: 30%;
+		background-size: contain;
+	}
+	.rule-thai .race-league .note h6 {
+		background-size: cover;
+		font-size: 17px;
+		padding-bottom: 6px;
+		text-transform: uppercase;
+		margin-bottom: 0px
+	}
+	.rule-thai .race-league .note p{
+		text-transform: lowercase;
+		padding: 15px 0
+	}
+	.rule-thai .race-league .note p::first-letter{
+		text-transform: uppercase
+	}
+	.rule-thai .race-league .note p .arrow {
+		color: white;
+		font-size: 16px;
+		margin-left: 10px
+	}
+	.rule-thai .race-league .note p a{ color: white }
+	.rule-thai.race-league > li .copy {
+    padding: 50px 15px 0 15px;
+}
+</style>
+<section id="term" class="rule-thai display ">
 	<div class="contain">
 		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="yamahagp/images/title-term.png"></h2>
 		<ul class="gallery-tabs js-term--tabs">
-			<li class="active" style="width: 100%;">QUY ĐỊNH CHUNG</li>	
+			<li class="active">QUY ĐỊNH TRANG PHỤC VÀ XE THI ĐẤU</li>
 		</ul>
-		<style>
-			.thai-scroll.g-overview {
-			    top: 0px;
-			    color: #333;
-			    text-align: justify;
-			    width: 80%;
-			    height: 60vh;
-			    margin: 0 auto;
-			    overflow: scroll;
-			    padding: 0 40px 0 0;
-			}
-			.thai-scroll.g-overview h4 {
-			    font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana,Roboto, sans-serif;
-			    font-weight: 700;
-			    font-size: 18px;
-			    padding-bottom: 20px;
-			    line-height: 1.2;
-			}
-			.thai-scroll.g-overview h5 {
-				font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-			    font-weight: 700;
-			    font-size: 16px;
-			    padding-bottom: 10px;
-			    line-height: 1.3;
-			}
-			.thai-scroll.g-overview p{
-				color: #333;
-   				padding-bottom: 10px;
-			}
-			
-			/* width */
-			.thai-scroll.g-overview::-webkit-scrollbar {
-				width: 6px;
-			}
-
-			/* Track */
-			.thai-scroll.g-overview::-webkit-scrollbar-track {
-			position: relative;
-    		background: #bababa;
-			}
-
-			/* Handle */
-			.thai-scroll.g-overview::-webkit-scrollbar-thumb {
-			width: 10px;
-		    cursor: pointer;
-		    overflow: hidden;
-		    position: absolute;
-		        background: #215eb3;
-    		left: -2px;
-			}	
-			
-			.thai-scroll.g-overview::-webkit-scrollbar-thumb {
-			    background: #6FDA2B;
-			}
-			.thai-scroll.g-overview::-webkit-scrollbar {
-			    width: 8px;
-			}
-			.thai-scroll.g-overview {
-    			color: #f9f9f9;
-    		}
-    		.thai-scroll.g-overview p {
-    			color: #f1f1f1;
-    		}
-			
-			.thai-scroll.g-overview {
-				color: #f9f9f9;
-				padding-bottom: 100px;
-			}
-
-					</style>
-		<div class="term-contain display">
-			<div class="copy" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-				<div class="wrap-scroll-thai">
-					<div class="g-scrollbar" style="height: 0px;">
-						<div class="g-track" style="height: 0px;">
-							<div class="g-thumb" style="top: 0px; height: 18.2296px;">
-								<div class="g-end"></div>
-							</div>
+		<div class="about-contain display">
+			<ul class="race-league">
+				<li>
+					<div class="copy">
+						<div class="note">
+							<h5>Điều lệ giải</br> Vinfast AutoGymkhana</br> CUP</h5>
+							<p>CÁC QUY ĐỊNH VÀ LỊCH TẬP LUYỆN</br>
+							TRONG QUÁ TRÌNH THAM GIA THI ĐẤU GIẢI</br>
+							(VIETNAM VR – ROLLER SPORTS 2020)
+							</p>
+							<p><a href="docs/GIAY_CAM_KET_VINFAST_AUTO_GYMKHANA.docx" target="_blank">Xem Thêm</a><span class= arrow>>></span></p>
 						</div>
 					</div>
-					<div class="thai-scroll g-overview" style="top: 0px;">
-						<h4>A. ĐỘI ĐUA VÀ VẬN ĐỘNG VIÊN:</h4>
-						<h5>1. Đối tượng tham dự:</h5>
-						<p>Nam/ nữ từ 18 tuổi trở lên, là công dân Việt Nam đã có bằng Lái xe A1, không mắc các bệnh về tim mạch, có khả năng điều khiển xe gắn máy.</p>
-						<h5>2. Thành viên tham dự:</h5>
-						<p>- Mỗi Vận động viên (VĐV) được đăng kí một Giải đấu và tối đa hai Hệ chạy xe trong một Giải đấu.</p>
-						<p>- Mỗi VĐV được sử dụng duy nhất 01 xe gắn máy cho mỗi hệ đua.</p>
-
-						<h4>B. CÁC GIẢI VÀ HỆ THI ĐẤU:</h4>
-						<p><strong>1. Giải Mở Rộng: Dành cho các VĐV chuyên nghiệp và bán chuyên (ưu tiên VĐV chuyên nghiệp)..</strong></p>
-						<h5>Hệ xe số 150 mở rộng. VĐV Giải Mở Rộng đăng kí qua Liên đoàn xe đạp – môtô Việt Nam, nhân tối đa 20 VĐV tham gia, ưu tiên VĐV đăng kí trước.</h5>
-						<p>
-							- Yêu cầu về công suất động cơ: động cơ tối đa 150cc (sai số trong phạm vi 1%). <br>
-							-	VĐV phải dùng xe của mình để thi đấu.<br>
-							-	Loại xe dùng để thi đấu: Các loại xe số thông thường do Công ty TNHH Yamaha Motor Việt Nam sản xuất và lắp ráp (Sirius, Jupiter, Exciter). <br>
-							- Xe thi đấu Giải Mở Rộng phải tuân thủ điều kiện kỹ thuật chung của Liên đoàn xe đạp –  môtô thể thao Việt Nam và điều kiện của Công ty TNHH Yamaha Motor Việt Nam.<br>
-							- Xe thi đấu Giải Mở Rộng có thể được kiểm tra phân khối (05 xe có thành tích cao nhất) đúng 150cc, chỉ chấp nhận sai số trong phạm vi 01% so với quy định.  Trong trường hợp không đúng về phân khối động cơ đúng quy định (quá 151cc) thì Ban Tổ Chức (BTC) sẽ hủy bỏ thành tích thi đấu và tính lại theo thành tích còn lại của các VĐV.
-						</p>
-						<p><strong>- Giải thưởng:</strong></p>
-						<ul>
-							<li>• Giải Nhất: 15 triệu đồng</li>
-							<li>• Giải Nhì: 12 triệu đồng</li>
-							<li>• Giải Ba: 10 triệu đồng</li>
-						</ul>
-
-						<h5><strong>2. Giải Xe Hãng: Dành cho các VĐV bán chuyên nghiệp và chuyên nghiệp (ưu tiên VĐV bán chuyên nghiệp).</strong></h5>
-						<p>
-						- VĐV có thể đăng ký một hoặc hai Hệ bất kì trong Giải Xe Hãng, VĐV tham gia giải này không thuộc đối tượng đăng kí các Giải còn lại. Tuy nhiên việc sắp xếp và chọn VĐV các Hệ do BTC quyết định dựa vào tình hình thực tế số VĐV đăng kí.<br>
-						-	VĐV sử dụng xe của hãng cung cấp để thi đấu.<br>
-						Tính trong năm 2018, những VĐV đã đạt giải (Nhất, Nhì, Ba) thuộc bất kỳ Hệ thi đấu nào tại Giải Xe Hãng sẽ không được đăng ký thi đấu cùng Hệ thi đấu đó của Giải Xe Hãng tại lần đua này. (Ví dụ: VĐV đã đạt giải Nhất/ Nhì/ Ba Giải Xe Hãng - Hệ Exciter 150i thì có thể đăng kí vào Hệ Sirius 115i hoặc Janus 125i. Tuy nhiên, quy định này không áp dụng đối với VĐV nữ đăng kí hệ Janus 125i.
-						</p>
-
-						<h5>2.1 Hệ Exciter 150i xe hãng. Nhận tối đa 60 VĐV.</h5>
-						<h5>2.2 Hệ Sirius 115i xe hãng. Nhận tối đa 40 VĐV.</h5>
-						<h5>2.3	Hệ Janus 125i xe hãng. Nhận tối đa 40 VĐV, ưu tiên VĐV nữ.</h5>
-
-						<p><strong>- Giải thưởng:</strong></p>
-						<ul>
-							<li>• Giải Nhất: 8 triệu đồng</li>
-							<li>• Giải Nhì: 6 triệu đồng</li>
-							<li>• Giải Ba: 4 triệu đồng</li>
-						</ul>
-						<p>- Riêng Hệ Janus 125i có thêm giải dành riêng cho nữ, trị giá giải thưởng giống như dành cho nam. Trường hợp VĐV nữ về vị trí dẫn đầu vòng đua chung kết thì được nhận đồng thời cả hai giải thưởng.</p>
-
-						<h5>3. Giải Câu Lạc Bộ - Hệ xe số thông thường:</h5>
-						<p>
-							-	Dành cho các đối tượng không phải là VĐV đăng kí các Giải Mở rộng và Giải xe Hãng ở trên, và ưu tiên là thành viên các câu lạc bộ Exciter (đã đăng ký với Yamaha Motor Việt Nam). Việc sắp xếp và chọn VĐV do BTC quyết định dựa vào tình hình thực tế số VĐV đăng kí. <strong>NHẬN TỐI ĐA 100 VDV</strong>.<br>
-							-	VĐV sử dụng xe của mình để thi đấu. Tất cả các dòng xe loại số thông thường do Công ty TNHH Yamaha Motor Việt Nam sản xuất và lắp ráp (không áp dụng xe nhập khẩu) có dung tích xi lanh từ 150cc trở xuống. <br>
-							Chú ý: Động cơ tối đa đến 150cc đối với xe số thông thường. Có thể kiểm tra sau khi thi đấu với các xe đạt giải. Kiểm tra đường kính và hành trình Piston, công suất động cơ không quá 150cc (sai số trong phạm vi 01%).
-						</p>
-						<p><strong>- Giải thưởng:</strong></p>
-						<ul>
-							<li>• Giải Nhất: 5 triệu đồng</li>
-							<li>• Giải Nhì: 3 triệu đồng</li>
-							<li>• Giải Ba: 2 triệu đồng</li>
-						</ul>
-
-						<h4>C. QUY ĐỊNH VỀ VIỆC THAM GIA CÁC GIẢI ĐẤU ĐỐI VỚI CÁC VẬN ĐỘNG VIÊN:</h4>
-						<p>- BTC sẽ căn cứ vào số lượng VĐV đăng kí thực tế để sắp xếp các Hệ thi đấu, nếu cần lấy thêm VĐV cho các Hệ thi đấu, BTC sẽ mời các VĐV thi đấu thêm một Hệ bổ sung so với Hệ thi đấu đã đăng kí. Tuy nhiên một VĐV không thi đấu quá 02 Hệ. Riêng Giải Câu Lạc Bộ không nhận các VĐV Giải Mở Rộng và Giải Xe Hãng.</p>
-						<p>-	Riêng Giải Mở Rông (Open) được kèm theo 01 Kĩ Thuật Viên chăm sóc xe vào cùng Khu vực Paddock, các Giải thi đấu khác chỉ có một mình VĐV được đi vào khu vực đường Paddock.</p>
-						<p><strong>-	Những VĐV đạt giải thưởng trên 10 triệu đồng sẽ phải đóng thuế thu nhập cá nhân 10% phần thu nhập sau khi trừ đi 10 triệu đồng. Tiền thuế sẽ được khấu trừ trực tiếp vào giải thưởng.<br> Ví dụ: Bạn đạt giải thưởng 12 triệu đồng thì thu nhập tính thuế là 2 triệu đồng. Số tiền đóng thuế là 200 ngàn đồng.</strong></p>
-
-						<h4>HỒ SƠ ĐĂNG KÝ:</h4>
-						<p>- Những VĐV được chọn sẽ được thông báo địa điểm để nộp hồ sơ đăng ký.</p>
-						<p>- Hồ sơ Đăng kí gồm: </p>
-						<ul>
-							<li>•	01 bản photo CMND   </li>
-							<li>•	01 bản photo bằng lái xe gắn máy </li>
-							<li>•	02 ảnh 3x4</li>
-							<li>•	Giấy khám sức khỏe hợp lệ</li>
-							<li>•	Email từ BTC xác nhận đăng kí thành công</li>
-						</ul>
-						<p>-	Thời gian nhận đăng kí tại Giải đua HCM: từ 13 tháng 07 đến hết ngày 17 tháng 07 năm 2018.</p>
-						<p>-	Thời gian thi đấu dự kiến ngày 04 tháng 08 năm 2018. Từ 8h đến 17h.</p>
-						<p>- Cách đăng kí tham gia:</p>
-						<ul>
-							<li>• VĐV chuyên nghiệp: đăng ký với Liên đoàn xe đạp – môtô thể thao Việt Nam. Mr. Nguyễn Công Sang (0949.292.292)</li>
-							<li>• VĐV không chuyên (đăng ký Giải Tự Do): đăng ký với trưởng nhóm CLB Exciter</li>
-							<li>• Hotline hỗ trợ đăng ký: Anh Vinh (0122.419.0082)</li>
-						</ul>
-						<p>- Địa điểm thi đấu: Nhà thi đấu Phú Thọ (Số 01 Lữ Gia, Phường 15, Q.11, TP. HCM).</p>
-						<p>- VĐV phải mang đầy đủ trang phục thi đấu theo Quy định của Liên đoàn xe đạp – môtô thể thao Việt Nam.Trên trang phục thi đấu không được gắn nhãn hiệu các hãng xe gắn máy hay dầu nhớt khác ngoài nhãn hiệu của Yamaha Motor Việt nam.</p>
-						<p>- Xe thi đấu bắt buộc phải có đầy đủ dàn áo, bửng, xe thi đấu không dán tem, không dán decal có nhãn hiệu của các hãng xe gắn máy hay dầu nhớt khác ngoài nhãn hiệu của Yamaha Motor Việt nam. </p>
-						<p>- Xe thi đấu bắt buộc tháo gương chiếu hậu, tháo chân chống cạnh  và chân chống đứng, biển số, tháo hoặc cố định gác chân cao, cần khởi động, dán băng keo che kín hoặc tháo bỏ đèn trước và sau.</p>
-
-						<h4>QUY ĐỊNH CHUNG:</h4>
-						<h5>Trang phục và đồ bảo hộ </h5>
-						<p>Trong quá trình tập luyện và thi đấu, các VĐV phải phải tự trang bị trang phục và bảo hộ như sau:</p>
-						<ul>
-							<li>•	Mũ bảo hiểm toàn đầu (Fullface) chứng nhận DOT – ECE- SNELL   </li>
-							<li>•	Bộ quần áo bằng da hay vật liệu bền bỉ chống ma sát khác </li>
-							<li>•	Găng tay bằng vật liệu bền.</li>
-							<li>•	Giầy phải cao trên mắt cá, làm bằng da hay vật liệu bền bỉ chống ma sát khác</li>
-							<li>•	Bảo hộ đầu gối.</li>
-							<li>•	Bảo vệ lưng. </li>
-							<li>•	Bảo vệ cùi chỏ và vai.</li>
-							<li>•	Bảo vệ tay và hông. </li>
-							<li>•	Tất cả đồ bảo hộ phải vừa vặn với các VĐV</li>
-						</ul>
-						<p>Tại giải đua Yamaha GP 2018, BTC cho mượn 20 bộ đồ bảo hộ, dành cho các VĐV đến sớm nhất làm thủ tục vào ngày thi đấu. </p>
-
-						<h5>Cách hành xử trong đường đua và sau khi đua</h5>
-						<ul>
-							<li>•	Đến đúng giờ quy định của BTC</li>
-							<li>•	Các VĐV không gây trở ngại nhau trên đường chạy.</li>
-							<li>•	Các VĐV (khi lái xe) phải liên tục giữ chân của mình trên gác chân, đặc biệt trong khi cua (Ngoại trừ: trong quá trình xuất phát và được hướng dẫn khi vào khu vực PIT)</li>
-							<li>•	Nghiêm cấm lái xe ngược chiều với đường chạy.</li>
-							<li>•	Nghiêm cấm việc tự ý dừng trên đường đua.</li>
-							<li>•	Nghiêm cấm sử dụng mọi chất kích thích trong quá trình tập luyện và thi đấu.</li>
-							<li>•	Mỗi lần chạy 8 đến 12 xe chạy liên tục 5-10 phút và phân chia theo cấp độ của mỗi nhóm VĐV. Riêng vòng chung kết có thể chạy từ 8 đến 12 vòng</li>
-							<li>•	VĐV vi phạm các tiêu chuẩn kỹ thuật về công suất động cơ theo quy định của BTC sẽ bị hủy kết quả thi đấu.</li>
-							<li>•	VĐV vi phạm các lỗi trên có thể bị BTC quyết định tước quyền tham gia thi đấu hoặc hủy bỏ kết quả thi đấu.</li>
-						</ul>
+				</li>
+				<li>
+					<div class="copy">
+						<div class="note">
+							<h5>Điều lệ giải</br> Vinfast Track Attact Cup</h5>
+							<p>điều lệ Vinfast Track Attack
+							</p>
+							<p>Xem Thêm<span class= arrow>>></span></p>
+						</div>
 					</div>
-				</div>
-			</div>
+				</li>
+					<li>
+					<div class="copy">
+						<div class="note">
+							<h5>Điều lệ giải</br> Motul Motor Racing Cup</br> hệ 300 - 400cc</h5>
+							<p>QUY ĐỊNH CHUNG HỆ 300-400cc
+							</p>
+							<p>Xem Thêm<span class= arrow>>></span></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="copy">
+						<div class="note">
+							<h5>Điều lệ giải</br> Motul Motor Racing Cup</br> hệ UB150</h5>
+							<p>QUY ĐỊNH CHUNG HỆ UB150
+							</p>
+							<p>Xem Thêm<span class= arrow>>></span></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="copy">
+						<div class="note">
+							<h5>Điều lệ giải</br>VR Go-Kart Cup</h5>
+							<p> điều lệ VR GOKART VÀ YÊU CẦU KỸ THUẬT
+							</p>
+							<p>Xem Thêm<span class= arrow>>></span></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="copy">
+						<div class="note">
+							<h5>Điều lệ giải</br> VR Go-Kart Cup</h5>
+							<p> điều lệ VR GOKART VÀ YÊU CẦU KỸ THUẬT
+							</p>
+							<p>Xem Thêm<span class= arrow>>></span></p>
+						</div>
+					</div>
+				</li>
+			
+				
+			</ul>
 		</div>
 	</div>
 </section>
