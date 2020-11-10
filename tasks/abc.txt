@@ -1,0 +1,4 @@
+Viet cau lenh sql update table [SCDMv14].[dbo].[tbl_eulegacyreturn_question] where que_answer có Chuyen emtpy -> empty (Update dua vao khoa chinh)
+
+
+[SCDMv14].[dbo].[tbl_eulegacyreturn_answer] Change red columns value to green value
