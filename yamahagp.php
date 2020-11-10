@@ -234,11 +234,6 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					</div>
 				</li>
 			</ul>
-<!--			<p class="race-note">-->
-<!--				- Đăng ký có thể đóng trước thời hạn khi nhận đủ số lượng đăng ký.<br/>-->
-<!--				- Nếu thông tin hợp lệ, bạn sẽ nhận được email xác nhận đăng ký. Vui lòng cung cấp chính xác thông tin của bạn<br/>-->
-<!--				- Hotline hỗ trợ đăng ký: Mr. Vinh (<span>0122</span>.419.<span>0082</span>)-->
-<!--			</p>-->
 		</div>
 	</div>
 </section>
@@ -330,211 +325,57 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 	</div>
 </section>
 
-<!-- <section id="register">
-	<div class="contain">
-		<h2><img src="yamahagp/images/title-register.png"></h2>
-		<ul class="race-league">
-			<li>
-				<h2>Giải mở rộng</h2>
-				<div class="copy">
-					<p>
-						Chỉ dành cho <strong>VĐV chuyên nghiệp</strong> (*)<br/>
-						<span>Vui lòng đăng ký qua Liên Đoàn.<br/> Liên hệ Mr. Nguyễn Công Sang (0949.292.292)</span>
-					</p>
-					<ol>
-						<li>
-							<img src="yamahagp/images/i1.png">
-							<p>Hệ xe số 150</p>
-						</li>
-					</ol>
-					<div class="note">
-						<h6>Sử dụng xe thí sinh</h6>
-						<p>- Động cơ tối đa 150cc</p>
-						<p>- Xe số do Yamaha Việt Nam sản xuất <br/>(Exciter, Jupiter, Sirius)</p>
-						<p><span>*VĐV Chuyên nghiệp: Vận động viên thuộc Liên Đoàn Xe Đạp – Môtô Thể thao Việt Nam quản lý </span></p>
-					</div>
-				</div>
-			</li>
-			<li>
-				<h2>Giải xe hãng</h2>
-				<div class="copy">
-					<p>
-						Dành cho <strong>VĐV chuyên nghiệp</strong> và <br/><strong>VĐV bán chuyên</strong> (**)
-					</p>
-
-					<ol>
-						<li>
-							<img src="yamahagp/images/i2.png">
-							<p>Exciter<br/>150i</p>
-						</li>
-						<li>
-							<img src="yamahagp/images/i3.png">
-							<p>Sirius<br/>115i</p>
-						</li>
-						<li>
-							<img src="yamahagp/images/i4.png">
-							<p>Janus<br/>125i</p>
-						</li>
-					</ol>
-					<div class="note">
-						<h6>Sử dụng xe hãng cung cấp</h6>
-						<p><span>*VĐV Bán chuyên: đã có kinh nghiệm tập huấn và tham gia thi đua xe, từng thi Revkhana</span></p>
-					</div>
-
-				</div>
-								<a href="javascript:;"  class="btn">đăng ký</a>
-							</li>
-			<li>
-				<h2>Giải tự do</h2>
-				<div class="copy">
-					<p>
-						Dành cho <br/>
-						<strong>VĐV không chuyên</strong> (***)
-					</p>
-
-					<ol>
-						<li>
-							<img src="yamahagp/images/i6.png">
-							<p>Xe <br/>tay ga</p>
-						</li>
-						<li>
-							<img src="yamahagp/images/i5.png">
-							<p>Xe số<br/>thông thường</p>
-						</li>
-					</ol>
-					<div class="note">
-						<h6>Sử dụng xe thí sinh <em>(do Yamaha sản xuất)</em></h6>
-						<p>- Xe tay ga (động cơ tối đa 150cc)</p>
-						<p>- Xe số (động cơ tối đa 150cc)</p>
-						<p><span>***Không chuyên: thí sinh có đam mê đua xe, chưa có kinh nghiệm và muốn thử sức.</span></p>
-					</div>
-				</div>
-								<a href="http://www.yamahagp.vn/dang-ky-giai-tu-do" class="btn">đăng ký</a>
-							</li>
-		</ul>
-		<p class="race-note">
-			- Thời gian đăng ký: 19 &oline; 22/05/2017<br/>
-			- Đăng ký có thể đóng trước thời hạn khi nhận đủ số lượng đăng ký<br/>
-			- Hotline hỗ trợ: Mr. Vinh (0938.051.851)
-		</p>
-	</div>
-</section> -->
-
-<style type="text/css">
-	.rule-thai.display .gallery-tabs.js-term--tabs li{
-		width: 100%!important;
-		
+<section id="term" class="display ">
+	<style>
+		.red_link {
+			font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+			color: #f00;
+			text-decoration: underline;
+			margin-top: 10px;
 		}
-	#term.rule-thai{
-		height: auto;
-	}
-	.rule-thai .race-league {
-		display: flex;
-    	flex-wrap: wrap;
-    	margin-left: -20px;
-    	justify-content: center;
-	}
-	.rule-thai .race-league li{
-		margin-bottom: 50px;
-		width: 30%;
-		background-size: contain;
-	}
-	.rule-thai .race-league .note h6 {
-		background-size: cover;
-		font-size: 17px;
-		padding-bottom: 6px;
-		text-transform: uppercase;
-		margin-bottom: 0px
-	}
-	.rule-thai .race-league .note p{
-		text-transform: lowercase;
-		padding: 15px 0
-	}
-	.rule-thai .race-league .note p::first-letter{
-		text-transform: uppercase
-	}
-	.rule-thai .race-league .note p .arrow {
-		color: white;
-		font-size: 16px;
-		margin-left: 10px
-	}
-	.rule-thai .race-league .note p a{ color: white }
-	.rule-thai.race-league > li .copy {
-    padding: 50px 15px 0 15px;
-}
-</style>
-<section id="term" class="rule-thai display ">
+	</style>
 	<div class="contain">
 		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="yamahagp/images/title-term.png"></h2>
 		<ul class="gallery-tabs js-term--tabs">
-			<li class="active">QUY ĐỊNH TRANG PHỤC VÀ XE THI ĐẤU</li>
+			<li class="active" style="width: 100%;">QUY ĐỊNH TRANG PHỤC VÀ XE THI ĐẤU</li>
 		</ul>
 		<div class="about-contain display">
 			<ul class="race-league">
 				<li>
 					<div class="copy">
-						<div class="note">
-							<h5>Điều lệ giải</br> Vinfast AutoGymkhana</br> CUP</h5>
-							<p>CÁC QUY ĐỊNH VÀ LỊCH TẬP LUYỆN</br>
-							TRONG QUÁ TRÌNH THAM GIA THI ĐẤU GIẢI</br>
-							(VIETNAM VR – ROLLER SPORTS 2020)
-							</p>
-							<p><a href="docs/GIAY_CAM_KET_VINFAST_AUTO_GYMKHANA.docx" target="_blank">Xem Thêm</a><span class= arrow>>></span></p>
-						</div>
+						<h5>Điều lệ giải Vinfast AutoGymkhana CUP</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải (VIETNAM VR – ROLLER SPORTS 2020)</p>
+						<p><a class="red_link" href="yamahagp/docs/GIAY_CAM_KET_VINFAST_AUTO_GYMKHANA.docx" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<div class="note">
-							<h5>Điều lệ giải</br> Vinfast Track Attact Cup</h5>
-							<p>điều lệ Vinfast Track Attack
-							</p>
-							<p>Xem Thêm<span class= arrow>>></span></p>
-						</div>
-					</div>
-				</li>
-					<li>
-					<div class="copy">
-						<div class="note">
-							<h5>Điều lệ giải</br> Motul Motor Racing Cup</br> hệ 300 - 400cc</h5>
-							<p>QUY ĐỊNH CHUNG HỆ 300-400cc
-							</p>
-							<p>Xem Thêm<span class= arrow>>></span></p>
-						</div>
+						<h5>Điều lệ giải Vinfast Track Attact Cup</h5>
+						<p>Các quy định, nội dung và thể thức thi đấu</p>
+						<p><a class="red_link" href="yamahagp/docs/Đieu_le_Vinfast_LuxA_Track_Attack_.docx" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<div class="note">
-							<h5>Điều lệ giải</br> Motul Motor Racing Cup</br> hệ UB150</h5>
-							<p>QUY ĐỊNH CHUNG HỆ UB150
-							</p>
-							<p>Xem Thêm<span class= arrow>>></span></p>
-						</div>
+						<h5>Điều lệ giải Motul Motor Racing Cup hệ 300 - 400cc</h5>
+						<p>Quy định chung hệ 300-400cc</p>
+						<p><a class="red_link" href="yamahagp/docs/QUY_ĐINH_CHUNG_He_300_400cc.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<div class="note">
-							<h5>Điều lệ giải</br>VR Go-Kart Cup</h5>
-							<p> điều lệ VR GOKART VÀ YÊU CẦU KỸ THUẬT
-							</p>
-							<p>Xem Thêm<span class= arrow>>></span></p>
-						</div>
+						<h5>Điều lệ giải Motul Motor Racing Cup hệ UB150</h5>
+						<p>Các quy định thi đấu và lịch tập luyện trong quá trình tham gia thi đấu giải VR Gokart và yêu cầu kỹ thuật</p>
+						<p><a class="red_link" href="yamahagp/docs/ĐIEU_LE_CAC_GIAI_GOKART_CUA_VMA_VA_YEU_CAU_ KY_ THUAT.docx" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<div class="note">
-							<h5>Điều lệ giải</br> VR Go-Kart Cup</h5>
-							<p> điều lệ VR GOKART VÀ YÊU CẦU KỸ THUẬT
-							</p>
-							<p>Xem Thêm<span class= arrow>>></span></p>
-						</div>
+						<h5>Điều lệ hệ UB150</h5>
+						<p>Các quy định chung hệ UB150</p>
+						<p><a class="red_link" href="yamahagp/docs/QUY_ĐINH_CHUNG_He_UB150.docx" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
-			
-				
 			</ul>
 		</div>
 	</div>
