@@ -32,17 +32,36 @@
     <meta http-equiv="cleartype" content="on">
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <link rel="stylesheet" href="yamahagp/main.css">
+	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+	<script>
+		function ShowAboutUs(){
+			swal({
+			  imageUrl: 'http://thuctaplamsang.edu.vn/yamahagp/images/BG%20about%20us.jpg',
+			  imageWidth: '100%',
+			  imageHeight: '100%',
+			  width: '1200px',
+			  imageAlt: 'BG About Us'
+			});
+			return false;
+		}
+		
+		function changeVid(youtubeUrl){
+			$('#video-div').attr('src', youtubeUrl);
+		  };
+	</script>
 </head>
 <body>
-
     <header>
       <div class="contain">
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
-            <li><a href="#" class="nav-left" role="main"><span>trang chủ</span></a></li>
+            <li><a href="#" onclick="return ShowAboutUs();" class="nav-left" role="main"><span>giới thiệu</span></a></li>
             <li><a href="#sukien" class="nav-left" role="sukien"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
-            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = 'https://www.facebook.com/vietnamracingacademy';"><a href="#"></a></li>
+            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
             <li><a href="#news" class="nav-right" role="news"><span>tin tức</span></a></li>
             <li><a href="#gallery" class="nav-right" role="gallery"><span>HÌNH ẢNH <br>&amp; KẾT QUẢ</span></a></li>
@@ -102,6 +121,7 @@
 	</div>
 
 	<img src="yamahagp/images/bg.jpg" alt="" class="bg_pc">
+	
 	<img src="yamahagp/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
 		<img src="yamahagp/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
@@ -127,7 +147,49 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			</div>
 			<div class="video">
 				<div class="ytb">
-					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe id="video-div" width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="video-multiple-items" >
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_nature_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/K2tUK44wFwM')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/bY6jLt3owBQ')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/4dMNOSqGLy4')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/g6fvOcAcRmc')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/cFhKI5UJPBo')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_nature_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/K2tUK44wFwM')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/bY6jLt3owBQ')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/4dMNOSqGLy4')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/g6fvOcAcRmc')">
+						</div>
+						<div>
+						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/cFhKI5UJPBo')">
+						</div>
+				    </div>
 				</div>
 			</div>
 		</div>
@@ -139,8 +201,6 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">hạng mục thi đấu</li>
 		</ul>
-		<link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script>
 			//https://sweetalert.js.org/guides/
 			function ShowExpiredRegistryMessage(){
@@ -215,7 +275,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						</div>
 						<ol>
 							<li>
-								<img width="200" height="200" style="width: 200px; height: 200px;" src="yamahagp/images/otologo.png">
+								<img width="200" height="200" style="width: 200px; height: 160px;" src="yamahagp/images/otologo.png">
 							</li>
 						</ol>
 					</div>
@@ -380,9 +440,9 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 				</li>
 				<li>
 					<div class="copy">
-						<h5>Điều lệ hệ UB150</h5>
-						<p>Các quy định chung hệ UB150</p>
-						<p><a class="red_link" href="yamahagp/docs/QUY_ĐINH_CHUNG_He_UB150.pdf" target="_blank">Xem Thêm >></a></p>
+						<h5>Điều lệ GIẢI VR GO-KART CUP</h5>
+						<p>Các quy định thi đấu và lịch tập luyện trong quá trình tham gia thi đấu giải VR GOKART và yêu cầu kỹ thuật</p>
+						<p><a class="red_link" href="yamahagp/docs/ĐIỀU LỆ CÁC GIẢI GOKART CỦA VMA VÀ YÊU CẦU KỸ THUẬT.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 			</ul>
@@ -554,22 +614,15 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<p>xem theo năm</p>
 					<div class="select_filter">
 						<select name="year">
-                            <option value="2018">2018</option>
-							<option value="2017">2017</option>
-							<option value="2016">2016</option>
+                            <option value="2020">2020</option>
 						</select>
 					</div>
 				</div>
 				<div class="luc_province">
-					<p>giải đua tại</p>
+					<p>chương trình</p>
 					<div class="select_filter">
-<!--						<select name="province">-->
-<!--							<option value="cantho">Cần thơ</option>-->
-<!--							<option value="danang" >Đà Nẵng</option>-->
-<!--							<option value="hochiminh">Hồ Chí Minh</option>-->
-<!--							<option value="binhduong">Bình Dương</option>-->
-<!--						</select>-->
-                        <select name="province"><option value="binhduong">Bình Dương</option></select>
+                        <select name="province"><option value="hopbao_vietnam_racing">Họp Báo Kỹ Thuật Ngày Hội Đua Xe Vietnam Racing Festival 2020</option></select>
+						<select name="province"><option value="phat-dong-phong-trao-dua-xe-the-thao-vietnam">Phát Động Phong Trào Đua Xe Thể Thao Việt Nam</option></select>
 					</div>
 				</div>
 			</div>
@@ -601,33 +654,6 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
     <div class="paging" style="visibility: visible;">
 
-        
-
-        
-        
-        <a href="javascript:;" class="active">1</a>
-        
-        
-        
-        <a href="javascript:;">2</a>
-        
-        
-        
-        <a href="javascript:;">3</a>
-        
-        
-        
-        <a href="javascript:;">4</a>
-        
-        
-        
-        <a href="javascript:;">5</a>
-        
-        
-
-        
-        <a href="javascript:;" class="btn-next" style="">2</a>
-        
     </div>
     
 
@@ -997,7 +1023,55 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 <!--<![endif]-->
 
 
+<!--Call me block-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+.call-me {
+	font-size: 72px;
+	color: #67b868;
+	margin: 0px 12px;
+	adding: 0px;
+	position: fixed;
+	z-index: 2147483644;
+	bottom: 24px;
+	top: auto;
+	height: 60px;
+	width: 60px;
+	border-radius: 29px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px;
+	background: none;
+	display: block;
+	right: 12px;
+	padding-bottom: 130px;
+}
+</style>
+<a href="tel:0909337777" title="Tel: 0909337777"><i class="material-icons call-me shak-icon">phone</i></a>
 
 
+<!-- Load Facebook Messenger -->
+<!-- https://wiki.matbao.net/kb/huong-dan-tich-hop-facebook-chat-vao-website-ma-khong-can-dung-plugin/ -->
+  <div id="fb-root"></div>
+  <script>
+	window.fbAsyncInit = function() {
+	  FB.init({
+		xfbml            : true,
+		version          : 'v9.0'
+	  });
+	};
 
+	(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+	fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat shak-icon"
+	attribution=setup_tool
+	page_id="104362934697822"
+	theme_color="#67b868">
+  </div>
+	  
 </body></html>
