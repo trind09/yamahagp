@@ -58,7 +58,7 @@
       <div class="contain">
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
-            <li><a href="#" onclick="return ShowAboutUs();" class="nav-left" role="main"><span>giới thiệu</span></a></li>
+            <li><a onclick="return ShowAboutUs();" class="nav-left" role="main" style="cursor: pointer;"><span>giới thiệu</span></a></li>
             <li><a href="#sukien" class="nav-left" role="sukien"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
             <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#"></a></li>
@@ -132,6 +132,43 @@
 
 
 <section id="about" class="display">
+	<style type="text/css">
+		.about-contain.display {
+			display: flex;
+			height: 92vh;	
+		}
+		.about-contain.display .video {
+			float: inherit;	
+			margin-left: 50px
+		}
+    	#about .slick-prev {
+	    width: 47px;
+	    height: 38px;
+	    top: 62%;
+	    left: -40px;
+		}
+		#about .slick-next {
+	    width: 47px;
+	    height: 38px;
+	    top: 62%;
+	    right: -49px;
+		}
+    	#about .video {
+    		width: 	600px
+    	}
+		.video-multiple-items{
+			display: flex;
+		}
+		.video-img-t{
+			width: 200px;
+    		height: 100px;
+    		margin-left:10px;
+    		margin-top: 10px
+		}
+		.video-img-t img{
+			height: 100%;
+		}
+	</style>
 	<div class="contain">
 		<h2><img src="yamahagp/images/a-title.png"></h2>
 
@@ -149,43 +186,35 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 				<div class="ytb">
 					<iframe id="video-div" width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<div class="video-multiple-items" >
-						<div>
-						  <img src="https://www.w3schools.com/w3css/img_nature_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/K2tUK44wFwM')">
+						<div class="video-img-t">
+						  <img src="https://i9.ytimg.com/vi_webp/Pbjhj2VnqmE/mqdefault.webp?time=1605142200000&sqp=CLiNsv0F&rs=AOn4CLAQwj88UTI6tROCyC0WMlGZvti_9w"
+						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/Pbjhj2VnqmE')">
 						</div>
-						<div>
-						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/bY6jLt3owBQ')">
-						</div>
-						<div>
-						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/4dMNOSqGLy4')">
-						</div>
-						<div>
+						<div class="video-img-t">
 						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/g6fvOcAcRmc')">
 						</div>
-						<div>
+						<div class="video-img-t">
 						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/cFhKI5UJPBo')">
 						</div>
-						<div>
+						<div class="video-img-t">
 						  <img src="https://www.w3schools.com/w3css/img_nature_wide.jpg"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/K2tUK44wFwM')">
 						</div>
-						<div>
+						<div class="video-img-t">
 						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/bY6jLt3owBQ')">
 						</div>
-						<div>
+						<div class="video-img-t">
 						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/4dMNOSqGLy4')">
 						</div>
-						<div>
+						<div class="video-img-t">
 						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/g6fvOcAcRmc')">
 						</div>
-						<div>
+						<div class="video-img-t">
 						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/cFhKI5UJPBo')">
 						</div>

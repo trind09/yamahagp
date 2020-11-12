@@ -418,7 +418,7 @@ var YMH = {
 	
 	$('.video-multiple-items').slick({
       arrows: true,
-      dots: true,
+      dots: false,
       infinite: false,
       slidesToShow: 3,
       slidesToScroll: 3,
