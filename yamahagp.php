@@ -50,7 +50,7 @@
 		
 		function changeVid(youtubeUrl){
 			$('#video-div').attr('src', youtubeUrl);
-		  };
+		};
 	</script>
 </head>
 <body>
@@ -85,6 +85,40 @@
 	var isMobile = '0';
 </script>
 <section id="main" style="visibility: inherit; opacity: 1;">
+	<style type="text/css">
+	@media (max-width: 920px){
+	.main_copy .text {
+	    width: 79%;
+	    margin: -6% auto;
+		}
+	.btn1 {
+	    width: 231px;
+	    height: 54px;
+	    line-height: 50px;
+	    font-size: 18px
+		}
+	.btn2{
+		margin-top:41%!important	 	
+		}
+	}
+	
+	@media (max-width: 767px){
+	.main_copy .text {
+	    width: 79%;
+	    margin: -9% auto;
+			}
+	.btn1 {
+	    width: 141px;
+	    height: 31px;
+	    line-height: 30px;
+	   	font-size: 10px;
+	   	margin-top: 18px!important;
+	}
+	.btn2{
+		margin-top:44%!important	 	
+		}
+	}
+	</style>
 	<div class="contain">
 		<div class="copy" style="height: 45vh;">
 			<h2 style="visibility: inherit; opacity: 1;"><img src="yamahagp/images/h-title.png"></h2>
@@ -125,48 +159,86 @@
 	<img src="yamahagp/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
 		<img src="yamahagp/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-		<a href="#sukien" class="btn js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ NGAY</a><br/>
-		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a> 
+		<a href="#sukien" class="btn btn1 btn2 js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ NGAY</a><br/>
+		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1 js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a> 
 	</div>
 </section>
 
 
-<section id="about" class="display">
+<section id="about" class="display about-video">
 	<style type="text/css">
-		.about-contain.display {
+		#about.about-video {
+			margin-top: -10vh;
+		}
+		#about .ytb {
+		    height: 420px;
+		}
+		.video-img-t {
+			width: 120px!important;
+		}
+		#about.about-video .ytb {
 			display: flex;
-			height: 92vh;	
+    		flex-direction: column;
 		}
-		.about-contain.display .video {
-			float: inherit;	
-			margin-left: 50px
+		.video-multiple-items {
+			height: 20%
 		}
-    	#about .slick-prev {
-	    width: 47px;
-	    height: 38px;
-	    top: 62%;
-	    left: -40px;
+		.video-img-t img {
+			height: 100%
 		}
-		#about .slick-next {
-	    width: 47px;
-	    height: 38px;
-	    top: 62%;
-	    right: -49px;
+		#about.about-video .slick-next {
+		    width: 21px;
+		    height: 16px;
+		    top: 94%;
+		    right: -10px;
+		    z-index: 1000
 		}
-    	#about .video {
-    		width: 	600px
-    	}
+		#about.about-video .slick-prev {
+		    width: 21px;
+		    height: 16px;
+		    top: 94%;
+		    left: -4px;
+		    z-index: 1000
+		}
 		.video-multiple-items{
-			display: flex;
+			margin-left: -10px
 		}
-		.video-img-t{
-			width: 200px;
-    		height: 100px;
+		.video-img-t {
+			margin-top: 10px;
     		margin-left:10px;
-    		margin-top: 10px
 		}
-		.video-img-t img{
-			height: 100%;
+		@media (max-width: 767px){
+			#about .ytb {
+				height: 348px
+			}
+			#about.about-video .slick-prev {
+		    width: 21px;
+		    height: 16px;
+		    top: 100%;
+		    left: 0px;
+			}
+			#about.about-video .slick-next {
+		    width: 21px;
+		    height: 16px;
+		    top: 100%;
+		    right:-9px;
+			}
+		}
+		@media screen and (max-width: 1024px){
+			#about.about-video {
+		    margin-top: -5vh;
+		    min-height: 122vh;
+			}
+		}
+		@media screen and (max-width: 767px){
+			#about.about-video {
+		    margin-top: -6vh;
+		  }  
+		}
+		@media (max-width: 567px){
+			#about.about-video {
+    		margin-top: -5vh;
+			}
 		}
 	</style>
 	<div class="contain">
@@ -187,7 +259,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<iframe id="video-div" width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<div class="video-multiple-items" >
 						<div class="video-img-t">
-						  <img src="https://i9.ytimg.com/vi_webp/Pbjhj2VnqmE/mqdefault.webp?time=1605142200000&sqp=CLiNsv0F&rs=AOn4CLAQwj88UTI6tROCyC0WMlGZvti_9w"
+						  <img src="yamahagp/images/abdefaeg.png"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/Pbjhj2VnqmE')">
 						</div>
 						<div class="video-img-t">
@@ -275,7 +347,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						</div>
 						<ol>
 							<li>
-								<img width="200" height="200" style="width: 200px; height: 200px; margin-top: -60px;" src="yamahagp/images/motorlogo.png">
+								<img width="200" height="123" style="width: 200px;height: 123px;margin-top: -20px;" src="yamahagp/images/motorlogo.png">
 							</li>
 						</ol>
 					</div>
@@ -505,101 +577,11 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 		   </div>
 		   <div class="js-news--detail">
 			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="0"><img src="yamahagp/images/b4a83c6c43c5ae9ce97298bb140b0e73.jpg"></a></p>
+				 <p class="thumb"><a href="yamahagp/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0"><img src="yamahagp/images/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.jpg"></a></p>
 				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="0">Nhìn lại những điểm nổi bật của giải đua xe Yamaha GP 2018 tại SVĐ Phú Thọ</a></h4>
-					<p>Giải đua xe Yamaha GP 2018 lần này là một trong chuỗi sự kiện thể dục - thể thao nhân dịp kỷ niệm 50 năm cuộc tổng tiến công và nổi dây xuân Mậu Thân 1968, kỷ niệm 88 năm ngày thành lập đảng công sản Việt Nam và chào mừng tết nguyên đán Mậu Tuất 2018 tại Tp.Hồ Chí Minh.</p>
-					<a href="#" class="viewmore" tabindex="0">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/2cba0279de8960dc7db62a2b707974f0.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Tranh tài nảy lửa ở chặng đua Yamaha GP 2017 tại Đà Nẵng</a></h4>
-					<p>3 dòng xe Exciter, Janus và Sirius được sử dụng cho giải đua Yamaha GP 2017. Chặng đua mới nhất diễn ra tại thành phố Đà Nẵng.</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/99b5ebb3aa5b157e728ff2c8e44966eb.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Yamaha GP 2017 đến Đà Nẵng – Mãn nhãn người hâm mộ</a></h4>
-					<p>Đối với những “tín đồ” đam mê bộ môn thể thao đua xe tốc độ thì khó lòng bỏ qua giải đua xe Yamaha GP tại Việt Nam do Yamaha Motor Việt Nam tổ chức và đây là lần đầu tiên giải đua xe này đến với khán giả Đà Nẵng.</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/a94aa67317c6b20311a7c707528ab30f.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Đà Nẵng 2017] Yamaha GP 2017 chặng 2 chính thức diễn ra tại Đà Nẵng</a></h4>
-					<p> Giải đua xe mô tô chuyên nghiệp Yamaha GP 2017 tiếp tục chặng thi đấu thứ 2 tại thành phố Đà Nẵng</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/b3d1dd58010bdb81354f6d2ed775c5dd.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Giải đua xe Yamaha GP 2017 lần đầu đến Cần Thơ</a></h4>
-					<p>Yamaha Motor Việt Nam đã khuấy động TP. Cần Thơ bằng giải đua xe Yamaha GP 2017 mùa thứ 2, quy tụ hàng trăm tay đua từ khắp các tỉnh thành cùng tranh tài trong ngày 28/5 vừa qua.</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/dc16d9107d7631f147377f380c184eb1.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Khán giả Cần Thơ thích thú với giải đua xe Yamaha GP 2017</a></h4>
-					<p>Ngày 28/5, sự kiện đua xe Yamaha GP 2017 đã diễn ra tại Quảng trường Tây Nam Bộ, đường Mai Chí Thọ, P. Phú Thứ, Q. Cái Răng, Tp. Cần Thơ. Đây là sự kiện mở màn mùa giải đua xe Yamaha GP 2017 do Công ty TNHH Yamaha Motor Việt Nam tổ chức.</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/5c1822bd501639594590d39b9b305dca.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Cần Thơ 2017] Nam nữ đua chung trong giải đua Yamaha GP ở Cần Thơ</a></h4>
-					<p> Bốn cô gái cùng tranh tài cùng các vận động viên nam trong cuộc đua xe Yamaha GP tại Cần Thơ. Tuy nhiên phần thắng nghiêng về những tay đua nam giàu kinh nghiệm.</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/fafe5601b49a09c91f56420b7cbbdbc8.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Toàn cảnh giải đua xe chuyên nghiệp Yamaha GP Racing</a></h4>
-					<p>Cuối tuần qua, giới trẻ đam mê môn thể thao xe đua sốt rần rần khi check in ở Khu Du Lịch Đại Nam – Bình Dương cùng hàng trăm tay đua chuyên nghiệp lẫn bán chuyên tại giải đua xe Yamaha GP Racing Việt Nam.</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/8b1251f95c4b7cffe197f2fd22304306.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Yamaha GP - Trải nghiệm ngắm nhìn và khám phá đường đua mini GP</a></h4>
-					<p>Là một người yêu thích bộ môn đua xe, không ít lần mình đã có cơ hội để đi đến xem đua xe máy tại các sân đua ở Việt Nam</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="#" tabindex="-1"><img src="yamahagp/images/744b76bd40bca12ecc499a2b057a6a9b.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="javascript:;" tabindex="-1">[Bình Dương 2016] Yamaha GP 2016 - thêm một làn gió mới cho đua xe mô tô ở Việt Nam</a></h4>
-					<p>Ngày  06/11/2016, tại KDL Đại Nam, Bình Dương, Yamaha Việt Nam đã tổ chức Giải đua xe Yamaha GP 2016. Là kẻ đi sau Suzuki và Honda nên Yamaha đã tìm ra một hướng đi mới hơn và kết quả là họ đã thành công khi mang thêm một làn gió mới cho đua xe Việt Nam.</p>
-					<a href="#" class="viewmore" tabindex="-1">Xem chi tiết</a>
+					<h4><a href="yamahagp/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0">Thông tin chương trình VIETNAM RACING FESTIAL 2020</a></h4>
+					<p>Ngày hội đua xe thể thao chuyên nghiệp do Vietnam Racing Academy - VR tổ chức nhầm phát động phong trào RACE TO MIỀN TRUNG. Chương trình với sự đồng hành của hai thương hiệu lớn VINFAST và MOTUL. Ngày hội đua xe cũng là lễ hội âm nhạc EDM hoành tráng - WHERE’S YOUR LIMIT? với sự góp mặt của nhiều ca sĩ - DJ nổi tiếng và chương trình MOTUL STUNT SHOW 2020.</p>
+					<a href="yamahagp/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
 				 </div>
 			  </div>
 		   </div>
@@ -608,434 +590,88 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 </section>
 
 <section id="gallery" class="display">
-	<div class="contain">
-		<ul class="gallery-list js-type" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-			<li class="active" role="type-photo">HÌNH ẢNH <br>SỰ KIỆN</li>
-			<li role="result" class="">KẾT QUẢ <br>THI ĐẤU</li>
-		</ul>
-		<!-- <div class="gallery-filter">
-			<div>
-				<p>xem theo năm</p>
-				<div class="select_filter">
-					<select name="year">
-						<option value="2016">2016</option>
-						<option value="2017">2017</option>
-					</select>
-				</div>
-			</div>
-			<div class="luc_province">
-				<p>giải đua tại</p>
-				<div class="select_filter">
-					<select name="province">
-						<option value="cantho">Cần thơ</option>
-						<option value="danang" >Đà Nẵng</option>
-						<option value="hochiminh">Hồ Chí Minh</option>
-						<option value="binhduong">Bình Dương</option>
-					</select>
-				</div>
-			</div>
-		</div> -->
-
-
-		<div class="gallery-item display" id="type-photo">
-			<div class="gallery-filter" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-				<div>
-					<p>xem theo năm</p>
-					<div class="select_filter">
-						<select name="year">
-                            <option value="2020">2020</option>
-						</select>
-					</div>
-				</div>
-				<div class="luc_province">
-					<p>chương trình</p>
-					<div class="select_filter">
-                        <select name="province"><option value="hopbao_vietnam_racing">Họp Báo Kỹ Thuật Ngày Hội Đua Xe Vietnam Racing Festival 2020</option></select>
-						<select name="province"><option value="phat-dong-phong-trao-dua-xe-the-thao-vietnam">Phát Động Phong Trào Đua Xe Thể Thao Việt Nam</option></select>
-					</div>
-				</div>
-			</div>
-
-			<div class="gallery-item-wrap">
-<div class="gallery-photo js-photo">
-	
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_2669.jpg"></div>
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_2729.jpg"></div>
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_2394.jpg"></div>
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_2445.jpg"></div>
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_2688.jpg"></div>
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_1797.jpg"></div>
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_2168.jpg"></div>
-	
-		<div class="js-img"><img src="yamahagp/images/PHU_2843.jpg"></div>
-	
-	
-</div>
-<span class="btn-prev" style="display: none;"></span>
-<span class="btn-next"></span>
-
-    <div class="paging" style="visibility: visible;">
-
-    </div>
-    
-
-</div>			
-
-		</div>
-
-		<div class="gallery-item" id="type-result">
-			<div class="gallery-filter" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-				<div>
-					<p>xem theo năm</p>
-					<div class="select_filter">
-						<select name="winner_year">
-							<option value="2018">2018</option>
-							<option value="2017">2017</option>
-							<option value="2016">2016</option>
-						</select>
-					</div>
-				</div>
-				<div class="luc_province_winner">
-					<p>giải đua tại</p>
-					<div class="select_filter">
-<!--						<select name="winner_province">-->
-<!--							<option value="92">Cần thơ</option>-->
-<!--							<option value="48" >Đà Nẵng</option>-->
-<!--							<option value="79">Hồ Chí Minh</option>-->
-<!--							<option value="74">Bình Dương</option>-->
-<!--						</select>-->
-                        <select name="winner_province"><option value="79">TP.HCM 02/18</option></select>
-					</div>
-				</div>
-			</div>
-			<ul class="gallery-tabs luc-tabs-giai-xe">
-				<li data-id="3">giải mở rộng</li>
-				<li class="active" data-id="1">giải xe hãng</li>
-<!--				<li data-id="2">giải tự do</li>-->
-                <li data-id="2">giải câu lạc bộ</li>
-			</ul>
-
-			<div class="gallery-item-filter luc-gallery-item-filter">
-				<p class="active" data-id="1">Exciter 150i</p>
-				<p data-id="2">Sirius 115i</p>
-				<p data-id="3">Janus 125i</p>
-				<p data-id="10">Janus 125i Nữ</p>
-			</div>
-			
-			<ul class="gallery-winner">
-
-
-<li>
-<div>
-	<p class="thumb">
-		<span><img src="yamahagp/images/fcbec3b5697d693fb1434010911b8c1e.jpg"></span>
-	</p>
-	<h5>ĐOÀN TRƯỜNG LỢI</h5>
-	
-		<h6></h6>
-	
-	<span>2</span>
-</div>
-</li>
-
-<li>
-<div>
-	<p class="thumb">
-		<span><img src="yamahagp/images/82862a613d2e282ca7e3cfbf0dd2da7d.jpg"></span>
-	</p>
-	<h5>NGUYỄN NGỌC HỒ</h5>
-	
-		<h6></h6>
-	
-	<span>1</span>
-</div>
-</li>
-
-<li>
-<div>
-	<p class="thumb">
-		<span><img src="yamahagp/images/2ae297ce6effa01c46cc43095d517659.jpg"></span>
-	</p>
-	<h5>NGUYỄN MINH CƯƠNG</h5>
-	
-		<h6></h6>
-	
-	<span>3</span>
-</div>
-</li>
-
-
-
-</ul>
-
-		</div>
+   <style type="text/css">
+      .gallery-list li {
+      color: #6FDA2B;
+      }
+      .gallery-filter .select_filter select {
+      font-size: 13px
+      }
+      .gallery-filter .luc_province .select_filter select {
+      font-size: 10px
+      }
+      .gallery-filter > div:last-child {
+      padding-left: 20px;
+      width: 34%;
+      }
+      .gallery-filter .luc_province  .select_filter {
+      background: url(images/ar2.png) no-repeat 80% center;
+      }
+	  .gallery-list1 li:after {
+			display: 	none !important; 
+		}
+		
+      @media (max-width: 767px){
+      .gallery-filter .select_filter select {
+      font-size: 10px
+      }
+      .gallery-filter .luc_province .select_filter select {
+      font-size: 8px
+      }
+      }
+   </style>
+   <div class="contain">
+      <ul class="gallery-list js-type gallery-list1" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+         <li class="active" role="type-photo" style="width: 100%;">HÌNH ẢNH & SỰ KIỆN</li>
+      </ul>
+      <div class="gallery-item display" id="type-photo">
+         <div class="gallery-filter" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+            <div>
+               <p>xem theo năm</p>
+               <div class="select_filter">
+                  <select name="year">
+                     <option value="2020">2020</option>
+                  </select>
+               </div>
+            </div>
+            <div class="luc_province">
+               <p>chương trình</p>
+               <div class="select_filter">
+                  <select name="province">
+                     <option value="hopbao_vietnam_racing">Họp Báo Kỹ Thuật Ngày Hội Đua Xe Vietnam Racing Festival 2020</option>
+                  </select>
+                  <select name="province">
+                     <option value="phat-dong-phong-trao-dua-xe-the-thao-vietnam">Phát Động Phong Trào Đua Xe Thể Thao Việt Nam</option>
+                  </select>
+               </div>
+            </div>
+         </div>
+         <div class="gallery-item-wrap">
+            <div class="gallery-photo js-photo">
+               <div class="js-img"><img src="yamahagp/images/PHU_2669.jpg"></div>
+               <div class="js-img"><img src="yamahagp/images/PHU_2729.jpg"></div>
+               <div class="js-img"><img src="yamahagp/images/PHU_2394.jpg"></div>
+               <div class="js-img"><img src="yamahagp/images/PHU_2445.jpg"></div>
+               <div class="js-img"><img src="yamahagp/images/PHU_2688.jpg"></div>
+               <div class="js-img"><img src="yamahagp/images/PHU_1797.jpg"></div>
+               <div class="js-img"><img src="yamahagp/images/PHU_2168.jpg"></div>
+               <div class="js-img"><img src="yamahagp/images/PHU_2843.jpg"></div>
+            </div>
+            <span class="btn-prev" style="display: none;"></span>
+            <span class="btn-next"></span>
+            <div class="paging" style="visibility: visible;">
+            </div>
+         </div>
+      </div>
 	</div>
 	<footer>
-		<p class="socials" style="margin-top: 20px;">
-			<a href="https://www.facebook.com/vietnamracingacademy" class="fb" target="_blank"></a> 
-			<a href="#" class="ytb" target="_blank"></a>
-		</p>
-		<p class="copyright">© 2020 Copyright <a href="https://www.facebook.com/vietnamracingacademy" target="_blank">Vietnam Racing Academy</a>. All rights reserved.</p>
+      <p class="socials" style="margin-top: 20px;">
+         <a href="https://www.facebook.com/vietnamracingacademy" class="fb" target="_blank"></a> 
+         <a href="#" class="ytb" target="_blank"></a>
+      </p>
+      <p class="copyright">© 2020 Copyright <a href="https://www.facebook.com/vietnamracingacademy" target="_blank">Vietnam Racing Academy</a>. All rights reserved.</p>
 	</footer>
 </section>
-
-
-<div class="popup-mobile">
-  <p>“Vui lòng đăng ký thi đấu giải Yamaha GP 2017 tại <br>Cần Thơ bằng máy tính”</p>
-</div>  
-<div class="alert">
-	<div class="copy">
-    <div>
-	   	<p>Thông báo</p>
-    </div>
-    <span class="btn-close js-close"></span>
-	</div>
-	<span class="ovl"></span>
-</div>
-
-<div class="contestant-popup">
-  <div class="contestant-detail">
-    <h3><img src="yamahagp/images/ts-title.png"></h3>
-    <h4>Tham gia giải <span>Cần Thơ</span> ngày <span>28/5/2017</span></h4>
-    <ul class="gallery-tabs luc-biker-giai-xe">
-      <li class="active" data-id="morong">giải mở rộng</li>
-      <li data-id="xehang">giải xe hãng</li>
-      <li data-id="tudo">giải tự do</li>
-    </ul>
-
-    <div class="gallery-item-filter luc-biker-he-xe">
-      <p class="active" data-id="at">Xe tay ga</p>
-      <p data-id="mt">Xe số thông thường</p>
-    </div>
-
-    <div class="cld-h scrolled"><div class="g-scrollbar" style="height: 0px;"><div class="g-track" style="height: 0px;"><div class="g-thumb"><div class="g-end"></div></div></div></div><div class="g-viewport"><div class="g-overview" style="top: 0px;">
-      <table cellspacing="0" cellpadding="0" border="0" class="cld-item luc-cld-item">
-        <tbody>
-
-<tr>
-        <th>STT</th>
-        <th>họ tên</th>
-        <th>năm sinh</th>
-        <th>tỉnh/ tp</th>
-      </tr>
-
-	<tr>
-        <td>1</td>
-        <td>BUI TAN DAT</td>
-        <td>24-12-1996</td>
-        <td>Cần Thơ</td>
-      </tr>
-
-	<tr>
-        <td>2</td>
-        <td>NGUYEN TIEN DAT</td>
-        <td>02-01-1999</td>
-        <td>Đồng Nai</td>
-      </tr>
-
-	<tr>
-        <td>3</td>
-        <td>DO THI DU</td>
-        <td>13-12-1994</td>
-        <td>Cà Mau</td>
-      </tr>
-
-	<tr>
-        <td>4</td>
-        <td>VU MINH DUC</td>
-        <td>20-03-1988</td>
-        <td>Hà Nội</td>
-      </tr>
-
-	<tr>
-        <td>5</td>
-        <td>TRAN TRI HAI</td>
-        <td>02-04-1997</td>
-        <td>Hậu Giang</td>
-      </tr>
-
-	<tr>
-        <td>6</td>
-        <td>NGO CANH HAU</td>
-        <td>22-06-1989</td>
-        <td>Bạc Liêu</td>
-      </tr>
-
-	<tr>
-        <td>7</td>
-        <td>TRAN PHAM XUAN HIEU</td>
-        <td>09-11-1995</td>
-        <td>Cần Thơ</td>
-      </tr>
-
-	<tr>
-        <td>8</td>
-        <td>PHAM MINH LOC</td>
-        <td>03-02-1984</td>
-        <td>Hồ Chí Minh</td>
-      </tr>
-
-	<tr>
-        <td>9</td>
-        <td>VU HOANG NAM</td>
-        <td>12-05-1990</td>
-        <td>Hồ Chí Minh</td>
-      </tr>
-
-	<tr>
-        <td>10</td>
-        <td>TRAN VAN TOAN</td>
-        <td>01-11-1992</td>
-        <td>Cần Thơ</td>
-      </tr>
-
-	<tr>
-        <td>11</td>
-        <td>NGUYEN VAN KHAN</td>
-        <td>20-09-1994</td>
-        <td>Bình Dương</td>
-      </tr>
-
-	<tr>
-        <td>12</td>
-        <td>NGO QUANG NHUT</td>
-        <td>21-10-1990</td>
-        <td>Cần Thơ</td>
-      </tr>
-
-
-</tbody></table>
-    </div></div></div>
-
-    <span class="btn js-close--ctt">đóng</span>
-    <span class="bg"></span>
-  </div>
-
-  <span class="ovl"></span>
-</div>
-
-
-<div class="gallery-detail">
-    <span class="btn-prev detail-image-prev"></span>
-    <div class="contain">
-      <img src="yamahagp/images/bg-h-min.jpg">
-    </div>
-    <span class="btn-next detail-image-next"></span>
-    <span class="btn-close js-close-glr"></span>
-    <p class="ovl"></p>
-  </div> 
-
-
-  <div class="news-detail">
-    <div class="contain">
-      <h3 class="title">Công bố các hạng xe tham gia Yahama GP 2017</h3>
-      <p class="time">Cập nhật ngày 18- 5- 2017</p>
-		<div class="luc_content">
-	      <p>Consectetur adipiscing elit. Duis vel erat iaculis, blandit mauris vel, tincidunt felis. Praesent vulputate sapien vel velit lacinia congue. Sed in ex at mauris lobortis fermentum. Proin imperdiet, magna non tincidunt sagittis, nisi felis tempor ex, vel convallis lorem augue ac leo.</p>
-	      <p><img src="yamahagp/images/bg-h-min.jpg"></p>
-	      <p>Consectetur adipiscing elit. Duis vel erat iaculis, blandit mauris vel, tincidunt felis. Praesent vulputate sapien vel velit lacinia congue. Sed in ex at mauris lobortis fermentum. Proin imperdiet, magna non tincidunt sagittis, nisi felis tempor ex, vel convallis lorem augue ac leo.</p>
-	      <p>Consectetur adipiscing elit. Duis vel erat iaculis, blandit mauris vel, tincidunt felis. Praesent vulputate sapien vel velit lacinia congue. Sed in ex at mauris lobortis fermentum. Proin imperdiet, magna non tincidunt sagittis, nisi felis tempor ex, vel convallis lorem augue ac leo.</p>
-	      <p><img src="yamahagp/images/bg-h-min.jpg"></p>
-	      <p>Consectetur adipiscing elit. Duis vel erat iaculis, blandit mauris vel, tincidunt felis. Praesent vulputate sapien vel velit lacinia congue. Sed in ex at mauris lobortis fermentum. Proin imperdiet, magna non tincidunt sagittis, nisi felis tempor ex, vel convallis lorem augue ac leo.</p>
-	    </div>
-    </div>
-    <span class="btn-close js-close-news"></span>
-  </div> 
-	<input type="hidden" name="csrf_token" value="2d3889f262953a32c8cb3bcfbee392d9">
-<!-- inject:js -->
-
-<script type="text/template" id="template-biker">
-<% if(data.bikers){ %>
-<tr>
-        <th>STT</th>
-        <th>họ tên</th>
-        <th>năm sinh</th>
-        <th>tỉnh/ tp</th>
-      </tr>
-<% _.each(data.bikers,function(biker){ %>
-	<tr>
-        <td><%= biker.A %></td>
-        <td><%= biker.C %></td>
-        <td><%= biker.E %></td>
-        <td><%= biker.F %></td>
-      </tr>
-<% }) %>
-<% }else{ %>
-<tr>
-        <th>STT</th>
-        <th>họ tên</th>
-        <th>năm sinh</th>
-        <th>tỉnh/ tp</th>
-      </tr>
-<tr>
-    <td align="center">Không thấy dữ liệu bạn yêu cầu</td>
-</tr>
-<% } %>
-</script>
-<script type="text/template" id="luc-image">
-<div class="gallery-photo js-photo">
-	<% if(data.files.length>0){ %>
-	<% _.each(data.files,function(file){ %>
-		<div class="js-img"><img src="http://www.yamahagp.vn/<%= _folder+file %>"></div>
-	<% }) %>
-	<% }else{%>
-		<div><p class="empty_message">Chương trình chưa diễn ra</p></div>
-	<% } %>
-</div>
-<span class="btn-prev"></span>
-<span class="btn-next"></span>
-<% if(data.paper.TotalPages>1){ %>
-    <div class="paging" style="visibility: visible;">
-
-        <% if(data.paper.CurrentPage > 1){ %>
-        <a href="javascript:;" class="btn-prev" style="display:none"><%= parseInt(data.paper.CurrentPage - 1)  %></a>
-        <% } %>
-
-        <% for(var i = data.paper.StartPage ;i<=data.paper.EndPage;i++){ %>
-        <% if(data.paper.CurrentPage == i ){ %>
-        <a href="javascript:;" class="active"><%= i %></a>
-        <% }else{ %>
-        <a href="javascript:;"><%= i %></a>
-        <% } %>
-        <% } %>
-
-        <% if(data.paper.CurrentPage < data.paper.TotalPages){ %>
-        <a href="javascript:;" class="btn-next" style="display:none"><%= parseInt(data.paper.CurrentPage + 1)  %></a>
-        <% } %>
-    </div>
-    <% } %>
-
-</script>
-<script type="text/template" id="template-winner">
-<% if(data.winners.length>0) {%>
-<% _.each(data.winners,function(winner,key){ %>
-<li>
-<div>
-	<p class="thumb">
-		<span><img src="http://www.yamahagp.vn/<%= _folder == "/" ? '' : _folder %>/static/uploads/winners/<%=  winner.image %>" /></span>
-	</p>
-	<h5><%=  winner.title %></h5>
-	<% if( winner.club != 'không xác định'  ){ %>
-		<h6><%=  winner.club  %></h6>
-	<% }else{ %>
-		<h6>        </h6>
-	<% } %>
-	<span><%=  winner.thanh_tich %></span>
-</div>
-</li>
-<%})%>
-
-<% }else{ %>
-<p class="empty-winner"> Dữ liệu đang được cập nhật <p>
-<% } %>
-</script>
 
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
@@ -1053,28 +689,66 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 
 <!--Call me block-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <style>
+.wrap-phone{
+	position: fixed;
+	top: auto;
+	bottom: 24px;
+	right: 12px;
+	display: block;
+	z-index: 2147483644;
+}
+.phoneamination {
+    border: 2px solid #126D0C;
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    z-index: -1;
+    right: 4%;
+    top: 31%;
+    position: absolute;
+    background: #126D0C;
+}
+
 .call-me {
 	font-size: 72px;
-	color: #67b868;
+	color: transparent;
 	margin: 0px 12px;
 	adding: 0px;
-	position: fixed;
-	z-index: 2147483644;
-	bottom: 24px;
-	top: auto;
-	height: 60px;
-	width: 60px;
+	width: 75px;
 	border-radius: 29px;
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px;
 	background: none;
 	display: block;
-	right: 12px;
 	padding-bottom: 130px;
+	background-image: url("yamahagp/images/phone-02.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.numbershow {
+	color: white;
+    font-size: 15px;
+    position: absolute;
+    background: #126D0C;
+    right: 3%;
+    padding: 5px 10px 6px;
+    border-radius: 39px;
+    bottom: 72%;
+}
+@media (max-width: 767px){
+	.numbershow {
+		display: none
+	}
 }
 </style>
-<a href="tel:0909337777" title="Tel: 0909337777"><i class="material-icons call-me shak-icon">phone</i></a>
+<div class="wrap-phone">
+	<div class="numbershow animate__animated animate__zoomIn animate__delay-2s animate__slower"><span>Phone:0909337777</span></div>
+	<div class="phoneamination animate__animated animate__zoomIn animate__delay-2s animate__infinite animate__slower"></div>
+	<a href="tel:0909337777" title="Tel: 0909337777"><i class="material-icons call-me shak-icon">phone</i></a>
+</div>
+<!--Call me block-->
 
 
 <!-- Load Facebook Messenger -->
