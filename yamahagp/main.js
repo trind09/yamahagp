@@ -643,7 +643,9 @@ var YMH = {
       var s = $('.js-term');
       s.tinyscrollbar();
       setTimeout(function(){ 
-        s.tinyscrollbar_update();
+		try{
+			s.tinyscrollbar_update();
+		  }catch(e){}
       }, 300);
     } else if( getDocumentSize(0) < 769) {
       $('.race-league').slick({ 

@@ -39,9 +39,8 @@
 	<script>
 		function ShowAboutUs(){
 			swal({
-			  imageUrl: 'http://thuctaplamsang.edu.vn/yamahagp/images/BG%20about%20us.jpg',
+			  imageUrl: 'yamahagp/images/BG%20about%20us.jpg',
 			  imageWidth: '100%',
-			  imageHeight: '100%',
 			  width: '1200px',
 			  imageAlt: 'BG About Us'
 			});
@@ -683,6 +682,16 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 		  $($(this).attr('href')).addClass('active-img').siblings().removeClass('active-img');
 		});
    	});
+	
+	function ViewPigsizeImage(element){
+		var src = $(element).attr("src");
+		swal({
+		  imageUrl: src,
+		  imageWidth: '100%',
+		  width: '1200px',
+		  imageAlt: 'BG About Us'
+		});
+	}
    </script>
    <div class="contain">
    		<ul class="gallery-tabs gallery-tabs1 js-term--tabs">
@@ -697,24 +706,24 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
       				<a class="active-title tap-active active-title1" href="#tab-2">2.PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</a>
       			</div>
 	             <div id="tab-1" class="gallery-photo gallery-photo-1 active-img">
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2669.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2729.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2394.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2445.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2688.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_1797.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2168.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2843.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
 	            </div>
 	            <div id="tab-2"class="gallery-photo gallery-photo-1">
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-25.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-26.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-28.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-29.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-30.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-31.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-32.jpg"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-33.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-28.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-29.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
 	            </div>
       		</div>
   			
@@ -819,11 +828,6 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <!-- Load Facebook Messenger -->
 <!-- https://wiki.matbao.net/kb/huong-dan-tich-hop-facebook-chat-vao-website-ma-khong-can-dung-plugin/ -->
-<script>
-	$(document).ready(function() { 
-		$('#fb-root').attr('class', 'wrap-phone');
-	});
-</script>
   <div id="fb-root"></div>
   <script>
 	window.fbAsyncInit = function() {

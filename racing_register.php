@@ -48,9 +48,9 @@
 			} else if (form_id == "moto-ub150-semipro"){
 				$('#moto-ub150-semipro').show();
 				
+				$('[id^=license_file1]').hide();
 				$('[id^=license_file2]').hide();
 				$('[id^=license_file3]').hide();
-				$('[id^=license_file4]').hide();
 				
 				$('[id^=comment1]').hide();
 				$('[id^=comment2]').hide();
@@ -71,7 +71,7 @@
 				$('#racing_level').val("HỆ Moto UB150 Pro - GIẢI MOTUL MOTOR RACING CUP");
 			}
 			$('input#form_id').val(form_id);
-			$('#register_form').show();
+			$('#register_form').attr("style", "display: -webkit-box;");
 		}
 		
 		function HideAllFormTitleAndDescription(){
@@ -102,7 +102,7 @@
 		}
 		
 		function CancelRegister(){
-			$('#register_form').hide();
+			$('#register_form').attr("style", "display: none;");
 		}
 		
 		function ProcessRegister(){
@@ -243,8 +243,9 @@ if(isset($_POST['form1'])) {
 				$path = $_FILES['license_file1']['name'];
 				$path_tmp = $_FILES['license_file1']['tmp_name'];
 				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
 				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
 					$valid = 0;
 					$error_message .= 'Tập tin bằng lái A2 không đúng định dạng.<br>';
 				}
@@ -257,8 +258,9 @@ if(isset($_POST['form1'])) {
 				$path = $_FILES['banktransfer_file1']['name'];
 				$path_tmp = $_FILES['banktransfer_file1']['tmp_name'];
 				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
 				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
 					$valid = 0;
 					$error_message .= 'Tập tin xác nhận chuyển khoản không đúng định dạng.<br>';
 				}
@@ -271,8 +273,9 @@ if(isset($_POST['form1'])) {
 				$path = $_FILES['license_file2']['name'];
 				$path_tmp = $_FILES['license_file2']['tmp_name'];
 				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
 				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
 					$valid = 0;
 					$error_message .= 'Hình ảnh bằng lái B không đúng định dạng.<br>';
 				}
@@ -285,8 +288,9 @@ if(isset($_POST['form1'])) {
 				$path = $_FILES['license_file3']['name'];
 				$path_tmp = $_FILES['license_file3']['tmp_name'];
 				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
 				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
 					$valid = 0;
 					$error_message .= 'Hình ảnh bằng đua xe VMA không đúng định dạng.<br>';
 				}
@@ -304,8 +308,9 @@ if(isset($_POST['form1'])) {
 				$path = $_FILES['license_file2']['name'];
 				$path_tmp = $_FILES['license_file2']['tmp_name'];
 				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
 				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
 					$valid = 0;
 					$error_message .= 'Hình ảnh bằng lái B không đúng định dạng.<br>';
 				}
@@ -316,34 +321,6 @@ if(isset($_POST['form1'])) {
 				$error_message .= 'Xin chia sẻ kinh nghiệm và kỹ năng lái xe, đua xe của bạn.<br>';
 			}
 		} else if ($form_id == 'moto-ub150-semipro'){
-			if($license_file1 == '') {
-				$valid = 0;
-				$error_message .= 'Xin upload hình ảnh bằng lái A2 còn hiệu lực.<br>';
-			} else {
-				$path = $_FILES['license_file1']['name'];
-				$path_tmp = $_FILES['license_file1']['tmp_name'];
-				$ext = pathinfo( $path, PATHINFO_EXTENSION );
-				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
-					$valid = 0;
-					$error_message .= 'Hình ảnh bằng lái A2 không đúng định dạng.<br>';
-				}
-			}
-			
-			if($banktransfer_file1 == '') {
-				$valid = 0;
-				$error_message .= 'Xin upload hình ảnh xác nhận chuyển khoản thành công.<br>';
-			} else {
-				$path = $_FILES['banktransfer_file1']['name'];
-				$path_tmp = $_FILES['banktransfer_file1']['tmp_name'];
-				$ext = pathinfo( $path, PATHINFO_EXTENSION );
-				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
-					$valid = 0;
-					$error_message .= 'Hình ảnh chuyển khoản không đúng định dạng.<br>';
-				}
-			}
-		} else if ($form_id == 'moto-ub150-pro'){
 			if($license_file4 == '') {
 				$valid = 0;
 				$error_message .= 'Xin upload hình ảnh bằng lái A1 còn hiệu lực.<br>';
@@ -351,8 +328,9 @@ if(isset($_POST['form1'])) {
 				$path = $_FILES['license_file4']['name'];
 				$path_tmp = $_FILES['license_file4']['tmp_name'];
 				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
 				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
 					$valid = 0;
 					$error_message .= 'Hình ảnh bằng lái A1 không đúng định dạng.<br>';
 				}
@@ -365,8 +343,39 @@ if(isset($_POST['form1'])) {
 				$path = $_FILES['banktransfer_file1']['name'];
 				$path_tmp = $_FILES['banktransfer_file1']['tmp_name'];
 				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
 				$file_name = basename( $path, '.' . $ext );
-				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' ) {
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
+					$valid = 0;
+					$error_message .= 'Hình ảnh chuyển khoản không đúng định dạng.<br>';
+				}
+			}
+		} else if ($form_id == 'moto-ub150-pro'){
+			if($license_file4 == '') {
+				$valid = 0;
+				$error_message .= 'Xin upload hình ảnh bằng lái A1 còn hiệu lực.<br>';
+			} else {
+				$path = $_FILES['license_file4']['name'];
+				$path_tmp = $_FILES['license_file4']['tmp_name'];
+				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
+				$file_name = basename( $path, '.' . $ext );
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
+					$valid = 0;
+					$error_message .= 'Hình ảnh bằng lái A1 không đúng định dạng.<br>';
+				}
+			}
+			
+			if($banktransfer_file1 == '') {
+				$valid = 0;
+				$error_message .= 'Xin upload hình ảnh xác nhận chuyển khoản thành công.<br>';
+			} else {
+				$path = $_FILES['banktransfer_file1']['name'];
+				$path_tmp = $_FILES['banktransfer_file1']['tmp_name'];
+				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
+				$file_name = basename( $path, '.' . $ext );
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
 					$valid = 0;
 					$error_message .= 'Hình ảnh chuyển khoản không đúng định dạng.<br>';
 				}
@@ -515,7 +524,6 @@ if(isset($_POST['form1'])) {
 		}
 
 		.swal2a-container {
-			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
 			position: fixed;
@@ -538,10 +546,11 @@ if(isset($_POST['form1'])) {
 			z-index: 1060;
 			overflow-x: hidden;
 			-webkit-overflow-scrolling: touch;
+			overflow-y: auto; 
 		}
 	</style>
 	<form action="" method="post" enctype="multipart/form-data">
-		<div class="swal2a-container swal2a-center swal2-backdrop-show" style="overflow-y: auto; display: none;" id="register_form">
+		<div class="swal2a-container swal2a-center swal2-backdrop-show" style="display: none;" id="register_form">
 		   <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="width: 1200px; display: flex;">
 			  <input style="display: none;" id="form_id" name="form_id" value=""/>
 			  <input style="display: none;" id="racing_level" name="racing_level" value=""/>
@@ -628,19 +637,19 @@ if(isset($_POST['form1'])) {
 			  <br/>
 			  <div class="swal2-content">
 				<label for="fullname" class="swal2-input-label" id="fullname-label">Họ và tên <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="fullname" name="fullname" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="fullname" name="fullname" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="fullname-validation-message"></div>
 				 
 				<label for="birthday" class="swal2-input-label" id="birthday-label">Ngày tháng năm sinh <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="birthday" name="birthday" placeholder="dd/mm/yyyy" type="date" style="display: flex;">
+				 <input class="swal2-input" id="birthday" name="birthday" placeholder="dd/mm/yyyy" type="date" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="birthday-validation-message"></div>
 				 
 				<label for="phone" class="swal2-input-label" id="phone-label">Số điện thoại <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="phone" name="phone" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="phone" name="phone" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="phone-validation-message"></div>
 				 
 				<label for="email" class="swal2-input-label" id="email-label">Email <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="email" name="email" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="email" name="email" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="email-validation-message"></div>
 				 
 				<label for="club_name" class="swal2-input-label" id="club_name-label">Tên Câu lạc bộ <span style="color: red;">*</span></label>
@@ -659,55 +668,55 @@ if(isset($_POST['form1'])) {
 					<input type="checkbox" value="Tự do hay Cá Nhân" id="club_name-checkbox" id="club_name_ck" name="club_name_ck">
 					<span class="swal2-label">Tự do/Cá Nhân</span>
 				 </label>
-				 <input class="swal2-input" id="club_name" name="club_name" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="club_name" name="club_name" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="club_name-validation-message"></div>
 				 
 				<label for="address" class="swal2-input-label" id="address-label">Nơi ở hiện nay <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="address" name="address" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="address" name="address" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="address-validation-message"></div>
 				 
 				<label for="social_link" class="swal2-input-label" id="social_link-label">Zalo hoặc link Facebook <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="social_link" name="social_link" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="social_link" name="social_link" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="social_link-validation-message"></div>
 				 
-				<label for="license_file1" class="swal2-input-label" id="license_file1-label">Hình ảnh bằng lái A2 còn hiệu lực (Upload tâp tin jpg, png, pdf, docx) <span style="color: red;">*</span></label>
-				 <input type="file" aria-label="Upload tâp tin jpg, png, pdf, docx" id="license_file1" name="license_file1" class="swal2-file" placeholder="" style="display: flex;">
+				<label for="license_file1" class="swal2-input-label" id="license_file1-label">Hình ảnh bằng lái A2 còn hiệu lực (Upload tâp tin jpg, jpeg, png, pdf, docx) <span style="color: red;">*</span></label>
+				 <input type="file" aria-label="Upload tâp tin jpg, jpeg, png, pdf, docx" id="license_file1" name="license_file1" class="swal2-file" placeholder="" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="license_file1-validation-message"></div>
 				 
-				<label for="license_file2" class="swal2-input-label" id="license_file2-label">Hình ảnh bằng lái B trở lên còn hiệu lực (Upload tâp tin jpg, png, pdf, docx) <span style="color: red;">*</span></label>
-				 <input type="file" aria-label="Upload tâp tin jpg, png, pdf, docx" id="license_file2" name="license_file2" class="swal2-file" placeholder="" style="display: flex;">
+				<label for="license_file2" class="swal2-input-label" id="license_file2-label">Hình ảnh bằng lái B trở lên còn hiệu lực (Upload tâp tin jpg, jpeg, png, pdf, docx) <span style="color: red;">*</span></label>
+				 <input type="file" aria-label="Upload tâp tin jpg, jpeg, png, pdf, docx" id="license_file2" name="license_file2" class="swal2-file" placeholder="" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="license_file2-validation-message"></div>
 				 
-				<label for="license_file3" class="swal2-input-label" id="license_file3-label">Hình ảnh bằng đua xe VMA (Upload tâp tin jpg, png, pdf, docx) <span style="color: red;">*</span></label>
-				 <input type="file" aria-label="Upload tâp tin jpg, png, pdf, docx" id="license_file3" name="license_file3" class="swal2-file" placeholder="" style="display: flex;">
+				<label for="license_file3" class="swal2-input-label" id="license_file3-label">Hình ảnh bằng đua xe VMA (Upload tâp tin jpg, jpeg, png, pdf, docx) <span style="color: red;">*</span></label>
+				 <input type="file" aria-label="Upload tâp tin jpg, jpeg, png, pdf, docx" id="license_file3" name="license_file3" class="swal2-file" placeholder="" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="license_file3-validation-message"></div>
 				 
 				<label for="license_file4" class="swal2-input-label" id="license_file4-label">Hình ảnh bằng lái A1 còn hiệu lực <span style="color: red;">*</span></label>
-				 <input type="file" aria-label="Upload tâp tin jpg, png, pdf, docx" id="license_file4" name="license_file4" class="swal2-file" placeholder="" style="display: flex;">
+				 <input type="file" aria-label="Upload tâp tin jpg, jpeg, png, pdf, docx" id="license_file4" name="license_file4" class="swal2-file" placeholder="" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="license_file4-validation-message"></div>
 				 
 				<label for="number" class="swal2-input-label" id="number-label">Số đua đăng ký <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="number" name="number" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="number" name="number" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="number-validation-message"></div>
 				 
 				<label for="sponsor_fullname" class="swal2-input-label" id="sponsor_fullname-label">Họ và tên người bảo hộ <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="sponsor_fullname" name="sponsor_fullname" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="sponsor_fullname" name="sponsor_fullname" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="sponsor_fullname-validation-message"></div>
 				 
 				<label for="sponsor_phone" class="swal2-input-label" id="sponsor_phone-label">Số điện thoại người bảo hộ <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="sponsor_phone" name="sponsor_phone" placeholder="" type="text" style="display: flex;">
+				 <input class="swal2-input" id="sponsor_phone" name="sponsor_phone" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="sponsor_phone-validation-message"></div>
 				 
-				<label for="banktransfer_file1" class="swal2-input-label" id="banktransfer_file1-label">Chuyển khoản vào STK: 19036288269012 - TECHCOMBANK - CONG TY TNHH HOC VIEN THE THAO TOC DO VIET NAM . Hình ảnh xác nhận thành công (Upload tâp tin jpg, png, pdf, docx) <span style="color: red;">*</span></label>
-				 <input type="file" aria-label="Upload tâp tin jpg, png, pdf, docx" id="banktransfer_file1" name="banktransfer_file1" class="swal2-file" placeholder="" style="display: flex;">
+				<label for="banktransfer_file1" class="swal2-input-label" id="banktransfer_file1-label">Chuyển khoản vào STK: 19036288269012 - TECHCOMBANK - CONG TY TNHH HOC VIEN THE THAO TOC DO VIET NAM . Hình ảnh xác nhận thành công (Upload tâp tin jpg, jpeg, png, pdf, docx) <span style="color: red;">*</span></label>
+				 <input type="file" aria-label="Upload tâp tin jpg, jpeg, png, pdf, docx" id="banktransfer_file1" name="banktransfer_file1" class="swal2-file" placeholder="" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="banktransfer_file1-validation-message"></div>
 				 
 				<label for="comment1" class="swal2-input-label" id="comment1-label">Hãy chia sẻ với chúng tôi về những kinh nghiệm đua xe của bạn: Bạn từng tham gia giải đua nào tại Đại Nam? Các giải đua khác bạn từng tham gia, thành tích đạt được?.... Cảm ơn bạn đã chia sẻ! <span style="color: red;">*</span></label>
-				 <textarea aria-label="Type your message here" class="swal2-textarea" id="comment1" name="comment1" placeholder="" id="swal2-input" style="display: flex;"></textarea>
+				 <textarea aria-label="Type your message here" class="swal2-textarea" id="comment1" name="comment1" placeholder="" id="swal2-input" style="display: flex; color: black;"></textarea>
 				 <div class="swal2-validation-message" id="comment1-validation-message"></div>
 				 
 				<label for="comment2" class="swal2-input-label" id="comment2-label">Giới thiệu chi tiết về kinh nghiệm và kỹ năng lái xe, đua xe của bản thân để được vào vòng loại. <span style="color: red;">*</span></label>
-				 <textarea aria-label="Type your message here" class="swal2-textarea" id="comment2" name="comment2" placeholder="" id="swal2-input" style="display: flex;"></textarea>
+				 <textarea aria-label="Type your message here" class="swal2-textarea" id="comment2" name="comment2" placeholder="" id="swal2-input" style="display: flex; color: black;"></textarea>
 				 <div class="swal2-validation-message" id="comment2-validation-message"></div>
 				 
 				<p>Bạn hãy tham gia nhóm dành cho VĐV để cập nhật thêm thông tin về giải đua: <a href="https://www.facebook.com/groups/motulmotorracingcup2020">MOTUL MOTOR RACING CUP - VietNam Racing Festival 2020</a></p>
