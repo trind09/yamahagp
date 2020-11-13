@@ -1,17 +1,3 @@
-
-
-<!DOCTYPE html>
-<html lang="en" >
-
-<head>
-
-  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-	
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-    <!-- CSS -->
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-	<!-- https://sweetalert2.github.io/#icons -->
-	
 	<script>
 		$(document).ready(function() {
 			var form_id = localStorage.getItem('form_id');
@@ -22,6 +8,7 @@
 		});
 		
 		function OpenRegisterPopup(form_id){
+			console.log(form_id);
 			HideAllFormTitleAndDescription();
 			ShowAllFormControls();
 			if (form_id == "semipro-300-400cc"){
@@ -126,7 +113,7 @@
 			  }
 		}
 	</script>
-</head>
+
 <?php
 $domain = "http://thuctaplamsang.edu.vn/";
 $dbhost = 'localhost';
@@ -513,14 +500,48 @@ if(isset($_POST['form1'])) {
 	}
 }
 ?>
-<body style="background: green;" >
-	<a style="cursor: pointer;" onclick="OpenRegisterPopup('semipro-300-400cc');">Semipro-300-400cc</a><br/>
-	<a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-track-attack');">oto-track-attack</a><br/>
-	<a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-gymkhana');">oto-gymkhana</a><br/>
-	<a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-semipro');">moto-ub150-semipro</a><br/>
-	<a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-pro');">moto-ub150-pro</a><br/>
+	
+	<style>
+		.swal2a-container.swal2a-center {
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		.swal2a-container.swal2a-center {
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		.swal2a-container {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			padding: 10px;
+			background-color: transparent;
+			z-index: 1060;
+			overflow-x: hidden;
+			-webkit-overflow-scrolling: touch;
+		}
+	</style>
 	<form action="" method="post" enctype="multipart/form-data">
-		<div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none;" id="register_form">
+		<div class="swal2a-container swal2a-center swal2-backdrop-show" style="overflow-y: auto; display: none;" id="register_form">
 		   <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="width: 1200px; display: flex;">
 			  <input style="display: none;" id="form_id" name="form_id" value=""/>
 			  <input style="display: none;" id="racing_level" name="racing_level" value=""/>
@@ -699,7 +720,5 @@ if(isset($_POST['form1'])) {
 		   </div>
 		</div>
 	</form>
-</body>
 
-</html>
  

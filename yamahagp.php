@@ -6,8 +6,8 @@
     <!-- SEO -->
     <title>Vietnam Racing Festival 2020</title>
     <!-- <title>Giải đua xe Yamaha Motor Việt Nam GP 2018</title> -->
-        	<meta name="description" content="Giải đua xe chuyên nghiệp do Yamaha Motor Việt Nam tổ chức tại Hồ Chí Minh ngày 04/02/2018">
-            	<meta name="keywords" content="">
+	<meta name="description" content="Giải đua xe chuyên nghiệp do Yamaha Motor Việt Nam tổ chức tại Hồ Chí Minh ngày 04/02/2018">
+	<meta name="keywords" content="">
         	
 	 <!--    	<meta name="og:title" content="Giải đua xe Yamaha Motor Việt Nam GP 2018">
      -->
@@ -54,6 +54,7 @@
 	</script>
 </head>
 <body>
+	<?php include 'racing_register.php';?>
     <header>
       <div class="contain">
         <nav>
@@ -122,16 +123,6 @@
 	<div class="contain">
 		<div class="copy" style="height: 45vh;">
 			<h2 style="visibility: inherit; opacity: 1;"><img src="yamahagp/images/h-title.png"></h2>
-<!--			<h4>Tp. Hồ Chí Minh </h4>-->
-<!--			<p>04/02/2018 - Nhà thi đấu Phú Thọ-->
-<!--				<!-- <span class="ticket">-->
-<!--					<span class="arrow-left"></span>-->
-<!--					<span class="arrow-right"></span>-->
-<!--					Vào cửa miễn phí-->
-<!--				</span> -->
-<!--			</p>-->
-<!--			 <a href="#" class="btn js-joinnow" role="about">ĐĂNG KÝ NGAY</a>-->
-
 			<div class="bikers" style="visibility: inherit; opacity: 1;">
 				<img src="yamahagp/images/biker2.png" class="biker2" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
 				<img src="yamahagp/images/biker1.png" class="biker1" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
@@ -160,7 +151,7 @@
 	<div class="main_copy">
 		<img src="yamahagp/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 		<a href="#sukien" class="btn btn1 btn2 js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ NGAY</a><br/>
-		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1 js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a> 
+		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a> 
 	</div>
 </section>
 
@@ -306,10 +297,12 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			//https://sweetalert.js.org/guides/
 			function ShowExpiredRegistryMessage(){
 				swal({
-				  title: "Thông báo",
-				  text: "HẾT HẠN ĐĂNG KÝ",
-				  icon: "error",
-				  button: "OK!",
+				  title: '<strong>Thông báo</strong>',
+				  html: 'HẾT HẠN ĐĂNG KÝ',
+				  type: 'error',
+				  confirmButtonText: 'Ok'
+				}).then((result) => {
+					
 				});
 				return false;
 			}
@@ -317,10 +310,12 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			//https://sweetalert2.github.io/#icons
 			function ShowRegistryBox(){
 				swal({
-				  title: "Thông báo",
-				  text: "BẠN SẼ CHUYỂN ĐẾN TRANG ĐĂNG KÝ",
-				  icon: "success",
-				  button: "OK!",
+				  title: '<strong>Thông báo</strong>',
+				  html: 'ĐĂNG KÝ CHO MỤC NÀY CHƯA CÓ',
+				  type: 'success',
+				  confirmButtonText: 'Ok'
+				}).then((result) => {
+					
 				});
 				return false;
 			}
@@ -338,12 +333,12 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<div class="copy">
 						<div class="note">
 							<h6>300 - 400cc</h6>
-							<p><a href='https://forms.gle/JjVJEXWagtXczGg48' class="registry-link">- Semi-Pro</a></p>
+							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('semipro-300-400cc');" class="registry-link">- Semi-Pro</a></p>
 						</div>
 						<div class="note">
 							<h6>UB150</h6>
-							<p><a href='#' onclick="return ShowRegistryBox('UB150 Pro');" class="registry-link">- Pro</a></p>
-							<p><a href='#' onclick="return ShowRegistryBox('UB150 Semi-Pro');" class="registry-link">- Semi-Pro</a></p>
+							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-pro');" class="registry-link">- Pro</a></p>
+							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-semipro');" class="registry-link">- Semi-Pro</a></p>
 						</div>
 						<ol>
 							<li>
@@ -370,8 +365,8 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<h2>Oto</h2>
 					<div class="copy">
 						<div class="note">
-							<h6><a href='https://forms.gle/5zgXZBeEkjakn8i58' class="registry-link">GymKhana</a></h6>
-							<h6><a href='https://forms.gle/KEMikfE9e7C7QWv46' class="registry-link">Track Attack</a></h6>
+							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-gymkhana');" class="registry-link">GymKhana</a></h6>
+							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-track-attack');" class="registry-link">Track Attack</a></h6>
 							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">Drift</a></h6>
 						</div>
 						<ol>
@@ -590,80 +585,142 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 </section>
 
 <section id="gallery" class="display">
-   <style type="text/css">
-      .gallery-list li {
-      color: #6FDA2B;
-      }
-      .gallery-filter .select_filter select {
-      font-size: 13px
-      }
-      .gallery-filter .luc_province .select_filter select {
-      font-size: 10px
-      }
-      .gallery-filter > div:last-child {
-      padding-left: 20px;
-      width: 34%;
-      }
-      .gallery-filter .luc_province  .select_filter {
-      background: url(images/ar2.png) no-repeat 80% center;
-      }
-	  .gallery-list1 li:after {
-			display: 	none !important; 
+	<style type="text/css">
+		#gallery .gallery-tabs {
+			width: 60vw;
 		}
-		
-      @media (max-width: 767px){
-      .gallery-filter .select_filter select {
-      font-size: 10px
-      }
-      .gallery-filter .luc_province .select_filter select {
-      font-size: 8px
-      }
-      }
-   </style>
+		.gallery-tabs1 li{
+			font-size: 20px
+		}
+		.gallery-list li {
+			color: #6FDA2B;
+		}
+		.gallery-filter {
+			padding-top: 0px;
+		}
+		.gallery-filter .select_filter select {
+			font-size: 13px
+		}
+		.gallery-filter .luc_province .select_filter select {
+			font-size: 10px
+		}
+		.gallery-filter > div:last-child {
+			padding-left: 20px;
+			width: 34%;
+		}
+		.gallery-filter .luc_province  .select_filter {
+			background: url(images/ar2.png) no-repeat 80% center;
+		}
+		.gallery-list1 li:after {
+			display: none !important; 
+		}
+		.wrap-img-active {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			width: 100%;	
+		}
+		.text-active a{
+			display: block;
+		}
+		.active-title {
+			font-size: 18px;
+			font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+			text-align: left;
+		}
+		.img-active-right {
+			margin: 10px;
+		}
+		.text-active {
+			line-height: 2
+		}
+		.active-title1 {
+			color:#6FDA2B;
+			font-size: 15px;
+		}
+		.nav-tab-active{
+			color: 	#F4ED2D
+
+		}
+		.active-title1:hover {
+			cursor: pointer;
+			color: 	#F4ED2D
+		}
+		.gallery-photo-1 {
+			display: none
+		}
+		.active-img {
+			display: block
+		}
+		.animate__animated.animate__fast {
+			animation-duration: calc(var(--animate-duration)*5);
+		}
+		@media (max-width: 767px){
+			#gallery .gallery-tabs {
+			width: 90%;
+			}
+			.gallery-tabs {
+				margin: 10px auto
+			}
+			.gallery-tabs1 li {
+			font-size: 11px;
+			}
+			.active-title {
+			font-size: 13px;
+			}
+			.active-title1 {
+			font-size: 10px;
+			}
+		}
+	</style>
+   
+   <script type="text/javascript">
+   	$(document).ready(function(){
+   		$('.tap-active').click(function(event) {
+   			 event.preventDefault();
+		  $(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
+
+		  $($(this).attr('href')).addClass('active-img').siblings().removeClass('active-img');
+		});
+   	});
+   </script>
    <div class="contain">
-      <ul class="gallery-list js-type gallery-list1" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-         <li class="active" role="type-photo" style="width: 100%;">HÌNH ẢNH & SỰ KIỆN</li>
-      </ul>
+   		<ul class="gallery-tabs gallery-tabs1 js-term--tabs">
+			<li class="active" style="width: 100%;">HÌNH ẢNH & SỰ KIỆN NĂM 2020</li>
+		</ul>
       <div class="gallery-item display" id="type-photo">
-         <div class="gallery-filter" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-            <div>
-               <p>xem theo năm</p>
-               <div class="select_filter">
-                  <select name="year">
-                     <option value="2020">2020</option>
-                  </select>
-               </div>
-            </div>
-            <div class="luc_province">
-               <p>chương trình</p>
-               <div class="select_filter">
-                  <select name="province">
-                     <option value="hopbao_vietnam_racing">Họp Báo Kỹ Thuật Ngày Hội Đua Xe Vietnam Racing Festival 2020</option>
-                  </select>
-                  <select name="province">
-                     <option value="phat-dong-phong-trao-dua-xe-the-thao-vietnam">Phát Động Phong Trào Đua Xe Thể Thao Việt Nam</option>
-                  </select>
-               </div>
-            </div>
-         </div>
-         <div class="gallery-item-wrap">
-            <div class="gallery-photo js-photo">
-               <div class="js-img"><img src="yamahagp/images/PHU_2669.jpg"></div>
-               <div class="js-img"><img src="yamahagp/images/PHU_2729.jpg"></div>
-               <div class="js-img"><img src="yamahagp/images/PHU_2394.jpg"></div>
-               <div class="js-img"><img src="yamahagp/images/PHU_2445.jpg"></div>
-               <div class="js-img"><img src="yamahagp/images/PHU_2688.jpg"></div>
-               <div class="js-img"><img src="yamahagp/images/PHU_1797.jpg"></div>
-               <div class="js-img"><img src="yamahagp/images/PHU_2168.jpg"></div>
-               <div class="js-img"><img src="yamahagp/images/PHU_2843.jpg"></div>
-            </div>
-            <span class="btn-prev" style="display: none;"></span>
-            <span class="btn-next"></span>
-            <div class="paging" style="visibility: visible;">
-            </div>
-         </div>
-      </div>
-	</div>
+      	<div class="wrap-img-active">
+      		<div class="img-active-right">
+      			<div class="active-title">HÌNH ẢNH CHƯƠNG TRÌNH</div>
+      			<div class="text-active">
+      				<a class="active-title tap-active nav-tab-active active-title1" href="#tab-1">1.HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</a>
+      				<a class="active-title tap-active active-title1" href="#tab-2">2.PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</a>
+      			</div>
+	             <div id="tab-1" class="gallery-photo gallery-photo-1 active-img">
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2669.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2729.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2394.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2445.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2688.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_1797.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2168.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/PHU_2843.jpg"></div>
+	            </div>
+	            <div id="tab-2"class="gallery-photo gallery-photo-1">
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-25.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-26.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-28.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-29.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-30.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-31.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-32.jpg"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img src="yamahagp/images/viber_image_2020-11-10_12-32-33.jpg"></div>
+	            </div>
+      		</div>
+  			
+      	</div>
+        
+	</div>	
 	<footer>
       <p class="socials" style="margin-top: 20px;">
          <a href="https://www.facebook.com/vietnamracingacademy" class="fb" target="_blank"></a> 
@@ -718,7 +775,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 	adding: 0px;
 	width: 75px;
 	border-radius: 29px;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px;
+	box-shadow: none;
 	background: none;
 	display: block;
 	padding-bottom: 130px;
@@ -741,6 +798,15 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 	.numbershow {
 		display: none
 	}
+	.call-me {
+		width: 55px;
+	}
+	.phoneamination {
+		height: 60px;
+		width: 60px;
+		right: 13%;
+    	top: 37%;
+	}
 }
 </style>
 <div class="wrap-phone">
@@ -753,6 +819,11 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <!-- Load Facebook Messenger -->
 <!-- https://wiki.matbao.net/kb/huong-dan-tich-hop-facebook-chat-vao-website-ma-khong-can-dung-plugin/ -->
+<script>
+	$(document).ready(function() { 
+		$('#fb-root').attr('class', 'wrap-phone');
+	});
+</script>
   <div id="fb-root"></div>
   <script>
 	window.fbAsyncInit = function() {
