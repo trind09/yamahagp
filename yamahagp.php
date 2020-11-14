@@ -14,10 +14,10 @@
      <meta name="og:title" content="Vietnam Racing Festival 2020">
          	<meta name="og:description" content="Where's your limit?">
               	<meta name="og:description" content="Where's your limit?">
-              	<meta name="og:image" content="yamahagp/images/logo.png">
+              	<meta name="og:image" content="assets/images/logo.png">
          <!-- Spiders must use meta description -->
 
-    <link rel="icon" type="image/png" href="yamahagp/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta name="robots" content="noodp, noydir">
 
     <!-- No Google Translate toolbar -->
@@ -31,7 +31,7 @@
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <link rel="stylesheet" href="yamahagp/main.css">
+    <link rel="stylesheet" href="assets/main.css">
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
@@ -39,7 +39,7 @@
 	<script>
 		function ShowAboutUs(){
 			swal({
-			  imageUrl: 'yamahagp/images/BG%20about%20us.jpg',
+			  imageUrl: 'assets/images/BG%20about%20us.jpg',
 			  imageWidth: '100%',
 			  width: '1200px',
 			  imageAlt: 'BG About Us'
@@ -55,6 +55,33 @@
 <body>
 	<?php include 'racing_register.php';?>
     <header>
+	  <style>
+		@media screen and (max-width: 1024px){
+			.header-mb {
+				height: 50px
+			}
+			.header-mb:before {
+				background-image: url("assets/images/bg-smartphone-bar.png");
+				content: '';
+				display: flex;
+				height: 70px;
+				width: 100%;
+				position: absolute;
+				z-index: 0;
+				background-size: cover;
+				background-repeat: inherit;
+			}
+			.menu-icon, .menu-icon:before, .menu-icon:after {
+				background-color: white
+			}
+		}
+		
+		@media screen and (max-width: 520px){
+				.header-mb:before {
+					height: 50px;
+				}
+		}
+	  </style>
       <div class="contain">
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
@@ -121,34 +148,34 @@
 	</style>
 	<div class="contain">
 		<div class="copy" style="height: 45vh;">
-			<h2 style="visibility: inherit; opacity: 1;"><img src="yamahagp/images/h-title.png"></h2>
+			<h2 style="visibility: inherit; opacity: 1;"><img src="assets/images/h-title.png"></h2>
 			<div class="bikers" style="visibility: inherit; opacity: 1;">
-				<img src="yamahagp/images/biker2.png" class="biker2" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-				<img src="yamahagp/images/biker1.png" class="biker1" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-				<img src="yamahagp/images/biker3.png" class="biker3" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+				<img src="assets/images/biker2.png" class="biker2" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+				<img src="assets/images/biker1.png" class="biker1" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+				<img src="assets/images/biker3.png" class="biker3" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
 			</div>
 		</div>
 		<ul class="sponsor">
 			<li>
-				<img src="yamahagp/images/logo-liendoan.png">
+				<img src="assets/images/logo-liendoan.png">
 				<p>Liên đoàn xe đạp<br>Môtô thể thao Việt Nam</p>
 			</li>
 			<li>
-				<img src="yamahagp/images/logo-yamah.png">
+				<img src="assets/images/logo-yamah.png">
 				<p>Công ty TNHH<br>Yamaha Motor Việt Nam</p>
 			</li>
 			<li>
-				<img src="yamahagp/images/ogo-ldxd.png">
+				<img src="assets/images/ogo-ldxd.png">
 				<p>Liên Đoàn Xe đạp<br>Mô tô thể thao Tp. HCM</p>
 			</li>			
 		</ul>
 	</div>
 
-	<img src="yamahagp/images/bg.jpg" alt="" class="bg_pc">
+	<img src="assets/images/bg.jpg" alt="" class="bg_pc">
 	
-	<img src="yamahagp/images/bg-hmb4.jpg" alt="" class="bg_mb">
+	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
-		<img src="yamahagp/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+		<img src="assets/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 		<a href="#sukien" class="btn btn1 btn2 js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ NGAY</a><br/>
 		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a> 
 	</div>
@@ -232,14 +259,14 @@
 		}
 	</style>
 	<div class="contain">
-		<h2><img src="yamahagp/images/a-title.png"></h2>
+		<h2><img src="assets/images/a-title.png"></h2>
 
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">giới thiệu giải đua</li>
 		</ul>
 		<div class="about-contain display">
 			<div class="copy-about">
-				<h3><img src="yamahagp/images/tagline.png"></h3>
+				<h3><img src="assets/images/tagline.png"></h3>
 				<p>Ngày hội đua xe thể thao chuyên nghiệp do Vietnam Racing Academy - VR tổ chức nhầm phát động phong trào RACE TO MIỀN TRUNG. Chương trình với sự đồng hành của hai thương hiệu lớn VINFAST và MOTUL.
 Ngày hội đua xe cũng là lễ hội âm nhạc EDM hoành tráng - WHERE’S YOUR LIMNIT? với sự góp mặt của nhiều ca sĩ - DJ nổi tiếng.
 Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuyên nghiệp.</p>
@@ -249,7 +276,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<iframe id="video-div" width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<div class="video-multiple-items" >
 						<div class="video-img-t">
-						  <img src="yamahagp/images/abdefaeg.png"
+						  <img src="assets/images/abdefaeg.png"
 						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/Pbjhj2VnqmE')">
 						</div>
 						<div class="video-img-t">
@@ -341,7 +368,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						</div>
 						<ol>
 							<li>
-								<img width="200" height="123" style="width: 200px;height: 123px;margin-top: -20px;" src="yamahagp/images/motorlogo.png">
+								<img width="200" height="123" style="width: 200px;height: 123px;margin-top: -20px;" src="assets/images/motorlogo.png">
 							</li>
 						</ol>
 					</div>
@@ -355,7 +382,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						</div>
 						<ol>
 							<li>
-								<img width="200" height="200" style="width: 200px; height: 200px; margin-top: -15px;" src="yamahagp/images/go-kartlogo.png">
+								<img width="200" height="200" style="width: 200px; height: 200px; margin-top: -15px;" src="assets/images/go-kartlogo.png">
 							</li>
 						</ol>
 					</div>
@@ -370,7 +397,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						</div>
 						<ol>
 							<li>
-								<img width="200" height="200" style="width: 200px; height: 160px;" src="yamahagp/images/otologo.png">
+								<img width="200" height="200" style="width: 200px; height: 160px;" src="assets/images/otologo.png">
 							</li>
 						</ol>
 					</div>
@@ -383,7 +410,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						</div>
 						<ol>
 							<li>
-								<img width="200" height="200" style="width: 200px; height: 200px; margin-top: 40px;" src="yamahagp/images/rollerlogo.png">
+								<img width="200" height="200" style="width: 200px; height: 200px; margin-top: 40px;" src="assets/images/rollerlogo.png">
 							</li>
 						</ol>
 					</div>
@@ -395,7 +422,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <section id="plan" class="display">
 	<div class="contain">
-		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="yamahagp/images/l-title.png"></h2>
+		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="assets/images/l-title.png"></h2>
 
 		<div class="plan-wrap">
 			<ul class="plan-list">
@@ -404,9 +431,9 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<span>Lịch thi đấu</span>
 					<div class="plan-item">
 						<h3>Vòng loại</h3>
-						<p><img src="yamahagp/images/i-time.png">6/12/2020 Vòng loại giải MOTUL MOTOR RACING CUP</p>
-						<p><img src="yamahagp/images/i-time.png">11/12/2020 Vòng loại VINFAST AUTOGYMKHANA, VINFAST TRACK ATTACK CUP</p>
-						<p><img src="yamahagp/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
+						<p><img src="assets/images/i-time.png">6/12/2020 Vòng loại giải MOTUL MOTOR RACING CUP</p>
+						<p><img src="assets/images/i-time.png">11/12/2020 Vòng loại VINFAST AUTOGYMKHANA, VINFAST TRACK ATTACK CUP</p>
+						<p><img src="assets/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
 						<h4>1</h4>
 					</div>
 				</li>
@@ -415,7 +442,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<span>Lịch thi đấu</span>
 					<div class="plan-item">
 						<h3>Vòng chung kết</h3>
-						<p><img src="yamahagp/images/i-time.png">12/12/2020<br/>
+						<p><img src="assets/images/i-time.png">12/12/2020<br/>
 							&nbsp;&nbsp;- Đại nhạc hội<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;- Chung kết các giải đua<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- VINFAST AUTOGYMKHANA<br/>
@@ -425,7 +452,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- VR GO-KART CUP<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- VR DRIFT BATTLE<br/>
 						</p>
-						<p><img src="yamahagp/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
+						<p><img src="assets/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
 						<h4>2</h4>
 					</div>
 				</li>
@@ -436,7 +463,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 	<div class="cld-popup">
 		<div class="cld-detail">
-			<h3><img src="yamahagp/images/lct-title.png"></h3>
+			<h3><img src="assets/images/lct-title.png"></h3>
 			<h4>Tại <span>Cần Thơ</span> ngày <span>28/5/2017</span></h4>
 			<table cellspacing="0" cellpadding="0" border="0" class="cld-item">
 				<tbody><tr>
@@ -499,7 +526,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 		}
 	</style>
 	<div class="contain">
-		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="yamahagp/images/title-term.png"></h2>
+		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="assets/images/title-term.png"></h2>
 		<ul class="gallery-tabs js-term--tabs">
 			<li class="active" style="width: 100%;">QUY ĐỊNH TRANG PHỤC VÀ XE THI ĐẤU</li>
 		</ul>
@@ -509,35 +536,35 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<div class="copy">
 						<h5>Điều lệ giải Vinfast AutoGymkhana CUP</h5>
 						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải (VIETNAM VR – ROLLER SPORTS 2020)</p>
-						<p><a class="red_link" href="yamahagp/docs/Đieu_le_Vinfast_Fadil_AutoGymkhanaCup.pdf" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="assets/docs/Đieu_le_Vinfast_Fadil_AutoGymkhanaCup.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
 						<h5>Điều lệ giải Vinfast Track Attact Cup</h5>
 						<p>Các quy định, nội dung và thể thức thi đấu</p>
-						<p><a class="red_link" href="yamahagp/docs/Đieu_le_Vinfast_LuxA_Track_Attack_.pdf" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="assets/docs/Đieu_le_Vinfast_LuxA_Track_Attack_.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
 						<h5>Điều lệ giải Motul Motor Racing Cup hệ 300 - 400cc</h5>
 						<p>Quy định chung hệ 300-400cc</p>
-						<p><a class="red_link" href="yamahagp/docs/QUY_ĐINH_CHUNG_He_300_400cc.pdf" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="assets/docs/QUY_ĐINH_CHUNG_He_300_400cc.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
 						<h5>Điều lệ giải Motul Motor Racing Cup hệ UB150</h5>
 						<p>Các quy định thi đấu và lịch tập luyện trong quá trình tham gia thi đấu giải VR Gokart và yêu cầu kỹ thuật</p>
-						<p><a class="red_link" href="yamahagp/docs/ĐIEU_LE_CAC_GIAI_GOKART_CUA_VMA_VA_YEU_CAU_ KY_ THUAT.pdf" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_GOKART_CUA_VMA_VA_YEU_CAU_ KY_ THUAT.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
 						<h5>Điều lệ GIẢI VR GO-KART CUP</h5>
 						<p>Các quy định thi đấu và lịch tập luyện trong quá trình tham gia thi đấu giải VR GOKART và yêu cầu kỹ thuật</p>
-						<p><a class="red_link" href="yamahagp/docs/ĐIỀU LỆ CÁC GIẢI GOKART CỦA VMA VÀ YÊU CẦU KỸ THUẬT.pdf" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="assets/docs/ĐIỀU LỆ CÁC GIẢI GOKART CỦA VMA VÀ YÊU CẦU KỸ THUẬT.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 			</ul>
@@ -547,35 +574,35 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <section id="news">
 	<div class="contain">
-		<h2><img src="yamahagp/images/n-tittle.png"></h2>
+		<h2><img src="assets/images/n-tittle.png"></h2>
 		<div class="js-news" role="toolbar">
 		   <div class="js-news--detail">
 			  <div class="news-item">
-				 <p class="thumb"><a href="yamahagp/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" tabindex="0"><img src="yamahagp/news/images/Họp-báo-VR-Fest-2020-5-1.jpg"></a></p>
+				 <p class="thumb"><a href="assets/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" tabindex="0"><img src="assets/news/images/Họp-báo-VR-Fest-2020-5-1.jpg"></a></p>
 				 <div class="copy">
-					<h4><a href="yamahagp/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" tabindex="0">Họp báo Lễ hội đua xe VietNam Racing Fest 2020, chuyên nghiệp đầu tiên tại Việt Nam</a></h4>
+					<h4><a href="assets/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" tabindex="0">Họp báo Lễ hội đua xe VietNam Racing Fest 2020, chuyên nghiệp đầu tiên tại Việt Nam</a></h4>
 					<p>Sáng này 03/11/2020 tại sân Golf Tân Sơn Nhất – Tp.Hồ Chí Minh, vừa diễn ra họp báo công bố chiến dịch Race To Miền Trung bao gồm: Một giải Golf lớn nhất trong năm 2020 và đặc biệt là sự kiện VietNam Racing Fest 2020 (VR Fest 2020) lễ hội đua xe chuyên nghiệp lần đầu tiên tổ chức tại Việt Nam.</p>
-					<a href="yamahagp/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
+					<a href="assets/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
 				 </div>
 			  </div>
 		   </div>
 		   <div class="js-news--detail">
 			  <div class="news-item">
-				 <p class="thumb"><a href="yamahagp/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" tabindex="0"><img src="yamahagp/news/images/VMA47C.jpg"></a></p>
+				 <p class="thumb"><a href="assets/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" tabindex="0"><img src="assets/news/images/VMA47C.jpg"></a></p>
 				 <div class="copy">
-					<h4><a href="yamahagp/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" tabindex="0">Những người Việt Nam đầu tiên nhận bằng đua xe ô tô thể thao</a></h4>
+					<h4><a href="assets/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" tabindex="0">Những người Việt Nam đầu tiên nhận bằng đua xe ô tô thể thao</a></h4>
 					<p>Ngày 04/07/2020, Hiệp hội Ô tô Thể thao Việt Nam phối hợp cùng Công ty TNHH Hiệp hội Thể thao Xe động cơ (VMA) - thành viên của Liên đoàn Ô tô Quốc tế (FIA) tổ chức Lễ trao bằng đua xe ô tô thể thao cho 32 tay đua người Việt Nam tại Trường đua Công thức 1 Hà Nội, nhằm công nhận thành tích và ghi nhận nỗ lực của các VĐV đua xe ô thể thao đầu tiên của Việt Nam khi là những người tiên phong trong môn thể thao tốc độ này.</p>
-					<a href="yamahagp/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
+					<a href="assets/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
 				 </div>
 			  </div>
 		   </div>
 		   <div class="js-news--detail">
 			  <div class="news-item">
-				 <p class="thumb"><a href="yamahagp/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0"><img src="yamahagp/images/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.jpg"></a></p>
+				 <p class="thumb"><a href="assets/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0"><img src="assets/images/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.jpg"></a></p>
 				 <div class="copy">
-					<h4><a href="yamahagp/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0">Thông tin chương trình VIETNAM RACING FESTIAL 2020</a></h4>
+					<h4><a href="assets/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0">Thông tin chương trình VIETNAM RACING FESTIAL 2020</a></h4>
 					<p>Ngày hội đua xe thể thao chuyên nghiệp do Vietnam Racing Academy - VR tổ chức nhầm phát động phong trào RACE TO MIỀN TRUNG. Chương trình với sự đồng hành của hai thương hiệu lớn VINFAST và MOTUL. Ngày hội đua xe cũng là lễ hội âm nhạc EDM hoành tráng - WHERE’S YOUR LIMIT? với sự góp mặt của nhiều ca sĩ - DJ nổi tiếng và chương trình MOTUL STUNT SHOW 2020.</p>
-					<a href="yamahagp/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
+					<a href="assets/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
 				 </div>
 			  </div>
 		   </div>
@@ -706,24 +733,24 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
       				<a class="active-title tap-active active-title1" href="#tab-2">2.PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</a>
       			</div>
 	             <div id="tab-1" class="gallery-photo gallery-photo-1 active-img">
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
 	            </div>
 	            <div id="tab-2"class="gallery-photo gallery-photo-1">
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-28.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-29.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="yamahagp/images/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-28.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-29.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
+	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
 	            </div>
       		</div>
   			
@@ -741,11 +768,11 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
-<script src="yamahagp/js/underscore.js"></script>
-<script src="yamahagp/js/jquery.history.js"></script>
+<script src="assets/js/underscore.js"></script>
+<script src="assets/js/jquery.history.js"></script>
 
-<script src="yamahagp/js/gscript.js"></script>
-<script src="yamahagp/main.js"></script>
+<script src="assets/js/gscript.js"></script>
+<script src="assets/main.js"></script>
 
 <!-- endinject -->
 
@@ -771,7 +798,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
     height: 90px;
     width: 90px;
     z-index: -1;
-    right: 4%;
+    right: 3%;
     top: 31%;
     position: absolute;
     background: #126D0C;
@@ -782,13 +809,13 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 	color: transparent;
 	margin: 0px 12px;
 	adding: 0px;
-	width: 75px;
+	width: 70px;
 	border-radius: 29px;
 	box-shadow: none;
 	background: none;
 	display: block;
 	padding-bottom: 130px;
-	background-image: url("yamahagp/images/phone-02.png");
+	background-image: url("assets/images/phone-02.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -803,6 +830,11 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
     border-radius: 39px;
     bottom: 72%;
 }
+.phoneamination1 {
+    top: -75px;
+    right: -3px;
+}
+
 @media (max-width: 767px){
 	.numbershow {
 		display: none
@@ -811,10 +843,33 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 		width: 55px;
 	}
 	.phoneamination {
-		height: 60px;
-		width: 60px;
-		right: 13%;
+	    height: 65px;
+	    width: 65px;
+	    right: 8%;
     	top: 37%;
+	}
+	.phoneamination1 {
+		right: 6px;
+    	top: -54px;
+	}
+}
+
+@media (max-width: 520px){
+	.numbershow {
+		display: none
+	}
+	.call-me {
+		width: 66px;
+	}
+	.phoneamination {
+	    height: 70px;
+	    width: 70px;
+	    right: 11%;
+	    top: 36%;
+	}
+	.phoneamination1 {
+		right: 6px;
+    	top: -64px;
 	}
 }
 </style>
@@ -828,7 +883,9 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <!-- Load Facebook Messenger -->
 <!-- https://wiki.matbao.net/kb/huong-dan-tich-hop-facebook-chat-vao-website-ma-khong-can-dung-plugin/ -->
-  <div id="fb-root"></div>
+<div class="wrap-phone">
+	<div class="phoneamination phoneamination1 animate__animated animate__zoomIn animate__delay-2s animate__infinite animate__slower"></div>
+	<div id="fb-root"></div>
   <script>
 	window.fbAsyncInit = function() {
 	  FB.init({
@@ -851,5 +908,6 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 	page_id="104362934697822"
 	theme_color="#67b868">
   </div>
+</div>
 	  
 </body></html>
