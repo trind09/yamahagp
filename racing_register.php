@@ -115,21 +115,7 @@
 	</script>
 
 <?php
-$domain = "http://thuctaplamsang.edu.vn/";
-$dbhost = 'localhost';
-$dbhost = 'localhost';
-// Database Name
-$dbname = 'ilear871_vietnam_racing_festival';
-// Database Username
-$dbuser = 'ilear871_ilearn';
-// Database Password
-$dbpass = 'panda@80';
-$pdo = new PDO("mysql:host={$dbhost};dbname={$dbname}", $dbuser, $dbpass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//Query to alter table to utf8 collation
-//ALTER DATABASE dbname CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-//ALTER TABLE tablename CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-//ALTER TABLE mytable CONVERT TO CHARACTER SET utf8
+include 'inc/config.php';
 	
 if(isset($_POST['form1'])) {
 	$valid = 1;
@@ -388,8 +374,8 @@ if(isset($_POST['form1'])) {
 		
 		// saving into the database
 		$statement = $pdo->prepare("INSERT INTO registers (number, fullname, birthday, phone, "
-			. "email, club_name, address, social_link, sponsor_fullname, sponsor_phone, create_date, comment1, comment2) VALUES "
-			. "(?,?,?,?,?,?,?,?,?,?,curdate(),?,?)");
+			. "email, club_name, address, social_link, sponsor_fullname, sponsor_phone, comment1, comment2) VALUES "
+			. "(?,?,?,?,?,?,?,?,?,?,?,?)");
 		$statement->execute(array($number, $fullname, $birthday, $phone, $email, $club_name, $address, $social_link, $sponsor_fullname, $sponsor_phone, $comment1, $comment2));
 		$register_id = $pdo->lastInsertId();
 		
@@ -443,19 +429,15 @@ if(isset($_POST['form1'])) {
 			}
 
 			if (count($license_file_urls) > 0){
-				foreach ($license_file_urls as $license_file_url) {
-					$statement = $pdo->prepare("INSERT INTO license(name, description, file_urls, create_date, register_id) "
-						. "VALUES (?,?,?,curdate(),?)");
-					$statement->execute(array($fullname, $email, $license_file_url, $register_id));
-				}
+				$license_files = implode ('|', $license_file_urls);
+				$statement = $pdo->prepare("UPDATE registers SET license_files = ? WHERE id = ?");
+				$statement->execute(array($license_files, $register_id));
 			}
 			
 			if (count($bank_file_urls) > 0){
-				foreach ($bank_file_urls as $bank_file_url) {
-					$statement = $pdo->prepare("INSERT INTO bank_transfer_certificates(bank_name, receiver_name, bank_account_number, transfer_date, file_urls, create_date, register_id) "
-						. "VALUES (?,?,?,curdate(),?,curdate(),?)");
-					$statement->execute(array($fullname, "STK: 19036288269012 - TECHCOMBANK - CONG TY TNHH HOC VIEN THE THAO TOC DO VIET NAM", $email, $bank_file_url, $register_id));
-				}
+				$banktransfer_files = implode ('|', $bank_file_urls);
+				$statement = $pdo->prepare("UPDATE registers SET banktransfer_files = ? WHERE id = ?");
+				$statement->execute(array($banktransfer_files, $register_id));
 			}
 			
 			$success_message = "<span style=\"text-transform: uppercase;\">Chúc mừng <b>" . $fullname . "</b> đã đăng ký thành công " . $racing_level . ".</span>";

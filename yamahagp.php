@@ -5,17 +5,16 @@
 	
     <!-- SEO -->
     <title>Vietnam Racing Festival 2020</title>
-    <!-- <title>Giải đua xe Yamaha Motor Việt Nam GP 2018</title> -->
-	<meta name="description" content="Giải đua xe chuyên nghiệp do Yamaha Motor Việt Nam tổ chức tại Hồ Chí Minh ngày 04/02/2018">
+	<meta name="description" content="Where's your limit?">
 	<meta name="keywords" content="">
-        	
-	 <!--    	<meta name="og:title" content="Giải đua xe Yamaha Motor Việt Nam GP 2018">
-     -->
-     <meta name="og:title" content="Vietnam Racing Festival 2020">
-         	<meta name="og:description" content="Where's your limit?">
-              	<meta name="og:description" content="Where's your limit?">
-              	<meta name="og:image" content="assets/images/logo.png">
-         <!-- Spiders must use meta description -->
+	<meta name="og:title" content="Vietnam Racing Festival 2020">
+	<meta name="og:description" content="Where's your limit?">
+	<meta name="og:image" content="assets/images/logo.png">
+    
+	<meta property="og:image" content="assets/images/bg.jpg">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1024">
+	<meta property="og:image:height" content="576">
 
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta name="robots" content="noodp, noydir">
@@ -146,30 +145,6 @@
 		}
 	}
 	</style>
-	<div class="contain">
-		<div class="copy" style="height: 45vh;">
-			<h2 style="visibility: inherit; opacity: 1;"><img src="assets/images/h-title.png"></h2>
-			<div class="bikers" style="visibility: inherit; opacity: 1;">
-				<img src="assets/images/biker2.png" class="biker2" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-				<img src="assets/images/biker1.png" class="biker1" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-				<img src="assets/images/biker3.png" class="biker3" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-			</div>
-		</div>
-		<ul class="sponsor">
-			<li>
-				<img src="assets/images/logo-liendoan.png">
-				<p>Liên đoàn xe đạp<br>Môtô thể thao Việt Nam</p>
-			</li>
-			<li>
-				<img src="assets/images/logo-yamah.png">
-				<p>Công ty TNHH<br>Yamaha Motor Việt Nam</p>
-			</li>
-			<li>
-				<img src="assets/images/ogo-ldxd.png">
-				<p>Liên Đoàn Xe đạp<br>Mô tô thể thao Tp. HCM</p>
-			</li>			
-		</ul>
-	</div>
 
 	<img src="assets/images/bg.jpg" alt="" class="bg_pc">
 	
@@ -534,37 +509,37 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			<ul class="race-league">
 				<li>
 					<div class="copy">
-						<h5>Điều lệ giải Vinfast AutoGymkhana CUP</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải (VIETNAM VR – ROLLER SPORTS 2020)</p>
-						<p><a class="red_link" href="assets/docs/Đieu_le_Vinfast_Fadil_AutoGymkhanaCup.pdf" target="_blank">Xem Thêm >></a></p>
+						<h5>ĐIỀU LỆ GIẢI VINFAST AUTOGYMKHANA CUP</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
+						<p><a class="red_link" href="assets/docs/ĐIEU_LE_VINFAST_AUTOGYMKHANA_CUP.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<h5>Điều lệ giải Vinfast Track Attact Cup</h5>
-						<p>Các quy định, nội dung và thể thức thi đấu</p>
-						<p><a class="red_link" href="assets/docs/Đieu_le_Vinfast_LuxA_Track_Attack_.pdf" target="_blank">Xem Thêm >></a></p>
+						<h5>ĐIỀU LỆ GIẢI VINFAST TRACK ATTACT CUP</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
+						<p><a class="red_link" href="assets/docs/ĐIEU_LE_VINFAST_TRACK_ATTACK_CUP.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<h5>Điều lệ giải Motul Motor Racing Cup hệ 300 - 400cc</h5>
-						<p>Quy định chung hệ 300-400cc</p>
-						<p><a class="red_link" href="assets/docs/QUY_ĐINH_CHUNG_He_300_400cc.pdf" target="_blank">Xem Thêm >></a></p>
+						<h5>ĐIỀU LỆ GIẢI MOTUL MOTOR RACING CUP HỆ 300 - 400CC</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
+						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_300_400cc.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<h5>Điều lệ giải Motul Motor Racing Cup hệ UB150</h5>
-						<p>Các quy định thi đấu và lịch tập luyện trong quá trình tham gia thi đấu giải VR Gokart và yêu cầu kỹ thuật</p>
-						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_GOKART_CUA_VMA_VA_YEU_CAU_ KY_ THUAT.pdf" target="_blank">Xem Thêm >></a></p>
+						<h5>ĐIỀU LỆ GIẢI MOTUL MOTOR RACING CUP HỆ UB150</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
+						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_UB150.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
 					<div class="copy">
-						<h5>Điều lệ GIẢI VR GO-KART CUP</h5>
-						<p>Các quy định thi đấu và lịch tập luyện trong quá trình tham gia thi đấu giải VR GOKART và yêu cầu kỹ thuật</p>
-						<p><a class="red_link" href="assets/docs/ĐIỀU LỆ CÁC GIẢI GOKART CỦA VMA VÀ YÊU CẦU KỸ THUẬT.pdf" target="_blank">Xem Thêm >></a></p>
+						<h5>ĐIỀU LỆ GIẢI VR GO-KART CUP</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
+						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_GO_KART_CUP.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 			</ul>
