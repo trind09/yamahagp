@@ -442,66 +442,6 @@ var YMH = {
         },
       ]
     });
-	
-	$('#tab-2').slick({
-      rows:2,
-      arrows: true,
-      dots: true,
-      infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            centerMode: false,
-            dots: false,
-          }
-        },
-        {
-          breakpoint: 567,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            dots: false,
-          }
-        },
-      ]
-    });
-	
-	$('#tab-1').slick({
-      rows:2,
-      arrows: true,
-      dots: true,
-      infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            centerMode: false,
-            dots: false,
-          }
-        },
-        {
-          breakpoint: 567,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            dots: false,
-          }
-        },
-      ]
-    });
 
     var controller = new ScrollMagic.Controller();
     var scene = new ScrollMagic.Scene({ triggerElement: "#news", triggerHook: 0.5 })
@@ -530,23 +470,23 @@ var YMH = {
 
   photo: function() {
 
-    // $('.js-photo').slick({
-    //   dots: true,
-    //   infinite: true,
-    //   slidesPerRow: 4,
-    //   rows: 2,
-    //   draggable: false,
-    //   focusOnSelect: true,
-    //   responsive: [
-    //       {
-    //         breakpoint: 478,
-    //         settings: {
-    //           slidesPerRow: 1,
-    //           rows: 1,
-    //         }
-    //       }
-    //     ]
-    // });
+    $('.js-photo').slick({
+      dots: true,
+      infinite: true,
+      slidesPerRow: 4,
+      rows: 2,
+      draggable: false,
+      focusOnSelect: true,
+      responsive: [
+          {
+            breakpoint: 478,
+            settings: {
+              slidesPerRow: 1,
+              rows: 1,
+            }
+          }
+        ]
+    });
 
   },
 

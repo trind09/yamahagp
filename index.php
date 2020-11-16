@@ -596,175 +596,38 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			  width: '1200px',
 			  imageAlt: 'BG Gallery',
 			});
-      	};
-		
-      	$(document).ready(function(){
-      		$('.tap-active').click(function(event) {
-      			 event.preventDefault();
-      	  $(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
-      
-      	  $($(this).attr('href')).addClass('active-img').siblings().removeClass('active-img');
-      	});
-      });
+      	}
    </script>
-   <style>
-      .active-title {
-			font-size: 18px;
-			font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-			text-align: left;
-		}
-
-		.text-active a {
-			display: block;
-		}
-
-		.active-title1 {
-			color: #6FDA2B;
-			font-size: 15px;
-		}
-
-		.nav-tab-active {
-			color: #F4ED2D;
-		}
-
-		.img-two-rows img {
-			width: 100%;
-			border: 2px solid white;
-			height: 170px
-		}
-
-		.img-two-rows {
-			padding: 10px;
-		}
-
-		.gallery-photo-1 {
-			display: none
-		}
-
-		.active-img {
-			display: block
-		}
-
-		.gallery-photo-1 .slick-prev,
-		.gallery-photo-1 .slick-next {
-			top: 21%;
-			z-index: 1000;
-		}
-
-		.gallery-photo-1 .slick-next {
-			right: -20px
-		}
-
-		.gallery-photo-1 .slick-prev {
-			left: -20px
-		}
-
-		.gallery-photo-1 .slick-dots {
-			position: absolute;
-			bottom: 52%;
-			left: 46%
-		}
-
-		@media (max-width: 920px) {
-			.wrap-img-active {
-				margin: 0 auto;
-				width: 90%
-			}
-			.img-two-rows {
-				padding: 9px;
-			}
-			.gallery-photo-1 .slick-prev,
-			.gallery-photo-1 .slick-next {
-				top: 20%;
-				width: 40px;
-				height: 34px;
-			}
-			.gallery-photo-1 .slick-dots {
-				position: absolute;
-				bottom: 64%;
-				left: 41%
-			}
-		}
-
-		@media (max-width: 520px) {
-			.gallery-tabs {
-				margin: 10px auto 20px;
-			}
-			.active-title {
-				font-size: 13px;
-			}
-			.active-title1 {
-				font-size: 10px;
-			}
-			.wrap-img-active {
-				margin: 0 auto;
-				width: 80%
-			}
-			.img-two-rows {
-				padding: 5px;
-			}
-			.gallery-photo-1 .slick-prev,
-			.gallery-photo-1 .slick-next {
-				top: 18%;
-				width: 40px;
-				height: 34px;
-			}
-			.gallery-photo-1 .slick-dots {
-				position: absolute;
-				bottom: 75%;
-				left: 24%
-			}
-		}
-   </style>
    <div class="contain">
-   <ul class="gallery-tabs gallery-tabs1 js-term--tabs">
-      <li class="active" style="width: 100%;">HÌNH ẢNH & SỰ KIỆN NĂM 2020</li>
-   </ul>
-   <div class="gallery-item display" id="type-photo">
-      <div class="wrap-img-active">
-         <div class="img-active-right">
-            <div class="active-title">HÌNH ẢNH CHƯƠNG TRÌNH</div>
-            <div class="text-active">
-               <a class="active-title tap-active nav-tab-active active-title1" href="#tab-1">1.HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</a>
-               <a class="active-title tap-active active-title1" href="#tab-2">2.PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</a>
-            </div>
-         </div>
-      </div>
-      <div id="tab-1" class="gallery-photo-1 active-img">
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
-      </div>
-      <div id="tab-2" class="gallery-photo-1">
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-28.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-29.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
-         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
-      </div>
-   </div>
+		<h2>HÌNH ẢNH & SỰ KIỆN NĂM 2020</h2>
+		<ul class="gallery-tabs" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
+			<li class="active" style="width: 100%;">HÌNH ẢNH CHƯƠNG TRÌNH</li>
+		</ul>
+		<select>
+		  <option value="1">1.	HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</option>
+		  <option value="2">2.	PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</option>
+	   </select>
+	   <div class="gallery-item-wrap">
+		 <div class="gallery-photo js-photo">
+			<div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+		 </div>
+	  </div>
+	</div>
    <footer>
       <p class="socials" style="margin-top: 20px;">
          <a href="https://www.facebook.com/vietnamracingacademy" class="fb" target="_blank"></a> 
