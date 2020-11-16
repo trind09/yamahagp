@@ -5,3 +5,5 @@ Viet cau lenh sql update table [SCDMv14].[dbo].[tbl_eulegacyreturn_question] whe
 
 Nhac 2 anh chi ghi ro cau thoai sau khi dang ky moi
 Nhac domain
+
+Phai lam giam dung luong anh de website co the load nhanh hon

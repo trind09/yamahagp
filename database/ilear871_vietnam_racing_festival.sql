@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 15, 2020 at 09:01 PM
+-- Generation Time: Nov 16, 2020 at 07:03 AM
 -- Server version: 5.7.32-log
 -- PHP Version: 7.3.6
 
@@ -89,6 +89,30 @@ INSERT INTO `registers` (`id`, `number`, `fullname`, `birthday`, `phone`, `email
 (58, '12323646464696', 'Nguyễn Dũng Trí', '1980-11-02', '0764439566', 'trind09@yahoo.com', 'Câu lạc bộ abc', '40 TK20, KDC Hoàng Hải', 'http://www.google.com', 'Nguyễn Văn Bánh', '3032265656556', NULL, NULL, 'Ngày 31 tháng 10 năm 2019, Hương Giang ra mắt phần tiếp theo thuộc ADODDA series, một ca khúc ballad nhẹ nhàng của nhạc sĩ RIN9 mang tên Anh ta bỏ em rồi. Ở phần này chính thức có thêm sự xuất hiện của một nhân vật khách mời ngoại quốc nữa là Philip Thinroj, quán quân của The Face Men Thailand. Ca khúc đã đạt kỉ lục 100.000 lượt xem cùng lúc tại thời điểm công chiếu.\r\n\r\nNgày 4 tháng 12 năm 2019, Hương Giang chính thức công bố dự án phim điện ảnh đầu tay của mình với cái tên Sắc đẹp dối trá, bộ phim đự kiến ra mắt vào đầu năm 2020.\r\n\r\nNgày 6 tháng 2 năm 2020, Hương Giang tung phần cuối series ADODDA mang tên Tặng Anh Cho Cô Ấy với những tình tiết kịch tính không thua kém gì những sản phẩm trước đó. Tặng Anh Cho Cô Ấy là một ca khúc được Hương Giang đồng sáng tác với nhạc sĩ Hứa Kim Tuyền. Đặc biệt, còn có sự xuất hiện của Apinya Sakuljaroensuk. Chỉ sau 4 giờ đăng tải, Tặng Anh Cho Cô Ấy đã đạt top 1 trending trên YouTube với gần 2.000.000 lượt xem.', '', NULL, '2020-11-15 20:11:57', NULL, NULL, NULL),
 (59, '12323646464696', 'Nguyễn Dũng Trí', '1980-11-02', '0764439566', 'trind09@yahoo.com', 'Câu lạc bộ abc', '40 TK20, KDC Hoàng Hải', 'http://www.google.com', 'Nguyễn Văn Bánh', '3032265656556', 'register_files/uploads/photo_trind09@yahoo.com_B_15-11-2020_13-12-33.jpg|register_files/uploads/photo_trind09@yahoo.com_VMA_15-11-2020_13-12-33.jpg', NULL, 'Ngày 31 tháng 10 năm 2019, Hương Giang ra mắt phần tiếp theo thuộc ADODDA series, một ca khúc ballad nhẹ nhàng của nhạc sĩ RIN9 mang tên Anh ta bỏ em rồi. Ở phần này chính thức có thêm sự xuất hiện của một nhân vật khách mời ngoại quốc nữa là Philip Thinroj, quán quân của The Face Men Thailand. Ca khúc đã đạt kỉ lục 100.000 lượt xem cùng lúc tại thời điểm công chiếu.\r\n\r\nNgày 4 tháng 12 năm 2019, Hương Giang chính thức công bố dự án phim điện ảnh đầu tay của mình với cái tên Sắc đẹp dối trá, bộ phim đự kiến ra mắt vào đầu năm 2020.\r\n\r\nNgày 6 tháng 2 năm 2020, Hương Giang tung phần cuối series ADODDA mang tên Tặng Anh Cho Cô Ấy với những tình tiết kịch tính không thua kém gì những sản phẩm trước đó. Tặng Anh Cho Cô Ấy là một ca khúc được Hương Giang đồng sáng tác với nhạc sĩ Hứa Kim Tuyền. Đặc biệt, còn có sự xuất hiện của Apinya Sakuljaroensuk. Chỉ sau 4 giờ đăng tải, Tặng Anh Cho Cô Ấy đã đạt top 1 trending trên YouTube với gần 2.000.000 lượt xem.', '', NULL, '2020-11-15 20:12:33', NULL, NULL, NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(200) DEFAULT NULL,
+  `password` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `address` varchar(300) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `country` varchar(100) DEFAULT NULL,
+  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `address`, `birthday`, `country`, `create_date`) VALUES
+(1, 'admin', 'admin', 'trind09@yahoo.com', NULL, NULL, NULL, '2020-11-15 21:31:40');
+
 --
 -- Indexes for dumped tables
 --
@@ -101,6 +125,12 @@ ALTER TABLE `registers`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -109,6 +139,12 @@ ALTER TABLE `registers`
 --
 ALTER TABLE `registers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
