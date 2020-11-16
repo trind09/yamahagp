@@ -1,5 +1,5 @@
 <?php
-$domain = "http://thuctaplamsang.edu.vn/";
+$domain = "http://thuctaplamsang.edu.vn/vietnamracing/";
 $dbhost = 'localhost';
 $dbhost = 'localhost';
 // Database Name
