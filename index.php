@@ -586,159 +586,192 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 </section>
 
 <section id="gallery" class="display">
-	<style type="text/css">
-		#gallery .gallery-tabs {
-			width: 60vw;
-		}
-		.gallery-tabs1 li{
-			font-size: 20px
-		}
-		.gallery-list li {
-			color: #6FDA2B;
-		}
-		.gallery-filter {
-			padding-top: 0px;
-		}
-		.gallery-filter .select_filter select {
-			font-size: 13px
-		}
-		.gallery-filter .luc_province .select_filter select {
-			font-size: 10px
-		}
-		.gallery-filter > div:last-child {
-			padding-left: 20px;
-			width: 34%;
-		}
-		.gallery-filter .luc_province  .select_filter {
-			background: url(images/ar2.png) no-repeat 80% center;
-		}
-		.gallery-list1 li:after {
-			display: none !important; 
-		}
-		.wrap-img-active {
-			display: flex;
-			flex-wrap: wrap;
-			margin: 0 auto;
-			width: 100%;	
-		}
-		.text-active a{
-			display: block;
-		}
-		.active-title {
+   <script type="text/javascript">
+		function ViewPigsizeImage(element){
+			var src = $(element).attr("src");
+			var larger_src = src.replace("/small/", "/large/");
+			swal({
+			  imageUrl: larger_src,
+			  imageWidth: '100%',
+			  width: '1200px',
+			  imageAlt: 'BG Gallery',
+			});
+      	};
+		
+      	$(document).ready(function(){
+      		$('.tap-active').click(function(event) {
+      			 event.preventDefault();
+      	  $(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
+      
+      	  $($(this).attr('href')).addClass('active-img').siblings().removeClass('active-img');
+      	});
+      });
+   </script>
+   <style>
+      .active-title {
 			font-size: 18px;
 			font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
 			text-align: left;
 		}
-		.img-active-right {
-			margin: 10px;
+
+		.text-active a {
+			display: block;
 		}
-		.text-active {
-			line-height: 2
-		}
+
 		.active-title1 {
-			color:#6FDA2B;
+			color: #6FDA2B;
 			font-size: 15px;
 		}
-		.nav-tab-active{
-			color: 	#F4ED2D
 
+		.nav-tab-active {
+			color: #F4ED2D;
 		}
-		.active-title1:hover {
-			cursor: pointer;
-			color: 	#F4ED2D
+
+		.img-two-rows img {
+			width: 100%;
+			border: 2px solid white;
+			height: 170px
 		}
+
+		.img-two-rows {
+			padding: 10px;
+		}
+
 		.gallery-photo-1 {
 			display: none
 		}
+
 		.active-img {
 			display: block
 		}
-		.animate__animated.animate__fast {
-			animation-duration: calc(var(--animate-duration)*5);
+
+		.gallery-photo-1 .slick-prev,
+		.gallery-photo-1 .slick-next {
+			top: 21%;
+			z-index: 1000;
 		}
-		@media (max-width: 767px){
-			#gallery .gallery-tabs {
-			width: 90%;
+
+		.gallery-photo-1 .slick-next {
+			right: -20px
+		}
+
+		.gallery-photo-1 .slick-prev {
+			left: -20px
+		}
+
+		.gallery-photo-1 .slick-dots {
+			position: absolute;
+			bottom: 52%;
+			left: 46%
+		}
+
+		@media (max-width: 920px) {
+			.wrap-img-active {
+				margin: 0 auto;
+				width: 90%
 			}
+			.img-two-rows {
+				padding: 9px;
+			}
+			.gallery-photo-1 .slick-prev,
+			.gallery-photo-1 .slick-next {
+				top: 20%;
+				width: 40px;
+				height: 34px;
+			}
+			.gallery-photo-1 .slick-dots {
+				position: absolute;
+				bottom: 64%;
+				left: 41%
+			}
+		}
+
+		@media (max-width: 520px) {
 			.gallery-tabs {
-				margin: 10px auto
-			}
-			.gallery-tabs1 li {
-			font-size: 11px;
+				margin: 10px auto 20px;
 			}
 			.active-title {
-			font-size: 13px;
+				font-size: 13px;
 			}
 			.active-title1 {
-			font-size: 10px;
+				font-size: 10px;
+			}
+			.wrap-img-active {
+				margin: 0 auto;
+				width: 80%
+			}
+			.img-two-rows {
+				padding: 5px;
+			}
+			.gallery-photo-1 .slick-prev,
+			.gallery-photo-1 .slick-next {
+				top: 18%;
+				width: 40px;
+				height: 34px;
+			}
+			.gallery-photo-1 .slick-dots {
+				position: absolute;
+				bottom: 75%;
+				left: 24%
 			}
 		}
-	</style>
-   
-   <script type="text/javascript">
-   	$(document).ready(function(){
-   		$('.tap-active').click(function(event) {
-   			 event.preventDefault();
-		  $(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
-
-		  $($(this).attr('href')).addClass('active-img').siblings().removeClass('active-img');
-		});
-   	});
-	
-	function ViewPigsizeImage(element){
-		var src = $(element).attr("src");
-		swal({
-		  imageUrl: src,
-		  imageWidth: '100%',
-		  width: '1200px',
-		  imageAlt: 'BG About Us'
-		});
-	}
-   </script>
+   </style>
    <div class="contain">
-   		<ul class="gallery-tabs gallery-tabs1 js-term--tabs">
-			<li class="active" style="width: 100%;">HÌNH ẢNH & SỰ KIỆN NĂM 2020</li>
-		</ul>
-      <div class="gallery-item display" id="type-photo">
-      	<div class="wrap-img-active">
-      		<div class="img-active-right">
-      			<div class="active-title">HÌNH ẢNH CHƯƠNG TRÌNH</div>
-      			<div class="text-active">
-      				<a class="active-title tap-active nav-tab-active active-title1" href="#tab-1">1.HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</a>
-      				<a class="active-title tap-active active-title1" href="#tab-2">2.PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</a>
-      			</div>
-	             <div id="tab-1" class="gallery-photo gallery-photo-1 active-img">
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
-	            </div>
-	            <div id="tab-2"class="gallery-photo gallery-photo-1">
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-28.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-29.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
-	               <div class="js-img animate__fadeIn animate__fast animate__animated "><img style="cursor: pointer;" src="assets/images/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
-	            </div>
-      		</div>
-  			
-      	</div>
-        
-	</div>	
-	<footer>
+   <ul class="gallery-tabs gallery-tabs1 js-term--tabs">
+      <li class="active" style="width: 100%;">HÌNH ẢNH & SỰ KIỆN NĂM 2020</li>
+   </ul>
+   <div class="gallery-item display" id="type-photo">
+      <div class="wrap-img-active">
+         <div class="img-active-right">
+            <div class="active-title">HÌNH ẢNH CHƯƠNG TRÌNH</div>
+            <div class="text-active">
+               <a class="active-title tap-active nav-tab-active active-title1" href="#tab-1">1.HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</a>
+               <a class="active-title tap-active active-title1" href="#tab-2">2.PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</a>
+            </div>
+         </div>
+      </div>
+      <div id="tab-1" class="gallery-photo-1 active-img">
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
+      </div>
+      <div id="tab-2" class="gallery-photo-1">
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-28.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-29.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
+         <div class="img-two-rows "><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
+      </div>
+   </div>
+   <footer>
       <p class="socials" style="margin-top: 20px;">
          <a href="https://www.facebook.com/vietnamracingacademy" class="fb" target="_blank"></a> 
          <a href="#" class="ytb" target="_blank"></a>
       </p>
       <p class="copyright">© 2020 Copyright <a href="https://www.facebook.com/vietnamracingacademy" target="_blank">Vietnam Racing Academy</a>. All rights reserved.</p>
-	</footer>
+   </footer>
 </section>
 
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
