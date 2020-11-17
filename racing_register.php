@@ -87,7 +87,6 @@
 			$('[id^=birthday]').show();
 			$('[id^=phone]').show();
 			$('[id^=email]').show();
-			$('[id^=club_name]').show();
 			$('[id^=address]').show();
 			$('[id^=social_link]').show();
 			$('[id^=license_file1]').show();
@@ -127,12 +126,6 @@ if(isset($_POST['form1'])) {
 	$birthday = strip_tags($_POST['birthday']);
 	$phone = strip_tags($_POST['phone']);
 	$email = strip_tags($_POST['email']);
-	$club_name = "";
-	if (isset($_POST['club_name_ck'])){
-		$club_name = "Tự do - Cá nhân";
-	} else {
-		$club_name = strip_tags($_POST['club_name']);
-	}
 	$address = strip_tags($_POST['address']);
 	$social_link = strip_tags($_POST['social_link']);
 	$number = strip_tags($_POST['number']);
@@ -189,34 +182,9 @@ if(isset($_POST['form1'])) {
 		$error_message .= 'Xin nhập email.<br>';
 	}
 	
-	if(empty($club_name)) {
-		$valid = 0;
-		$error_message .= 'Xin nhập tên câu lạc bộ.<br>';
-	}
-	
 	if(empty($address)) {
 		$valid = 0;
 		$error_message .= 'Xin nhập địa chỉ nơi ở hiện nay.<br>';
-	}
-	
-	if(empty($social_link)) {
-		$valid = 0;
-		$error_message .= 'Xin nhập link Facebook hoặc Zalo của bạn.<br>';
-	}
-	
-	if(empty($number)) {
-		$valid = 0;
-		$error_message .= 'Xin nhập Số đua đăng ký.<br>';
-	}
-	
-	if(empty($sponsor_fullname)) {
-		$valid = 0;
-		$error_message .= 'Xin nhập Họ và tên người bảo hộ.<br>';
-	}
-	
-	if(empty($sponsor_phone)) {
-		$valid = 0;
-		$error_message .= 'Xin nhập số điện thoại người bảo hộ.<br>';
 	}
 	
 	if(!empty($_POST['form_id'])) {
@@ -374,9 +342,9 @@ if(isset($_POST['form1'])) {
 		
 		// saving into the database
 		$statement = $pdo->prepare("INSERT INTO registers (number, fullname, birthday, phone, "
-			. "email, club_name, address, social_link, sponsor_fullname, sponsor_phone, comment1, comment2) VALUES "
-			. "(?,?,?,?,?,?,?,?,?,?,?,?)");
-		$statement->execute(array($number, $fullname, $birthday, $phone, $email, $club_name, $address, $social_link, $sponsor_fullname, $sponsor_phone, $comment1, $comment2));
+			. "email, address, social_link, sponsor_fullname, sponsor_phone, comment1, comment2) VALUES "
+			. "(?,?,?,?,?,?,?,?,?,?,?)");
+		$statement->execute(array($number, $fullname, $birthday, $phone, $email, $address, $social_link, $sponsor_fullname, $sponsor_phone, $comment1, $comment2));
 		$register_id = $pdo->lastInsertId();
 		
 		if ($register_id != 0){
@@ -634,30 +602,11 @@ if(isset($_POST['form1'])) {
 				 <input class="swal2-input" id="email" name="email" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="email-validation-message"></div>
 				 
-				<label for="club_name" class="swal2-input-label" id="club_name-label">Tên Câu lạc bộ <span style="color: red;">*</span></label>
-				 <script>
-					$(document).ready(function() {      
-						$("#club_name-checkbox").change(function() {
-							if(this.checked) {
-								$("#club_name").attr("disabled", "disabled"); 
-							} else {
-								$("#club_name").removeAttr("disabled");
-							}
-						});
-					});
-				 </script>
-				 <label for="club_name-checkbox" class="swal2-checkbox" id="club_name-checkbox-label" style="display: flex; -webkit-box-align: left; -ms-flex-align: left; align-items: left; -webkit-box-pack: left; -ms-flex-pack: left; justify-content: left;">
-					<input type="checkbox" value="Tự do hay Cá Nhân" id="club_name-checkbox" id="club_name_ck" name="club_name_ck">
-					<span class="swal2-label">Tự do/Cá Nhân</span>
-				 </label>
-				 <input class="swal2-input" id="club_name" name="club_name" placeholder="" type="text" style="display: flex; color: black;">
-				 <div class="swal2-validation-message" id="club_name-validation-message"></div>
-				 
 				<label for="address" class="swal2-input-label" id="address-label">Nơi ở hiện nay <span style="color: red;">*</span></label>
 				 <input class="swal2-input" id="address" name="address" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="address-validation-message"></div>
 				 
-				<label for="social_link" class="swal2-input-label" id="social_link-label">Zalo hoặc link Facebook <span style="color: red;">*</span></label>
+				<label for="social_link" class="swal2-input-label" id="social_link-label">Zalo hoặc link Facebook</label>
 				 <input class="swal2-input" id="social_link" name="social_link" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="social_link-validation-message"></div>
 				 
@@ -677,15 +626,15 @@ if(isset($_POST['form1'])) {
 				 <input type="file" aria-label="Upload tâp tin jpg, jpeg, png, pdf, docx" id="license_file4" name="license_file4" class="swal2-file" placeholder="" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="license_file4-validation-message"></div>
 				 
-				<label for="number" class="swal2-input-label" id="number-label">Số đua đăng ký <span style="color: red;">*</span></label>
+				<label for="number" class="swal2-input-label" id="number-label">Số đua đăng ký</label>
 				 <input class="swal2-input" id="number" name="number" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="number-validation-message"></div>
 				 
-				<label for="sponsor_fullname" class="swal2-input-label" id="sponsor_fullname-label">Họ và tên người bảo hộ <span style="color: red;">*</span></label>
+				<label for="sponsor_fullname" class="swal2-input-label" id="sponsor_fullname-label">Họ và tên người bảo hộ</label>
 				 <input class="swal2-input" id="sponsor_fullname" name="sponsor_fullname" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="sponsor_fullname-validation-message"></div>
 				 
-				<label for="sponsor_phone" class="swal2-input-label" id="sponsor_phone-label">Số điện thoại người bảo hộ <span style="color: red;">*</span></label>
+				<label for="sponsor_phone" class="swal2-input-label" id="sponsor_phone-label">Số điện thoại người bảo hộ</label>
 				 <input class="swal2-input" id="sponsor_phone" name="sponsor_phone" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="sponsor_phone-validation-message"></div>
 				 
