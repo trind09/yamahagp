@@ -8,7 +8,6 @@
 		});
 		
 		function OpenRegisterPopup(form_id){
-			console.log(form_id);
 			HideAllFormTitleAndDescription();
 			ShowAllFormControls();
 			if (form_id == "semipro-300-400cc"){
@@ -105,12 +104,179 @@
 		}
 		
 		function ProcessRegister(){
-			if (confirm("Bạn đã điền thông tin chính xác và đầy đủ?")) {
-				 return true;
-			  } else {
+			var error_message = ValidateForm();
+			if (error_message == ""){
+				if (confirm("Bạn đã điền thông tin chính xác và đầy đủ?")) {
+					 return true;
+				  } else {
+					return false;
+				  }
+			} else {
+				swal({
+				  title: '<strong>Thông báo</strong>',
+				  html: error_message,
+				  type: 'error',
+				  confirmButtonText: 'Ok'
+				});
 				return false;
-			  }
+			}
 		}
+		
+		function ValidateForm(){
+			var form_id = $('input#form_id').val();
+			
+			var error_message = "";
+			
+			if($('#fullname').val() == ''){
+				error_message += "Xin nhập họ và tên.<br>";
+			}
+			if(!isDate($('#birthday').val())){
+				error_message += "Xin nhập ngày sinh đúng định dạng.<br>";
+			}
+			if($('#phone').val() == ''){
+				error_message += "Xin nhập số điện thoại.<br>";
+			}
+			if(!isEmail($('#email').val())){
+				error_message += "Xin nhập email.<br>";
+			}
+			if($('#address').val() == ''){
+				error_message += "Xin nhập địa chỉ nơi ở hiện nay.<br>";
+			}
+			
+			if (form_id == 'semipro-300-400cc'){
+				if(document.getElementById("license_file1").files.length == 0) {
+					error_message += 'Xin upload hình ảnh bằng lái A2 còn hiệu lực.<br>';
+				} else {
+					if (!isValidFileType("license_file1")){
+						error_message += 'Xin upload hình ảnh bằng lái A2 đúng định dạng.<br>';
+					}
+				}
+				
+				if(document.getElementById("banktransfer_file1").files.length == 0) {
+					error_message += 'Xin upload hình ảnh xác nhận chuyển khoản.<br>';
+				} else {
+					if (!isValidFileType("banktransfer_file1")){
+						error_message += 'Xin upload hình ảnh xác nhận chuyển khoản đúng định dạng.<br>';
+					}
+				}
+			} else if (form_id == 'oto-track-attack'){
+				if(document.getElementById("license_file2").files.length == 0) {
+					error_message += 'Xin upload hình ảnh bằng lái B trở lên còn hiệu lực.<br>';
+				} else {
+					if (!isValidFileType("license_file2")){
+						error_message += 'Xin upload hình ảnh bằng lái B đúng định dạng.<br>';
+					}
+				}
+				
+				if(document.getElementById("license_file3").files.length == 0) {
+					error_message += 'Xin upload hình ảnh bằng đua xe VMA còn hiệu lực.<br>';
+				} else {
+					if (!isValidFileType("license_file3")){
+						error_message += 'Xin upload hình ảnh bằng đua xe VMA đúng định dạng.<br>';
+					}
+				}
+				
+				if($("comment1").val() == "") {
+					error_message += 'Xin chia sẻ kinh nghiệm đua xe của bạn.<br>';
+				}
+			} else if ($form_id == 'oto-gymkhana'){
+				if(document.getElementById("license_file2").files.length == 0) {
+					error_message += 'Xin upload hình ảnh bằng lái B trở lên còn hiệu lực.<br>';
+				} else {
+					if (!isValidFileType("license_file2")){
+						error_message += 'Xin upload hình ảnh bằng lái B đúng định dạng.<br>';
+					}
+				}
+				
+				if($("comment2").val() == "") {
+					error_message += 'Xin chia sẻ kinh nghiệm và kỹ năng lái xe, đua xe của bạn.<br>';
+				}
+			} else if ($form_id == 'moto-ub150-semipro'){
+				if(document.getElementById("license_file4").files.length == 0) {
+					error_message += 'Xin upload hình ảnh bằng lái A1 còn hiệu lực.<br>';
+				} else {
+					if (!isValidFileType("license_file4")){
+						error_message += 'Xin upload hình ảnh bằng lái A1 đúng định dạng.<br>';
+					}
+				}
+				
+				if(document.getElementById("banktransfer_file1").files.length == 0) {
+					error_message += 'Xin upload hình ảnh xác nhận chuyển khoản thành công.<br>';
+				} else {
+					if (!isValidFileType("banktransfer_file1")){
+						error_message += 'Xin upload hình ảnh xác nhận chuyển khoản đúng định dạng.<br>';
+					}
+				}
+			} else if ($form_id == 'moto-ub150-pro'){
+				if(document.getElementById("license_file4").files.length == 0) {
+					error_message += 'Xin upload hình ảnh bằng lái A1 còn hiệu lực.<br>';
+				} else {
+					if (!isValidFileType("license_file4")){
+						error_message += 'Xin upload hình ảnh bằng lái A1 đúng định dạng.<br>';
+					}
+				}
+				
+				if(document.getElementById("banktransfer_file1").files.length == 0) {
+					error_message += 'Xin upload hình ảnh xác nhận chuyển khoản thành công.<br>';
+				} else {
+					if (!isValidFileType("banktransfer_file1")){
+						error_message += 'Xin upload hình ảnh xác nhận chuyển khoản đúng định dạng.<br>';
+					}
+				}
+			}
+			
+			return error_message;
+		}
+		
+		//---------------------Utils---------------------//
+		function isValidFileType(input_id){
+			var file = $('#' + input_id)[0].files[0]
+			if (file){
+				var fileExtension = ['jpeg', 'jpg', 'png', 'docx', 'pdf'];
+				if ($.inArray(file.name.split('.').pop().toLowerCase(), fileExtension) == -1) {
+					return false;
+				}
+				return true;
+			}
+			return false;
+		}
+		
+		function isEmail(email) {
+			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			return regex.test(email);
+		}
+		
+		function isDate(txtDate) {
+			var currVal = txtDate;
+			if(currVal == '')
+				return false;
+
+			var rxDatePattern = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/; //Declare Regex
+			var dtArray = currVal.match(rxDatePattern); // is format OK?
+
+			if (dtArray == null) 
+				return false;
+
+			//Checks for mm/dd/yyyy format.
+			dtMonth = dtArray[3];
+			dtDay= dtArray[5];
+			dtYear = dtArray[1];        
+
+			if (dtMonth < 1 || dtMonth > 12) 
+				return false;
+			else if (dtDay < 1 || dtDay> 31) 
+				return false;
+			else if ((dtMonth==4 || dtMonth==6 || dtMonth==9 || dtMonth==11) && dtDay ==31) 
+				return false;
+			else if (dtMonth == 2) 
+			{
+				var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+				if (dtDay> 29 || (dtDay ==29 && !isleap)) 
+						return false;
+			}
+			return true;
+		}
+		//---------------------Utils---------------------//
 	</script>
 
 <?php
@@ -591,7 +757,7 @@ if(isset($_POST['form1'])) {
 				 <div class="swal2-validation-message" id="fullname-validation-message"></div>
 				 
 				<label for="birthday" class="swal2-input-label" id="birthday-label">Ngày tháng năm sinh <span style="color: red;">*</span></label>
-				 <input class="swal2-input" id="birthday" name="birthday" placeholder="dd/mm/yyyy" type="date" style="display: flex; color: black;">
+				 <input class="swal2-input" id="birthday" name="birthday" placeholder="dd/mm/yyyy" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="birthday-validation-message"></div>
 				 
 				<label for="phone" class="swal2-input-label" id="phone-label">Số điện thoại <span style="color: red;">*</span></label>
@@ -606,7 +772,7 @@ if(isset($_POST['form1'])) {
 				 <input class="swal2-input" id="address" name="address" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="address-validation-message"></div>
 				 
-				<label for="social_link" class="swal2-input-label" id="social_link-label">Zalo hoặc link Facebook</label>
+				<label for="social_link" class="swal2-input-label" id="social_link-label">Địa chỉ trang mạng xã hội của bạn</label>
 				 <input class="swal2-input" id="social_link" name="social_link" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="social_link-validation-message"></div>
 				 

@@ -85,7 +85,7 @@
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
             <li><a onclick="return ShowAboutUs();" class="nav-left" role="main" style="cursor: pointer;"><span>giới thiệu</span></a></li>
-            <li><a href="#sukien" class="nav-left" role="sukien"><span>Sự kiện</span></a></li>
+            <li><a href="#sukien" class="nav-left" role="sukien"><span>Đăng ký</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
             <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
