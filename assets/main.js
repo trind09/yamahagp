@@ -415,33 +415,6 @@ var YMH = {
         },
       ]
     });
-	
-	$('.video-multiple-items').slick({
-      arrows: true,
-      dots: false,
-      infinite: false,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            centerMode: false,
-            dots: false,
-          }
-        },
-        {
-          breakpoint: 567,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-          }
-        },
-      ]
-    });
 
     var controller = new ScrollMagic.Controller();
     var scene = new ScrollMagic.Scene({ triggerElement: "#news", triggerHook: 0.5 })
@@ -487,6 +460,7 @@ var YMH = {
           }
         ]
     });
+	$('.js-photo').show();
 
   },
 
@@ -572,7 +546,35 @@ var YMH = {
   },
 
   about: function() {
-
+	$('.video-multiple-items').slick({
+      arrows: true,
+      dots: false,
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            centerMode: false,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+          }
+        },
+      ]
+    });
+	
+	$('.video-multiple-items').show();
+	
     var controller = new ScrollMagic.Controller();
     var scene = new ScrollMagic.Scene({ triggerElement: "#about", triggerHook: 0.5 })
         .setClassToggle('#about', 'display') 

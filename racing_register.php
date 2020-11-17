@@ -684,10 +684,10 @@ if(isset($_POST['form1'])) {
 				 </p>
 				 <p>
 				 ĐIỀU LỆ:<br/>
-				 <a href="https://docs.google.com/document/d/1VUcOfXfRYNlkU0wTkk4Tma43v2CXWd_-/edit">Xem điều lệ tại đây</a>
+				 <a href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_300_400cc.pdf" target="_blank">Xem điều lệ tại đây</a>
 				 </p>
 				 <p>
-				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking">https://ticketbox.vn/vr-fest-2020#booking</a>
+				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking" target="_blank">https://ticketbox.vn/vr-fest-2020#booking</a>
 				 </p>
 				 <span class="swal2-content" style="color: red;">*Bắt buộc</span>
 				 </div>
@@ -696,7 +696,7 @@ if(isset($_POST['form1'])) {
 				 <h2 class="swal2-title" id="swal2-title">Đăng ký thi đấu VINFAST TRACK ATTACK CUP</h2>
 				 <div class="swal2-content" style="width: 100%;">
 				 Đăng ký đầy đủ thông tin bên dưới. Điều lệ:<br/>
-				 <a href="https://docs.google.com/document/d/1T9jG8Tg0eqTBNKeNOzvxrt7POjUrfqvi/edit">Xem điều lệ tại đây</a><br/>
+				 <a href="assets/docs/ĐIEU_LE_VINFAST_TRACK_ATTACK_CUP.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
 				 <br/>
 				 <span class="swal2-content" style="color: red;">*Bắt buộc</span>
 				 </div>
@@ -705,7 +705,7 @@ if(isset($_POST['form1'])) {
 				 <h2 class="swal2-title" id="swal2-title">Đăng ký thi đấu VINFAST AUTOGYMKHANA CUP</h2>
 				 <div class="swal2-content" style="width: 100%;">
 				 Đăng ký đầy đủ thông tin bên dưới. Điều lệ:<br/>
-				 <a href="https://docs.google.com/document/d/17-jo4X1tcdLu6yQ-C7QKk3mefIE9ZThY/edit#heading=h.gjdgxs">Xem điều lệ tại đây</a><br/>
+				 <a href="assets/docs/Đieu_le_Vinfast_Fadil_AutoGymkhanaCup.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
 				 <br/>
 				 <span class="swal2-content" style="color: red;">*Bắt buộc</span>
 				 </div>
@@ -722,9 +722,9 @@ if(isset($_POST['form1'])) {
 				 -	1 phòng khách sạn Đại Nam ngày 11/12<br/>
 				 <br/>
 				 VĐV vui lòng đọc kỹ ĐIỀU LỆ:<br/>
-				 <a href="https://drive.google.com/file/d/1RHUb3iY2EMwCE_8YWsJQ7RFbGsCmJK8W/view?usp=sharing">Xem điều lệ tại đây</a><br/>
+				 <a href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_UB150.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
 				 <br/>
-				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
+				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking" target="_blank">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
 				 <br/>
 				 <span class="swal2-content" style="color: red;">*Bắt buộc</span>
 				 </div>
@@ -741,9 +741,9 @@ if(isset($_POST['form1'])) {
 				 -	1 phòng khách sạn Đại Nam ngày 11/12<br/>
 				 <br/>
 				 VĐV vui lòng đọc kỹ ĐIỀU LỆ:<br/>
-				 <a href="https://drive.google.com/file/d/1RHUb3iY2EMwCE_8YWsJQ7RFbGsCmJK8W/view?usp=sharing">Xem điều lệ tại đây</a><br/>
+				 <a href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_UB150.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
 				 <br/>
-				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
+				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking" target="_blank">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
 				 <br/>
 				 <span class="swal2-content" style="color: red;">*Bắt buộc</span>
 				 </div>
@@ -804,7 +804,7 @@ if(isset($_POST['form1'])) {
 				 <input class="swal2-input" id="sponsor_phone" name="sponsor_phone" placeholder="" type="text" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="sponsor_phone-validation-message"></div>
 				 
-				<label for="banktransfer_file1" class="swal2-input-label" id="banktransfer_file1-label">Chuyển khoản vào STK: 19036288269012 - TECHCOMBANK - CONG TY TNHH HOC VIEN THE THAO TOC DO VIET NAM . Hình ảnh xác nhận thành công (Upload tâp tin jpg, jpeg, png, pdf, docx) <span style="color: red;">*</span></label>
+				<label for="banktransfer_file1" class="swal2-input-label" id="banktransfer_file1-label">Chuyển khoản vào STK: 19036288269012 - TECHCOMBANK - CONG TY TNHH HOC VIEN THE THAO TOC DO VIET NAM. Nội dung: HỌ TÊN - HẠNG MỤC ĐĂNG KÝ. Hình ảnh xác nhận thành công (Upload tâp tin jpg, jpeg, png, pdf, docx) <span style="color: red;">*</span></label>
 				 <input type="file" aria-label="Upload tâp tin jpg, jpeg, png, pdf, docx" id="banktransfer_file1" name="banktransfer_file1" class="swal2-file" placeholder="" style="display: flex; color: black;">
 				 <div class="swal2-validation-message" id="banktransfer_file1-validation-message"></div>
 				 

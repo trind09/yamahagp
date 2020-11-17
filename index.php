@@ -85,7 +85,7 @@
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
             <li><a onclick="return ShowAboutUs();" class="nav-left" role="main" style="cursor: pointer;"><span>giới thiệu</span></a></li>
-            <li><a href="#sukien" class="nav-left" role="sukien"><span>Đăng ký</span></a></li>
+            <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
             <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
@@ -144,153 +144,51 @@
 		margin-top:44%!important	 	
 		}
 	}
+	
+	.wrap-video-banner {
+		position: absolute;
+		right: 2%;
+		top: 35%;
+		width: 700px;
+		height: 400px;
+	}
 	</style>
-
+	<div class="wrap-video-banner">
+		<iframe id="video-div" width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
 	<img src="assets/images/bg.jpg" alt="" class="bg_pc">
 	
 	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
 		<img src="assets/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-		<a href="#sukien" class="btn btn1 btn2 js-joinnow" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ NGAY</a><br/>
-		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="sukien" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a> 
+		<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
+		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
 	</div>
 </section>
 
 
-<section id="about" class="display about-video">
-	<style type="text/css">
-		#about.about-video {
-			margin-top: -10vh;
-		}
-		#about .ytb {
-		    height: 420px;
-		}
-		.video-img-t {
-			width: 120px!important;
-		}
-		#about.about-video .ytb {
-			display: flex;
-    		flex-direction: column;
-		}
-		.video-multiple-items {
-			height: 20%
-		}
-		.video-img-t img {
-			height: 100%
-		}
-		#about.about-video .slick-next {
-		    width: 21px;
-		    height: 16px;
-		    top: 94%;
-		    right: -10px;
-		    z-index: 1000
-		}
-		#about.about-video .slick-prev {
-		    width: 21px;
-		    height: 16px;
-		    top: 94%;
-		    left: -4px;
-		    z-index: 1000
-		}
-		.video-multiple-items{
-			margin-left: -10px
-		}
-		.video-img-t {
-			margin-top: 10px;
-    		margin-left:10px;
-		}
-		@media (max-width: 767px){
-			#about .ytb {
-				height: 348px
-			}
-			#about.about-video .slick-prev {
-		    width: 21px;
-		    height: 16px;
-		    top: 100%;
-		    left: 0px;
-			}
-			#about.about-video .slick-next {
-		    width: 21px;
-		    height: 16px;
-		    top: 100%;
-		    right:-9px;
-			}
-		}
-		@media screen and (max-width: 1024px){
-			#about.about-video {
-		    margin-top: -5vh;
-		    min-height: 122vh;
-			}
-		}
-		@media screen and (max-width: 767px){
-			#about.about-video {
-		    margin-top: -6vh;
-		  }  
-		}
-		@media (max-width: 567px){
-			#about.about-video {
-    		margin-top: -5vh;
-			}
-		}
-	</style>
+<section id="events" class="display about-video">
 	<div class="contain">
-		<h2><img src="assets/images/a-title.png"></h2>
+		<h4 style="text-align: center;">WHERE’S YOUR LIMIT?</h4>
+		<h2>VIETNAM RACING FESTIVAL 2020</h2>
 
-		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
-			<li class="active" style="width: 100%;">giới thiệu giải đua</li>
-		</ul>
 		<div class="about-contain display">
 			<div class="copy-about">
-				<h3><img src="assets/images/tagline.png"></h3>
-				<p>Ngày hội đua xe thể thao chuyên nghiệp do Vietnam Racing Academy - VR tổ chức nhầm phát động phong trào RACE TO MIỀN TRUNG. Chương trình với sự đồng hành của hai thương hiệu lớn VINFAST và MOTUL.
-Ngày hội đua xe cũng là lễ hội âm nhạc EDM hoành tráng - WHERE’S YOUR LIMNIT? với sự góp mặt của nhiều ca sĩ - DJ nổi tiếng.
-Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuyên nghiệp.</p>
-			</div>
-			<div class="video">
-				<div class="ytb">
-					<iframe id="video-div" width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<div class="video-multiple-items" >
-						<div class="video-img-t">
-						  <img src="assets/images/abdefaeg.png"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/Pbjhj2VnqmE')">
-						</div>
-						<div class="video-img-t">
-						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/g6fvOcAcRmc')">
-						</div>
-						<div class="video-img-t">
-						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/cFhKI5UJPBo')">
-						</div>
-						<div class="video-img-t">
-						  <img src="https://www.w3schools.com/w3css/img_nature_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/K2tUK44wFwM')">
-						</div>
-						<div class="video-img-t">
-						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/bY6jLt3owBQ')">
-						</div>
-						<div class="video-img-t">
-						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/4dMNOSqGLy4')">
-						</div>
-						<div class="video-img-t">
-						  <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/g6fvOcAcRmc')">
-						</div>
-						<div class="video-img-t">
-						  <img src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"
-						  style="width:100%" onclick="changeVid('https://www.youtube.com/embed/cFhKI5UJPBo')">
-						</div>
-				    </div>
-				</div>
+				<p>Chuỗi sự kiện đại nhạc hội giải trí đỉnh cao đúng “chất” sẽ được tổ chức tại Trường đua Đại Nam với quy mô lớn mang tên gọi WHERE’S YOUR LIMIT?</p>
+				<p>Chương trình sẽ diễn ra xuyên suốt trong ngày 12/12/2020 cùng sự góp mặt của RAPPER KARIK, DJ MIE, DJ THANH HƯƠNG, DJ NICKY, DJ COCA. Khách tham dự sự kiện sẽ được hoà mình vào không khí lễ hộiâm nhạc sôi động với hàng loạt các hoạt động dành cho fan hâm mộ cùng các phần biểu diễn nghệ thuật và giải trí hấp dẫn: </p>
+				<p>–	Chiêm ngưỡng dàn  siêu xe “khủng”</p>
+				<p>–	Tiết mục trình diễn Flyboard đẹp mắt</p>
+				<p>–	Biểu diễn Stunt đẳng cấp</p>
+				<p>–	Thưởng thức những giải đua xe hàng đầu Việt Nam gồm: oto, go-kart, moto và bộ môn Roller Sport tốc độ.</p>
+				<p>Các khu vực vui chơi giải trí được bố trí rộng khắp chương trình, khán giả sẽ vừa xem chương trình vừa có cơ hội mang về cho mình những phần quá hấp dẫn từ những đơn vị tài trợ. WHERE’S YOUR LIMIT? - VIETNAM RACING FESTIVAL 2020 hứa hẹn sẽ là ngọn lửa thổi bùng đam mê, thúc đẩy bộ môn đua xe thể thao nước nhà.</p>
 			</div>
 		</div>
 	</div>
 </section>
-<section id="sukien"></section>
-<section id="about" class="display">
+<section id="register" class="display">
 	<div class="contain">
+		<h4 style="text-align: center;">Đăng ký thi đấu</h4>
+		<h2>VIETNAM RACING FESTIVAL 2020</h2>
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">hạng mục thi đấu</li>
 		</ul>
@@ -326,68 +224,57 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 				color: white;
 				text-decoration: underline;
 			}
+			
+			.copy-a {
+				 background-size: 200px 130px !important;
+				 background-position: bottom center !important;
+				 background-repeat: no-repeat !important;
+				 height: 300px;
+			}
 		</style>
 		<div class="about-contain display">
 			<ul class="race-league">
 				<li>
 					<h2>Moto</h2>
-					<div class="copy">
+					<div class="copy copy-a" style="background: url(assets/images/motorlogo.png);">
 						<div class="note">
-							<h6>300 - 400cc</h6>
+							<h6>Motul Motor Racing Cup</h6>
+							<p>Hệ 300 - 400cc</p>
 							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('semipro-300-400cc');" class="registry-link">- Semi-Pro</a></p>
 						</div>
 						<div class="note">
-							<h6>UB150</h6>
+							<h6>Motul Motor Racing Cup</h6>
+							<p>Hệ UB150</p>
 							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-pro');" class="registry-link">- Pro</a></p>
 							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-semipro');" class="registry-link">- Semi-Pro</a></p>
 						</div>
-						<ol>
-							<li>
-								<img width="200" height="123" style="width: 200px;height: 123px;margin-top: -20px;" src="assets/images/motorlogo.png">
-							</li>
-						</ol>
 					</div>
 				</li>
 				<li>
 					<h2>Go kart</h2>
-					<div class="copy">
+					<div class="copy copy-a" style="background: url(assets/images/go-kartlogo.png);">
 						<div class="note">
-							<h6 style="margin-bottom: 0px;"><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">2 Thì</a></h6>
-							<h6 style="margin-bottom: 0px;"><a href='#' onclick="return ShowRegistryBox('4 Thi');" class="registry-link">4 Thì</a></h6>
+							<h6 style="margin-bottom: 0px;"><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">VR Go-Kart Cup Hệ 2 THÌ</a></h6>
+							<h6 style="margin-bottom: 0px;"><a href='#' onclick="return ShowRegistryBox('4 Thi');" class="registry-link">VR Go-Kart Cup Hệ 4 THÌ</a></h6>
 						</div>
-						<ol>
-							<li>
-								<img width="200" height="200" style="width: 200px; height: 200px; margin-top: -15px;" src="assets/images/go-kartlogo.png">
-							</li>
-						</ol>
 					</div>
 				</li>
 				<li>
 					<h2>Oto</h2>
-					<div class="copy">
+					<div class="copy copy-a" style="background: url(assets/images/otologo.png);">
 						<div class="note">
-							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-gymkhana');" class="registry-link">GymKhana</a></h6>
-							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-track-attack');" class="registry-link">Track Attack</a></h6>
-							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">Drift</a></h6>
+							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-gymkhana');" class="registry-link">Vinfast Autogymkhana Cup</a></h6>
+							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-track-attack');" class="registry-link">Vinfast Track Attact Cup</a></h6>
+							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">VR Drift Battle</a></h6>
 						</div>
-						<ol>
-							<li>
-								<img width="200" height="200" style="width: 200px; height: 160px;" src="assets/images/otologo.png">
-							</li>
-						</ol>
 					</div>
 				</li>
 				<li>
 					<h2>Roller Sport</h2>
-					<div class="copy">
+					<div class="copy copy-a" style="background: url(assets/images/rollerlogo.png);">
 						<div class="note">
-							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">Roller Sport</a></h6>
+							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">VR Roller Sport Cup</a></h6>
 						</div>
-						<ol>
-							<li>
-								<img width="200" height="200" style="width: 200px; height: 200px; margin-top: 40px;" src="assets/images/rollerlogo.png">
-							</li>
-						</ol>
 					</div>
 				</li>
 			</ul>
@@ -397,7 +284,8 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <section id="plan" class="display">
 	<div class="contain">
-		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="assets/images/l-title.png"></h2>
+		<h4 style="text-align: center;">lịch trình</h4>
+		<h2>VIETNAM RACING FESTIVAL 2020</h2>
 
 		<div class="plan-wrap">
 			<ul class="plan-list">
@@ -418,14 +306,13 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 					<div class="plan-item">
 						<h3>Vòng chung kết</h3>
 						<p><img src="assets/images/i-time.png">12/12/2020<br/>
-							&nbsp;&nbsp;- Đại nhạc hội<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;- Chung kết các giải đua<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- VINFAST AUTOGYMKHANA<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- VINFAST TRACK ATTACK CUP<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- MOTUL MOTOR RACING CUP<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ROLLER SPORT<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- VR GO-KART CUP<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- VR DRIFT BATTLE<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- VINFAST AUTOGYMKHANA<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- VINFAST TRACK ATTACK CUP<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- MOTUL MOTOR RACING CUP<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- ROLLER SPORT<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- VR GO-KART CUP<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- VR DRIFT BATTLE<br/>
 						</p>
 						<p><img src="assets/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
 						<h4>2</h4>
@@ -501,7 +388,8 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 		}
 	</style>
 	<div class="contain">
-		<h2 style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="assets/images/title-term.png"></h2>
+		<h4 style="text-align: center;">thể lệ thi đấu</h4>
+		<h2>VIETNAM RACING FESTIVAL 2020</h2>
 		<ul class="gallery-tabs js-term--tabs">
 			<li class="active" style="width: 100%;">QUY ĐỊNH TRANG PHỤC VÀ XE THI ĐẤU</li>
 		</ul>
@@ -519,6 +407,13 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						<h5>ĐIỀU LỆ GIẢI VINFAST TRACK ATTACT CUP</h5>
 						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
 						<p><a class="red_link" href="assets/docs/ĐIEU_LE_VINFAST_TRACK_ATTACK_CUP.pdf" target="_blank">Xem Thêm >></a></p>
+					</div>
+				</li>
+				<li>
+					<div class="copy">
+						<h5>ĐIỀU LỆ GIẢI VR Drift Battle</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
+						<p><a class="red_link" href="#" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
@@ -542,6 +437,13 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_GO_KART_CUP.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
+				<li>
+					<div class="copy">
+						<h5>ĐIỀU LỆ GIẢI VR Roller Sport Cup</h5>
+						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
+						<p><a class="red_link" href="assets/docs/The_thuc_VR_ROLLER_SPORTS.pdf" target="_blank">Xem Thêm >></a></p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -549,7 +451,8 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 
 <section id="news">
 	<div class="contain">
-		<h2><img src="assets/images/n-tittle.png"></h2>
+		<h4 style="text-align: center;">tin tức</h4>
+		<h2>Mới Nhất</h2>
 		<div class="js-news" role="toolbar">
 		   <div class="js-news--detail">
 			  <div class="news-item">
@@ -598,6 +501,20 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 			});
       	}
    </script>
+   <style>
+		.gallery-item-wrap .gallery-photo .slick-prev,
+		.gallery-item-wrap .gallery-photo .slick-next {
+			top: 26%;
+			z-index: 1000;
+		}
+		.gallery-item-wrap .slick-dots{
+			display: block;
+			position: absolute;
+			bottom: 35%;
+			left: 46%;
+			z-index: 100;
+		}
+   </style>
    <div class="contain">
 		<h2>HÌNH ẢNH & SỰ KIỆN NĂM 2020</h2>
 		<ul class="gallery-tabs" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
@@ -608,7 +525,7 @@ Hãy cùng nhau đưa phong trào đua xe thể thao Việt Nam lên tầm chuy�
 		  <option value="2">2.	PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</option>
 	   </select>
 	   <div class="gallery-item-wrap">
-		 <div class="gallery-photo js-photo">
+		 <div class="gallery-photo js-photo" style="display: none;">
 			<div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
 			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
 			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
