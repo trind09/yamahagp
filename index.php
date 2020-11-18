@@ -84,7 +84,7 @@
       <div class="contain" id="menu">
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
-            <li><a onclick="return ShowAboutUs();" class="nav-left" role="main" style="cursor: pointer;"><span>giới thiệu</span></a></li>
+            <li><a onclick="return ShowAboutUs();" class="nav-left" style="cursor: pointer;"><span>giới thiệu</span></a></li>
             <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
             <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#menu"></a></li>
@@ -232,19 +232,44 @@
 
 
 <section id="events" class="display about-video">
+	<style>
+		.event-text-list {
+			background: url(assets/images/line.png) no-repeat center;
+			background-size: 100%;
+			font-size: 14px;
+			text-transform: none;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			color: #f4ed2d;
+			font-family: 'SFUEurostileBoldOblique', Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+		}
+		
+		.event-text {
+			font-family: "SFUEurostileOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+			font-size: 16px;
+			font-weight: normal;
+			color: #fff;
+			line-height: 1.5;
+			position: relative;
+			letter-spacing: normal;
+			-webkit-font-smoothing: subpixel-antialiased;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+	</style>
 	<div class="contain">
 		<h4 style="text-align: center;">WHERE’S YOUR LIMIT?</h4>
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
-
 		<div class="about-contain display">
 			<div class="copy-about">
-				<p>Chuỗi sự kiện đại nhạc hội giải trí đỉnh cao đúng “chất” sẽ được tổ chức tại Trường đua Đại Nam với quy mô lớn mang tên gọi WHERE’S YOUR LIMIT?</p>
-				<p>Chương trình sẽ diễn ra xuyên suốt trong ngày 12/12/2020 cùng sự góp mặt của RAPPER KARIK, DJ MIE, DJ THANH HƯƠNG, DJ NICKY, DJ COCA. Khách tham dự sự kiện sẽ được hoà mình vào không khí lễ hộiâm nhạc sôi động với hàng loạt các hoạt động dành cho fan hâm mộ cùng các phần biểu diễn nghệ thuật và giải trí hấp dẫn: </p>
-				<p>–	Chiêm ngưỡng dàn  siêu xe “khủng”</p>
-				<p>–	Tiết mục trình diễn Flyboard đẹp mắt</p>
-				<p>–	Biểu diễn Stunt đẳng cấp</p>
-				<p>–	Thưởng thức những giải đua xe hàng đầu Việt Nam gồm: oto, go-kart, moto và bộ môn Roller Sport tốc độ.</p>
-				<p>Các khu vực vui chơi giải trí được bố trí rộng khắp chương trình, khán giả sẽ vừa xem chương trình vừa có cơ hội mang về cho mình những phần quá hấp dẫn từ những đơn vị tài trợ. WHERE’S YOUR LIMIT? - VIETNAM RACING FESTIVAL 2020 hứa hẹn sẽ là ngọn lửa thổi bùng đam mê, thúc đẩy bộ môn đua xe thể thao nước nhà.</p>
+				<p class="event-text">Chuỗi sự kiện đại nhạc hội giải trí đỉnh cao đúng <strong style="color: #f4ed2d;">“chất”</strong> sẽ được tổ chức tại Trường đua Đại Nam với quy mô lớn mang tên gọi <strong style="color: #f4ed2d;">WHERE’S YOUR LIMIT?</strong></p>
+				<p class="event-text">Chương trình sẽ diễn ra xuyên suốt trong ngày 12/12/2020 cùng sự góp mặt của <strong style="color: #f4ed2d;">RAPPER KARIK, DJ MIE, DJ THANH HƯƠNG, DJ NICKY, DJ COCA.</strong></p>
+				<p class="event-text">Khách tham dự sự kiện sẽ được hoà mình vào không khí lễ hội âm nhạc sôi động với hàng loạt các hoạt động dành cho fan hâm mộ cùng các phần biểu diễn nghệ thuật và giải trí hấp dẫn: </p>
+				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Chiêm ngưỡng dàn  siêu xe “khủng”<strong></p>
+				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Tiết mục trình diễn Flyboard đẹp mắt<strong></p>
+				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Biểu diễn Stunt đẳng cấp<strong></p>
+				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Thưởng thức những giải đua xe hàng đầu Việt Nam gồm: oto, go-kart, moto và bộ môn Roller Sport tốc độ.<strong></p>
+				<p class="event-text">Các khu vực vui chơi giải trí được bố trí rộng khắp chương trình, khán giả sẽ vừa xem chương trình vừa có cơ hội mang về cho mình những phần quá hấp dẫn từ những đơn vị tài trợ. <strong style="color: #f4ed2d;">WHERE’S YOUR LIMIT? - VIETNAM RACING FESTIVAL 2020</strong> hứa hẹn sẽ là ngọn lửa thổi bùng đam mê, thúc đẩy bộ môn đua xe thể thao nước nhà.</p>
 			</div>
 		</div>
 	</div>
@@ -513,7 +538,7 @@
 					<div class="copy">
 						<h5>ĐIỀU LỆ GIẢI VR Drift Battle</h5>
 						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="#" target="_blank">Xem Thêm >></a></p>
+						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_VR_DRIFT_BATTLE.pdf" target="_blank">Xem Thêm >></a></p>
 					</div>
 				</li>
 				<li>
@@ -554,6 +579,16 @@
 		<h4 style="text-align: center;">tin tức</h4>
 		<h2>Mới Nhất</h2>
 		<div class="js-news" role="toolbar">
+			<div class="js-news--detail">
+			  <div class="news-item">
+				 <p class="thumb"><a href="assets/news/Giai_dua_Motul_Motor_Racing_Cup_sap.htm" tabindex="0"><img src="assets/images/Poster-Sponsor-VR-Event-3-1068x1488.jpg"></a></p>
+				 <div class="copy">
+					<h4><a href="assets/news/Giai_dua_Motul_Motor_Racing_Cup_sap.htm" tabindex="0">Giải đua Motul Motor Racing Cup sắp “Bùng nổ” tại chương trình Vietnam Racing Festival 2020</a></h4>
+					<p>Ngày 12/12 tới đây, GIẢI ĐUA MOTUL MOTOR RACING CUP hệ UB150 sẽ “BÙNG NỔ” tại Trường đua Đại Nam. Được biết giải đua này nằm trong chuỗi sự kiện VIETNAM RACING FESTIVAL 2020 do VR Academy tổ chức.</p>
+					<a href="assets/news/Giai_dua_Motul_Motor_Racing_Cup_sap.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
+				 </div>
+			  </div>
+		   </div>
 		   <div class="js-news--detail">
 			  <div class="news-item">
 				 <p class="thumb"><a href="assets/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" tabindex="0"><img src="assets/news/images/Họp-báo-VR-Fest-2020-5-1.jpg"></a></p>
@@ -619,42 +654,79 @@
 				height: 400px;
 			}
 		}
+		
+		/*Fix issue footer collapted on other elements*/
+		#gallery {
+			min-height: 143vh;
+		}
+		@media(max-height: 920px){
+			footer {
+				padding: 50px 20px 20px 20px;
+			}
+		}
+		@media screen and (max-width: 567px){
+			#gallery {
+				height: 170vh;
+			}
+			#gallery footer {
+				font-size: 11px;
+			}
+		}
+		@media screen and (max-width: 375px){
+			#gallery {
+				height: 175vh;
+			}
+		}
+		/*Fix issue footer collapted on other elements*/
    </style>
    <div class="contain">
 		<h2>HÌNH ẢNH & SỰ KIỆN NĂM 2020</h2>
 		<ul class="gallery-tabs" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">HÌNH ẢNH CHƯƠNG TRÌNH</li>
 		</ul>
-		<select>
+		<select id="type-photo-select">
 		  <option value="1">1.	HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</option>
 		  <option value="2">2.	PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</option>
 	   </select>
-	   <div class="gallery-item-wrap gallery-content">
-		 <div class="gallery-photo js-photo" style="display: none;">
-			<div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-			 <div><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-		 </div>
-	  </div>
+	   <div class="gallery-item display" id="type-photo1" style="display: none;">
+		   <div class="gallery-item-wrap">
+			  <div class="gallery-photo js-photo">
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
+			  </div>
+		   </div>
+		   <a class="btn" href="#">Xem thêm</a>
+		</div>
+		<div class="gallery-item display" id="type-photo2" style="display: none;">
+		   <div class="gallery-item-wrap">
+			  <div class="gallery-photo js-photo">
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
+				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
+			  </div>
+		   </div>
+		   <a class="btn" href="#">Xem thêm</a>
+		</div>
 	</div>
-   <footer>
+   <footer style="margin-top: 50px;">
       <p class="socials" style="margin-top: 20px;">
          <a href="https://www.facebook.com/vietnamracingacademy" class="fb" target="_blank"></a> 
          <a href="#" class="ytb" target="_blank"></a>
       </p>
+	  <p><img src="assets/images/i-location.png" style="width: 15px; height: 15px;"> 87 Nguyễn Cơ Thạch, Khu đô thị Sala, Phường An Lợi Đông, Quận 2, Thành phố Hồ Chí Minh, Việt Nam</p>
+	  <p><img src="assets/images/i-phone.png" style="width: 15px; height: 15px;"> <a href="tel:+84-907879999">+84-907879999</a></p>
+	  <p><img src="assets/images/i-email.png" style="width: 15px; height: 15px;"> <a href="mailto:vietnam.racing.academy@gmail.com">vietnam.racing.academy@gmail.com</a></p>
       <p class="copyright">© 2020 Copyright <a href="https://www.facebook.com/vietnamracingacademy" target="_blank">Vietnam Racing Academy</a>. All rights reserved.</p>
    </footer>
 </section>

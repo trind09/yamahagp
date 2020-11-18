@@ -442,25 +442,12 @@ var YMH = {
   },
 
   photo: function() {
-
-    $('.js-photo').slick({
-      dots: true,
-      infinite: true,
-      slidesPerRow: 4,
-      rows: 2,
-      draggable: false,
-      focusOnSelect: true,
-      responsive: [
-          {
-            breakpoint: 478,
-            settings: {
-              slidesPerRow: 2,
-              rows: 2,
-            }
-          }
-        ]
-    });
-	$('.js-photo').show();
+	$('#type-photo1').show();
+	
+	$('#type-photo-select').on('change', function() {
+		$('.gallery-item').hide();
+		$('#type-photo' + this.value).show();
+	});
 
   },
 

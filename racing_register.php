@@ -131,13 +131,13 @@
 				error_message += "Xin nhập họ và tên.<br>";
 			}
 			if(!isDate($('#birthday').val())){
-				error_message += "Xin nhập ngày sinh đúng định dạng.<br>";
+				error_message += "Xin nhập ngày sinh đúng định dạng (Ví dụ 02/11/1994).<br>";
 			}
 			if($('#phone').val() == ''){
 				error_message += "Xin nhập số điện thoại.<br>";
 			}
 			if(!isEmail($('#email').val())){
-				error_message += "Xin nhập email.<br>";
+				error_message += "Xin nhập email đúng định dạng.<br>";
 			}
 			if($('#address').val() == ''){
 				error_message += "Xin nhập địa chỉ nơi ở hiện nay.<br>";
@@ -176,10 +176,10 @@
 					}
 				}
 				
-				if($("comment1").val() == "") {
+				if($("#comment1").val() == "") {
 					error_message += 'Xin chia sẻ kinh nghiệm đua xe của bạn.<br>';
 				}
-			} else if ($form_id == 'oto-gymkhana'){
+			} else if (form_id == 'oto-gymkhana'){
 				if(document.getElementById("license_file2").files.length == 0) {
 					error_message += 'Xin upload hình ảnh bằng lái B trở lên còn hiệu lực.<br>';
 				} else {
@@ -188,10 +188,10 @@
 					}
 				}
 				
-				if($("comment2").val() == "") {
+				if($("#comment2").val() == "") {
 					error_message += 'Xin chia sẻ kinh nghiệm và kỹ năng lái xe, đua xe của bạn.<br>';
 				}
-			} else if ($form_id == 'moto-ub150-semipro'){
+			} else if (form_id == 'moto-ub150-semipro'){
 				if(document.getElementById("license_file4").files.length == 0) {
 					error_message += 'Xin upload hình ảnh bằng lái A1 còn hiệu lực.<br>';
 				} else {
@@ -207,7 +207,7 @@
 						error_message += 'Xin upload hình ảnh xác nhận chuyển khoản đúng định dạng.<br>';
 					}
 				}
-			} else if ($form_id == 'moto-ub150-pro'){
+			} else if (form_id == 'moto-ub150-pro'){
 				if(document.getElementById("license_file4").files.length == 0) {
 					error_message += 'Xin upload hình ảnh bằng lái A1 còn hiệu lực.<br>';
 				} else {
@@ -251,17 +251,25 @@
 			if(currVal == '')
 				return false;
 
-			var rxDatePattern = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/; //Declare Regex
-			var dtArray = currVal.match(rxDatePattern); // is format OK?
+			var dtArray = currVal.split("/");
+			if (currVal.indexOf("-") >= 0){
+				dtArray = currVal.split("-");
+			} else if (currVal.indexOf(".") >= 0){
+				dtArray = currVal.split(".");
+			}
 
 			if (dtArray == null) 
 				return false;
-
+			
 			//Checks for mm/dd/yyyy format.
-			dtMonth = dtArray[3];
-			dtDay= dtArray[5];
-			dtYear = dtArray[1];        
-
+			dtMonth = parseInt(dtArray[1]);
+			dtDay = parseInt(dtArray[0]);
+			dtYear = parseInt(dtArray[2]);
+			
+			if (Number.isNaN(dtMonth) || Number.isNaN(dtDay) || Number.isNaN(dtYear)){
+				return false;
+			}
+			
 			if (dtMonth < 1 || dtMonth > 12) 
 				return false;
 			else if (dtDay < 1 || dtDay> 31) 
@@ -274,7 +282,15 @@
 				if (dtDay> 29 || (dtDay ==29 && !isleap)) 
 						return false;
 			}
-			return true;
+			
+			var d = new Date();
+			var currYear = d.getFullYear();
+  
+			if (dtYear >= 1500 && dtYear <= currYear) {
+			  return true;
+			} else {
+			  return false;
+			}
 		}
 		//---------------------Utils---------------------//
 	</script>
@@ -336,6 +352,24 @@ if(isset($_POST['form1'])) {
 	if(empty($birthday)) {
 		$valid = 0;
 		$error_message .= 'Xin nhập ngày sinh.<br>';
+	} else {
+		$pieces = [];
+		if (strpos($birthday, '/') !== false) {
+			$pieces = explode("/", $birthday);
+			
+		} else if (strpos($birthday, '-') !== false) {
+			$pieces = explode("-", $birthday);
+		} else if (strpos($birthday, '.') !== false) {
+			$pieces = explode(".", $birthday);
+		}
+		$year = $pieces[2];
+		$month = $pieces[1];
+		$day = $pieces[0];
+		$birthday = $year . "-" . $month . "-" . $day;
+		if (DateTime::createFromFormat('Y-m-d', $birthday) == FALSE) {
+			$valid = 0;
+			$error_message .= 'Xin nhập ngày sinh đúng định dạng.<br>';
+		}
 	}
 	
 	if(empty($phone)) {
@@ -507,10 +541,11 @@ if(isset($_POST['form1'])) {
 		$exceptionMessage = "";
 		
 		// saving into the database
-		$statement = $pdo->prepare("INSERT INTO registers (number, fullname, birthday, phone, "
-			. "email, address, social_link, sponsor_fullname, sponsor_phone, comment1, comment2) VALUES "
-			. "(?,?,?,?,?,?,?,?,?,?,?)");
-		$statement->execute(array($number, $fullname, $birthday, $phone, $email, $address, $social_link, $sponsor_fullname, $sponsor_phone, $comment1, $comment2));
+		$sql = "INSERT INTO registers (number, fullname, birthday, phone, "
+			. "email, address, social_link, sponsor_fullname, sponsor_phone, comment1, comment2, form_id, form_name) VALUES "
+			. "(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$statement = $pdo->prepare($sql);
+		$statement->execute(array($number, $fullname, $birthday, $phone, $email, $address, $social_link, $sponsor_fullname, $sponsor_phone, $comment1, $comment2, $form_id, $racing_level));
 		$register_id = $pdo->lastInsertId();
 		
 		if ($register_id != 0){
