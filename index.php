@@ -81,13 +81,13 @@
 				}
 		}
 	  </style>
-      <div class="contain">
+      <div class="contain" id="menu">
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
             <li><a onclick="return ShowAboutUs();" class="nav-left" role="main" style="cursor: pointer;"><span>giới thiệu</span></a></li>
             <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
-            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#"></a></li>
+            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#menu"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
             <li><a href="#news" class="nav-right" role="news"><span>tin tức</span></a></li>
             <li><a href="#gallery" class="nav-right" role="gallery"><span>HÌNH ẢNH <br>&amp; KẾT QUẢ</span></a></li>
@@ -112,57 +112,121 @@
 </script>
 <section id="main" style="visibility: inherit; opacity: 1;">
 	<style type="text/css">
-	@media (max-width: 920px){
-	.main_copy .text {
-	    width: 79%;
-	    margin: -6% auto;
+		.wrap-video-banner {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 25px;
+
 		}
-	.btn1 {
-	    width: 231px;
-	    height: 54px;
-	    line-height: 50px;
-	    font-size: 18px
+		.video-position {
+			position: absolute;
+			width: 46%;
+			right: 3%;
+			bottom: 15%;
+			z-index: 99;
 		}
-	.btn2{
-		margin-top:41%!important	 	
+		.responsive-iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			border: none;
 		}
-	}
-	
-	@media (max-width: 767px){
-	.main_copy .text {
-	    width: 79%;
-	    margin: -9% auto;
+		@media (max-width: 920px){
+		.main_copy .text {
+			width: 79%;
+			margin: -6% auto;
 			}
-	.btn1 {
-	    width: 141px;
-	    height: 31px;
-	    line-height: 30px;
-	   	font-size: 10px;
-	   	margin-top: 18px!important;
-	}
-	.btn2{
-		margin-top:44%!important	 	
+		.mb-btn .btn1 {
+			width: 231px;
+			height: 54px;
+			line-height: 50px;
+			font-size: 18px
+			}
+		.mb-btn .btn2{
+			margin-top: 0
 		}
-	}
-	
-	.wrap-video-banner {
-		position: absolute;
-		right: 2%;
-		top: 35%;
-		width: 700px;
-		height: 400px;
-	}
+		.main_copy .mb-btn .btn {
+			margin-top: 0
+		}
+		.mb-btn {
+			display: flex;
+			position: absolute;
+			top: 61%;
+			left: 23%;
+		}
+		.video-position {
+		   width: 59%;
+			right: 18%;
+			bottom: 40%;
+		}
+		#events {
+			margin-top: -6vh;
+			height: 113vh;
+		}
+		#events .contain {
+			padding: 6vh 2vh;
+		}
+		}
+		@media (max-width: 767px){
+		.mb-btn {
+			left: 21%;
+		}
+		.mb-btn .btn1 {
+			width: 120px;
+			height: 25px;
+			line-height: 26px;
+			font-size: 8px;
+		}
+		.video-position {
+			top: 29%;
+			right: 21%
+		}
+		}
+		@media (max-width: 375px){
+		.mb-btn {
+			left: 23%;
+		}
+		.mb-btn .btn1 {
+			width: 106px;
+			height: 25px;
+			line-height: 26px;
+			font-size: 8px;
+		}
+		.video-position {
+			top: 28%;
+		}
+		#events {
+			height: 130vh;
+		}
+		}
+		@media (max-width: 320px){
+			.mb-btn .btn1 {
+			width: 91px;
+			height: 21px;
+			line-height: 20px;
+			font-size: 6px;
+		}
+		#events {
+			height: 160vh;
+		}
+		}
 	</style>
-	<div class="wrap-video-banner">
-		<iframe id="video-div" width="100%" height="100%" src="https://www.youtube.com/embed/Pbjhj2VnqmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
+
 	<img src="assets/images/bg.jpg" alt="" class="bg_pc">
 	
 	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
 		<img src="assets/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-		<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
-		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
+		<div class="mb-btn">
+			<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
+			<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
+		</div>
+	</div>
+	<div class="video-position">
+		<div class="wrap-video-banner">
+			<iframe class="responsive-iframe" id="video-div" width="100%" height="100%" src="//www.youtube-nocookie.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
+		</div>
 	</div>
 </section>
 
@@ -231,8 +295,38 @@
 				 background-repeat: no-repeat !important;
 				 height: 300px;
 			}
+			
+			/* For general iPad layouts */
+			@media only screen and (device-width: 768px) {
+			  .register-contain {
+				  margin-bottom: 10px;
+			  }
+			  
+			  .copy-a {
+					 background-size: 250px 180px !important;
+					 height: 450px;
+				}
+			}
+			
+			/* For general Mobiles Landscape */
+			@media (min-width: 481px) and (max-width: 767px) {
+  
+			  .copy-a {
+					 background-size: 250px 180px !important;
+					 height: 450px;
+				}
+			  
+			}
+
+			/* For general Mobiles Portrait */
+			@media (min-width: 320px) and (max-width: 480px) {
+			  .copy-a {
+					 background-size: 250px 180px !important;
+					 height: 450px;
+				}
+			}
 		</style>
-		<div class="about-contain display">
+		<div class="about-contain display register-contain">
 			<ul class="race-league">
 				<li>
 					<h2>Moto</h2>
@@ -386,6 +480,12 @@
 		.race-league > li {
 			margin-bottom: 30px
 		}
+		@media only screen and (device-width: 768px) {
+		  /* For general iPad layouts */
+		  .term-content {
+				margin-bottom: 10px;
+			}
+		}
 	</style>
 	<div class="contain">
 		<h4 style="text-align: center;">thể lệ thi đấu</h4>
@@ -393,7 +493,7 @@
 		<ul class="gallery-tabs js-term--tabs">
 			<li class="active" style="width: 100%;">QUY ĐỊNH TRANG PHỤC VÀ XE THI ĐẤU</li>
 		</ul>
-		<div class="about-contain display">
+		<div class="about-contain display term-content">
 			<ul class="race-league">
 				<li>
 					<div class="copy">
@@ -502,17 +602,22 @@
       	}
    </script>
    <style>
-		.gallery-item-wrap .gallery-photo .slick-prev,
-		.gallery-item-wrap .gallery-photo .slick-next {
-			top: 26%;
-			z-index: 1000;
+		.gallery-content {
+			height: 600px;
 		}
-		.gallery-item-wrap .slick-dots{
-			display: block;
-			position: absolute;
-			bottom: 35%;
-			left: 46%;
-			z-index: 100;
+		@media (max-width: 767px) and (max-width: 520px){
+			.gallery-content {
+				height: 400px;
+			}
+		}
+		
+		@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px)  { 
+			/* iPad in portrait & landscape */
+			.gallery-content {
+				height: 400px;
+			}
 		}
    </style>
    <div class="contain">
@@ -524,7 +629,7 @@
 		  <option value="1">1.	HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</option>
 		  <option value="2">2.	PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</option>
 	   </select>
-	   <div class="gallery-item-wrap">
+	   <div class="gallery-item-wrap gallery-content">
 		 <div class="gallery-photo js-photo" style="display: none;">
 			<div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
 			 <div><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>

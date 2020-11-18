@@ -454,8 +454,8 @@ var YMH = {
           {
             breakpoint: 478,
             settings: {
-              slidesPerRow: 1,
-              rows: 1,
+              slidesPerRow: 2,
+              rows: 2,
             }
           }
         ]
