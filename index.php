@@ -31,6 +31,7 @@
     <meta http-equiv="cleartype" content="on">
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <link rel="stylesheet" href="assets/main.css">
+	<link rel="stylesheet" href="assets/index.css">
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
@@ -38,10 +39,10 @@
 	<script>
 		function ShowAboutUs(){
 			swal({
-			  imageUrl: 'assets/images/BG%20about%20us.jpg',
+			  imageUrl: 'assets/images/about.jpg',
 			  imageWidth: '100%',
 			  width: '1200px',
-			  imageAlt: 'BG About Us'
+			  imageAlt: 'VR About Us'
 			});
 			return false;
 		}
@@ -53,41 +54,14 @@
 </head>
 <body>
 	<?php include 'racing_register.php';?>
-    <header>
-	  <style>
-		@media screen and (max-width: 1024px){
-			.header-mb {
-				height: 50px
-			}
-			.header-mb:before {
-				background-image: url("assets/images/bg-smartphone-bar.png");
-				content: '';
-				display: flex;
-				height: 70px;
-				width: 100%;
-				position: absolute;
-				z-index: 0;
-				background-size: cover;
-				background-repeat: inherit;
-			}
-			.menu-icon, .menu-icon:before, .menu-icon:after {
-				background-color: white
-			}
-		}
-		
-		@media screen and (max-width: 520px){
-				.header-mb:before {
-					height: 50px;
-				}
-		}
-	  </style>
-      <div class="contain" id="menu">
+    <header id="header">
+      <div class="contain">
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
             <li><a onclick="return ShowAboutUs();" class="nav-left" style="cursor: pointer;"><span>giới thiệu</span></a></li>
             <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
-            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '#';"><a href="#menu"></a></li>
+            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '<?php echo($domain); ?>';"><a href="<?php echo($domain); ?>"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
             <li><a href="#news" class="nav-right" role="news"><span>tin tức</span></a></li>
             <li><a href="#gallery" class="nav-right" role="gallery"><span>HÌNH ẢNH <br>&amp; KẾT QUẢ</span></a></li>
@@ -110,114 +84,12 @@
 	var _newsDetail = ''; 
 	var isMobile = '0';
 </script>
-<section id="main" style="visibility: inherit; opacity: 1;">
-	<style type="text/css">
-		.wrap-video-banner {
-			position: relative;
-			padding-bottom: 56.25%;
-			padding-top: 25px;
-
-		}
-		.video-position {
-			position: absolute;
-			width: 46%;
-			right: 3%;
-			bottom: 15%;
-			z-index: 99;
-		}
-		.responsive-iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			border: none;
-		}
-		@media (max-width: 920px){
-		.main_copy .text {
-			width: 79%;
-			margin: -6% auto;
-			}
-		.mb-btn .btn1 {
-			width: 231px;
-			height: 54px;
-			line-height: 50px;
-			font-size: 18px
-			}
-		.mb-btn .btn2{
-			margin-top: 0
-		}
-		.main_copy .mb-btn .btn {
-			margin-top: 0
-		}
-		.mb-btn {
-			display: flex;
-			position: absolute;
-			top: 61%;
-			left: 23%;
-		}
-		.video-position {
-		   width: 59%;
-			right: 18%;
-			bottom: 40%;
-		}
-		#events {
-			margin-top: -6vh;
-			height: 113vh;
-		}
-		#events .contain {
-			padding: 6vh 2vh;
-		}
-		}
-		@media (max-width: 767px){
-		.mb-btn {
-			left: 21%;
-		}
-		.mb-btn .btn1 {
-			width: 120px;
-			height: 25px;
-			line-height: 26px;
-			font-size: 8px;
-		}
-		.video-position {
-			top: 29%;
-			right: 21%
-		}
-		}
-		@media (max-width: 375px){
-		.mb-btn {
-			left: 23%;
-		}
-		.mb-btn .btn1 {
-			width: 106px;
-			height: 25px;
-			line-height: 26px;
-			font-size: 8px;
-		}
-		.video-position {
-			top: 28%;
-		}
-		#events {
-			height: 130vh;
-		}
-		}
-		@media (max-width: 320px){
-			.mb-btn .btn1 {
-			width: 91px;
-			height: 21px;
-			line-height: 20px;
-			font-size: 6px;
-		}
-		#events {
-			height: 160vh;
-		}
-		}
-	</style>
-
+<!-- media style for both phone and ipad: @media screen and (max-width: 900px) -->
+<section id="main" style="visibility: inherit; opacity: 1;" class="main-section">
 	<img src="assets/images/bg.jpg" alt="" class="bg_pc">
 	
 	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
-		<img src="assets/images/2.png" alt="" class="text" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 		<div class="mb-btn">
 			<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
 			<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
@@ -232,31 +104,6 @@
 
 
 <section id="events" class="display about-video">
-	<style>
-		.event-text-list {
-			background: url(assets/images/line.png) no-repeat center;
-			background-size: 100%;
-			font-size: 14px;
-			text-transform: none;
-			padding-top: 4px;
-			padding-bottom: 4px;
-			color: #f4ed2d;
-			font-family: 'SFUEurostileBoldOblique', Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-		}
-		
-		.event-text {
-			font-family: "SFUEurostileOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-			font-size: 16px;
-			font-weight: normal;
-			color: #fff;
-			line-height: 1.5;
-			position: relative;
-			letter-spacing: normal;
-			-webkit-font-smoothing: subpixel-antialiased;
-			padding-top: 4px;
-			padding-bottom: 4px;
-		}
-	</style>
 	<div class="contain">
 		<h4 style="text-align: center;">WHERE’S YOUR LIMIT?</h4>
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
@@ -308,49 +155,6 @@
 				return false;
 			}
 		</script>
-		<style>
-			.registry-link{
-				color: white;
-				text-decoration: underline;
-			}
-			
-			.copy-a {
-				 background-size: 200px 130px !important;
-				 background-position: bottom center !important;
-				 background-repeat: no-repeat !important;
-				 height: 300px;
-			}
-			
-			/* For general iPad layouts */
-			@media only screen and (device-width: 768px) {
-			  .register-contain {
-				  margin-bottom: 10px;
-			  }
-			  
-			  .copy-a {
-					 background-size: 250px 180px !important;
-					 height: 450px;
-				}
-			}
-			
-			/* For general Mobiles Landscape */
-			@media (min-width: 481px) and (max-width: 767px) {
-  
-			  .copy-a {
-					 background-size: 250px 180px !important;
-					 height: 450px;
-				}
-			  
-			}
-
-			/* For general Mobiles Portrait */
-			@media (min-width: 320px) and (max-width: 480px) {
-			  .copy-a {
-					 background-size: 250px 180px !important;
-					 height: 450px;
-				}
-			}
-		</style>
 		<div class="about-contain display register-contain">
 			<ul class="race-league">
 				<li>
@@ -489,29 +293,6 @@
 </section>
 
 <section id="term" class="display ">
-	<style>
-		.red_link {
-			font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-			color: #f00;
-			text-decoration: underline;
-			margin-top: 10px;
-		}
-		.red_link:hover {
-			color: #343520;
-		}
-		#term {
-			height: auto;
-		}
-		.race-league > li {
-			margin-bottom: 30px
-		}
-		@media only screen and (device-width: 768px) {
-		  /* For general iPad layouts */
-		  .term-content {
-				margin-bottom: 10px;
-			}
-		}
-	</style>
 	<div class="contain">
 		<h4 style="text-align: center;">thể lệ thi đấu</h4>
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
@@ -636,49 +417,6 @@
 			});
       	}
    </script>
-   <style>
-		.gallery-content {
-			height: 600px;
-		}
-		@media (max-width: 767px) and (max-width: 520px){
-			.gallery-content {
-				height: 400px;
-			}
-		}
-		
-		@media only screen 
-		and (min-device-width : 768px) 
-		and (max-device-width : 1024px)  { 
-			/* iPad in portrait & landscape */
-			.gallery-content {
-				height: 400px;
-			}
-		}
-		
-		/*Fix issue footer collapted on other elements*/
-		#gallery {
-			min-height: 143vh;
-		}
-		@media(max-height: 920px){
-			footer {
-				padding: 50px 20px 20px 20px;
-			}
-		}
-		@media screen and (max-width: 567px){
-			#gallery {
-				height: 170vh;
-			}
-			#gallery footer {
-				font-size: 11px;
-			}
-		}
-		@media screen and (max-width: 375px){
-			#gallery {
-				height: 175vh;
-			}
-		}
-		/*Fix issue footer collapted on other elements*/
-   </style>
    <div class="contain">
 		<h2>HÌNH ẢNH & SỰ KIỆN NĂM 2020</h2>
 		<ul class="gallery-tabs" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
@@ -746,101 +484,32 @@
 <!--<![endif]-->
 
 
-<!--Call me block-->
+<!--Call me, register, booking ticket block-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<style>
-.wrap-phone{
-	position: fixed;
-	top: auto;
-	bottom: 24px;
-	right: 12px;
-	display: block;
-	z-index: 2147483644;
-}
-.phoneamination {
-    border: 2px solid #126D0C;
-    border-radius: 50%;
-    height: 90px;
-    width: 90px;
-    z-index: -1;
-    right: 3%;
-    top: 31%;
-    position: absolute;
-    background: #126D0C;
-}
-
-.call-me {
-	font-size: 72px;
-	color: transparent;
-	margin: 0px 12px;
-	adding: 0px;
-	width: 70px;
-	border-radius: 29px;
-	box-shadow: none;
-	background: none;
-	display: block;
-	padding-bottom: 130px;
-	background-image: url("assets/images/phone-02.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-}
-.numbershow {
-	color: white;
-    font-size: 15px;
-    position: absolute;
-    background: #126D0C;
-    right: 3%;
-    padding: 5px 10px 6px;
-    border-radius: 39px;
-    bottom: 72%;
-}
-.phoneamination1 {
-    top: -75px;
-    right: -3px;
-}
-
-@media (max-width: 767px){
-	.numbershow {
-		display: none
-	}
-	.call-me {
-		width: 55px;
-	}
-	.phoneamination {
-	    height: 65px;
-	    width: 65px;
-	    right: 8%;
-    	top: 37%;
-	}
-	.phoneamination1 {
-		right: 6px;
-    	top: -54px;
-	}
-}
-
-@media (max-width: 520px){
-	.numbershow {
-		display: none
-	}
-	.call-me {
-		width: 66px;
-	}
-	.phoneamination {
-	    height: 70px;
-	    width: 70px;
-	    right: 11%;
-	    top: 36%;
-	}
-	.phoneamination1 {
-		right: 6px;
-    	top: -64px;
-	}
-}
-</style>
+<script type="text/javascript">
+	$(document).scroll(function() {
+	  var y = $(this).scrollTop();
+	  if (y > 600) {
+	    $('.wrap-ticket-regi').fadeIn();
+	  } else {
+	    $('.wrap-ticket-regi').fadeOut();
+	  }
+	});
+</script>
 <div class="wrap-phone">
-	<div class="numbershow animate__animated animate__zoomIn animate__delay-2s animate__slower"><span>Phone:0909337777</span></div>
-	<div class="phoneamination animate__animated animate__zoomIn animate__delay-2s animate__infinite animate__slower"></div>
+	<div class="wrap-ticket-regi" style="display: none">
+		<div class="muave animate__animated animate__zoomIn animate__slower"><span>Mua Vé</span></div>
+		<div class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
+		</div>
+		<a href="https://ticketbox.vn/vr-fest-2020#booking"><img class="img-ticket" src="assets/images/ticket.png"></a>
+		<div class="dangky animate__animated animate__zoomIn  animate__slower"><span>Đăng Ký Thi Đấu</span></div>
+		<div class="wrap-regi phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
+		</div>
+		<a href="#register" role="register" class="js-joinnow"><img class="img-regi" src="assets/images/register.png"></a>
+	</div>
+
+	<div class="numbershow animate__animated animate__zoomIn animate__slower"><span style="color:white">☎ 0909337777</span></div>
+	<div class="phoneamination animate__animated animate__zoomIn animate__infinite animate__slower"></div>
 	<a href="tel:0909337777" title="Tel: 0909337777"><i class="material-icons call-me shak-icon">phone</i></a>
 </div>
 <!--Call me block-->
@@ -849,7 +518,7 @@
 <!-- Load Facebook Messenger -->
 <!-- https://wiki.matbao.net/kb/huong-dan-tich-hop-facebook-chat-vao-website-ma-khong-can-dung-plugin/ -->
 <div class="wrap-phone">
-	<div class="phoneamination phoneamination1 animate__animated animate__zoomIn animate__delay-2s animate__infinite animate__slower"></div>
+	<div class="phoneamination phoneamination1 animate__animated animate__zoomIn  animate__infinite animate__slower"></div>
 	<div id="fb-root"></div>
   <script>
 	window.fbAsyncInit = function() {

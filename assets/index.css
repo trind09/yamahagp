@@ -1,0 +1,474 @@
+/* ------------------ Start: CSS for header tag <header id="header"> ------------------ */
+@media screen and (max-width: 1024px){
+	.header-mb {
+		height: 50px
+	}
+	.header-mb:before {
+		background-image: url("images/bg-smartphone-bar.png");
+		content: '';
+		display: flex;
+		height: 70px;
+		width: 100%;
+		position: absolute;
+		z-index: 0;
+		background-size: cover;
+		background-repeat: inherit;
+	}
+	.menu-icon, .menu-icon:before, .menu-icon:after {
+		background-color: white
+	}
+}
+
+@media screen and (max-width: 520px){
+		.header-mb:before {
+			height: 50px;
+		}
+}
+/* ------------------ End: CSS for header tag <header id="header"> ------------------ */
+
+
+/* ------------------ Start: CSS for main section <section id="main"> ------------------ */
+.main-section {
+	margin-bottom: 100px;
+}
+
+.main_copy {
+	width: 40%;
+	bottom: -34%;
+	top: inherit;
+}
+
+@media screen and (max-width: 900px) {
+	.main_copy {
+		bottom: 0%;
+		width: 100%;
+	}
+	.main-section {
+		margin-bottom: 0px;
+	}
+}
+
+.wrap-video-banner {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+}
+
+.video-position {
+	position: absolute;
+	width: 43%;
+	right: 4%;
+	bottom: 22%;
+	z-index: 99;
+}
+
+.responsive-iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border: none;
+}
+
+@media (max-width: 920px) {
+	.main_copy .text {
+		width: 79%;
+		margin: -6% auto;
+	}
+	.mb-btn .btn1 {
+		width: 231px;
+		height: 54px;
+		line-height: 50px;
+		font-size: 18px
+	}
+	.mb-btn .btn2 {
+		margin-top: 0
+	}
+	.main_copy .mb-btn .btn {
+		margin-top: 0
+	}
+	.mb-btn {
+		display: flex;
+		position: absolute;
+		top: 61%;
+		left: 23%;
+	}
+	.video-position {
+		width: 59%;
+		right: 18%;
+		bottom: 40%;
+	}
+	#events {
+		margin-top: -6vh;
+		height: 113vh;
+	}
+	#events .contain {
+		padding: 6vh 2vh;
+	}
+}
+
+@media (max-width: 767px) {
+	.mb-btn {
+		left: 21%;
+	}
+	.mb-btn .btn1 {
+		width: 120px;
+		height: 25px;
+		line-height: 26px;
+		font-size: 8px;
+	}
+	.video-position {
+		top: 29%;
+		right: 21%
+	}
+}
+
+@media (max-width: 375px) {
+	.mb-btn {
+		left: 23%;
+	}
+	.mb-btn .btn1 {
+		width: 106px;
+		height: 25px;
+		line-height: 26px;
+		font-size: 8px;
+	}
+	.video-position {
+		top: 28%;
+	}
+	#events {
+		height: 130vh;
+	}
+}
+
+@media (max-width: 320px) {
+	.mb-btn .btn1 {
+		width: 91px;
+		height: 21px;
+		line-height: 20px;
+		font-size: 6px;
+	}
+	#events {
+		height: 160vh;
+	}
+}
+/* ------------------ End: CSS for main section <section id="main"> ------------------ */
+
+
+/* ------------------ Start: CSS for events section <section id="events"> ------------------ */
+.event-text-list {
+	background: url(images/line.png) no-repeat center;
+	background-size: 100%;
+	font-size: 14px;
+	text-transform: none;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	color: #f4ed2d;
+	font-family: 'SFUEurostileBoldOblique', Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+}
+
+.event-text {
+	font-family: "SFUEurostileOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #fff;
+	line-height: 1.5;
+	position: relative;
+	letter-spacing: normal;
+	-webkit-font-smoothing: subpixel-antialiased;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+/* ------------------ End: CSS for events section <section id="events"> ------------------ */
+
+
+/* ------------------ Start: CSS for register section <section id="register"> ------------------ */
+.registry-link{
+	color: white;
+	text-decoration: underline;
+}
+
+.copy-a {
+	 background-size: 200px 130px !important;
+	 background-position: bottom center !important;
+	 background-repeat: no-repeat !important;
+	 height: 300px;
+}
+
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) {
+  .register-contain {
+	  margin-bottom: 10px;
+  }
+  
+  .copy-a {
+		 background-size: 250px 180px !important;
+		 height: 450px;
+	}
+}
+
+/* For general Mobiles Landscape */
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .copy-a {
+		 background-size: 250px 180px !important;
+		 height: 450px;
+	}
+  
+}
+
+/* For general Mobiles Portrait */
+@media (min-width: 320px) and (max-width: 480px) {
+  .copy-a {
+		 background-size: 250px 180px !important;
+		 height: 450px;
+	}
+}
+/* ------------------ End: CSS for register section <section id="register"> ------------------ */
+
+
+/* ------------------ Start: CSS for term section <section id="term"> ------------------ */
+.red_link {
+	font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+	color: #f00;
+	text-decoration: underline;
+	margin-top: 10px;
+}
+.red_link:hover {
+	color: #343520;
+}
+#term {
+	height: auto;
+}
+.race-league > li {
+	margin-bottom: 30px
+}
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+  .term-content {
+		margin-bottom: 10px;
+	}
+}
+/* ------------------ End: CSS for term section <section id="term"> ------------------ */
+
+
+/* ------------------ Start: CSS for gallery section <section id="gallery"> ------------------ */
+.gallery-content {
+	height: 600px;
+}
+@media (max-width: 767px) and (max-width: 520px){
+	.gallery-content {
+		height: 400px;
+	}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+	/* iPad in portrait & landscape */
+	.gallery-content {
+		height: 400px;
+	}
+}
+
+/*Fix issue footer collapted on other elements*/
+#gallery {
+	min-height: 143vh;
+}
+@media(max-height: 920px){
+	footer {
+		padding: 50px 20px 20px 20px;
+	}
+}
+@media screen and (max-width: 567px){
+	#gallery {
+		height: 170vh;
+	}
+	#gallery footer {
+		font-size: 11px;
+	}
+}
+@media screen and (max-width: 375px){
+	#gallery {
+		height: 175vh;
+	}
+}
+/*Fix issue footer collapted on other elements*/
+/* ------------------ End: CSS for gallery section <section id="gallery"> ------------------ */
+
+
+/* ------------------ Start: CSS for sidebar icon group (register, ticket, phone, messenger) ------------------ */
+.wrap-ticket-regi{
+	right: 3%;
+	top: -90%;
+	position: absolute;
+}
+.phoneamination-new {
+	background: #126D0C;
+	border: 2px solid #126D0C;
+	border-radius: 50%;
+	height: 90px;
+	width: 90px;
+}
+.wrap-ticket-regi img {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    right: 	11%
+}
+.img-regi {
+	top: 65%;
+}
+.img-ticket {
+	top: 5%;
+}
+.wrap-regi {
+	margin-top: 54%;
+}
+.dangky {
+    position: absolute;
+    background: #126D0C;
+    right: 3%;
+    padding: 5px 10px 6px;
+    border-radius: 39px;
+    bottom: 41%;
+	font-size:12px;
+	width:144%;
+}
+.dangky span {
+	position:relative;
+	left:9%
+}
+.muave {
+	position: absolute;
+    background: #126D0C;
+    right: 3%;
+    padding: 5px 10px 6px;
+    border-radius: 39px;
+    bottom: 102%;
+	font-size:12px;
+}
+.wrap-phone{
+	position: fixed;
+	top: auto;
+	bottom: 24px;
+	right: 5px;
+	display: block;
+	z-index: 100;
+}
+.phoneamination {
+    border: 2px solid #126D0C;
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    z-index: -1;
+    right: 3%;
+    top: 31%;
+    position: absolute;
+    background: #126D0C;
+}
+
+.call-me {
+	font-size: 72px;
+	color: transparent;
+	margin: 0px 12px;
+	padding: 0px;
+	width: 70px;
+	border-radius: 29px;
+	box-shadow: none;
+	background: none;
+	display: block;
+	padding-bottom: 130px;
+	background-image: url("images/phone-02.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.numbershow {
+	width: 130%;
+	color: white;
+    font-size: 12px;
+    position: absolute;
+    background: #126D0C;
+    right: 3%;
+    padding: 5px 10px 6px;
+    border-radius: 39px;
+    bottom: 72%;
+}
+.phoneamination1 {
+    top: -75px;
+    right: 4px;
+}
+@media only screen and (device-width: 768px) {
+  .dangky span {
+		left:6%
+	}
+	
+	.numbershow {
+		width: 150%;
+	}
+}
+
+@media (max-width: 767px){
+	.wrap-phone {
+		right: 3%
+	}
+	.wrap-ticket-regi {
+	    right: 12%;
+    top: -26%;
+	}
+	.phoneamination-new  {
+	    height: 67px;
+		width: 67px;
+		margin-bottom: -31px
+	}
+	.wrap-ticket-regi img {
+	    height: 60px;
+	    width: 60px;
+	    right: 6%;
+	}
+	.img-ticket {
+    	top: 4%;
+	}
+	.img-regi {
+    	top: 69%;
+	}
+	.numbershow {
+		display: none
+	}
+	.call-me {
+		width: 55px;
+	}
+	.phoneamination {
+	    height: 65px;
+	    width: 65px;
+	    right: 8%;
+    	top: 37%;
+	}
+	.phoneamination1 {
+		right: 6px;
+    	top: -54px;
+	}
+}
+
+@media (max-width: 520px){
+	.numbershow,.muave,.dangky {
+		display: none;
+		width:140%;
+	}
+	.call-me {
+		width: 66px;
+	}
+	.phoneamination {
+	    height: 70px;
+	    width: 70px;
+	    right: 11%;
+	    top: 36%;
+	}
+	.phoneamination1 {
+		right: 7px;
+    	top: -64px;
+	}
+}
+/* ------------------ End: CSS for sidebar icon group (register, ticket, phone, messenger) ------------------ */
