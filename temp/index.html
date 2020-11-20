@@ -3,109 +3,116 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-html {
+.about-us {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+.about-us *, *:before, *:after {
   box-sizing: inherit;
 }
 
-.column {
+.aboutus-column {
   float: left;
-  width: 33.3%;
+  width: 25%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
 
 @media screen and (max-width: 650px) {
-  .column {
+  .aboutus-column {
     width: 100%;
     display: block;
   }
 }
 
-.card {
+.aboutus-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container {
+.aboutus-container {
   padding: 0 16px;
 }
 
-.container::after, .row::after {
+.aboutus-container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.title {
+.aboutus-title {
   color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
 }
 </style>
 </head>
 <body>
 
-<h2>Responsive "Meet The Team" Section</h2>
-<p>Resize the browser window to see the effect.</p>
-<br>
+<h2>Về chúng tôi</h2>
+<p>Năm 2020, Học viện Đua xe Việt Nam - Vietnam Racing Academy (VR) được thành lập bởi một nhóm doanh nhân với niềm đam mê mãnh liệt với đua xe thể thao. Được hỗ trợ bởi VMA - ASN duy nhất của Liên Đoàn Ô tô Quốc tế FIA tại Việt Nam.</p>
+<h2>Câu chuyện</h2>
+<p>Học viện Đua xe Việt Nam (VR) ra đời bởi những con người tâm huyết, trăn trở với nền thể thao đua xe nước nhà. Luôn mong muốn Việt Nam có những tay đua đủ chuyên môn để thi đấu trong khu vực cũng như quốc tế.</p>
+<h2>Định hướng</h2>
+<p>Học viện Vietnam Racing Academy được thành lập để định hướng và đào tạo các tay đua chuyên nghiệp, đồng thời tổ chức các cuộc thi để thúc đẩy môn đua xe thể thao nước nhà trên một nền tảng vững chắc, bài bản nhằm thúc đẩy môn đua xe thể thao tại Việt Nam.</p>
+<h2>Về chúng tôi</h2>
+<p>Năm 2020, Học viện Đua xe Việt Nam - Vietnam Racing Academy (VR) được thành lập bởi một nhóm doanh nhân với niềm đam mê mãnh liệt với đua xe thể thao. Được hỗ trợ bởi VMA - ASN duy nhất của Liên Đoàn Ô tô Quốc tế FIA tại Việt Nam.</p>
+<h2>Giá trị cốt lõi</h2>
+-	Chuyên Nghiệp<br/>
+-	Đam Mê<br/>
+-	Điêu Luyện<br/>
+-	Tinh Thần Thể Thao<br/>
+<h2>Tầm nhìn tương lai</h2>
+<p>Quảng bá và cấu trúc hóa văn hóa đua xe thể thao tại Việt Nam, cũng như mang đến nhiều cơ hội cho các danh nghiệp trong nước và ngoài nước quảng bá thương hiệu trong môi trường an toàn và công bằng.</p>
 
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="person1.png" alt="Jane" style="width:100%">
-      <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
 
-  <div class="column">
-    <div class="card">
-      <img src="person2.png" alt="Mike" style="width:100%">
-      <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <img src="person3.png" alt="John" style="width:100%">
-      <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
+
+<div class="about-us">
+	<div class="row">
+	  <div class="aboutus-column">
+		<div class="aboutus-card">
+		  <img src="person1.png" alt="Jane" style="width:100%">
+		  <div class="aboutus-container">
+			<h2>Jane Doe</h2>
+			<p class="aboutus-title">CEO & Founder</p>
+			<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+			<p>example@example.com</p>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="aboutus-column">
+		<div class="aboutus-card">
+		  <img src="person2.png" alt="Mike" style="width:100%">
+		  <div class="aboutus-container">
+			<h2>Mike Ross</h2>
+			<p class="aboutus-title">Art Director</p>
+			<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+			<p>example@example.com</p>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="aboutus-column">
+		<div class="aboutus-card">
+		  <img src="person3.png" alt="John" style="width:100%">
+		  <div class="aboutus-container">
+			<h2>John Doe</h2>
+			<p class="aboutus-title">Designer</p>
+			<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+			<p>example@example.com</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="aboutus-column">
+		<div class="aboutus-card">
+		  <img src="person4.png" alt="John" style="width:100%">
+		  <div class="aboutus-container">
+			<h2>John Doe</h2>
+			<p class="aboutus-title">Designer</p>
+			<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+			<p>example@example.com</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
 </div>
-
 </body>
 </html>

@@ -37,28 +37,18 @@
     <!-- CSS -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 	<script>
-		function ShowAboutUs(){
-			swal({
-			  imageUrl: 'assets/images/about.jpg',
-			  imageWidth: '100%',
-			  width: '1200px',
-			  imageAlt: 'VR About Us'
-			});
-			return false;
-		}
-		
 		function changeVid(youtubeUrl){
 			$('#video-div').attr('src', youtubeUrl);
 		};
 	</script>
 </head>
-<body>
+<body style="background: #010300;">
 	<?php include 'racing_register.php';?>
     <header id="header">
       <div class="contain">
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
-            <li><a onclick="return ShowAboutUs();" class="nav-left" style="cursor: pointer;"><span>giới thiệu</span></a></li>
+            <li><a href="#aboutus" class="nav-left" role="aboutus"><span>giới thiệu</span></a></li>
             <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
             <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '<?php echo($domain); ?>';"><a href="<?php echo($domain); ?>"></a></li>
@@ -103,6 +93,85 @@
 </section>
 
 
+<section id="aboutus" class="display about-video">
+	<div class="contain">
+		<h4 style="text-align: center;">VỀ CHÚNG TÔI</h4>
+		<h2>VIETNAM RACING FESTIVAL 2020</h2>
+		<div class="about-contain display">
+			<div class="copy-about">
+				<div class="aboutus-paragraph">
+					<h5>Về chúng tôi</h5>
+					<p>Năm 2020, Học viện Đua xe Việt Nam - Vietnam Racing Academy (VR) được thành lập bởi một nhóm doanh nhân với niềm đam mê mãnh liệt với đua xe thể thao. Được hỗ trợ bởi VMA - ASN duy nhất của Liên Đoàn Ô tô Quốc tế FIA tại Việt Nam.</p>
+				</div>
+				<div class="aboutus-paragraph">
+					<h5>Câu chuyện</h5>
+					<p>Học viện Đua xe Việt Nam (VR) ra đời bởi những con người tâm huyết, trăn trở với nền thể thao đua xe nước nhà. Luôn mong muốn Việt Nam có những tay đua đủ chuyên môn để thi đấu trong khu vực cũng như quốc tế.</p>
+				</div>
+				<div class="aboutus-paragraph">
+					<h5>Định hướng</h5>
+					<p>Học viện Vietnam Racing Academy được thành lập để định hướng và đào tạo các tay đua chuyên nghiệp, đồng thời tổ chức các cuộc thi để thúc đẩy môn đua xe thể thao nước nhà trên một nền tảng vững chắc, bài bản nhằm thúc đẩy môn đua xe thể thao tại Việt Nam.</p>
+				</div>
+				<div class="aboutus-paragraph">
+					<h5>Giá trị cốt lõi</h5>
+					<p>-	Chuyên Nghiệp</p>
+					<p>-	Đam Mê</p>
+					<p>-	Điêu Luyện</p>
+					<p>-	Tinh Thần Thể Thao</p>
+				</div>
+				<div class="aboutus-paragraph">
+					<h5>Tầm nhìn tương lai</h5>
+					<p>Quảng bá và cấu trúc hóa văn hóa đua xe thể thao tại Việt Nam, cũng như mang đến nhiều cơ hội cho các danh nghiệp trong nước và ngoài nước quảng bá thương hiệu trong môi trường an toàn và công bằng.</p>
+				</div>
+				<div class="aboutus-users">
+					<div class="about-us">
+						<div class="row">
+						  <div class="aboutus-column">
+							<div class="aboutus-card">
+							  <div class="aboutus-image" title="GIA BẢO NGUYỄN" style="background-image: url('assets/images/person1.jpg');"></div>
+							  <div class="aboutus-card-container">
+								<h2>GIA BẢO NGUYỄN</h2>
+								<p>Founder</p>
+							  </div>
+							</div>
+						  </div>
+
+						  <div class="aboutus-column">
+							<div class="aboutus-card">
+							  <div class="aboutus-image" title="DUY TRẦN" style="background-image: url('assets/images/person2.jpg');"></div>
+							  <div class="aboutus-card-container">
+								<h2>DUY TRẦN</h2>
+								<p>Co-Founder</p>
+							  </div>
+							</div>
+						  </div>
+						  
+						  <div class="aboutus-column">
+							<div class="aboutus-card">
+							  <div class="aboutus-image" title="RICH PHẠM" style="background-image: url('assets/images/person3.jpg');"></div>
+							  <div class="aboutus-card-container">
+								<h2>RICH PHẠM</h2>
+								<p>Co-Founder</p>
+							  </div>
+							</div>
+						  </div>
+						  <div class="aboutus-column">
+							<div class="aboutus-card">
+							  <div class="aboutus-image" title="VINH NGUYỄN" style="background-image: url('assets/images/person4.jpg');"></div>
+							  <div class="aboutus-card-container">
+								<h2>VINH NGUYỄN</h2>
+								<p>Co-Founder</p>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 <section id="events" class="display about-video">
 	<div class="contain">
 		<h4 style="text-align: center;">WHERE’S YOUR LIMIT?</h4>
@@ -121,6 +190,7 @@
 		</div>
 	</div>
 </section>
+
 <section id="register" class="display">
 	<div class="contain">
 		<h4 style="text-align: center;">Đăng ký thi đấu</h4>

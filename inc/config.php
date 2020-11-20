@@ -1,12 +1,12 @@
 <?php
-$domain = "http://localhost/yamahagp/";
+$domain = "http://vietnamracing.com.vn/";
 $dbhost = 'localhost';
 // Database Name
 $dbname = 'ilear871_vietnam_racing_festival';
 // Database Username
-$dbuser = 'root';
+$dbuser = 'ilear871_ilearn';
 // Database Password
-$dbpass = '';
+$dbpass = 'panda@80';
 $pdo = new PDO("mysql:host={$dbhost};dbname={$dbname}", $dbuser, $dbpass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

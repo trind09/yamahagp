@@ -2225,7 +2225,7 @@ footer .copyright a:hover {
 
 /* line 308, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #events {
-  height: 110vh;
+  height: 80vh;
   width: 100%;
   background: url(images/bg-term.png) no-repeat center top;
   background-size: cover;
@@ -3290,6 +3290,62 @@ footer .copyright a:hover {
   bottom: 0;
   left: 0;
 }
+
+
+/* css for aboutus section */
+#aboutus {
+  width: 100%;
+  min-height: 130vh;
+  background: url(images/p-bg.png) no-repeat center top;
+  background-size: cover;
+  padding: 13vh 0 20px 0;
+  position: relative;
+  z-index: 2;
+  margin-top: -12vh;
+}
+/* line 1209, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#aboutus > * {
+  visibility: hidden;
+}
+/* line 1213, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#aboutus.display > * {
+  visibility: visible;
+}
+/* line 1218, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#aboutus .contain {
+  padding-top: 10vh;
+}
+/* line 1221, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#aboutus h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* line 1224, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#aboutus h2 img {
+  width: 280px;
+}
+/* line 1229, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#aboutus footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) {
+	#aboutus {
+	  padding: 0vh 0 20px 0;
+	}
+}
+
+/* For general mobile layouts */
+@media only screen and (max-width: 600px) {
+	#aboutus {
+	  padding: 0vh 0 20px 0;
+	}
+}
+/* css for aboutus section */
+
 
 /* line 1237, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .gallery-list {

@@ -38,13 +38,25 @@
 	top: inherit;
 }
 
-@media screen and (max-width: 900px) {
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) {
 	.main_copy {
 		bottom: 0%;
 		width: 100%;
 	}
 	.main-section {
-		margin-bottom: 0px;
+		margin-bottom: 25px;
+	}
+}
+
+/* For general mobile layouts */
+@media only screen and (max-width: 600px) {
+	.main_copy {
+		bottom: 0%;
+		width: 100%;
+	}
+	.main-section {
+		margin-bottom: 41px;
 	}
 }
 
@@ -97,13 +109,6 @@
 		width: 59%;
 		right: 18%;
 		bottom: 40%;
-	}
-	#events {
-		margin-top: -6vh;
-		height: 113vh;
-	}
-	#events .contain {
-		padding: 6vh 2vh;
 	}
 }
 
@@ -472,3 +477,118 @@ and (max-device-width : 1024px)  {
 	}
 }
 /* ------------------ End: CSS for sidebar icon group (register, ticket, phone, messenger) ------------------ */
+
+
+/* ------------------ Start: CSS for aboutus section <section id="aboutus"> ------------------ */
+.about-us {
+	  box-sizing: border-box;
+	  padding-top: 30px;
+	  border-style: solid;
+	  border-right: none;
+	  border-bottom: none;
+	  border-image: linear-gradient( #126d0c, rgba(0, 0, 0, 0) ) 1 100%;
+	  background: linear-gradient(-45deg, #ffa63d00, #13792085);
+	}
+
+.about-us *, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.aboutus-column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.aboutus-users {
+	padding-bottom: 80px;
+}
+
+.aboutus-card {
+  text-align: center;
+  width: 320px;
+}
+
+.aboutus-card-container {
+  padding: 0 16px;
+  color: grey;
+}
+
+.aboutus-card-container p {
+  color: grey;
+}
+
+.aboutus-card-container h2 {
+  font-size: 14pt;
+  margin-bottom: 0 !important;
+  padding-top: 10px;
+  color: #f4ed2d;
+}
+
+.aboutus-card-container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.aboutus-paragraph {
+  padding-bottom: 20px;
+}
+
+.aboutus-paragraph h5 {
+  font-size: 12pt;
+  background: linear-gradient(-45deg, #ffa63d00, #137920);
+  padding: 5px;
+  border-radius: 3px;
+  border-bottom: solid 2px #137920;
+}
+
+.aboutus-paragraph p {
+  font-size: 12pt;
+  font-style: normal;
+}
+
+.aboutus-image {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	border-radius: 50%;
+	box-shadow: 0 12px 12px 0 rgba(0, 0, 20, 0.2);
+	border: solid 4px #137920;
+}
+
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) {
+	.aboutus-column {
+	  width: 100%;
+	}
+	.aboutus-card {
+	  width: 100%;
+	}
+	.copy-about {
+	  padding: 20px;
+	}
+	.aboutus-image {
+		margin-left: 30%;
+	}
+	.aboutus-users {
+		padding-bottom: 118px;
+	}
+}
+
+/* For general mobile layouts */
+@media only screen and (max-width: 600px) {
+	.copy-about {
+		padding: 20px;
+	}
+	.aboutus-column {
+		width: 100%;
+		display: block;
+	}
+	.aboutus-users {
+		padding-bottom: 85px;
+	}
+}
+/* ------------------ End: CSS for aboutus section <section id="aboutus"> ------------------ */
