@@ -41,6 +41,16 @@
 			$('#video-div').attr('src', youtubeUrl);
 		};
 	</script>
+	<!-- Start: Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2075FRD1R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-Z2075FRD1R');
+    </script>
+    <!-- End: Global site tag (gtag.js) - Google Analytics -->
 </head>
 <body style="background: #010300;">
 	<?php include 'racing_register.php';?>
@@ -59,7 +69,7 @@
         </nav>
       </div>
       <div class="header-mb">
-        <a href="#" class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0);"></a>
+        <a href="<?php echo($domain); ?>" class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0);"></a>
          <div class="menu-toggle-wrapper" aria-hidden="true">
           <button class="btn-menu menu-closed">
              <span class="menu-icon"></span>
@@ -87,7 +97,7 @@
 	</div>
 	<div class="video-position">
 		<div class="wrap-video-banner">
-			<iframe class="responsive-iframe" id="video-div" width="100%" height="100%" src="//www.youtube-nocookie.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
+			<iframe class="responsive-iframe" id="video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 </section>

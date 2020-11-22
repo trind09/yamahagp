@@ -12,3 +12,7 @@
 [19-Nov-2020 14:18:58 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/ilear871/public_html/admin/login.php on line 69
 [20-Nov-2020 00:07:01 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/ilear871/public_html/admin/login.php on line 69
 [20-Nov-2020 07:48:22 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/ilear871/public_html/admin/login.php on line 69
+[20-Nov-2020 13:58:11 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/ilear871/public_html/admin/login.php on line 69
+[21-Nov-2020 03:01:31 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/ilear871/public_html/admin/login.php on line 69
+[21-Nov-2020 03:21:33 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/ilear871/public_html/admin/login.php on line 69
+[21-Nov-2020 06:41:07 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/ilear871/public_html/admin/login.php on line 69

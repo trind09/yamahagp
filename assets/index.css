@@ -102,13 +102,13 @@
 	.mb-btn {
 		display: flex;
 		position: absolute;
-		top: 61%;
-		left: 23%;
+		top: 58%;
+		left: 21%;
 	}
 	.video-position {
 		width: 59%;
 		right: 18%;
-		bottom: 40%;
+		bottom: 48%;
 	}
 }
 
@@ -122,9 +122,17 @@
 		line-height: 26px;
 		font-size: 8px;
 	}
+	
+	.mb-btn {
+		display: flex;
+		position: absolute;
+		top: 53%;
+		left: 21%;
+	}
 	.video-position {
-		top: 29%;
-		right: 21%
+		width: 59%;
+		right: 21%;
+		bottom: 48%;
 	}
 }
 
@@ -287,7 +295,7 @@ and (max-device-width : 1024px)  {
 }
 @media screen and (max-width: 567px){
 	#gallery {
-		height: 170vh;
+		height: 141vh;
 	}
 	#gallery footer {
 		font-size: 11px;

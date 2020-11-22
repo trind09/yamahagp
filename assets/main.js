@@ -619,7 +619,6 @@ var YMH = {
         slidesToScroll: 1,
       });
     }
-    $('.plan-list .slick-dots li:eq(1)').trigger('click');
     //$('.plan-list .slick-next').trigger('click');
 
   },
@@ -644,8 +643,6 @@ var YMH = {
         slidesToShow: 1,
         slidesToScroll: 1,
       }); 
-
-      $('.race-league .slick-dots li:eq(1)').trigger('click');
 
     }
 

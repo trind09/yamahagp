@@ -2225,7 +2225,7 @@ footer .copyright a:hover {
 
 /* line 308, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #events {
-  height: 80vh;
+  height: 108vh;
   width: 100%;
   background: url(images/bg-term.png) no-repeat center top;
   background-size: cover;
@@ -2314,6 +2314,18 @@ footer .copyright a:hover {
 .events ul li {
   font-size: 16px;
   padding-bottom: 10px;
+}
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) {
+	#events {
+	  height: 80vh;
+	}
+}
+/* For general mobile layouts */
+@media only screen and (max-width: 600px) {
+	#events {
+	  height: 124vh;
+	}
 }
 
 /* line 393, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
@@ -3154,7 +3166,7 @@ footer .copyright a:hover {
 
 /* line 1113, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #news {
-  height: 120vh;
+  height: 123vh;
   width: 100%;
   background: url(images/n-bg.png) no-repeat center top;
   background-size: cover;
@@ -5634,6 +5646,24 @@ footer .copyright a:hover {
   height: auto;
   background: transparent;
   opacity: 0;
+}
+/* For general mobile layouts */
+@media only screen and (max-width: 600px) {
+	#main {
+	  height: 69vh;
+	}
+}
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) {
+	#main {
+	  height: 100vh;
+	}
+}
+/* For general samsung galaxy a51 layouts */
+@media only screen and (device-width: 914px) {
+	#main {
+	  height: 100vh;
+	}
 }
 /* line 14, ../../../../../../Digitop/2017/assets/scss/module/_v2.scss */
 #main .contain {
