@@ -51,6 +51,24 @@
       gtag('config', 'G-Z2075FRD1R');
     </script>
     <!-- End: Global site tag (gtag.js) - Google Analytics -->
+    
+    <!-- Start: Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2740220276218425');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2740220276218425&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End: Facebook Pixel Code -->
 </head>
 <body style="background: #010300;">
 	<?php include 'racing_register.php';?>
@@ -59,7 +77,7 @@
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
             <li><a href="#aboutus" class="nav-left" role="aboutus"><span>giới thiệu</span></a></li>
-            <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
+            <li><a href="#sukien1" class="nav-left" role="sukien1"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
             <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '<?php echo($domain); ?>';"><a href="<?php echo($domain); ?>"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
@@ -91,7 +109,7 @@
 	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy">
 		<div class="mb-btn">
-			<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
+			<a href="#dang-ky" class="btn btn1 btn2 js-joinnow" role="dang-ky" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
 			<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
 		</div>
 	</div>
@@ -104,33 +122,60 @@
 
 
 <section id="aboutus" class="display about-video">
+	<script>
+		var currentAboutContentIndex = 0;
+		function ShowAboutusContent(element, className){
+			var elementClass = $(element).attr("class");
+			$('.' + elementClass).each(function( index ) {
+				$( this ).text($( this ).attr("title") + " ►");
+			});
+			var elementText = $(element).attr("title");
+			$(element).text(elementText + " ▼");
+			
+			var arr = className.split("-");
+			$('.' + arr[0] + '-' + arr[1]).hide();
+			$('.' + className).each(function( index ) {
+				if (arr[2] != currentAboutContentIndex){
+					$( this ).show();
+				} else {
+					$( this ).hide();
+					$(element).text(elementText + " ►");
+				}
+			});
+			if (arr[2] != currentAboutContentIndex){
+				currentAboutContentIndex = arr[2];
+			} else {
+				currentAboutContentIndex = arr[2] + 1;
+			}
+		}
+	</script>
 	<div class="contain">
 		<h4 style="text-align: center;">VỀ CHÚNG TÔI</h4>
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
 		<div class="about-contain display">
 			<div class="copy-about">
 				<div class="aboutus-paragraph">
-					<h5>Về chúng tôi</h5>
-					<p>Năm 2020, Học viện Đua xe Việt Nam - Vietnam Racing Academy (VR) được thành lập bởi một nhóm doanh nhân với niềm đam mê mãnh liệt với đua xe thể thao. Được hỗ trợ bởi VMA - ASN duy nhất của Liên Đoàn Ô tô Quốc tế FIA tại Việt Nam.</p>
+					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-1');" title="Về chúng tôi">Về chúng tôi ►</h5>
+					<p class="aboutus-content aboutus-content-1" style="display: none;">Năm 2020, Học viện Đua xe Việt Nam - Vietnam Racing Academy (VR) được thành lập bởi một nhóm doanh nhân với niềm đam mê mãnh liệt với đua xe thể thao. Được hỗ trợ bởi VMA - ASN duy nhất của Liên Đoàn Ô tô Quốc tế FIA tại Việt Nam.</p>
 				</div>
 				<div class="aboutus-paragraph">
-					<h5>Câu chuyện</h5>
-					<p>Học viện Đua xe Việt Nam (VR) ra đời bởi những con người tâm huyết, trăn trở với nền thể thao đua xe nước nhà. Luôn mong muốn Việt Nam có những tay đua đủ chuyên môn để thi đấu trong khu vực cũng như quốc tế.</p>
+					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-2');" title="Câu chuyện">Câu chuyện ►</h5>
+					<p class="aboutus-content aboutus-content-2" style="display: none;">Học viện Đua xe Việt Nam (VR) ra đời bởi những con người tâm huyết, trăn trở với nền thể thao đua xe nước nhà. Luôn mong muốn Việt Nam có những tay đua đủ chuyên môn để thi đấu trong khu vực cũng như quốc tế.</p>
 				</div>
 				<div class="aboutus-paragraph">
-					<h5>Định hướng</h5>
-					<p>Học viện Vietnam Racing Academy được thành lập để định hướng và đào tạo các tay đua chuyên nghiệp, đồng thời tổ chức các cuộc thi để thúc đẩy môn đua xe thể thao nước nhà trên một nền tảng vững chắc, bài bản nhằm thúc đẩy môn đua xe thể thao tại Việt Nam.</p>
+					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-3');" title="Định hướng">Định hướng ►</h5>
+					<p class="aboutus-content aboutus-content-3" style="display: none;">Học viện Vietnam Racing Academy được thành lập để định hướng và đào tạo các tay đua chuyên nghiệp, đồng thời tổ chức các cuộc thi để thúc đẩy môn đua xe thể thao nước nhà trên một nền tảng vững chắc, bài bản nhằm thúc đẩy môn đua xe thể thao tại Việt Nam.</p>
 				</div>
 				<div class="aboutus-paragraph">
-					<h5>Giá trị cốt lõi</h5>
-					<p>-	Chuyên Nghiệp</p>
-					<p>-	Đam Mê</p>
-					<p>-	Điêu Luyện</p>
-					<p>-	Tinh Thần Thể Thao</p>
+					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-4');" title="Giá trị cốt lõi">Giá trị cốt lõi ►</h5>
+					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Chuyên Nghiệp</p>
+					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Đam Mê</p>
+					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Điêu Luyện</p>
+					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Tinh Thần Thể Thao</p>
 				</div>
 				<div class="aboutus-paragraph">
-					<h5>Tầm nhìn tương lai</h5>
-					<p>Quảng bá và cấu trúc hóa văn hóa đua xe thể thao tại Việt Nam, cũng như mang đến nhiều cơ hội cho các danh nghiệp trong nước và ngoài nước quảng bá thương hiệu trong môi trường an toàn và công bằng.</p>
+					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-5');" title="Tầm nhìn tương lai">Tầm nhìn tương lai ►</h5>
+					<p class="aboutus-content aboutus-content-5" style="display: none;">Quảng bá và cấu trúc hóa văn hóa đua xe thể thao tại Việt Nam, cũng như mang đến nhiều cơ hội cho các danh nghiệp trong nước và ngoài nước quảng bá thương hiệu trong môi trường an toàn và công bằng.</p>
 				</div>
 				<div class="aboutus-users">
 					<div class="about-us">
@@ -182,7 +227,7 @@
 </section>
 
 
-<section id="events" class="display about-video">
+<section id="events" class="display about-video" style="display: none;">
 	<div class="contain">
 		<h4 style="text-align: center;">WHERE’S YOUR LIMIT?</h4>
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
@@ -203,11 +248,8 @@
 
 <section id="register" class="display">
 	<div class="contain">
-		<h4 style="text-align: center;">Đăng ký thi đấu</h4>
+		<h4 style="text-align: center;" id="sukien1">Sự kiện</h4>
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
-		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
-			<li class="active" style="width: 100%;">hạng mục thi đấu</li>
-		</ul>
 		<script>
 			//https://sweetalert.js.org/guides/
 			function ShowExpiredRegistryMessage(){
@@ -235,6 +277,220 @@
 				return false;
 			}
 		</script>
+		<style>
+		.animation-image-box{
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  transform: translate(-50%, -50%);
+		  top: 50%;
+		  left: 50%;
+		  background: #11451fa6;
+		  box-sizing: border-box;
+		  overflow: hidden;
+		  box-shadow: 0 20px 50px rgb(24 90 23);
+		  border: 2px solid #2cad2a;
+		  color: white;
+		  padding: 20px;
+		}
+
+		.animation-image-box:before{
+		  content: '';
+		  position:absolute;
+		  top:0;
+		  left:-100%;
+		  width:100%;
+		  height:100%;
+		  background: rgba(255,255,255,0.1);
+		  transition:0.5s;
+		  pointer-events: none;
+		}
+
+		.animation-image-box:hover:before{
+		  left:-50%;
+		  transform: skewX(-5deg);
+		}
+
+
+		.animation-image-box .content{
+		  position:absolute;
+		  top:15px;
+		  left:15px;
+		  right:15px;
+		  bottom:15px;
+		  border:1px solid #f0a591;
+		  padding:20px;
+		  text-align:center;
+		  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+		  
+		}
+
+		.animation-image-box span{
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  display: block;
+		  box-sizing: border-box;
+		  
+		}
+
+		.animation-image-box span:nth-child(1)
+		{
+		  transform:rotate(0deg);
+		}
+
+		.animation-image-box span:nth-child(2)
+		{
+		  transform:rotate(90deg);
+		}
+
+		.animation-image-box span:nth-child(3)
+		{
+		  transform:rotate(180deg);
+		}
+
+		.animation-image-box span:nth-child(4)
+		{
+		  transform:rotate(270deg);
+		}
+
+		.animation-image-box span:before
+		{
+		  content: '';
+		  position: absolute;
+		  width:100%;
+		  height: 2px;
+		  background: #50dfdb;
+		  animation: animate 4s linear infinite;
+		}
+		.animation-image-box img {
+			width: 100%;
+			height: 100%;
+		}
+		</style>
+		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
+			<li class="active" style="width: 100%;">Event Hightlights</li>
+		</ul>
+		<div class="about-contain display register-contain">
+			<ul class="race-league">
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Đường Đua</h2>
+					<div class="copy copy-a">
+						<h5 style="position: absolute; z-index: 1; color: #33c331">Đường Đua Chuẩn An Toàn VMA</h5>
+						<div class="animation-image-box"><img src="assets/sukien/Truong_dua_tieu_chuan.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Trọng Tài</h2>
+					<div class="copy copy-a">
+						<h5 style="position: absolute; z-index: 1; color: #33c331">Trọng Tài Được Huấn Luyện & Cấp Bằng VMA</h5>
+						<div class="animation-image-box"><img src="assets/sukien/1907178_vietnam.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Trưng Bày</h2>
+					<div class="copy copy-a">
+						<h5 style="position: absolute; z-index: 1; color: #33c331">Trưng Bài Siêu Xe & Test Drive</h5>
+						<div class="animation-image-box"><img src="assets/sukien/Sieu_xe.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">VIP Lounge</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/VIP_Lounge_01.jpg"/></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
+			<li class="active" style="width: 100%;">Line up</li>
+		</ul>
+		<div class="about-contain display register-contain">
+			<ul class="race-league">
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">DJ Vinjaz</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/DJ_VINJAZ_01.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">DJ Mie</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/Mie.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">DJ Lại Thanh Hương</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/DJThanhHuong.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">DJ Nicky</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+					</div>
+				</li>
+			</ul>
+			<ul class="race-league">
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">DJ Coca</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Rapper Lowkey</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/LowKey.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Rapper Mess</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/Mes.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">MC Goku</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/MCGOKU.jpg"/></div>
+					</div>
+				</li>
+			</ul>
+			<ul class="race-league">
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Rapper ??????</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Rapper ??????</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Rapper ??????</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+					</div>
+				</li>
+				<li style="background: none; height: 490px;">
+					<h2 style="z-index: 1;">Rapper ??????</h2>
+					<div class="copy copy-a">
+						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<h2>Đăng ký thi đấu</h2>
+		<ul id="dang-ky" class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
+			<li class="active" style="width: 100%;">hạng mục thi đấu</li>
+		</ul>
 		<div class="about-contain display register-contain">
 			<ul class="race-league">
 				<li>
@@ -585,7 +841,7 @@
 		<div class="dangky animate__animated animate__zoomIn  animate__slower"><span>Đăng Ký Thi Đấu</span></div>
 		<div class="wrap-regi phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
 		</div>
-		<a href="#register" role="register" class="js-joinnow"><img class="img-regi" src="assets/images/register.png"></a>
+		<a href="#dang-ky" role="dang-ky" class="js-joinnow"><img class="img-regi" src="assets/images/register.png"></a>
 	</div>
 
 	<div class="numbershow animate__animated animate__zoomIn animate__slower"><span style="color:white">☎ 0909337777</span></div>

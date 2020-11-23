@@ -295,7 +295,7 @@ and (max-device-width : 1024px)  {
 }
 @media screen and (max-width: 567px){
 	#gallery {
-		height: 141vh;
+		height: 170vh;
 	}
 	#gallery footer {
 		font-size: 11px;

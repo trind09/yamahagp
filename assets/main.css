@@ -1974,7 +1974,7 @@ footer .copyright a:hover {
 
 /* line 153, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #register {
-  height: 120vh;
+  height: 420vh;
   width: 100%;
   background: url(images/bg-rgt.png) no-repeat center top;
   background-size: cover;
@@ -2000,7 +2000,7 @@ footer .copyright a:hover {
 }
 /* line 179, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .race-league > li {
-  width: 245px;
+  width: 23%;
   height: 303px;
   position: relative;
   background: url(images/shape.png) no-repeat center;
@@ -4281,7 +4281,7 @@ footer .copyright a:hover {
 
   /* line 285, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #register {
-    height: 80vh;
+    height: 380vh;
     margin-top: -10vh;
   }
 
@@ -4335,6 +4335,7 @@ footer .copyright a:hover {
     margin-top: -3.5vh;
     height: auto;
     padding: 10vh;
+	margin-bottom: 200px;
   }
   /* line 338, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #register .contain {
