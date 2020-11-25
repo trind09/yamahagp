@@ -38,7 +38,7 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 	<script>
 		function changeVid(youtubeUrl){
-			$('#video-div').attr('src', youtubeUrl);
+			$('.video-div').attr('src', youtubeUrl);
 		};
 	</script>
 	<!-- Start: Global site tag (gtag.js) - Google Analytics -->
@@ -104,19 +104,92 @@
 </script>
 <!-- media style for both phone and ipad: @media screen and (max-width: 900px) -->
 <section id="main" style="visibility: inherit; opacity: 1;" class="main-section">
+	<script>
+		const getDeviceType = () => {
+		  const ua = navigator.userAgent;
+		  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+			return "tablet";
+		  }
+		  if (
+			/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+			  ua
+			)
+		  ) {
+			return "mobile";
+		  }
+		  return "desktop";
+		};
+		
+		$( document ).ready(function() {
+			var currentDevice = getDeviceType();
+			if (currentDevice != "desktop"){
+				$('.panel_controls').hide();
+				$('.panel_table_controls').show();
+				if (currentDevice == "tablet"){
+					$('.video-div').each(function( index ) {
+						$( this ).attr("height","300px");
+					});
+				}
+			} else {
+				if($(".bg_mb").is(":visible")){
+					$('.panel_controls').hide();
+					$('.panel_table_controls').show();
+					$('.video-div').each(function( index ) {
+						$( this ).attr("height","300px");
+					});
+				}
+			}
+		});
+	</script>
+	<style>
+		.panel_table_controls {
+			top: 20%;
+		}
+		.panel_table_controls table tr td {
+			text-align: center;
+		}
+	</style>
 	<img src="assets/images/bg.jpg" alt="" class="bg_pc">
-	
 	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
-	<div class="main_copy">
+	<div class="main_copy panel_controls">
 		<div class="mb-btn">
 			<a href="#dang-ky" class="btn btn1 btn2 js-joinnow" role="dang-ky" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
 			<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
 		</div>
 	</div>
-	<div class="video-position">
+	<div class="video-position panel_controls">
 		<div class="wrap-video-banner">
-			<iframe class="responsive-iframe" id="video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
+			<iframe class="responsive-iframe video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
 		</div>
+	</div>
+	<div class="main_copy panel_table_controls" style="display: none;">
+		<table style="width: 100%;">
+			<tr>
+				<td>
+					<iframe class="video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#dang-ky" class="btn js-joinnow" role="dang-ky" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a>&nbsp;
+					<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="assets/images/Logo_Vinfast.png" width="90%" />
+				</td>
+			</tr>
+			<tr>
+				<td><img src="assets/images/whereisyourlimit.png" width="100%" /></td>
+			</tr>
+			<tr>
+				<td><img src="assets/images/don_vi_to_chuc.png" width="100%" /></td>
+			</tr>
+		</table>
 	</div>
 </section>
 

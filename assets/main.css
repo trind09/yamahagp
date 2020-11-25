@@ -1974,7 +1974,7 @@ footer .copyright a:hover {
 
 /* line 153, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #register {
-  height: 440vh;
+  height: 400vh;
   width: 100%;
   background: url(images/bg-rgt.png) no-repeat center top;
   background-size: cover;
@@ -4359,7 +4359,7 @@ footer .copyright a:hover {
   #register:after {
     content: '';
     position: absolute;
-    background: #214799;
+    background: #06280d;
     height: 90%;
     width: 100%;
     bottom: 0;
@@ -5651,7 +5651,7 @@ footer .copyright a:hover {
 /* For general mobile layouts */
 @media only screen and (max-width: 600px) {
 	#main {
-	  height: 69vh;
+	  height: 75vh;
 	}
 }
 /* For general iPad layouts */
