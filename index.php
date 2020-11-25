@@ -448,28 +448,28 @@
 		</ul>
 		<div class="about-contain display register-contain">
 			<ul class="race-league">
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Đường Đua</h2>
 					<div class="copy copy-a">
 						<h5 style="position: absolute; z-index: 1; color: #33c331">Đường Đua Chuẩn An Toàn VMA</h5>
 						<div class="animation-image-box"><img src="assets/sukien/Truong_dua_tieu_chuan.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Trọng Tài</h2>
 					<div class="copy copy-a">
 						<h5 style="position: absolute; z-index: 1; color: #33c331">Trọng Tài Được Huấn Luyện & Cấp Bằng VMA</h5>
 						<div class="animation-image-box"><img src="assets/sukien/1907178_vietnam.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Trưng Bày</h2>
 					<div class="copy copy-a">
 						<h5 style="position: absolute; z-index: 1; color: #33c331">Trưng Bày Siêu Xe & Test Drive</h5>
 						<div class="animation-image-box"><img src="assets/sukien/Sieu_xe.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">VIP Lounge</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/VIP_Lounge_01.jpg"/></div>
@@ -482,25 +482,25 @@
 		</ul>
 		<div class="about-contain display register-contain">
 			<ul class="race-league">
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">DJ Vinjaz</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/DJ_VINJAZ_01.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">DJ Mie</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/Mie.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">DJ Lại Thanh Hương</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/DJThanhHuong.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">DJ Nicky</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/DJ_Nicky.jpg"/></div>
@@ -508,25 +508,25 @@
 				</li>
 			</ul>
 			<ul class="race-league">
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">DJ Coca</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/dj_coca.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Rapper Lowkey</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/LowKey.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Rapper Mess</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/Mes.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">MC Goku</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img src="assets/sukien/MCGOKU.jpg"/></div>
@@ -534,25 +534,25 @@
 				</li>
 			</ul>
 			<ul class="race-league">
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
 					</div>
 				</li>
-				<li style="background: none; height: 490px;">
+				<li style="background: none; height: 470px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
 						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
