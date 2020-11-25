@@ -739,8 +739,20 @@ if(isset($_POST['form1'])) {
 			  <div class="swal2-header" id="oto-gymkhana">
 				 <h2 class="swal2-title" id="swal2-title">Đăng ký thi đấu VINFAST AUTOGYMKHANA CUP</h2>
 				 <div class="swal2-content" style="width: 100%;">
-				 Đăng ký đầy đủ thông tin bên dưới. Điều lệ:<br/>
+				 <p>Phí đăng ký tham gia thi đấu: 3.000.000 vnđ</p>
+				 <p>
+				 CƠ CẤU GIẢI THƯỞNG NHẤT - NHÌ - BA HẤP DẪN<br/>
+				 Bao gồm :<br/>
+				 -	2 vé thường + 1 VIP trị giá 1.700.000vnđ<br/>
+				 -	Thay nhớt Motul và kiểm tra Xe trước thi đấu<br/>
+				 -	Quà từ BTC.<br/>
+				 -	1 phòng khách sạn Đại Nam ngày 11/12 (12 VĐV vào chung kết)<br/>
+				 </p>
+				 <p>
+				 ĐIỀU LỆ:<br/>
 				 <a href="assets/docs/Đieu_le_Vinfast_Fadil_AutoGymkhanaCup.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
+				 <br/>
+				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking" target="_blank">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
 				 <br/>
 				 <span class="swal2-content" style="color: red;">*Bắt buộc</span>
 				 </div>

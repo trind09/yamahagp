@@ -1974,7 +1974,7 @@ footer .copyright a:hover {
 
 /* line 153, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #register {
-  height: 420vh;
+  height: 440vh;
   width: 100%;
   background: url(images/bg-rgt.png) no-repeat center top;
   background-size: cover;
@@ -4281,7 +4281,7 @@ footer .copyright a:hover {
 
   /* line 285, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #register {
-    height: 380vh;
+    height: 400vh;
     margin-top: -10vh;
   }
 

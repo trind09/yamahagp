@@ -392,7 +392,7 @@
 				<li style="background: none; height: 490px;">
 					<h2 style="z-index: 1;">Trưng Bày</h2>
 					<div class="copy copy-a">
-						<h5 style="position: absolute; z-index: 1; color: #33c331">Trưng Bài Siêu Xe & Test Drive</h5>
+						<h5 style="position: absolute; z-index: 1; color: #33c331">Trưng Bày Siêu Xe & Test Drive</h5>
 						<div class="animation-image-box"><img src="assets/sukien/Sieu_xe.jpg"/></div>
 					</div>
 				</li>
@@ -430,7 +430,7 @@
 				<li style="background: none; height: 490px;">
 					<h2 style="z-index: 1;">DJ Nicky</h2>
 					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+						<div class="animation-image-box"><img src="assets/sukien/DJ_Nicky.jpg"/></div>
 					</div>
 				</li>
 			</ul>
@@ -438,7 +438,7 @@
 				<li style="background: none; height: 490px;">
 					<h2 style="z-index: 1;">DJ Coca</h2>
 					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+						<div class="animation-image-box"><img src="assets/sukien/dj_coca.jpg"/></div>
 					</div>
 				</li>
 				<li style="background: none; height: 490px;">
@@ -464,25 +464,25 @@
 				<li style="background: none; height: 490px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
 					</div>
 				</li>
 				<li style="background: none; height: 490px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
 					</div>
 				</li>
 				<li style="background: none; height: 490px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
 					</div>
 				</li>
 				<li style="background: none; height: 490px;">
 					<h2 style="z-index: 1;">Rapper ??????</h2>
 					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/anonymous_rapper.jpg"/></div>
+						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
 					</div>
 				</li>
 			</ul>
