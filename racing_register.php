@@ -68,6 +68,19 @@
 				$('[id^=comment3]').hide();
 				
 				$('#racing_level').val("HỆ Moto UB150 Pro - GIẢI MOTUL MOTOR RACING CUP");
+			} else if (form_id == "vr-roller-sport-cup"){
+				$('#vr-roller-sport-cup').show();
+				
+				$('[id^=license_file1]').hide();
+				$('[id^=license_file2]').hide();
+				$('[id^=license_file3]').hide();
+				$('[id^=license_file4]').hide();
+				
+				$('[id^=comment1]').hide();
+				$('[id^=comment2]').hide();
+				$('[id^=comment3]').hide();
+				
+				$('#racing_level').val("HỆ Roller Sport VR - GIẢI VIETNAM VR – ROLLER SPORTS 202");
 			}
 			$('input#form_id').val(form_id);
 			$('#register_form').attr("style", "display: -webkit-box;");
@@ -79,6 +92,7 @@
 			$('#oto-gymkhana').hide();
 			$('#moto-ub150-semipro').hide();
 			$('#moto-ub150-pro').hide();
+			$('#vr-roller-sport-cup').hide();
 		}
 		
 		function ShowAllFormControls(){
@@ -91,6 +105,7 @@
 			$('[id^=license_file1]').show();
 			$('[id^=license_file2]').show();
 			$('[id^=license_file3]').show();
+			$('[id^=license_file4]').show();
 			$('[id^=number]').show();
 			$('[id^=sponsor_fullname]').show();
 			$('[id^=sponsor_phone]').show();
@@ -216,6 +231,14 @@
 					}
 				}
 				
+				if(document.getElementById("banktransfer_file1").files.length == 0) {
+					error_message += 'Xin upload hình ảnh xác nhận chuyển khoản thành công.<br>';
+				} else {
+					if (!isValidFileType("banktransfer_file1")){
+						error_message += 'Xin upload hình ảnh xác nhận chuyển khoản đúng định dạng.<br>';
+					}
+				}
+			} else if (form_id == 'vr-roller-sport-cup'){
 				if(document.getElementById("banktransfer_file1").files.length == 0) {
 					error_message += 'Xin upload hình ảnh xác nhận chuyển khoản thành công.<br>';
 				} else {
@@ -534,6 +557,21 @@ if(isset($_POST['form1'])) {
 					$error_message .= 'Hình ảnh chuyển khoản không đúng định dạng.<br>';
 				}
 			}
+		} else if ($form_id == 'vr-roller-sport-cup'){
+			if($banktransfer_file1 == '') {
+				$valid = 0;
+				$error_message .= 'Xin upload hình ảnh xác nhận chuyển khoản thành công.<br>';
+			} else {
+				$path = $_FILES['banktransfer_file1']['name'];
+				$path_tmp = $_FILES['banktransfer_file1']['tmp_name'];
+				$ext = pathinfo( $path, PATHINFO_EXTENSION );
+				$ext = strtolower($ext);
+				$file_name = basename( $path, '.' . $ext );
+				if( $ext!='jpg' && $ext!='png' && $ext!='docx' && $ext!='pdf' && $ext!='jpeg' ) {
+					$valid = 0;
+					$error_message .= 'Hình ảnh chuyển khoản không đúng định dạng.<br>';
+				}
+			}
 		}
 	}
 
@@ -718,7 +756,7 @@ if(isset($_POST['form1'])) {
 				 -	1 phòng khách sạn Đại Nam ngày 11/12<br/>
 				 </p>
 				 <p>
-				 ĐIỀU LỆ:<br/>
+				 VĐV vui lòng đọc kỹ ĐIỀU LỆ:<br/>
 				 <a href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_300_400cc.pdf" target="_blank">Xem điều lệ tại đây</a>
 				 </p>
 				 <p>
@@ -737,7 +775,7 @@ if(isset($_POST['form1'])) {
 				 </div>
 			  </div>
 			  <div class="swal2-header" id="oto-gymkhana">
-				 <h2 class="swal2-title" id="swal2-title">Đăng ký thi đấu VINFAST AUTOGYMKHANA CUP</h2>
+				 <h2 class="swal2-title" id="swal2-title">Đăng Ký Thi Đấu Giải VINFAST AUTOGYMKHANA CUP</h2>
 				 <div class="swal2-content" style="width: 100%;">
 				 <p>Phí đăng ký tham gia thi đấu: 3.000.000 vnđ</p>
 				 <p>
@@ -749,8 +787,8 @@ if(isset($_POST['form1'])) {
 				 -	1 phòng khách sạn Đại Nam ngày 11/12 (12 VĐV vào chung kết)<br/>
 				 </p>
 				 <p>
-				 ĐIỀU LỆ:<br/>
-				 <a href="assets/docs/Đieu_le_Vinfast_Fadil_AutoGymkhanaCup.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
+				 VĐV vui lòng đọc kỹ ĐIỀU LỆ:<br/>
+				 <a href="assets/docs/ĐIEU_LE_VINFAST_AUTOGYMKHANA_CUP.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
 				 <br/>
 				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking" target="_blank">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
 				 <br/>
@@ -789,6 +827,18 @@ if(isset($_POST['form1'])) {
 				 <br/>
 				 VĐV vui lòng đọc kỹ ĐIỀU LỆ:<br/>
 				 <a href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_UB150.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
+				 <br/>
+				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking" target="_blank">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
+				 <br/>
+				 <span class="swal2-content" style="color: red;">*Bắt buộc</span>
+				 </div>
+			  </div>
+			  <div class="swal2-header" id="vr-roller-sport-cup">
+				 <h2 class="swal2-title" id="swal2-title">Đăng ký thi đấu VR ROLLER SPORT CUP</h2>
+				 <div class="swal2-content" style="width: 100%;">
+				 Phí đăng ký tham gia thi đấu: 500.000 vnđ<br/><br/>
+				 VĐV vui lòng đọc kỹ ĐIỀU LỆ:<br/>
+				 <a href="assets/docs/The_thuc_VR-ROLLER_SPORTS.pdf" target="_blank">Xem điều lệ tại đây</a><br/>
 				 <br/>
 				 LIÊN HỆ MUA VÉ XEM CHƯƠNG TRÌNH: <a href="https://ticketbox.vn/vr-fest-2020#booking" target="_blank">https://ticketbox.vn/vr-fest-2020#booking</a><br/>
 				 <br/>

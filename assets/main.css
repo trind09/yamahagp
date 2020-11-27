@@ -1974,7 +1974,7 @@ footer .copyright a:hover {
 
 /* line 153, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #register {
-  height: 415vh;
+  height: 120vh;
   width: 100%;
   background: url(images/bg-rgt.png) no-repeat center top;
   background-size: cover;
@@ -2225,7 +2225,7 @@ footer .copyright a:hover {
 
 /* line 308, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #events {
-  height: 108vh;
+  height: 419vh;
   width: 100%;
   background: url(images/bg-term.png) no-repeat center top;
   background-size: cover;
@@ -2233,6 +2233,26 @@ footer .copyright a:hover {
   position: relative;
   z-index: 2;
   margin-top: -16vh;
+}
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) {
+  #events {
+	height: 360vh;
+  }
+}
+
+/* For general Mobiles Landscape */
+@media (min-width: 481px) and (max-width: 767px) {
+  #events {
+	height: 360vh;
+  }
+}
+
+/* For general Mobiles Portrait */
+@media (min-width: 320px) and (max-width: 480px) {
+  #events {
+	height: 360vh;
+  }
 }
 /* line 318, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #events .gallery-tabs {
@@ -2314,18 +2334,6 @@ footer .copyright a:hover {
 .events ul li {
   font-size: 16px;
   padding-bottom: 10px;
-}
-/* For general iPad layouts */
-@media only screen and (device-width: 768px) {
-	#events {
-	  height: 80vh;
-	}
-}
-/* For general mobile layouts */
-@media only screen and (max-width: 600px) {
-	#events {
-	  height: 124vh;
-	}
 }
 
 /* line 393, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
@@ -2782,8 +2790,6 @@ footer .copyright a:hover {
   background-size: cover;
   padding: 13vh 0 10vh 0;
   position: relative;
-  z-index: 2;
-  margin-top: -12vh;
 }
 /* line 789, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #plan > * {
@@ -4136,7 +4142,7 @@ footer .copyright a:hover {
   /* line 166, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .gallery-tabs li {
     width: 15vw;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   /* line 171, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
@@ -4281,7 +4287,7 @@ footer .copyright a:hover {
 
   /* line 285, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #register {
-    height: 400vh;
+    height: 120vh;
     margin-top: -10vh;
   }
 
@@ -4358,7 +4364,7 @@ footer .copyright a:hover {
   /* line 354, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #register:after {
     content: '';
-    position: absolute;
+    position: relative;
     background: #06280d;
     height: 90%;
     width: 100%;
@@ -4658,7 +4664,7 @@ footer .copyright a:hover {
   }
   /* line 605, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #term .gallery-tabs li {
-    font-size: 7px;
+    font-size: 12px;
   }
 
   /* line 609, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
@@ -5406,7 +5412,7 @@ footer .copyright a:hover {
 
   /* line 1171, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .gallery-tabs li {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   /* line 1174, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */

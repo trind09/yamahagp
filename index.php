@@ -1,4 +1,5 @@
-﻿<html class="no-js" lang="">
+﻿<?php include 'inc/functions.php'; ?>
+<html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,8 +31,8 @@
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <link rel="stylesheet" href="assets/main.css">
-	<link rel="stylesheet" href="assets/index.css">
+	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
@@ -77,7 +78,7 @@
         <nav>
           <ul id="nav" style="visibility: inherit; opacity: 1;">
             <li><a href="#aboutus" class="nav-left" role="aboutus"><span>giới thiệu</span></a></li>
-            <li><a href="#sukien1" class="nav-left" role="sukien1"><span>Sự kiện</span></a></li>
+            <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
             <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
             <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '<?php echo($domain); ?>';"><a href="<?php echo($domain); ?>"></a></li>
             <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
@@ -153,7 +154,7 @@
 	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
 	<div class="main_copy panel_controls">
 		<div class="mb-btn">
-			<a href="#dang-ky" class="btn btn1 btn2 js-joinnow" role="dang-ky" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
+			<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
 			<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
 		</div>
 	</div>
@@ -171,7 +172,7 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="#dang-ky" class="btn js-joinnow" role="dang-ky" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a>&nbsp;
+					<a href="#register" class="btn js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a>&nbsp;
 					<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
 				</td>
 			</tr>
@@ -299,29 +300,15 @@
 	</div>
 </section>
 
-
-<section id="events" class="display about-video" style="display: none;">
+<script>
+$(window).on("load", function() {
+    //Wait util all images are loaded
+	$('#events').show();
+});
+</script>
+<section id="events" class="display" style="display: none;">
 	<div class="contain">
-		<h4 style="text-align: center;">WHERE’S YOUR LIMIT?</h4>
-		<h2>VIETNAM RACING FESTIVAL 2020</h2>
-		<div class="about-contain display">
-			<div class="copy-about">
-				<p class="event-text">Chuỗi sự kiện đại nhạc hội giải trí đỉnh cao đúng <strong style="color: #f4ed2d;">“chất”</strong> sẽ được tổ chức tại Trường đua Đại Nam với quy mô lớn mang tên gọi <strong style="color: #f4ed2d;">WHERE’S YOUR LIMIT?</strong></p>
-				<p class="event-text">Chương trình sẽ diễn ra xuyên suốt trong ngày 12/12/2020 cùng sự góp mặt của <strong style="color: #f4ed2d;">RAPPER KARIK, DJ MIE, DJ THANH HƯƠNG, DJ NICKY, DJ COCA.</strong></p>
-				<p class="event-text">Khách tham dự sự kiện sẽ được hoà mình vào không khí lễ hội âm nhạc sôi động với hàng loạt các hoạt động dành cho fan hâm mộ cùng các phần biểu diễn nghệ thuật và giải trí hấp dẫn: </p>
-				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Chiêm ngưỡng dàn  siêu xe “khủng”<strong></p>
-				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Tiết mục trình diễn Flyboard đẹp mắt<strong></p>
-				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Biểu diễn Stunt đẳng cấp<strong></p>
-				<p class="event-text-list"><strong><img src="assets/images/bullet1.png" style="width: 20px; height: 20px;" />	Thưởng thức những giải đua xe hàng đầu Việt Nam gồm: oto, go-kart, moto và bộ môn Roller Sport tốc độ.<strong></p>
-				<p class="event-text">Các khu vực vui chơi giải trí được bố trí rộng khắp chương trình, khán giả sẽ vừa xem chương trình vừa có cơ hội mang về cho mình những phần quá hấp dẫn từ những đơn vị tài trợ. <strong style="color: #f4ed2d;">WHERE’S YOUR LIMIT? - VIETNAM RACING FESTIVAL 2020</strong> hứa hẹn sẽ là ngọn lửa thổi bùng đam mê, thúc đẩy bộ môn đua xe thể thao nước nhà.</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="register" class="display">
-	<div class="contain">
-		<h4 style="text-align: center;" id="sukien1">Sự kiện</h4>
+		<h4 style="text-align: center;">Sự kiện</h4>
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
 		<script>
 			//https://sweetalert.js.org/guides/
@@ -350,218 +337,108 @@
 				return false;
 			}
 		</script>
-		<style>
-		.animation-image-box{
-		  position: absolute;
-		  width: 100%;
-		  height: 100%;
-		  transform: translate(-50%, -50%);
-		  top: 50%;
-		  left: 50%;
-		  background: #11451fa6;
-		  box-sizing: border-box;
-		  overflow: hidden;
-		  box-shadow: 0 20px 50px rgb(24 90 23);
-		  border: 2px solid #2cad2a;
-		  color: white;
-		  padding: 20px;
-		}
-
-		.animation-image-box:before{
-		  content: '';
-		  position:absolute;
-		  top:0;
-		  left:-100%;
-		  width:100%;
-		  height:100%;
-		  background: rgba(255,255,255,0.1);
-		  transition:0.5s;
-		  pointer-events: none;
-		}
-
-		.animation-image-box:hover:before{
-		  left:-50%;
-		  transform: skewX(-5deg);
-		}
-
-
-		.animation-image-box .content{
-		  position:absolute;
-		  top:15px;
-		  left:15px;
-		  right:15px;
-		  bottom:15px;
-		  border:1px solid #f0a591;
-		  padding:20px;
-		  text-align:center;
-		  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
-		  
-		}
-
-		.animation-image-box span{
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
-		  display: block;
-		  box-sizing: border-box;
-		  
-		}
-
-		.animation-image-box span:nth-child(1)
-		{
-		  transform:rotate(0deg);
-		}
-
-		.animation-image-box span:nth-child(2)
-		{
-		  transform:rotate(90deg);
-		}
-
-		.animation-image-box span:nth-child(3)
-		{
-		  transform:rotate(180deg);
-		}
-
-		.animation-image-box span:nth-child(4)
-		{
-		  transform:rotate(270deg);
-		}
-
-		.animation-image-box span:before
-		{
-		  content: '';
-		  position: absolute;
-		  width:100%;
-		  height: 2px;
-		  background: #50dfdb;
-		  animation: animate 4s linear infinite;
-		}
-		.animation-image-box img {
-			width: 100%;
-			height: 100%;
-		}
-		</style>
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">Event Hightlights</li>
 		</ul>
 		<div class="about-contain display register-contain">
-			<ul class="race-league">
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Đường Đua</h2>
-					<div class="copy copy-a">
-						<h5 style="position: absolute; z-index: 1; color: #33c331">Đường Đua Chuẩn An Toàn VMA</h5>
-						<div class="animation-image-box"><img src="assets/sukien/Truong_dua_tieu_chuan.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Trọng Tài</h2>
-					<div class="copy copy-a">
-						<h5 style="position: absolute; z-index: 1; color: #33c331">Trọng Tài Được Huấn Luyện & Cấp Bằng VMA</h5>
-						<div class="animation-image-box"><img src="assets/sukien/1907178_vietnam.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Trưng Bày</h2>
-					<div class="copy copy-a">
-						<h5 style="position: absolute; z-index: 1; color: #33c331">Trưng Bày Siêu Xe & Test Drive</h5>
-						<div class="animation-image-box"><img src="assets/sukien/Sieu_xe.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">VIP Lounge</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/VIP_Lounge_01.jpg"/></div>
-					</div>
-				</li>
-			</ul>
+			<div class="js-highlights js-slider" role="toolbar" style="height: 500px; text-align: center;">
+				 <div class="slider-box">
+					<p>Đường Đua</p>
+					<img src="assets/sukien/Truong_dua_tieu_chuan.jpg"/>
+					<h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">Đường Đua Chuẩn An Toàn VMA</h5>
+				 </div>
+				 <div class="slider-box">
+					<p>Trọng Tài</p>
+					<img src="assets/sukien/1907178_vietnam.jpg"/>
+					<h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">Trọng Tài Được Huấn Luyện & Cấp Bằng VMA</h5>
+				 </div>
+				 <div class="slider-box">
+					<p>Trưng Bày</p>
+					<img src="assets/sukien/Sieu_xe.jpg"/>
+					<h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">Trưng Bày Siêu Xe & Test Drive</h5>
+				 </div>
+				 <div class="slider-box">
+					<p>VIP Lounge</p>
+					<img src="assets/sukien/VIP_Lounge_01.jpg"/>
+				 </div>
+			</div>
 		</div>
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">Line up</li>
 		</ul>
 		<div class="about-contain display register-contain">
-			<ul class="race-league">
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">DJ Vinjaz</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/DJ_VINJAZ_01.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">DJ Mie</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/Mie.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">DJ Lại Thanh Hương</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/DJThanhHuong.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">DJ Nicky</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/DJ_Nicky.jpg"/></div>
-					</div>
-				</li>
-			</ul>
-			<ul class="race-league">
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">DJ Coca</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/dj_coca.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Rapper Lowkey</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/LowKey.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Rapper Mess</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/Mes.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">MC Goku</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img src="assets/sukien/MCGOKU.jpg"/></div>
-					</div>
-				</li>
-			</ul>
-			<ul class="race-league">
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Rapper ??????</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Rapper ??????</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Rapper ??????</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
-					</div>
-				</li>
-				<li style="background: none; height: 470px;">
-					<h2 style="z-index: 1;">Rapper ??????</h2>
-					<div class="copy copy-a">
-						<div class="animation-image-box"><img style="opacity: 0.2;" src="assets/sukien/anonymous_rapper.jpg"/></div>
-					</div>
-				</li>
-			</ul>
+			<div class="js-rappers js-slider" role="toolbar" style="height: 500px; text-align: center;">
+				 <div class="slider-box">
+					<p>Rapper Lowkey</p>
+					<img src="assets/sukien/LowKey.jpg"/>
+				 </div>
+				 <div class="slider-box">
+					<p>Rapper Mess</p>
+					<img src="assets/sukien/Mes.jpg">
+				</div>
+				 <div class="slider-box">
+					<p>Rapper Yuno BigBoi</p>
+					<img src="assets/sukien/YunoBigboi.jpg">
+				</div>
+				 <div class="slider-box">
+					<p>Rapper KOO</p>
+					<img src="assets/sukien/KOO.jpg">
+				</div>
+				 <div class="slider-box">
+					<p>Rapper Kenji</p>
+					<img src="assets/sukien/Kenji.jpg">
+				</div>
+				 <div class="slider-box">
+					<p>Rapper Karik</p>
+					<img src="assets/sukien/Karik.jpg">
+				</div>
+				 <div class="slider-box">
+					<p>Rapper Dế Choắt</p>
+					<img src="assets/sukien/DECHOAT.jpg">
+				</div>
+			</div>
+			<div class="js-djs js-slider" role="toolbar" style="height: 500px; text-align: center;">
+				<div class="slider-box">
+					<p>DJ Vinjaz</p>
+					<img src="assets/sukien/DJ_VINJAZ_01.jpg">
+				</div>
+				<div class="slider-box">
+					<p>DJ Mie</p>
+					<img src="assets/sukien/Mie.jpg">
+				</div>
+				<div class="slider-box">
+					<p>DJ Lại Thanh Hương</p>
+					<img src="assets/sukien/DJThanhHuong.jpg">
+				</div>
+				<div class="slider-box">
+					<p>DJ Nicky</p>
+					<img src="assets/sukien/DJ_Nicky.jpg">
+				</div>
+				<div class="slider-box">
+					<p>DJ Tio</p>
+					<img src="assets/sukien/DJ_Tio.jpg">
+				</div>
+				<div class="slider-box">
+					<p>DJ Miki</p>
+					<img src="assets/sukien/DJ_Miki.jpg">
+				</div>
+			</div>
+			<div class="js-mcs js-slider" role="toolbar" style="height: 500px; text-align: center;">
+				<div class="slider-box">
+					<p>MC Goku</p>
+					<img src="assets/sukien/MCGOKU.jpg">
+				</div>
+				<div class="slider-box">
+					<p>MC LIL 'Vinx</p>
+					<img src="assets/sukien/MC_LIL_Vinx.jpg">
+				</div>
+			</div>
 		</div>
+</section>
+
+<section id="register" class="display">
 		<h2>Đăng ký thi đấu</h2>
-		<ul id="dang-ky" class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
+		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">hạng mục thi đấu</li>
 		</ul>
 		<div class="about-contain display register-contain">
@@ -595,7 +472,7 @@
 					<h2>Oto</h2>
 					<div class="copy copy-a" style="background: url(assets/images/otologo.png);">
 						<div class="note">
-							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-gymkhana');" class="registry-link">Vinfast Autogymkhana Cup</a></h6>
+							<h6><a style="cursor: pointer;" onclick="ShowExpiredRegistryMessage();" class="registry-link">Vinfast Autogymkhana Cup</a></h6>
 							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-track-attack');" class="registry-link">Vinfast Track Attact Cup</a></h6>
 							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">VR Drift Battle</a></h6>
 						</div>
@@ -605,7 +482,7 @@
 					<h2>Roller Sport</h2>
 					<div class="copy copy-a" style="background: url(assets/images/rollerlogo.png);">
 						<div class="note">
-							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">VR Roller Sport Cup</a></h6>
+							<h6><a href='#' onclick="OpenRegisterPopup('vr-roller-sport-cup');" class="registry-link">VR Roller Sport Cup</a></h6>
 						</div>
 					</div>
 				</li>
@@ -884,7 +761,7 @@
 <script src="assets/js/jquery.history.js"></script>
 
 <script src="assets/js/gscript.js"></script>
-<script src="assets/main.js"></script>
+<script src="<?php echo auto_version('assets/main.js'); ?>"></script>
 
 <!-- endinject -->
 
@@ -914,7 +791,7 @@
 		<div class="dangky animate__animated animate__zoomIn  animate__slower"><span>Đăng Ký Thi Đấu</span></div>
 		<div class="wrap-regi phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
 		</div>
-		<a href="#dang-ky" role="dang-ky" class="js-joinnow"><img class="img-regi" src="assets/images/register.png"></a>
+		<a href="#register" role="register" class="js-joinnow"><img class="img-regi" src="assets/images/register.png"></a>
 	</div>
 
 	<div class="numbershow animate__animated animate__zoomIn animate__slower"><span style="color:white">☎ 0909337777</span></div>

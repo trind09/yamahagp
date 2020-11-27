@@ -48,7 +48,8 @@ var YMH = {
 
     if($('#pHome').length> 0) {
 
-      YMH.term();
+	  YMH.term();
+      YMH.events();
       YMH.home();
       YMH.scroll();
       YMH.deeplink();
@@ -133,6 +134,116 @@ var YMH = {
 
   },
 
+  events: function() {
+	$('.js-highlights').slick({
+      arrows: true,
+      dots: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            centerMode: false,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+          }
+        },
+      ]
+    });
+	
+	$('.js-rappers').slick({
+      arrows: true,
+      dots: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            centerMode: false,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+          }
+        },
+      ]
+    });
+	
+	$('.js-djs').slick({
+      arrows: true,
+      dots: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            centerMode: false,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+          }
+        },
+      ]
+    });
+	
+	$('.js-mcs').slick({
+      arrows: true,
+      dots: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            centerMode: false,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+          }
+        },
+      ]
+    });
+  },
+  
   term: function() {
 
     
@@ -304,6 +415,9 @@ var YMH = {
       }
       
       switch(hashTag) {
+		  case 'events':
+              TweenLite.to(window, 1, {scrollTo: offset});
+              break;
           case 'term':
               TweenLite.to(window, 1, {scrollTo: offset});
               break;

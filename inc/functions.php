@@ -24,3 +24,25 @@ function GetBantransferFile($agr, $str, $domain){
 	}
 	return "";
 }
+
+/**
+ *	Search tag: jquery force browser to reload js va css files
+ *  Source: https://stackoverflow.com/questions/118884/how-to-force-the-browser-to-reload-cached-css-and-javascript-files
+ *  Given a file, i.e. /css/base.css, replaces it with a string containing the
+ *  file's mtime, i.e. /css/base.1221534296.css.
+ *
+ *  @param $file  The file to be loaded.  Must be an absolute path (i.e.
+ *                starting with slash).
+ *
+ *	Add these line to .htaccess file as follow:
+ *	RewriteEngine on
+ *	RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]
+ */
+function auto_version($file)
+{
+  if(strpos($file, '/') !== 0 || !file_exists($_SERVER['DOCUMENT_ROOT'] . $file))
+    return $file;
+
+  $mtime = filemtime($_SERVER['DOCUMENT_ROOT'] . $file);
+  return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
+}
