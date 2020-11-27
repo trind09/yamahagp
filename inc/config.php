@@ -1,5 +1,6 @@
 <?php
 $domain = "http://localhost/yamahagp/";
+$root = "E:/xampp7/htdocs/yamahagp/";
 $dbhost = 'localhost';
 // Database Name
 $dbname = 'ilear871_vietnam_racing_festival';

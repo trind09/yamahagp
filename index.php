@@ -1,4 +1,5 @@
-﻿<?php include 'inc/functions.php'; ?>
+﻿<?php include 'inc/config.php'; ?>
+<?php include 'inc/functions.php'; ?>
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
@@ -33,6 +34,9 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/desktop.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/tablet.css'); ?>" type="text/css" />
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
@@ -368,7 +372,19 @@ $(window).on("load", function() {
 		</ul>
 		<div class="about-contain display register-contain">
 			<div class="js-rappers js-slider" role="toolbar" style="height: 500px; text-align: center;">
-				 <div class="slider-box">
+				<div class="slider-box">
+					<p>Rapper Karik</p>
+					<img src="assets/sukien/Karik.jpg">
+				</div>
+				<div class="slider-box">
+					<p>Rapper Dế Choắt</p>
+					<img src="assets/sukien/DECHOAT.jpg">
+				</div>
+				<div class="slider-box">
+					<p>Rapper Yuno BigBoi</p>
+					<img src="assets/sukien/YunoBigboi.jpg">
+				</div>
+				<div class="slider-box">
 					<p>Rapper Lowkey</p>
 					<img src="assets/sukien/LowKey.jpg"/>
 				 </div>
@@ -377,24 +393,12 @@ $(window).on("load", function() {
 					<img src="assets/sukien/Mes.jpg">
 				</div>
 				 <div class="slider-box">
-					<p>Rapper Yuno BigBoi</p>
-					<img src="assets/sukien/YunoBigboi.jpg">
-				</div>
-				 <div class="slider-box">
 					<p>Rapper KOO</p>
 					<img src="assets/sukien/KOO.jpg">
 				</div>
 				 <div class="slider-box">
 					<p>Rapper Kenji</p>
 					<img src="assets/sukien/Kenji.jpg">
-				</div>
-				 <div class="slider-box">
-					<p>Rapper Karik</p>
-					<img src="assets/sukien/Karik.jpg">
-				</div>
-				 <div class="slider-box">
-					<p>Rapper Dế Choắt</p>
-					<img src="assets/sukien/DECHOAT.jpg">
 				</div>
 			</div>
 			<div class="js-djs js-slider" role="toolbar" style="height: 500px; text-align: center;">

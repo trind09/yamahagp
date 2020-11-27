@@ -1,0 +1,26 @@
+/* -----------------------Register section------------------------------ */
+@media screen and (max-width: 567px) {
+  #register {
+    padding: 10vh 20px;
+  }
+  #register h2 img {
+    width: 100%;
+  }
+}
+/* -----------------------Register section------------------------------ */
+
+
+
+/* -----------------------Events section------------------------------ */
+@media (min-width: 481px) and (max-width: 767px) {
+  #events {
+	height: 390vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #events {
+	height: 390vh;
+  }
+}
+/* -----------------------Events section------------------------------ */

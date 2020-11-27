@@ -1972,27 +1972,6 @@ footer .copyright a:hover {
   margin: 0 auto;
 }
 
-/* line 153, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#register {
-  height: 120vh;
-  width: 100%;
-  background: url(images/bg-rgt.png) no-repeat center top;
-  background-size: cover;
-  padding: 13vh 0 10vh 0;
-  position: relative;
-  z-index: 2;
-  margin-top: -12vh;
-}
-/* line 166, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#register h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-/* line 169, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#register h2 img {
-  width: 382px;
-}
-
 /* line 175, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .race-league {
   width: 100%;
@@ -2222,120 +2201,6 @@ footer .copyright a:hover {
   font-size: 16px;
   padding-bottom: 10px;
 }
-
-/* line 308, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events {
-  height: 419vh;
-  width: 100%;
-  background: url(images/bg-term.png) no-repeat center top;
-  background-size: cover;
-  padding: 10vh 0;
-  position: relative;
-  z-index: 2;
-  margin-top: -16vh;
-}
-/* For general iPad layouts */
-@media only screen and (device-width: 768px) {
-  #events {
-	height: 360vh;
-  }
-}
-
-/* For general Mobiles Landscape */
-@media (min-width: 481px) and (max-width: 767px) {
-  #events {
-	height: 360vh;
-  }
-}
-
-/* For general Mobiles Portrait */
-@media (min-width: 320px) and (max-width: 480px) {
-  #events {
-	height: 360vh;
-  }
-}
-/* line 318, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events .gallery-tabs {
-  width: 60vw;
-}
-/* line 320, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events .gallery-tabs li {
-  width: 50%;
-}
-/* line 325, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events > * {
-  visibility: hidden;
-}
-/* line 330, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events.display > * {
-  visibility: visible;
-}
-/* line 335, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events .contain {
-  padding: 6vh 0 0 0;
-}
-/* line 338, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events h2 {
-  text-align: center;
-  padding-bottom: 20px;
-}
-/* line 341, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events h2 img {
-  width: 456px;
-}
-/* line 345, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events .video {
-  width: 640px;
-  height: 360px;
-  margin: 0 auto;
-}
-/* line 349, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-#events .video .ytb {
-  width: 100%;
-  height: 100%;
-}
-
-/* line 356, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-.events {
-  color: #333;
-  text-align: justify;
-  width: 80%;
-  height: 60vh;
-  margin: 0 auto;
-}
-/* line 362, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-.events h4 {
-  font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  padding-bottom: 20px;
-}
-/* line 368, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-.events h5 {
-  font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  padding-bottom: 10px;
-}
-/* line 374, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-.events p {
-  color: #333;
-  padding-bottom: 10px;
-}
-/* line 377, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-.events p strong {
-  font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
-}
-/* line 381, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-.events ul {
-  padding: 0 0 10px 0;
-}
-/* line 383, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-.events ul li {
-  font-size: 16px;
-  padding-bottom: 10px;
-}
-
 /* line 393, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #pRegister {
   position: absolute;
@@ -3880,16 +3745,6 @@ footer .copyright a:hover {
 }
 
 @media screen and (min-height: 750px) {
-  /* line 1710, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-  #register {
-    padding-top: 15vh;
-  }
-
-  /* line 1714, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
-  #register .contain {
-    padding-top: 8vh;
-  }
-
   /* line 1717, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
   .sponsor {
     bottom: 11vh;
@@ -4050,11 +3905,6 @@ footer .copyright a:hover {
   /* line 102, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .sponsor {
     display: none;
-  }
-
-  /* line 105, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register .contain {
-    padding-top: 0;
   }
 
   /* line 108, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
@@ -4285,12 +4135,6 @@ footer .copyright a:hover {
     height: 100vh;
   }
 
-  /* line 285, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register {
-    height: 120vh;
-    margin-top: -10vh;
-  }
-
   /* line 289, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .term {
     width: 90%;
@@ -4334,43 +4178,6 @@ footer .copyright a:hover {
   /* line 326, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #main .bikers {
     bottom: -20vh;
-  }
-
-  /* line 331, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register {
-    margin-top: -3.5vh;
-    height: auto;
-    padding: 10vh;
-	margin-bottom: 200px;
-  }
-  /* line 338, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register .contain {
-    position: relative;
-    z-index: 3;
-  }
-  /* line 342, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register:before {
-    content: '';
-    position: auto;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40vh;
-    position: absolute;
-    background: url(images/bg-rgt2.png) no-repeat center 0;
-    background-size: 100% auto;
-    z-index: 2;
-  }
-  /* line 354, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register:after {
-    content: '';
-    position: relative;
-    background: #06280d;
-    height: 90%;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
   }
 
   /* line 366, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
@@ -4734,16 +4541,6 @@ footer .copyright a:hover {
 
   /* line 657, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .race-league > li {
-    width: 100%;
-  }
-
-  /* line 660, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register {
-    padding: 10vh 20px;
-  }
-
-  /* line 664, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #register h2 img {
     width: 100%;
   }
 

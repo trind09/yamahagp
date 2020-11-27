@@ -1,0 +1,165 @@
+/* -----------------------Register section------------------------------ */
+#register {
+  height: 120vh;
+  width: 100%;
+  background: url(images/bg-rgt.png) no-repeat center top;
+  background-size: cover;
+  padding: 13vh 0 10vh 0;
+  position: relative;
+  z-index: 2;
+  margin-top: -12vh;
+}
+#register h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#register h2 img {
+  width: 382px;
+}
+
+@media screen and (max-width: 1024px) {
+  #register .contain {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1280px) and (min-height: 1200px) {
+  #register {
+    height: 120vh;
+    margin-top: -10vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #register {
+    margin-top: -3.5vh;
+    height: auto;
+    padding: 10vh;
+	margin-bottom: 200px;
+  }
+  #register .contain {
+    position: relative;
+    z-index: 3;
+  }
+  #register:before {
+    content: '';
+    position: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    background: url(images/bg-rgt2.png) no-repeat center 0;
+    background-size: 100% auto;
+    z-index: 2;
+  }
+  #register:after {
+    content: '';
+    position: relative;
+    background: #06280d;
+    height: 90%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+/* -----------------------Register section------------------------------ */
+
+
+
+/* -----------------------Events section------------------------------ */
+#events {
+  height: 419vh;
+  width: 100%;
+  background: url(images/bg-term.png) no-repeat center top;
+  background-size: cover;
+  padding: 10vh 0;
+  position: relative;
+  z-index: 2;
+  margin-top: -16vh;
+}
+
+/* line 318, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events .gallery-tabs {
+  width: 60vw;
+}
+/* line 320, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events .gallery-tabs li {
+  width: 50%;
+}
+/* line 325, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events > * {
+  visibility: hidden;
+}
+/* line 330, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events.display > * {
+  visibility: visible;
+}
+/* line 335, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events .contain {
+  padding: 6vh 0 0 0;
+}
+/* line 338, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* line 341, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events h2 img {
+  width: 456px;
+}
+/* line 345, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events .video {
+  width: 640px;
+  height: 360px;
+  margin: 0 auto;
+}
+/* line 349, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+#events .video .ytb {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 356, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+.events {
+  color: #333;
+  text-align: justify;
+  width: 80%;
+  height: 60vh;
+  margin: 0 auto;
+}
+/* line 362, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+.events h4 {
+  font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+/* line 368, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+.events h5 {
+  font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+/* line 374, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+.events p {
+  color: #333;
+  padding-bottom: 10px;
+}
+/* line 377, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+.events p strong {
+  font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+}
+/* line 381, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+.events ul {
+  padding: 0 0 10px 0;
+}
+/* line 383, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
+.events ul li {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+/* -----------------------Events section------------------------------ */

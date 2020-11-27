@@ -319,8 +319,6 @@
 	</script>
 
 <?php
-include 'inc/config.php';
-	
 if(isset($_POST['form1'])) {
 	$valid = 1;
 	$error_message = "";
