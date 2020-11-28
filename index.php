@@ -34,9 +34,9 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/desktop.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/tablet.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->

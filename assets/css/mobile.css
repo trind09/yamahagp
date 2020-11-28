@@ -1,4 +1,4 @@
-/* -----------------------Register section------------------------------ */
+/* -----------------------Start: Register section------------------------------ */
 @media screen and (max-width: 567px) {
   #register {
     padding: 10vh 20px;
@@ -7,11 +7,35 @@
     width: 100%;
   }
 }
-/* -----------------------Register section------------------------------ */
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+	#register {
+		margin-bottom: 0 !important;
+	}
+}
+/* ----------- iPhone X ----------- */
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	#register {
+		margin-bottom: 0 !important;
+	}
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* -----------------------End: Register section------------------------------ */
 
 
 
-/* -----------------------Events section------------------------------ */
+/* -----------------------Start: Events section------------------------------ */
 @media (min-width: 481px) and (max-width: 767px) {
   #events {
 	height: 390vh;
@@ -23,4 +47,29 @@
 	height: 390vh;
   }
 }
-/* -----------------------Events section------------------------------ */
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+	#events {
+		height: 346vh !important;
+	}
+}
+
+/* ----------- iPhone X ----------- */
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	#events {
+		height: 280vh !important;
+	}
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* -----------------------End: Events section------------------------------ */
