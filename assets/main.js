@@ -139,8 +139,8 @@ var YMH = {
       arrows: true,
       dots: true,
       infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 2,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 769,
@@ -166,8 +166,8 @@ var YMH = {
       arrows: true,
       dots: true,
       infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 2,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 769,
@@ -193,8 +193,8 @@ var YMH = {
       arrows: true,
       dots: true,
       infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 2,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 769,
@@ -220,8 +220,8 @@ var YMH = {
       arrows: true,
       dots: true,
       infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 769,

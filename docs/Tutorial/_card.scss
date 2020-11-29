@@ -1,0 +1,30 @@
+@mixin customCardStyle($customColor) {
+    width: 28rem;
+    background-color:$customColor;
+    padding: 2.5rem;
+    color: $textColor;
+    border-radius: .8rem;
+}
+
+.card{
+    @include customCardStyle(#191792);
+
+    &__name{
+        font-size: 3rem;
+    }
+
+    &__description{
+        font-size: 1.6rem;
+        &--red{
+            font-size: 1rem;
+        }
+
+        a{
+            color: #b714bd;
+        }
+
+        h1{
+            color:rgb(21, 156, 66);
+        }
+    }
+}

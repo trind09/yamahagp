@@ -1,0 +1,35 @@
+@import "./variables";
+
+@import "./section";
+
+html{
+    font-size: 10px;
+}
+
+
+@import "./card";
+
+.bocket{
+    background-color:rgb(177, 48, 160);
+    @include commonCss(#bdb03d64);
+}
+
+
+.button-basic  {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report  {
+  @extend .button-basic;
+  background-color: red;
+}
+
+.button-submit  {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}

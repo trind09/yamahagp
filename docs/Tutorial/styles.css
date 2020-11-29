@@ -1,0 +1,88 @@
+section {
+  background: #c1df1664;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: brown;
+}
+
+section button {
+  background: #c7c42a;
+}
+
+section button:hover {
+  background: red;
+}
+
+section button::before {
+  content: "baB";
+}
+
+section button::after {
+  content: rgba(255, 0, 0, 0);
+}
+
+html {
+  font-size: 10px;
+}
+
+.card {
+  width: 28rem;
+  background-color: #191792;
+  padding: 2.5rem;
+  color: brown;
+  border-radius: .8rem;
+}
+
+.card__name {
+  font-size: 3rem;
+}
+
+.card__description {
+  font-size: 1.6rem;
+}
+
+.card__description--red {
+  font-size: 1rem;
+}
+
+.card__description a {
+  color: #b714bd;
+}
+
+.card__description h1 {
+  color: #159c42;
+}
+
+.bocket {
+  background-color: #b130a0;
+  background: #bdb03d64;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: brown;
+}
+
+.button-basic, .button-report, .button-submit {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,7 @@
+Open Visual Studio Code
+Goto Extensions -> Install Live Sass Compiler
+Open scss files
+Press ctrl+shift+P and type Live Sass: Watch Sass to compile file
+https://www.youtube.com/watch?v=ms6ca5w3Qjk
+https://www.youtube.com/watch?v=Zz6eOVaaelI
+https://www.w3schools.com/sass/sass_functions_introspection.php

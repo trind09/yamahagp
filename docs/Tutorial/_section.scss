@@ -1,0 +1,39 @@
+@mixin commonCss($backgroundCustomColor) {
+    background:$backgroundCustomColor;
+    display: flex;
+    justify-content: center;
+    color: $textColor;
+}
+
+@mixin customBeforeContent($str, $insertStr, $index) {
+    content: str-insert($str, $insertStr, $index);
+}
+
+@mixin customAfterContent() {
+    content: unique-id();
+}
+
+@mixin isBracket($arr) {
+    content: is-bracketed($arr);
+}
+
+@mixin variableExits($value) {
+    content: transparentize(red, 1);    
+}
+
+section{
+    @include commonCss(#c1df1664);
+
+    button{
+        background: #c7c42a;
+        &:hover{
+            background: red;
+        }
+        &::before{
+            @include customBeforeContent("aB", "b", 1);
+        }
+        &::after{
+            @include variableExits("textColor1");
+        }
+    }
+}
