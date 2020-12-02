@@ -37,6 +37,7 @@
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/desktop.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/tablet.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/wrap-video.css'); ?>" type="text/css" />
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
@@ -124,78 +125,30 @@
 		  }
 		  return "desktop";
 		};
-		
-		$( document ).ready(function() {
-			var currentDevice = getDeviceType();
-			if (currentDevice != "desktop"){
-				$('.panel_controls').hide();
-				$('.panel_table_controls').show();
-				if (currentDevice == "tablet"){
-					$('.video-div').each(function( index ) {
-						$( this ).attr("height","300px");
-					});
-				}
-			} else {
-				if($(".bg_mb").is(":visible")){
-					$('.panel_controls').hide();
-					$('.panel_table_controls').show();
-					$('.video-div').each(function( index ) {
-						$( this ).attr("height","300px");
-					});
-				}
-			}
-		});
 	</script>
-	<style>
-		.panel_table_controls {
-			top: 20%;
-		}
-		.panel_table_controls table tr td {
-			text-align: center;
-		}
-	</style>
-	<img src="assets/images/bg.jpg" alt="" class="bg_pc">
-	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
+	
+	<!-- ---------------------------Start: Panel slider--------------------------- -->
+	<?php include 'panel_slider.php'; ?>
+	<!-- ---------------------------End: Panel slider--------------------------- -->
+	
 	<div class="main_copy panel_controls">
 		<div class="mb-btn">
 			<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
 			<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
 		</div>
 	</div>
-	<div class="video-position panel_controls">
-		<div class="wrap-video-banner">
-			<iframe class="responsive-iframe video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
+	
+	<!-- ---------------------------Start: Wrap video--------------------------- -->
+	<div class="wrapper-video">
+		<input type="checkbox">
+		<div class="video">
+			<iframe id="ytplayer" class="responsive-iframe video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow='autoplay'></iframe>
+		</div>
+		<div class="text">
+			<span data-text="Watch the video"></span>
 		</div>
 	</div>
-	<div class="main_copy panel_table_controls" style="display: none;">
-		<table style="width: 100%;">
-			<tr>
-				<td>
-					<iframe class="video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?modestbranding=1&showinfo=0&fs=0&rel=0&autohide=1&controls=0" frameborder="0" allowfullscreen></iframe>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="#register" class="btn js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a>&nbsp;
-					<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
-				</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>
-					<img src="assets/images/Logo_Vinfast.png" width="90%" />
-				</td>
-			</tr>
-			<tr>
-				<td><img src="assets/images/whereisyourlimit.png" width="100%" /></td>
-			</tr>
-			<tr>
-				<td><img src="assets/images/don_vi_to_chuc.png" width="100%" /></td>
-			</tr>
-		</table>
-	</div>
+	<!-- ---------------------------End: Wrap video--------------------------- -->
 </section>
 
 
