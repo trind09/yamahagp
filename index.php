@@ -110,45 +110,31 @@
 </script>
 <!-- media style for both phone and ipad: @media screen and (max-width: 900px) -->
 <section id="main" style="visibility: inherit; opacity: 1;" class="main-section">
-	<script>
-		const getDeviceType = () => {
-		  const ua = navigator.userAgent;
-		  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-			return "tablet";
-		  }
-		  if (
-			/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-			  ua
-			)
-		  ) {
-			return "mobile";
-		  }
-		  return "desktop";
-		};
-	</script>
+
 	
 	<!-- ---------------------------Start: Panel slider--------------------------- -->
 	<?php include 'panel_slider.php'; ?>
 	<!-- ---------------------------End: Panel slider--------------------------- -->
-	
-	<div class="main_copy panel_controls">
-		<div class="mb-btn">
-			<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
-			<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
+	<div class="wrap_btn_video">
+		<div class="panel_controls">
+			<div class="mb-btn">
+				<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
+				<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
+			</div>
+		</div>
+		
+		<!-- ---------------------------Start: Wrap video--------------------------- -->
+		<div class="wrapper-video">
+			<input type="checkbox">
+			<div class="video">
+				<iframe id="ytplayer" class="responsive-iframe video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow='autoplay'></iframe>
+			</div>
+			<div class="text">
+				<span data-text="VIETNAM RACING FESTIVAL 2020"></span>
+			</div>
 		</div>
 	</div>
-	
-	<!-- ---------------------------Start: Wrap video--------------------------- -->
-	<div class="wrapper-video">
-		<input type="checkbox">
-		<div class="video">
-			<iframe id="ytplayer" class="responsive-iframe video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow='autoplay'></iframe>
-		</div>
-		<div class="text">
-			<span data-text="Watch the video"></span>
-		</div>
-	</div>
-	<!-- ---------------------------End: Wrap video--------------------------- -->
+
 </section>
 
 
