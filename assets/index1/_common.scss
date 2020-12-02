@@ -1,0 +1,32 @@
+.contain {
+	width: calc(100% - 8vw);
+	margin: 0 auto;
+}
+.btn {
+	width: 250px;
+	height: 50px;
+	background: url(../images/btn.png) no-repeat center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 50px;
+	display: block;
+	font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
+	letter-spacing: 1px;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	&:hover {
+		background: url(../images/btn2.png) no-repeat center;
+		background-size: cover;
+	}
+}
+.btn.disable {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	cursor: default;
+	&:hover {
+		background: url(images/btn.png) no-repeat center;
+		background-size: cover;
+	}
+}
