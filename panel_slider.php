@@ -32,7 +32,7 @@ ul.bjqs-controls.v-centered li a{
 	padding:10px;
 	color:#126d0c;
 	text-decoration: none;
-	z-index: 202;
+	z-index: 205;
 	font-size: 35pt;
 	font-weight: bold;
 }

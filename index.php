@@ -140,10 +140,10 @@
 	</script>
 	<style>
 		.register-ticket-control-register {
-			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1; position: absolute; top: 20%; left: 5%;
+			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1; position: absolute; top: 20%; left: 5%; z-index: 205;
 		}
 		.register-ticket-control-ticket {
-			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1; position: absolute; top: 20%; right: 5%;
+			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1; position: absolute; top: 20%; right: 5%; z-index: 205;
 		}
 		.register-ticket-control-link{
 			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;
@@ -157,7 +157,7 @@
 	<!-- ---------------------------End: Panel slider--------------------------- -->
 
 	<!-- ---------------------------Start: control panel--------------------------- -->
-	<div class="mb-btn register-ticket-control" id="register-ticket-control">
+	<div class="mb-btn register-ticket-control">
 		<a href="#register" class="btn btn1 btn2 js-joinnow register-ticket-control-link" role="register" id="register-button">ĐĂNG KÝ THI ĐẤU</a>
 		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1 register-ticket-control-link" role="ticket" id="ticket-button">MUA VÉ</a>
 	</div>
