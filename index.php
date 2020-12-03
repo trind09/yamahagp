@@ -110,30 +110,79 @@
 </script>
 <!-- media style for both phone and ipad: @media screen and (max-width: 900px) -->
 <section id="main" style="visibility: inherit; opacity: 1;" class="main-section">
-
-	
+	<script>
+		const getDeviceType = () => {
+		  const ua = navigator.userAgent;
+		  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+			return "tablet";
+		  }
+		  if (
+			/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+			  ua
+			)
+		  ) {
+			return "mobile";
+		  }
+		  return "desktop";
+		};
+		
+		$( document ).ready(function() {
+			var currentDevice = getDeviceType();
+			if (currentDevice != "desktop"){
+				$('#vietnam-festival-video-desktop').hide();
+			} else {
+				$('#vietnam-festival-video-mobile').hide();
+				
+				$('#register-button').attr('class', 'btn btn1 btn2 js-joinnow register-ticket-control-register');
+				$('#ticket-button').attr('class', 'btn btn1 register-ticket-control-ticket');
+			}
+		});
+	</script>
+	<style>
+		.register-ticket-control-register {
+			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1; position: absolute; top: 20%; left: 5%;
+		}
+		.register-ticket-control-ticket {
+			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1; position: absolute; top: 20%; right: 5%;
+		}
+		.register-ticket-control-link{
+			transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;
+		}
+		.register-ticket-control {
+			display: flex; justify-content: center; padding-top: 20px;
+		}
+	</style>
 	<!-- ---------------------------Start: Panel slider--------------------------- -->
 	<?php include 'panel_slider.php'; ?>
 	<!-- ---------------------------End: Panel slider--------------------------- -->
-	<div class="wrap_btn_video">
-		<div class="panel_controls">
-			<div class="mb-btn">
-				<a href="#register" class="btn btn1 btn2 js-joinnow" role="register" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">ĐĂNG KÝ THI ĐẤU</a><br/>
-				<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1" role="ticket" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">MUA VÉ</a>
-			</div>
+
+	<!-- ---------------------------Start: control panel--------------------------- -->
+	<div class="mb-btn register-ticket-control" id="register-ticket-control">
+		<a href="#register" class="btn btn1 btn2 js-joinnow register-ticket-control-link" role="register" id="register-button">ĐĂNG KÝ THI ĐẤU</a>
+		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1 register-ticket-control-link" role="ticket" id="ticket-button">MUA VÉ</a>
+	</div>
+	<!-- ---------------------------Start: control panel--------------------------- -->
+
+	<div id="vietnam-festival-video-mobile">
+		<video controls autoplay loop muted style="width: 100%;">
+			<source src="assets/video/VIETNAM_RACING_FESTIVAL_2020.mp4" type="video/mp4">
+		</video>
+	</div>
+	
+	<!-- ---------------------------Start: Wrap video--------------------------- -->
+	<!-- https://codepen.io/milanraring/full/QWwyLdp -->
+	<div class="video-wrapper" id="vietnam-festival-video-desktop">
+		<input type="checkbox">
+		<div class="video-div">
+			<video controls autoplay loop muted>
+				<source src="assets/video/VIETNAM_RACING_FESTIVAL_2020.mp4" type="video/mp4">
+			</video>
 		</div>
-		
-		<!-- ---------------------------Start: Wrap video--------------------------- -->
-		<div class="wrapper-video">
-			<input type="checkbox">
-			<div class="video">
-				<iframe id="ytplayer" class="responsive-iframe video-div" width="100%" height="100%" src="//www.youtube.com/embed/Pbjhj2VnqmE?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow='autoplay'></iframe>
-			</div>
-			<div class="text">
-				<span data-text="VIETNAM RACING FESTIVAL 2020"></span>
-			</div>
+		<div class="video-text">
+			<span data-text="Watch the video"></span>
 		</div>
 	</div>
+	<!-- ---------------------------End: Wrap video--------------------------- -->
 
 </section>
 

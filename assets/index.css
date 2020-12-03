@@ -99,12 +99,13 @@
 	.main_copy .mb-btn .btn {
 		margin-top: 0
 	}
-	.mb-btn {
-		display: flex;
-		position: absolute;
-		top: 58%;
-		left: 21%;
-	}
+    .mb-btn {
+        display: flex;
+        position: absolute;
+        top: 58%;
+        left: 21%;
+        z-index: 100;
+    }
 	.video-position {
 		width: 59%;
 		right: 18%;

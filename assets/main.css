@@ -5508,12 +5508,6 @@ footer .copyright a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 49, ../../../../../../Digitop/2017/assets/scss/module/_v2.scss */
-  #main {
-    background: url(images/bg-htable-a.jpg) no-repeat right bottom;
-    background-size: cover;
-  }
-
   /* line 54, ../../../../../../Digitop/2017/assets/scss/module/_v2.scss */
   #pHome {
     padding-top: 70px;
