@@ -1,0 +1,68 @@
+/* -----------------------Start: Register section------------------------------ */
+@media screen and (max-width: 567px) {
+  #register {
+    padding: 10vh 20px;
+  }
+  #register h2 img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #register {
+    padding: 0 !important;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+	#register {
+		margin-bottom: 0 !important;
+	}
+}
+/* ----------- iPhone X ----------- */
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	#register {
+		margin-bottom: 0 !important;
+	}
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* -----------------------End: Register section------------------------------ */
+
+
+
+/* -----------------------Start: Events section------------------------------ */
+@media (min-width: 481px) and (max-width: 767px) {
+    #events {
+        height: 151vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #events {
+	height: 151vh;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    #events {
+        height: 107vh !important;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+/* -----------------------End: Events section------------------------------ */
