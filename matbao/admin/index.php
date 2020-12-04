@@ -214,6 +214,26 @@
 					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-5');" title="Tầm nhìn tương lai">Tầm nhìn tương lai ►</h5>
 					<p class="aboutus-content aboutus-content-5" style="display: none;">Chúng tôi thực hiện sứ mệnh truyền tải cảm hứng golf đến cộng đồng Golfer toàn quốc , tạo ra hiệu ứng tốt để phát triển phong trào golf , đưa golf trở nên phổ thông hơn với người Việt chúng ta, là cầu nối để kết nối giao thương giữa các Golfer trong nước và quốc tế.</p>
 				</div>
+				<div class="aboutus-paragraph">
+					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-6');" title="Danh sách nhà tài trợ">Danh sách nhà tài trợ ►</h5>
+					<script>
+						$( document ).ready(function() {
+							var currentDevice = getDeviceType();
+							if (currentDevice != "desktop"){
+								$('#sponsors1').remove();
+							} else {
+								$('#sponsors2').remove();
+							}
+						});
+					</script>
+					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center;" id="sponsors1"><img style='width: 100%;' src='assets/images/sponsors.jpg' /></div>
+					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center;" id="sponsors2">
+						<img style='width: 100%;' src='assets/images/sponsors1.jpg' />
+						<img style='width: 100%;' src='assets/images/sponsors2.jpg' />
+						<img style='width: 100%;' src='assets/images/sponsors3.jpg' />
+						<img style='width: 100%;' src='assets/images/sponsors4.jpg' />
+					</div>
+				</div>
 				<div class="aboutus-users">
 					<div class="about-us">
 						<div class="row">
@@ -469,6 +489,15 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section id="TCBC_RACETOMIENTRUNG">
+	<div class="contain" style="text-align: center;">
+		<h4 style="text-align: center;">RACE TO MIEN TRUNG </h4>
+		<h2 style="text-align: center;">GIẢI GOLF VÔ ĐỊCH CÁC CLB & LỆ HỘI ĐUA XE THỂ THAO</h2>
+		<br/><br/>
+		<iframe style="width: 80%; height: 787px;" src="https://drive.google.com/file/d/1anIBWAyM72VNqIcUM41w4wQ9uo32ryiz/preview"></iframe>
 	</div>
 </section>
 

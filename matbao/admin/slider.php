@@ -125,7 +125,7 @@
 			<img data-u="image" src="assets/images/bg.jpg" />
 			<div data-ts="flat" data-p="1260" style="left:0px;top:0px;width:1920px;height:960px;position:absolute;">
 				<div data-to="50% 0px" data-ts="preserve-3d" data-t="0" style="left:-20px;top:0px;width:1920px;height:960px;position:absolute;">
-					<img data-to="50% 50%" data-t="1" style="left:25%;top:12%;width:50%;height:300px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/RaceToMienTrung.png" />
+					<img onclick="location.href = '#TCBC_RACETOMIENTRUNG';" data-to="50% 50%" data-t="1" style="left:25%;top:12%;width:50%;height:300px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/RaceToMienTrung.png" />
 					<img onclick="location.href = '<?php echo($domain); ?>';" data-to="50% 50%" data-t="3" style="left:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/GolfClup.png" />
 					<img onclick="location.href = 'http://vietnamracing.com.vn/';"data-to="50% 50%" data-t="2" style="right:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/VietnamRacing.png" />
 					<div data-to="50% -200px" data-t="5" data-arr="4" style="left:3%;top:43%;text-transform: uppercase;width:100%;height:230px;position:absolute;opacity:0;color:rgb(68 229 15 / 1);font-size:16pt;font-weight:900;line-height:1.2;text-shadow:2px 2px #38003a;">
