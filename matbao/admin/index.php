@@ -154,8 +154,7 @@
 			text-align: center;
 		}
 	</style>
-	<img src="<?php echo auto_version('assets/images/bg.jpg'); ?>" alt="" class="bg_pc">
-	<img src="assets/images/bg-hmb4.jpg" alt="" class="bg_mb">
+	<?php include 'slider.php'; ?>
 </section>
 
 
