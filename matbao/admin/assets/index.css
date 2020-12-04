@@ -343,8 +343,8 @@
 	position: absolute;
 }
 .phoneamination-new {
-    background: #7e522b;
-    border: 2px solid #7e522b;
+    background: #126D0C;
+    border: 2px solid #126D0C;
     border-radius: 50%;
     height: 90px;
     width: 90px;
@@ -367,7 +367,7 @@
 }
 .dangky {
     position: absolute;
-    background: #7e522b;
+    background: #126D0C;
     right: 3%;
     padding: 5px 10px 6px;
     border-radius: 39px;
@@ -381,7 +381,7 @@
 }
 .muave {
     position: absolute;
-    background: #7e522b;
+    background: #126D0C;
     right: 3%;
     padding: 5px 10px 6px;
     border-radius: 39px;
@@ -397,7 +397,7 @@
 	z-index: 100;
 }
 .phoneamination {
-    border: 2px solid #7e522b;
+    border: 2px solid #126D0C;
     border-radius: 50%;
     height: 90px;
     width: 90px;
@@ -405,7 +405,7 @@
     right: 3%;
     top: 31%;
     position: absolute;
-    background: #7e522b;
+    background: #126D0C;
 }
 
 .call-me {
@@ -429,7 +429,7 @@
     color: white;
     font-size: 12px;
     position: absolute;
-    background: #7e522b;
+    background: #126D0C;
     right: 3%;
     padding: 5px 10px 6px;
     border-radius: 39px;
@@ -520,8 +520,8 @@
     border-style: solid;
     border-right: none;
     border-bottom: none;
-    border-image: linear-gradient( #7e522b, rgba(0, 0, 0, 0) ) 1 100%;
-    background: linear-gradient(-45deg, #ffa63d00, #c9b192);
+    border-image: linear-gradient( #126D0C, rgba(0, 0, 0, 0) ) 1 100%;
+    background: linear-gradient(-45deg, #ffa63d00, #81d07c);
 }
 
 .about-us *, *:before, *:after {
@@ -572,10 +572,10 @@
 
 .aboutus-paragraph h5 {
   font-size: 12pt;
-  background: linear-gradient(-45deg, #ffa63d00, #c9b192);
+  background: linear-gradient(-45deg, #ffa63d00, #81d07c);
   padding: 5px;
   border-radius: 3px;
-  border-bottom: solid 2px #c9b192;
+  border-bottom: solid 2px #81d07c;
 }
 
 .aboutus-paragraph p {
@@ -590,7 +590,7 @@
     overflow: hidden;
     border-radius: 50%;
     box-shadow: 0 12px 12px 0 rgba(0, 0, 20, 0.2);
-    border: solid 4px #7e522b;
+    border: solid 4px #126D0C;
     background-repeat: no-repeat;
     background-size: 300px 395px;
     margin-left: auto;
@@ -637,18 +637,20 @@
     height: 135vh !important;
 }
 
+#main {
+    height: auto !important;
+}
+#aboutus {
+    height: auto !important;
+}
+#events {
+    height: auto !important;
+}
+
 /* ------------------ Desktop ------------------ */
 @media only screen and (min-device-width: 2000px) {
     .term1 {
         height: 140vh !important;
-    }
-
-    #aboutus {
-        min-height: 192vh !important;
-    }
-
-    #events {
-        height: 201vh !important;
     }
 
     #plan {
@@ -670,14 +672,6 @@
         height: 120vh !important;
     }
 
-    #aboutus {
-        min-height: 212vh !important;
-    }
-
-    #events {
-        height: 180vh !important;
-    }
-
     #plan {
         height: 172vh !important;
     }
@@ -694,19 +688,11 @@
 /* ------------------ Tablet ------------------ */
 @media only screen and (min-device-width: 700px) and (max-device-height: 1024px) {
     .term1 {
-        height: 100vh !important;
-    }
-
-    #aboutus {
-        min-height: 222vh !important;
-    }
-
-    #events {
-        height: 120vh !important;
+        height: 140vh !important;
     }
 
     #plan {
-        height: 175vh !important;
+        height: 234vh !important;
     }
 
     #news {
@@ -722,14 +708,6 @@
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) {
     .term1 {
         height: 83vh !important;
-    }
-
-    #aboutus {
-        min-height: 222vh !important;
-    }
-
-    #events {
-        height: 100vh !important;
     }
 
     #plan {
@@ -750,14 +728,6 @@
 @media only screen and (min-device-width: 280px) and (max-device-height: 653px) {
     .term1 {
         height: 103vh !important;
-    }
-
-    #aboutus {
-        min-height: 222vh !important;
-    }
-
-    #events {
-        height: 130vh !important;
     }
 
     #plan {

@@ -54,7 +54,7 @@
 /* line 106, ../../../../../.. */
 .scrolled .g-thumb .end,
 .scrolled .g-thumb {
-  background: #7e522b;
+  background: #126D0C;
   left: -2px;
 }
 
@@ -776,7 +776,7 @@ body {
     font-family: "SFUEurostileOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
     font-size: 16px;
     font-weight: normal;
-    color: #7e522b;
+    color: #126D0C;
     line-height: 1.5;
     position: relative;
     letter-spacing: normal;
@@ -1612,7 +1612,7 @@ header {
 }
 /* line 126, ../../../../../../Digitop/2017/assets/scss/module/_header.scss */
 #nav li a:hover, #nav li a.active {
-  color: #c56c1d;
+  color: #309a29;
 }
 
 /* line 135, ../../../../../../Digitop/2017/assets/scss/module/_header.scss */
@@ -2731,7 +2731,7 @@ footer .copyright a:hover {
   left:4%;
   display:block;
   width:92%;
-  background: #c18652;
+  background: #74b510;
   color: #fff;
   text-transform: uppercase;
   padding: 10px 20px;
@@ -2740,7 +2740,7 @@ footer .copyright a:hover {
 }
 /* line 864, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .plan-list li > div {
-  background: #7e522b;
+  background: #126D0C;
   padding: 20px 30px;
 }
 
@@ -2762,7 +2762,7 @@ footer .copyright a:hover {
 /* line 885, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .plan-item h4 {
   font-size: 75px;
-  color:#c18652;
+  color:#74b510;
   text-align: right;
   font-family: "SFUEurostileBoldExtendedTwo", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
   line-height: 1;
@@ -2793,7 +2793,7 @@ footer .copyright a:hover {
 }
 /* line 915, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .plan-item .time a {
-  color: #c56c1d;
+  color: #309a29;
   font-family: "SFUEurostileBoldOblique", Helvetica Neue, Helvetica, Verdana, Roboto, sans-serif;
   text-decoration: underline;
 }
@@ -3034,7 +3034,6 @@ footer .copyright a:hover {
   padding: 13vh 0 10vh 0;
   position: relative;
   z-index: 2;
-  margin-top: -12vh;
 }
 /* line 1123, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #news .contain {
@@ -3088,7 +3087,7 @@ footer .copyright a:hover {
 /* line 1160, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .news-item h4 {
   text-transform: none;
-  color: #c56c1d;
+  color: #309a29;
   margin-bottom: 10px;
   font-size: 16px;
   height: 70px;
@@ -3096,7 +3095,7 @@ footer .copyright a:hover {
 }
 /* line 1168, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .news-item h4 a {
-  color: #c56c1d;
+  color: #309a29;
 }
 /* line 1171, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .news-item h4 a:hover {
@@ -3169,10 +3168,8 @@ footer .copyright a:hover {
   width: 100%;
   min-height: 229vh;
   background-size: cover;
-  padding: 13vh 0 20px 0;
   position: relative;
   z-index: 2;
-  margin-top: -12vh;
 }
 /* line 1209, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #aboutus > * {
@@ -3310,7 +3307,7 @@ footer .copyright a:hover {
 .gallery-tabs {
   clear: both;
   overflow: hidden;
-  background: #c56c1d;
+  background: #309a29;
   -webkit-transform: skewX(-15deg);
           transform: skewX(-15deg);
   width: 36vw;
@@ -3656,7 +3653,7 @@ footer .copyright a:hover {
 /* line 1636, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .news-detail h3 {
   padding-bottom: 20px;
-  color: #c56c1d;
+  color: #309a29;
 }
 /* line 1640, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .news-detail p {

@@ -51,7 +51,9 @@ var YMH = {
 	  YMH.term();
       YMH.home();
       YMH.scroll();
-      YMH.deeplink();
+        if (typeof (hashTag) != 'undefined') {
+            YMH.deeplink();
+        }
       YMH.cldPopup();
       YMH.news();
       YMH.photo();
