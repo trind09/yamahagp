@@ -28,9 +28,6 @@
 
 
 /* ------------------ Start: CSS for main section <section id="main"> ------------------ */
-.main-section {
-	margin-bottom: 100px;
-}
 
 .main_copy {
 	width: 40%;
@@ -44,9 +41,6 @@
 		bottom: 0%;
 		width: 100%;
 	}
-	.main-section {
-		margin-bottom: 25px;
-	}
 }
 
 /* For general mobile layouts */
@@ -54,9 +48,6 @@
 	.main_copy {
 		bottom: 0%;
 		width: 100%;
-	}
-	.main-section {
-		margin-bottom: 41px;
 	}
 }
 
@@ -280,9 +271,6 @@
 .red_link:hover {
 	color: #343520;
 }
-#term {
-	height: auto;
-}
 .race-league > li {
 	margin-bottom: 30px
 }
@@ -313,27 +301,9 @@ and (max-device-width : 1024px)  {
 		height: 400px;
 	}
 }
-
-/*Fix issue footer collapted on other elements*/
-#gallery {
-	min-height: 143vh;
-}
 @media(max-height: 920px){
 	footer {
 		padding: 50px 20px 20px 20px;
-	}
-}
-@media screen and (max-width: 567px){
-	#gallery {
-		height: 170vh;
-	}
-	#gallery footer {
-		font-size: 11px;
-	}
-}
-@media screen and (max-width: 375px){
-	#gallery {
-		height: 175vh;
 	}
 }
 /*Fix issue footer collapted on other elements*/

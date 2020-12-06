@@ -1778,7 +1778,7 @@ footer .copyright a:hover {
 
 /* line 1, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #main {
-  height: 110vh;
+  height: auto;
   width: 100%;
   background: url(images/bg-h.jpg) no-repeat right -2vh;
   background-size: cover;
@@ -2111,14 +2111,13 @@ footer .copyright a:hover {
 
 /* line 308, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #term {
-  height: 110vh;
+  height: auto;
   width: 100%;
   background: url(images/bg-term.png) no-repeat center top;
   background-size: cover;
   padding: 10vh 0;
   position: relative;
   z-index: 2;
-  margin-top: -16vh;
 }
 /* line 318, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #term .gallery-tabs {
@@ -2166,7 +2165,7 @@ footer .copyright a:hover {
   color: #333;
   text-align: justify;
   width: 80%;
-  height: 60vh;
+  height: auto;
   margin: 0 auto;
 }
 /* line 362, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
@@ -3037,18 +3036,17 @@ footer .copyright a:hover {
 
 /* line 1113, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #news {
-  height: 123vh;
+  height: 100%;
   width: 100%;
   background: url(images/n-bg.png) no-repeat center top;
   background-size: cover;
   padding: 13vh 0 10vh 0;
   position: relative;
   z-index: 2;
-  margin-top: -12vh;
 }
 /* line 1123, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #news .contain {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -3137,13 +3135,12 @@ footer .copyright a:hover {
 /* line 1200, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #gallery {
   width: 100%;
-  min-height: 130vh;
+  height: auto;
   background: url(images/p-bg.png) no-repeat center top;
   background-size: cover;
   padding: 13vh 0 20px 0;
   position: relative;
   z-index: 2;
-  margin-top: -12vh;
 }
 /* line 1209, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #gallery > * {
@@ -3169,7 +3166,6 @@ footer .copyright a:hover {
 /* line 1229, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #gallery footer {
   width: 100%;
-  position: absolute;
   bottom: 0;
   left: 0;
 }
@@ -3184,7 +3180,6 @@ footer .copyright a:hover {
   padding: 13vh 0 20px 0;
   position: relative;
   z-index: 2;
-  margin-top: -12vh;
 }
 /* line 1209, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #aboutus > * {
@@ -3894,7 +3889,6 @@ footer .copyright a:hover {
   #main {
     background: url(images/bg-htable.jpg) no-repeat 0 0;
     background-size: cover;
-    height: 100vh;
   }
   /* line 97, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #main .copy {
@@ -4058,12 +4052,6 @@ footer .copyright a:hover {
     font-size: 10px;
   }
 
-  /* line 219, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #plan,
-  #news {
-    height: 100vh;
-  }
-
   /* line 224, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .gallery-item .btn-prev {
     left: 0;
@@ -4132,7 +4120,6 @@ footer .copyright a:hover {
   #main {
     background: url(images/bg-hmb3.jpg) no-repeat center bottom;
     background-size: cover;
-    height: 100vh;
   }
 
   /* line 289, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
@@ -4263,11 +4250,6 @@ footer .copyright a:hover {
   #about .video {
     float: none;
     margin: 50px auto;
-  }
-
-  /* line 431, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #news {
-    height: 85vh;
   }
 
   /* line 434, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
@@ -4872,14 +4854,9 @@ footer .copyright a:hover {
     width: 80vw;
     margin: 0 10vw !important;
   }
-
-  /* line 927, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #news {
-    height: auto;
-  }
   /* line 929, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #news .contain {
-    position: static;
+    position: relative;
     top: auto;
     left: auto;
     bottom: auto;
@@ -5052,12 +5029,6 @@ footer .copyright a:hover {
     font-size: 10px;
   }
 
-  /* line 1060, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #gallery {
-    height: 165vh;
-    margin-top: -14vh;
-  }
-
   /* line 1064, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .gallery-winner li {
     width: 40%;
@@ -5152,7 +5123,6 @@ footer .copyright a:hover {
   /* line 1126, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #gallery footer {
     left: 0;
-    position: absolute;
     width: 100%;
     bottom: 10px;
   }
@@ -5322,11 +5292,6 @@ footer .copyright a:hover {
     font-size: 12px;
   }
 
-  /* line 1264, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #gallery {
-    height: 160vh;
-  }
-
   /* line 1267, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .gallery-winner {
     padding-top: 30vh;
@@ -5338,11 +5303,6 @@ footer .copyright a:hover {
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 1278, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
-  #gallery {
-    height: 170vh;
-  }
-
   /* line 1281, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   .gallery-winner {
     padding-top: 40vh;
@@ -5450,24 +5410,6 @@ footer .copyright a:hover {
   height: auto;
   background: transparent;
   opacity: 0;
-}
-/* For general mobile layouts */
-@media only screen and (max-width: 600px) {
-	#main {
-	  height: 85vh;
-	}
-}
-/* For general iPad layouts */
-@media only screen and (device-width: 768px) {
-	#main {
-	  height: 100vh;
-	}
-}
-/* For general samsung galaxy a51 layouts */
-@media only screen and (device-width: 914px) {
-	#main {
-	  height: 100vh;
-	}
 }
 /* line 14, ../../../../../../Digitop/2017/assets/scss/module/_v2.scss */
 #main .contain {

@@ -35,18 +35,11 @@
 	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/desktop.css'); ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php echo auto_version('assets/css/tablet.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php echo auto_version('assets/css/wrap-video.css'); ?>" type="text/css" />
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-	<script>
-		function changeVid(youtubeUrl){
-			$('.video-div').attr('src', youtubeUrl);
-		};
-	</script>
 	<!-- Start: Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2075FRD1R"></script>
     <script>
@@ -123,20 +116,24 @@
 		  ) {
 			return "mobile";
 		  }
+		  if (iOS()){
+		  	  return "tablet";
+		  }
 		  return "desktop";
 		};
-		
-		$( document ).ready(function() {
-			var currentDevice = getDeviceType();
-			if (currentDevice != "desktop"){
-				$('#vietnam-festival-video-desktop').hide();
-			} else {
-				$('#vietnam-festival-video-mobile').hide();
-				
-				$('#register-button').attr('class', 'btn btn1 btn2 js-joinnow register-ticket-control-register');
-				$('#ticket-button').attr('class', 'btn btn1 register-ticket-control-ticket');
-			}
-		});
+
+		function iOS() {
+			return [
+			'iPad Simulator',
+			'iPhone Simulator',
+			'iPod Simulator',
+			'iPad',
+			'iPhone',
+			'iPod'
+			].includes(navigator.platform)
+			// iPad on iOS 13 detection
+			|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+		}
 	</script>
 	<style>
 		.register-ticket-control-register {
@@ -155,35 +152,6 @@
 	<!-- ---------------------------Start: Panel slider--------------------------- -->
 	<?php include 'panel_slider.php'; ?>
 	<!-- ---------------------------End: Panel slider--------------------------- -->
-
-	<!-- ---------------------------Start: control panel--------------------------- -->
-	<div class="mb-btn register-ticket-control">
-		<a href="#register" class="btn btn1 btn2 js-joinnow register-ticket-control-link" role="register" id="register-button">ĐĂNG KÝ THI ĐẤU</a>
-		<a href="https://ticketbox.vn/vr-fest-2020#booking" class="btn btn1 register-ticket-control-link" role="ticket" id="ticket-button">MUA VÉ</a>
-	</div>
-	<!-- ---------------------------Start: control panel--------------------------- -->
-
-	<div id="vietnam-festival-video-mobile">
-		<video controls autoplay loop muted style="width: 100%;">
-			<source src="assets/video/VIETNAM_RACING_FESTIVAL_2020.mp4" type="video/mp4">
-		</video>
-	</div>
-	
-	<!-- ---------------------------Start: Wrap video--------------------------- -->
-	<!-- https://codepen.io/milanraring/full/QWwyLdp -->
-	<div class="video-wrapper" id="vietnam-festival-video-desktop">
-		<input type="checkbox">
-		<div class="video-div">
-			<video controls autoplay loop muted>
-				<source src="assets/video/VIETNAM_RACING_FESTIVAL_2020.mp4" type="video/mp4">
-			</video>
-		</div>
-		<div class="video-text">
-			<span data-text="Watch the video"></span>
-		</div>
-	</div>
-	<!-- ---------------------------End: Wrap video--------------------------- -->
-
 </section>
 
 

@@ -107,6 +107,11 @@
 	.jssora051.jssora051dn {opacity:.5;}
 	.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
 </style>
+
+<!-- Start: Animation Links -->
+<link rel="stylesheet" href="<?php echo auto_version('assets/css/animated-button.css'); ?>" type="text/css" />
+<!-- End: Animation Links -->
+	
 <svg viewbox="0 0 0 0" width="0" height="0" style="display:block;position:relative;left:0px;top:0px;">
 	<defs>
 		<filter id="jssor_1_flt_1" x="-50%" y="-50%" width="200%" height="200%">
@@ -125,35 +130,21 @@
 			<img data-u="image" src="assets/images/bg.jpg" />
 			<div data-ts="flat" data-p="1260" style="left:0px;top:0px;width:1920px;height:960px;position:absolute;">
 				<div data-to="50% 0px" data-ts="preserve-3d" data-t="0" style="left:-20px;top:0px;width:1920px;height:960px;position:absolute;">
-					<img onclick="location.href = '#TCBC_RACETOMIENTRUNG';" data-to="50% 50%" data-t="1" style="left:25%;top:12%;width:50%;height:300px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/RaceToMienTrung.png" />
+					<img onclick="location.href = '#TCBC_RACETOMIENTRUNG';" data-to="50% 50%" data-t="1" style="left: 30%; top: 12%; width: 42%; height: 133px; position: absolute; opacity: 1; cursor: pointer; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: auto;" src="assets/images/RaceToMienTrung1.png" />
+					<div style="position: absolute; top: 22%; left: 27%; width: 44%;">
+						<a href="#TCBC_RACETOMIENTRUNG" class="animated-button1" style="font-weight: bold;width: 100%;height:161px;background: rgba(240, 248, 255, 0);z-index: 1;font-size: 42pt;color: white;font-style: italic;font-family: 'FontAwesome';"><span></span><span></span><span></span><span></span>RACE TO MIEN TRUNG<br/>
+						<span style="z-index: 1;font-size: 12pt;font-style: normal;width: 100%;left: 0;">CHƯƠNG TRÌNH ĐẤU GIÁ KÍN TỪ THIỆN THÔNG QUA QUỸ OPEN ARMS</span></a>
+					</div>
 					<img onclick="location.href = '<?php echo($domain); ?>';" data-to="50% 50%" data-t="3" style="left:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/GolfClup.png" />
 					<img onclick="location.href = 'http://vietnamracing.com.vn/';"data-to="50% 50%" data-t="2" style="right:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/VietnamRacing.png" />
 					<div data-to="50% -200px" data-t="5" data-arr="4" style="left:3%;top:43%;text-transform: uppercase;width:100%;height:230px;position:absolute;opacity:0;color:rgb(68 229 15 / 1);font-size:16pt;font-weight:900;line-height:1.2;text-shadow:2px 2px #38003a;">
-						<div>Giải vô địch các CLB Golf Tranh Cúp Tasmania</div>
+						<div><a href="<?php echo($domain); ?>" class="animated-button1" style="background: #f0f8ff00; color: rgb(68, 229, 15);"><span></span><span></span><span></span><span></span>Giải vô địch các CLB Golf Tranh Cúp Tasmania</a></div>
 						<div style="position: absolute; top: 0; right: 50%; font-size:26pt; color: white;">&</div>
-						<div style="position: absolute; top: 0; right: 15%;">Vietnam Racing Festival</div>
+						<div style="position: absolute; top: 0; right: 15%;"><a href="http://vietnamracing.com.vn/" class="animated-button1" style="background: #f0f8ff00; color: rgb(68, 229, 15);"><span></span><span></span><span></span><span></span>Vietnam Racing Festival</a></div>
 					</div>
 				</div>
 				<div data-to="50% 50%" data-arr="6" style="left:34%;top:52%;width:28%;height:20px;position:absolute;opacity:0;color:#ffffff;font-size:30px;font-weight:normal;font-family: Arial;line-height:1.2;text-align:center;font-style: italic;">Hãy cho chúng tôi biết bất cứ sản phẩm nào bạn yêu thích dưới đây, cho biết số tiền muốn đấu và số điện thoại của bạn</div>
 			</div>
-			<svg viewbox="0 0 300 300" width="300" height="300" style="left:18%;top:14%;display:block;position:absolute;overflow:visible;">
-				<g>
-					<path stroke-dasharray="10,10" fill="none" stroke="#000000" stroke-width="0.3" shape-rendering="crispEdges" d="M200,100L200,200L100,200L100,100Z" x="100" y="100" style="position:absolute;overflow:visible;"></path>
-					<path stroke-dasharray="10,10" fill="none" stroke="#000000" shape-rendering="crispEdges" d="M129,100C129,60.78778 160.78778,29 200,29C239.21222,29 271,60.78778 271,100C271,139.21222 239.21222,171 200,171C160.78778,171 129,139.21222 129,100Z" x="129" y="29" style="position:absolute;overflow:visible;"></path>
-					<path stroke-dasharray="10,10" fill="none" stroke="#000000" shape-rendering="crispEdges" d="M29,200C29,160.78778 60.78778,129 100,129C139.21222,129 171,160.78778 171,200C171,239.21222 139.21222,271 100,271C60.78778,271 29,239.21222 29,200Z" x="29" y="129" style="position:absolute;overflow:visible;"></path>
-				</g>
-			</svg>
-			<svg viewbox="0 0 300 300" data-ts="preserve-3d" width="300" height="300" style="left:18%;top:14%;display:block;position:absolute;overflow:visible;">
-				<g filter="url(#jssor_1_flt_1)">
-					<path data-to="200px 100px" fill="#ffde00" d="M125,150C125,136.19288 136.19288,125 150,125C163.80712,125 175,136.19288 175,150C175,163.80712 163.80712,175 150,175C136.19288,175 125,163.80712 125,150Z" x="125" y="125" data-t="7" data-c="0" style="position:absolute;opacity:0;overflow:visible;"></path>
-					<path data-to="100px 200px" fill="#ffde00" d="M125,150C125,136.19288 136.19288,125 150,125C163.80712,125 175,136.19288 175,150C175,163.80712 163.80712,175 150,175C136.19288,175 125,163.80712 125,150Z" x="125" y="125" data-t="8" data-c="1" style="position:absolute;opacity:0;overflow:visible;"></path>
-					<path data-to="200px 100px" fill="#ffde00" d="M130,150C130,138.9543 138.9543,130 150,130C161.0457,130 170,138.9543 170,150C170,161.0457 161.0457,170 150,170C138.9543,170 130,161.0457 130,150Z" x="130" y="130" data-t="9" data-c="2" style="position:absolute;opacity:0;overflow:visible;"></path>
-					<path data-to="100px 200px" fill="#ffde00" d="M130,150C130,138.9543 138.9543,130 150,130C161.0457,130 170,138.9543 170,150C170,161.0457 161.0457,170 150,170C138.9543,170 130,161.0457 130,150Z" x="130" y="130" data-t="10" data-c="3" style="position:absolute;opacity:0;overflow:visible;"></path>
-					<path data-to="200px 100px" fill="#ffde00" d="M135,150C135,141.71573 141.71573,135 150,135C158.28427,135 165,141.71573 165,150C165,158.28427 158.28427,165 150,165C141.71573,165 135,158.28427 135,150Z" x="135" y="135" data-t="11" data-c="4" style="position:absolute;opacity:0;overflow:visible;"></path>
-					<path data-to="100px 200px" fill="#ffde00" d="M135,150C135,141.71573 141.71573,135 150,135C158.28427,135 165,141.71573 165,150C165,158.28427 158.28427,165 150,165C141.71573,165 135,158.28427 135,150Z" x="135" y="135" data-t="12" data-c="5" style="position:absolute;opacity:0;overflow:visible;"></path>
-					<path fill="#44e010" d="M100,150C100,122.38576 122.38576,100 150,100C177.61424,100 200,122.38576 200,150C200,177.61424 177.61424,200 150,200C122.38576,200 100,177.61424 100,150Z" x="100" y="100" data-t="13" style="position:absolute;opacity:0.45;overflow:visible;"></path>
-				</g>
-			</svg>
 		</div>
 	</div>
 	<!-- Bullet Navigator -->

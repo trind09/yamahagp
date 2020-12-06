@@ -32,16 +32,17 @@
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" type="text/css" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/desktop.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/tablet.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/swal-slider.css'); ?>" type="text/css" />
-	
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-    <!-- CSS -->
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
 	<script>
 		function changeVid(youtubeUrl){
 			$('.video-div').attr('src', youtubeUrl);
@@ -226,12 +227,12 @@
 							}
 						});
 					</script>
-					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center;" id="sponsors1"><img style='width: 100%;' src='assets/images/sponsors.jpg' /></div>
-					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center;" id="sponsors2">
-						<img style='width: 100%;' src='assets/images/sponsors1.jpg' />
-						<img style='width: 100%;' src='assets/images/sponsors2.jpg' />
-						<img style='width: 100%;' src='assets/images/sponsors3.jpg' />
-						<img style='width: 100%;' src='assets/images/sponsors4.jpg' />
+					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center; background: rgb(18 109 12); padding-bottom: 5px;" id="sponsors1"><img style='width: 100%;' src='assets/images/sponsors.png' /></div>
+					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center; background: rgb(18 109 12); padding-bottom: 5px;" id="sponsors2">
+						<img style='width: 100%;' src='assets/images/sponsors1.png' />
+						<img style='width: 100%; padding-top: 10px;' src='assets/images/sponsors2.png' />
+						<img style='width: 100%; padding-top: 10px;' src='assets/images/sponsors3.png' />
+						<img style='width: 100%;' src='assets/images/sponsors4.png' />
 					</div>
 				</div>
 				<div class="aboutus-users">
@@ -440,7 +441,7 @@
 						<li onclick="ShowClb('CLB GOLF DOANH NHÂN TRẺ TP. HCM.jpg', 2, 'CLB GOLF DOANH NHÂN TRẺ TP. HCM');">CLB GOLF DOANH NHÂN TRẺ TP. HCM</li>
 						<li onclick="ShowClb('CLB GOLF DOANH NHÂN SÀI GÒN.jpg');">CLB GOLF DOANH NHÂN SÀI GÒN</li>
 						<li onclick="ShowClb('SAIGON OPEN GOLF CLUB.jpg');">SÀI GÒN OPEN GOLF CLUB</li>
-						<li onclick="ShowClb('CLB GOLF BẤT ĐỘNG SẢN TP. HCM.jpg', 2 , 'CLB GOLF BẤT ĐỘNG SẢN TP. HCM');">CLB GOLF BẤT ĐỘNG SẢN TP. HCM</li>
+						<li onclick="ShowClb('CLB GOLF BẤT ĐỘNG SẢN TPHCM.jpg', 2 , 'CLB GOLF BẤT ĐỘNG SẢN TP. HCM');">CLB GOLF BẤT ĐỘNG SẢN TP. HCM</li>
 						<li onclick="ShowClb('CLB GOLF SG - TB.jpg', 2, 'CLB GOLF SG - TB');">CLB GOLF SG - TB</li>
 						<li onclick="ShowClb('CLB GOLF LADIES AND BEAUTY CLUB.jpg', 2, 'CLB GOLF LADIES & BEAUTY CLUB');">CLB GOLF LADIES & BEAUTY CLUB</li>
 						<li onclick="ShowClb('CLB GOLF MIỀN TRUNG AND FRIENDS.jpg', 2, 'CLB GOLF MIỀN TRUNG AND FRIENDS');">CLB GOLF MIỀN TRUNG & FRIENDS</li>
@@ -468,7 +469,7 @@
 						<li onclick="ShowClb('CLB GOLF TCGA.jpg', 2, 'CLB GOLF TCGA VŨNG TÀU');">CLB GOLF TCGA Vũng Tàu</li>
 						<li onclick="ShowClb('CLB GOLF STANDARD GOLFERS CLUB.jpg', 2, 'CLB GOLF STANDARD GOLFERS CLUB');">CLB GOLF STANDARD GOLFERS CLUB - SGC</li>
 						<li onclick="ShowClb('CLB GOLF IT.jpg', 2, 'CLB GOLF IT');">CLB GOLF IT</li>
-						<li onclick="ShowClb('CLB GOLF KN.jpg', 2, 'CLB GOLF KN');">CLB GOLF KN</li>
+						<li onclick="ShowClb('CLB GOLF KN.jpg', 2, 'KN Golf Club');">KN Golf Club</li>
 						<li onclick="ShowClb('CLB GOLF HÀ NỘI - SÀI GÒN.jpg', 2, 'CLB GOLF HÀ NỘI - SÀI GÒN');">CLB GOLF HÀ NỘI - SÀI GÒN</li>
 						<li onclick="ShowClb('CLB GOLF THÀNH PHỐ BIÊN HÒA.jpg', 2, 'CLB GOLF THÀNH PHỐ BIÊN HÒA');">CLB GOLF THÀNH PHỐ BIÊN HÒA</li>
 						<li style="color: #3c220b; cursor: auto;">CLB Golf Họ Nguyễn</li>

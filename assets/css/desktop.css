@@ -1,13 +1,11 @@
 /* -----------------------Register section------------------------------ */
 #register {
-  height: 120vh;
+  height: auto;
   width: 100%;
   background: url(../images/bg-rgt.png) no-repeat center top;
   background-size: cover;
-  padding: 13vh 0 10vh 0;
   position: relative;
   z-index: 2;
-  margin-top: -12vh;
 }
 #register h2 {
   text-align: center;
@@ -23,32 +21,16 @@
   }
 }
 
-@media screen and (min-width: 1023px) and (max-width: 1280px) and (min-height: 1200px) {
-  #register {
-    height: 120vh;
-    margin-top: -10vh;
-  }
-}
-
 @media screen and (max-width: 1000px) {
-  #register {
-    margin-top: -3.5vh;
-    height: auto;
-    padding: 10vh;
-	margin-bottom: 200px;
-  }
   #register .contain {
     position: relative;
     z-index: 3;
   }
   #register:before {
     content: '';
-    position: auto;
     top: 0;
     left: 0;
     width: 100%;
-    height: 40vh;
-    position: absolute;
     background: url(../images/bg-rgt2.png) no-repeat center 0;
     background-size: 100% auto;
     z-index: 2;
@@ -70,14 +52,12 @@
 
 /* -----------------------Events section------------------------------ */
 #events {
-  height: 419vh;
+  height: auto;
   width: 100%;
   background: url(../images/bg-term.png) no-repeat center top;
   background-size: cover;
-  padding: 10vh 0;
   position: relative;
   z-index: 2;
-  margin-top: -16vh;
 }
 
 /* line 318, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
