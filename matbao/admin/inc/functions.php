@@ -25,6 +25,14 @@ function GetBantransferFile($agr, $str, $domain){
 	return "";
 }
 
+function GetImageLinks($agr, $str, $domain){
+	$pieces = explode("|", $str);
+	foreach ($pieces as $piece) {	
+		return $domain . $piece;
+	}
+	return "";
+}
+
 /**
  *	Search tag: jquery force browser to reload js va css files
  *  Source: https://stackoverflow.com/questions/118884/how-to-force-the-browser-to-reload-cached-css-and-javascript-files

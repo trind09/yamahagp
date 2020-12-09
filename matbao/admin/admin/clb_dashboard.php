@@ -50,10 +50,10 @@ if($is_admin) {
 		$counter = 1;
 		
 		foreach ($result as $row) {
-			$image_names = GetLicenseFile("image_name", $row["image_name"], $domain);
-			$title = $row["title"] + "";
-            $description = $row["description"] + "";
-            $hyperlink = $row["hyperlink"] + "";
+			$image_names = GetImageLinks("image_name", $row["image_name"], $domain);
+			$title = $row["title"];
+            $description = $row["description"];
+            $hyperlink = $row["hyperlink"];
 			$create_date = date_create($row["create_date"]);
 
 			$allRecordTable .= "<tr>"
@@ -61,6 +61,7 @@ if($is_admin) {
 									. "<td><div class='scrollable'>" . $title . "</div></td>"
 									. "<td><div class='scrollable'>" . $description . "</div></td>"
 									. "<td><div class='scrollable'>" . $hyperlink . "</div></td>"
+                                    . "<td><div class='scrollable'>" . $image_names . "</div></td>"
 									. "<td><div class='scrollable'>" . date_format($create_date,"d-m-Y H:i:s") . "</div></td>";
 			$allRecordTable .= "</tr>";
 			

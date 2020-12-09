@@ -51,12 +51,24 @@
 		window.onload = loadJQuery;
 		
 		function InitControls(){
+			HideAll();
+			$('#dashboard_link').attr('class', 'nav-link active');
+            $('#dashboard').show();
+
 			if ( typeof from_date !== 'undefined' && Object.prototype.toString.call(from_date) == '[object String]') {
 				document.getElementById("from_date").value = from_date;
 			}
 			if ( typeof amount_of_record !== 'undefined' && $.isNumeric(amount_of_record)) {
 				$('#amount_of_record').val(amount_of_record);
 			}
+			console.log($('.dt-buttons'));
+			$('.dt-buttons').each(function( index ) {
+				console.log(index);
+				if (index == 1){
+					console.log($(this));
+					$('#caulacbo').insertBefore($(this));
+				}
+			});
 		}
 		
 		function ClearBeforeSubmit(){
@@ -64,6 +76,29 @@
 			$('#from_date').val('');
 			return true;
 		}
+
+
+		/* Menu links */
+		function GoTo(view) {
+            HideAll();
+            if (view == "Dashboard") {
+                $('#dashboard_link').attr('class', 'nav-link active');
+                $('#dashboard').show();
+            } else if (view == 'caulacbo') {
+                $('#caulacbo_link').attr('class', 'nav-link active');
+                $('#caulacbo').show();
+            }
+            return false;
+        }
+
+        function HideAll() {
+            $('#dashboard_link').attr('class', 'nav-link');
+            $('#caulacbo_link').attr('class', 'nav-link');
+            $('#dashboard').hide();
+            $('#caulacbo').hide();
+        }
+
+		/* Menu links */
 		
 		function Logout(){
 			window.location.href = 'login.php?logout=1';
@@ -187,10 +222,10 @@
             <!-- ============================================================== -->
             <!-- wrapper  -->
             <!-- ============================================================== -->
-            <div class="dashboard-wrapper">
+            <div class="dashboard-wrapper" id="dashboard">
                 <div class="dashboard-ecommerce">
                     <div class="container-fluid dashboard-content ">
-                        <div class="ecommerce-widget" id="maudon">
+                        <div class="ecommerce-widget">
                             <!-- Table of all records  -->
                             <!-- ============================================================== -->
                             <div class="row">
@@ -241,7 +276,63 @@
             <!-- ============================================================== -->
             <!-- end wrapper  -->
             <!-- ============================================================== -->
-        </div>
+
+			<div class="dashboard-wrapper" id="caulacbo">
+					<div class="dashboard-ecommerce">
+						<div class="container-fluid dashboard-content ">
+							<div class="ecommerce-widget">
+								<!-- Table of all records  -->
+								<!-- ============================================================== -->
+								<div class="row">
+									<!-- ============================================================== -->
+									<!-- basic table  -->
+									<!-- ============================================================== -->
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="card">
+											<div class="card-header">
+												<h2 class="mb-0">Danh sách câu lạc bộ</h2>
+												<div class="form-group">
+													<label for="amount_of_record">Số dòng dữ liệu: </label>
+													<select name="amount_of_record" id="amount_of_record" class="form-control">
+													  <option value="100">100</option>
+													  <option value="500">500</option>
+													  <option value="1000" selected>1000</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="from_date">Từ ngày: </label>
+													<input type="date" class="form-control" name="from_date" id="from_date" />
+												</div>
+												<div class="form-group">
+													<button type="submit" class="btn btn-space btn-primary" name="form2">Show</button>
+													<button type="submit" class="btn btn-space btn-secondary" name="form2" onclick="return ClearBeforeSubmit();">Clear</button>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="table-responsive">
+													<?php include 'clb_dashboard.php';?>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- ============================================================== -->
+									<!-- end basic table  -->
+									<!-- ============================================================== -->
+								</div>
+								<!-- ============================================================== -->
+								<!-- end table of all record -->
+							</div>
+						</div>
+					</div>
+					<!-- ============================================================== -->
+					<!-- end footer -->
+					<!-- ============================================================== -->
+				</div>
+				<!-- ============================================================== -->
+				<!-- end wrapper  -->
+				<!-- ============================================================== -->
+			</div>
+		</div>
         <!-- ============================================================== -->
         <!-- end main wrapper  -->
         <!-- ============================================================== -->
