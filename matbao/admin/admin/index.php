@@ -173,7 +173,8 @@
                             <ul class="navbar-nav flex-column">
                                 <li class="nav-divider">Menu</li>
                                 <li class="nav-item ">
-                                    <a onclick="return GoTo('Dashboard');" id="dashboard_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                    <a onclick="return GoTo('Dashboard');" id="dashboard_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Thông tin đăng ký thi đấu</a>
+									<a onclick="return GoTo('caulacbo');" id="caulacbo_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách câu lạc bộ</a>
                                 </li>
                             </ul>
                         </div>

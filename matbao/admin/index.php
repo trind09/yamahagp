@@ -496,9 +496,9 @@
 <section id="TCBC_RACETOMIENTRUNG">
 	<div class="contain" style="text-align: center;">
 		<h4 style="text-align: center;">RACE TO MIEN TRUNG </h4>
-		<h2 style="text-align: center;">GIẢI GOLF VÔ ĐỊCH CÁC CLB & LỆ HỘI ĐUA XE THỂ THAO</h2>
+		<h2 style="text-align: center;">Hãy cho chúng tôi biết bất cứ sản phẩm nào bạn yêu thích dưới đây, cho biết số tiền muốn đấu và số điện thoại của bạn</h2>
 		<br/><br/>
-		<iframe style="width: 80%; height: 787px;" src="https://drive.google.com/file/d/1anIBWAyM72VNqIcUM41w4wQ9uo32ryiz/preview"></iframe>
+		<iframe style="width: 100%; height: 1000px; display: none;" src="#"></iframe>
 	</div>
 </section>
 

@@ -79,6 +79,34 @@
 		/*#endregion responsive code end*/
 	};
 </script>
+<script>
+$( document ).ready(function() {
+	//reset animation every seconds
+	setInterval(function(){ 
+		$('.btn-pannel-1').removeClass('animated-button-effect');
+		$('.btn-pannel-1').addClass('animated-button-effect');
+		setTimeout(function () {
+			$('.btn-pannel-1').removeClass('animated-button-effect');
+		}, 700);
+	}, 2000);
+
+	setInterval(function(){ 
+		$('.btn-pannel-2').removeClass('animated-button-effect');
+		$('.btn-pannel-2').addClass('animated-button-effect');
+		setTimeout(function () {
+			$('.btn-pannel-2').removeClass('animated-button-effect');
+		}, 700);
+	}, 2100);
+
+	setInterval(function(){ 
+		$('.btn-pannel-3').removeClass('animated-button-effect');
+		$('.btn-pannel-3').addClass('animated-button-effect');
+		setTimeout(function () {
+			$('.btn-pannel-3').removeClass('animated-button-effect');
+		}, 700);
+	}, 2200);
+});
+</script>
 <style>
 	/*jssor slider loading skin spin css*/
 	.jssorl-009-spin img {
@@ -132,18 +160,17 @@
 				<div data-to="50% 0px" data-ts="preserve-3d" data-t="0" style="left:-20px;top:0px;width:1920px;height:960px;position:absolute;">
 					<img onclick="location.href = '#TCBC_RACETOMIENTRUNG';" data-to="50% 50%" data-t="1" style="left: 30%; top: 12%; width: 42%; height: 133px; position: absolute; opacity: 1; cursor: pointer; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: auto;" src="assets/images/RaceToMienTrung1.png" />
 					<div style="position: absolute; top: 22%; left: 27%; width: 44%;">
-						<a href="#TCBC_RACETOMIENTRUNG" class="animated-button1" style="font-weight: bold;width: 100%;height:161px;background: rgba(240, 248, 255, 0);z-index: 1;font-size: 42pt;color: white;font-style: italic;font-family: 'FontAwesome';"><span></span><span></span><span></span><span></span>RACE TO MIEN TRUNG<br/>
+						<a href="#TCBC_RACETOMIENTRUNG" class="animated-button1 btn-pannel-1" style="font-weight: bold;width: 100%;height:161px;background: rgba(240, 248, 255, 0);z-index: 1;font-size: 42pt;color: white;font-style: italic;font-family: 'FontAwesome';"><span></span><span></span><span></span><span></span>RACE TO MIEN TRUNG<br/>
 						<span style="z-index: 1;font-size: 12pt;font-style: normal;width: 100%;left: 0;">CHƯƠNG TRÌNH ĐẤU GIÁ KÍN TỪ THIỆN THÔNG QUA QUỸ OPEN ARMS</span></a>
 					</div>
 					<img onclick="location.href = '<?php echo($domain); ?>';" data-to="50% 50%" data-t="3" style="left:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/GolfClup.png" />
 					<img onclick="location.href = 'http://vietnamracing.com.vn/';"data-to="50% 50%" data-t="2" style="right:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/VietnamRacing.png" />
 					<div data-to="50% -200px" data-t="5" data-arr="4" style="left:3%;top:43%;text-transform: uppercase;width:100%;height:230px;position:absolute;opacity:0;color:rgb(68 229 15 / 1);font-size:16pt;font-weight:900;line-height:1.2;text-shadow:2px 2px #38003a;">
-						<div><a href="<?php echo($domain); ?>" class="animated-button1" style="background: #f0f8ff00; color: rgb(68, 229, 15);"><span></span><span></span><span></span><span></span>Giải vô địch các CLB Golf Tranh Cúp Tasmania</a></div>
-						<div style="position: absolute; top: 0; right: 50%; font-size:26pt; color: white;">&</div>
-						<div style="position: absolute; top: 0; right: 15%;"><a href="http://vietnamracing.com.vn/" class="animated-button1" style="background: #f0f8ff00; color: rgb(68, 229, 15);"><span></span><span></span><span></span><span></span>Vietnam Racing Festival</a></div>
+						<div><a href="<?php echo($domain); ?>" class="animated-button1 btn-pannel-2" style="background: #f0f8ff00; color: rgb(68, 229, 15);"><span></span><span></span><span></span><span></span>Giải vô địch các CLB Golf Tranh Cúp Tasmania</a></div>
+						<div style="position: absolute; top: 0; right: 50%; font-size:26pt; color: white; padding-top: 27px;">&</div>
+						<div style="position: absolute; top: 0; right: 15%;"><a href="http://vietnamracing.com.vn/" class="animated-button1 btn-pannel-3" style="background: #f0f8ff00; color: rgb(68, 229, 15);"><span></span><span></span><span></span><span></span>Vietnam Racing Festival</a></div>
 					</div>
 				</div>
-				<div data-to="50% 50%" data-arr="6" style="left:34%;top:52%;width:28%;height:20px;position:absolute;opacity:0;color:#ffffff;font-size:30px;font-weight:normal;font-family: Arial;line-height:1.2;text-align:center;font-style: italic;">Hãy cho chúng tôi biết bất cứ sản phẩm nào bạn yêu thích dưới đây, cho biết số tiền muốn đấu và số điện thoại của bạn</div>
 			</div>
 		</div>
 	</div>

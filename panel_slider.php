@@ -110,138 +110,28 @@
 	.jssora051:hover {opacity:.8;}
 	.jssora051.jssora051dn {opacity:.5;}
 	.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
-
-	/*---------------Start: video button----------------------*/
-	.video-button-wrap {
-	  height: 100%;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  position: absolute;
-	  top: 0;
-	  left: 45%;
-	  z-index: 1;
-	}
-
-	.video-button {
-	  min-width: 300px;
-	  min-height: 60px;
-	  font-family: 'Nunito', sans-serif;
-	  font-size: 22px;
-	  text-transform: uppercase;
-	  letter-spacing: 1.3px;
-	  font-weight: 700;
-	  color: #313133;
-	  background: #1b7115;
-	  background: linear-gradient(90deg, rgb(46 127 41) 0%, rgb(153 230 151) 100%);
-	  border: none;
-	  border-radius: 1000px;
-	  box-shadow: 12px 12px 24px rgb(79 209 89 / 64%);
-	  transition: all 0.3s ease-in-out 0s;
-	  cursor: pointer;
-	  outline: none;
-	  position: relative;
-	  padding: 10px;
-	  }
-
-	.video-button::before {
-	content: '';
-	  border-radius: 1000px;
-	  min-width: calc(300px + 12px);
-	  min-height: calc(60px + 12px);
-	  border: 6px solid #48a746;
-	  box-shadow: #48a746;
-	  position: absolute;
-	  top: 50%;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  opacity: 0;
-	  transition: all .3s ease-in-out 0s;
-	}
-
-	.video-button:hover, .video-button:focus {
-	  color: #313133;
-	  transform: translateY(-6px);
-	}
-
-	.video-button:hover::before, video-button:focus::before {
-	  opacity: 1;
-	}
-
-	.video-button::after {
-	  content: '';
-	  width: 30px; height: 30px;
-	  border-radius: 100%;
-	  border: 6px solid #48a746;
-	  position: absolute;
-	  z-index: -1;
-	  top: 50%;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  animation: ring 1.5s infinite;
-	}
-
-	.video-button:hover::after, video-button:focus::after {
-	  animation: none;
-	  display: none;
-	}
-
-	@keyframes ring {
-	  0% {
-		width: 30px;
-		height: 30px;
-		opacity: 1;
-	  }
-	  100% {
-		width: 300px;
-		height: 300px;
-		opacity: 0;
-	  }
-	}
-	/*---------------End: video button----------------------*/
 </style>
 <!-- Start: Animation Links -->
-<link rel="stylesheet" href="<?php echo auto_version('assets/css/animated-button.css'); ?>" type="text/css" />
+<link rel="stylesheet" href="assets/css/animated-button.css" type="text/css" />
 <!-- End: Animation Links -->
 <script>
-var currentVideoId = "";
 function showVideo(videoId){
+	console.log(videoId);
 	$('#' + videoId + "-div").show();
 	document.getElementById(videoId + "-clip").play();
-	document.getElementById(videoId + "-clip").addEventListener("click", hideVideo);
-	currentVideoId = videoId;
+	
+	$('#' + videoId + "-clip").on('click touchstart', function() {
+        hideVideo(videoId);
+    });
 }
-function hideVideo(){
-	$('#' + currentVideoId + "-div").hide();
+function hideVideo(videoId){
+	$('#' + videoId + "-div").hide();
+	$(document.getElementById(videoId + "-clip")).trigger('pause');
+	document.getElementById(videoId + "-clip").pause();
 }
-		
-$( document ).ready(function() {
-	var currentDevice = getDeviceType();
-	if (currentDevice != "desktop"){
-		$('.video-div').show();
-	} else {
-		$('.video-button-wrap').show();
-	}
-});
 </script>
-
-<?php 
-function BuildPannelVideoButton($index){
-	$html_str = '<div data-to="50% 0px" data-ts="preserve-3d" data-t="0" style="left:5%;top:40%;width:100%;position:absolute;">
-					<div data-to="50% -200px" data-t="5" data-arr="'.$index.'" style="left:3%;top:43%;text-transform: uppercase;width:100%;height:230px;position:absolute;opacity:0;color:rgb(68 229 15 / 1);font-size:16pt;font-weight:900;line-height:1.2;text-shadow:2px 2px #38003a;">
-						<div><a href="#register" role="register" class="animated-button1" style="background: rgb(19 214 43 / 40%); color: white;"><span></span><span></span><span></span><span></span>Đăng ký thi đấu</a></div>
-						<div style="position: absolute; top: 0; right: 15%;"><a href="https://ticketbox.vn/vr-fest-2020#booking" class="animated-button1" style="background: rgb(19 214 43 / 40%); color: white;"><span></span><span></span><span></span><span></span>Mua vé</a></div>
-					</div>
-				</div>';
-	echo($html_str);
-}
-?>
-
-<div class="video-button-wrap" style="display: none;">
-	<button onclick="showVideo('vietnam-racing');" class="video-button">► WATCH THE VIDEO</button>
-</div>
-<div style="display:none" id="vietnam-racing-div">
-	<video id="vietnam-racing-clip" controls autoplay loop style="position: absolute;z-index: 2;background: #c4cbde;top: 50%;left: 50%;min-width: 100%;min-height: 100%;width: auto;height: auto;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">
+<div style="display:none; z-index: 1000;" id="vietnam-racing-div">
+	<video id="vietnam-racing-clip" loop style="position: absolute;z-index: 2;background: #c4cbde;top: 50%;left: 50%;width: 100%;min-height: 100%;height: auto;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">
 		<source src="assets/video/VIETNAM_RACING_FESTIVAL_2020.mp4" type="video/mp4">
 	</video>
 </div>
@@ -260,13 +150,13 @@ function BuildPannelVideoButton($index){
 		<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="assets/images/spin.svg" />
 	</div>
 	<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1920px;height:960px;overflow:hidden;">
-		<div><img data-u="image" src="assets/pannel/20201201_191433.jpg" /><?php BuildPannelVideoButton(1); ?></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191416.jpg" /><?php BuildPannelVideoButton(2); ?></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191358.jpg" /><?php BuildPannelVideoButton(3); ?></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191327.jpg" /><?php BuildPannelVideoButton(4); ?></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191212.jpg" /><?php BuildPannelVideoButton(5); ?></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191151.jpg" /><?php BuildPannelVideoButton(6); ?></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191054.jpg" /><?php BuildPannelVideoButton(7); ?></div>
+		<div><img data-u="image" src="assets/pannel/20201201_191433.jpg" /></div>
+		<div><img data-u="image" src="assets/pannel/20201201_191416.jpg" /></div>
+		<div><img data-u="image" src="assets/pannel/20201201_191358.jpg" /></div>
+		<div><img data-u="image" src="assets/pannel/20201201_191327.jpg" /></div>
+		<div><img data-u="image" src="assets/pannel/20201201_191212.jpg" /></div>
+		<div><img data-u="image" src="assets/pannel/20201201_191151.jpg" /></div>
+		<div><img data-u="image" src="assets/pannel/20201201_191054.jpg" /></div>
 	</div>
 	<!-- Bullet Navigator -->
 	<div data-u="navigator" class="jssorb057" style="position:absolute;bottom:18px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
@@ -288,9 +178,48 @@ function BuildPannelVideoButton($index){
 		</svg>
 	</div>
 </div>
+<style>
+	.pannel-buttons {
+		left:10%; top: 35%; position: absolute; z-index: 1; width: 30%;
+	}
+
+	.animate {
+		box-shadow: 0px 37px 20px -20px rgba(0,0,0,0.2) !important;
+		transform: translate(0px, -10px) scale(1.2) !important;
+	}
+</style>
+<script>
+$( document ).ready(function() {
+	//reset animation every seconds
+	setInterval(function(){ 
+		$('#pannel-button1').removeClass('animate');
+		$('#pannel-button1').addClass('animate');
+		setTimeout(function () {
+			$('#pannel-button1').removeClass('animate');
+		}, 700);
+	}, 2000);
+
+	setInterval(function(){ 
+		$('#pannel-button2').removeClass('animate');
+		$('#pannel-button2').addClass('animate');
+		setTimeout(function () {
+			$('#pannel-button2').removeClass('animate');
+		}, 700);
+	}, 2100);
+
+	setInterval(function(){ 
+		$('#pannel-button3').removeClass('animate');
+		$('#pannel-button3').addClass('animate');
+		setTimeout(function () {
+			$('#pannel-button3').removeClass('animate');
+		}, 700);
+	}, 2200);
+});
+</script>
+<div class="pannel-buttons">
+	<a id="pannel-button1" class="btn-sm animated-button victoria-one" href="#register" role="register">Đăng ký thi đấu</a>
+	<a id="pannel-button2" class="btn-sm animated-button victoria-one" href="https://ticketbox.vn/vr-fest-2020#booking">Mua vé</a>
+	<a id="pannel-button3" class="btn-sm animated-button victoria-one" onclick="showVideo('vietnam-racing');" href="#">Watch video</a>
+</div>
 <script type="text/javascript">jssor_1_slider_init();
 </script>
-
-<video poster="poster.JPG" controls autoplay loop muted class="video-div" style="display:none; position: relative;width: 100%;">
-    <source src="assets/video/VIETNAM_RACING_FESTIVAL_2020.mp4" type="video/mp4">
-</video>
