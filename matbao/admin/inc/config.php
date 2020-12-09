@@ -1,5 +1,5 @@
 <?php
-$domain = "http://localhost/yamahagp/";
+$domain = "http://localhost/yamahagp/matbao/admin/";
 $root = "E:/xampp7/htdocs/yamahagp/";
 $dbhost = 'localhost';
 // Database Name

@@ -108,7 +108,6 @@
 </head>
 
 <body>
-    <form id="form1" action="" method="post" >
         <!-- ============================================================== -->
         <!-- main wrapper -->
         <!-- ============================================================== -->
@@ -234,30 +233,32 @@
                                 <!-- ============================================================== -->
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="card">
-										<div class="card-header">
-                                            <h2 class="mb-0">Danh sách đăng ký</h2>
-                                            <div class="form-group">
-                                                <label for="amount_of_record">Số dòng dữ liệu: </label>
-												<select name="amount_of_record" id="amount_of_record" class="form-control">
-												  <option value="100">100</option>
-												  <option value="500">500</option>
-												  <option value="1000" selected>1000</option>
-												</select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="from_date">Từ ngày: </label>
-												<input type="date" class="form-control" name="from_date" id="from_date" />
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-space btn-primary" name="form1">Show</button>
-												<button type="submit" class="btn btn-space btn-secondary" name="form1" onclick="return ClearBeforeSubmit();">Clear</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-												<?php include 'dashboard.php';?>
-                                            </div>
-                                        </div>
+										<form id="form1" action="" method="post" >
+											<div class="card-header">
+												<h2 class="mb-0">Danh sách đăng ký</h2>
+												<div class="form-group">
+													<label for="amount_of_record">Số dòng dữ liệu: </label>
+													<select name="amount_of_record" id="amount_of_record" class="form-control">
+													  <option value="100">100</option>
+													  <option value="500">500</option>
+													  <option value="1000" selected>1000</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="from_date">Từ ngày: </label>
+													<input type="date" class="form-control" name="from_date" id="from_date" />
+												</div>
+												<div class="form-group">
+													<button type="submit" class="btn btn-space btn-primary" name="form1">Show</button>
+													<button type="submit" class="btn btn-space btn-secondary" name="form1" onclick="return ClearBeforeSubmit();">Clear</button>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="table-responsive">
+													<?php include 'controller/reg_dashboard.php';?>
+												</div>
+											</div>
+										</form>
                                     </div>
                                 </div>
                                 <!-- ============================================================== -->
@@ -289,30 +290,32 @@
 									<!-- ============================================================== -->
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 										<div class="card">
-											<div class="card-header">
-												<h2 class="mb-0">Danh sách câu lạc bộ</h2>
-												<div class="form-group">
-													<label for="amount_of_record">Số dòng dữ liệu: </label>
-													<select name="amount_of_record" id="amount_of_record" class="form-control">
-													  <option value="100">100</option>
-													  <option value="500">500</option>
-													  <option value="1000" selected>1000</option>
-													</select>
+											<form id="form2" action="" method="post" >
+												<div class="card-header">
+													<h2 class="mb-0">Danh sách câu lạc bộ</h2>
+													<div class="form-group">
+														<label for="amount_of_record">Số dòng dữ liệu: </label>
+														<select name="amount_of_record" id="amount_of_record" class="form-control">
+														  <option value="100">100</option>
+														  <option value="500">500</option>
+														  <option value="1000" selected>1000</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="from_date">Từ ngày: </label>
+														<input type="date" class="form-control" name="from_date" id="from_date" />
+													</div>
+													<div class="form-group">
+														<button type="submit" class="btn btn-space btn-primary" name="form2">Show</button>
+														<button type="submit" class="btn btn-space btn-secondary" name="form2" onclick="return ClearBeforeSubmit();">Clear</button>
+													</div>
 												</div>
-												<div class="form-group">
-													<label for="from_date">Từ ngày: </label>
-													<input type="date" class="form-control" name="from_date" id="from_date" />
+												<div class="card-body">
+													<div class="table-responsive">
+														<?php include 'controller/clb_dashboard.php';?>
+													</div>
 												</div>
-												<div class="form-group">
-													<button type="submit" class="btn btn-space btn-primary" name="form2">Show</button>
-													<button type="submit" class="btn btn-space btn-secondary" name="form2" onclick="return ClearBeforeSubmit();">Clear</button>
-												</div>
-											</div>
-											<div class="card-body">
-												<div class="table-responsive">
-													<?php include 'clb_dashboard.php';?>
-												</div>
-											</div>
+											</form>
 										</div>
 									</div>
 									<!-- ============================================================== -->

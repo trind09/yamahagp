@@ -3,7 +3,7 @@ $is_admin = isset( $_SESSION['username'] );
 $amount_of_record = 1000;
 $from_date = "";
 $pre_script_variables = "";
-if(isset($_POST['form1'])) {
+if(isset($_POST['form2'])) {
 	if (isset($_POST['amount_of_record'])) {
 		$amount_of_record = strip_tags($_POST['amount_of_record']);
 		if ($amount_of_record == ""){
