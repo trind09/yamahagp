@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 27, 2020 at 08:00 PM
--- Server version: 5.7.32-log
--- PHP Version: 7.3.6
+-- Host: 127.0.0.1
+-- Generation Time: Dec 10, 2020 at 03:06 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `ilear871_vietnam_racing_festival`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `caulacbo`
+--
+
+CREATE TABLE `caulacbo` (
+  `id` int(11) NOT NULL,
+  `image_name` varchar(300) DEFAULT NULL,
+  `title` varchar(300) DEFAULT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `hyperlink` varchar(300) DEFAULT NULL,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `caulacbo`
+--
+
+INSERT INTO `caulacbo` (`id`, `image_name`, `title`, `description`, `hyperlink`, `create_date`) VALUES
+(1, 'assets/clbs/Untitled_page-0041.jpg', 'HỘI GOLF TỈNH ĐỒNG NAI', NULL, NULL, '2020-12-09 22:04:26');
 
 -- --------------------------------------------------------
 
@@ -45,7 +66,7 @@ CREATE TABLE `registers` (
   `comment1` varchar(1000) DEFAULT NULL,
   `comment2` varchar(1000) DEFAULT NULL,
   `comment3` varchar(1000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp(),
   `form_id` varchar(100) DEFAULT NULL,
   `form_name` varchar(400) DEFAULT NULL,
   `extra_column1` varchar(300) DEFAULT NULL,
@@ -64,7 +85,8 @@ INSERT INTO `registers` (`id`, `number`, `fullname`, `birthday`, `phone`, `email
 (85, '121240140918498', 'Nguyễn Dũng Trí', '1980-11-02', '0764473953', 'trind09@yahoo.com', NULL, ' 40 TK20 KDC Hoàng Hải', 'https://www.facebook.com/', 'Nguyễn Văn Nam', '0958322842', 'register_files/uploads/photo_trind09@yahoo.com_A1_21-11-2020_02-59-35.jpg', 'register_files/uploads/photo_trind09@yahoo.com_bank1_21-11-2020_02-59-35.jpg', '', '', NULL, '2020-11-21 09:59:35', 'moto-ub150-semipro', 'HỆ Moto UB150 SemiPro - GIẢI MOTUL MOTOR RACING CUP', NULL, NULL, NULL),
 (86, '121240140918498', 'Nguyễn Dũng Trí', '1980-11-02', '0764473953', 'trind09@yahoo.com', NULL, '40 TK20 KDC Hoàng Hải', 'https://www.facebook.com/', 'Nguyễn Văn Nam', '0958322842', 'register_files/uploads/photo_trind09@yahoo.com_B_21-11-2020_03-00-23.jpg', NULL, '', 'I am iron man', NULL, '2020-11-21 10:00:23', 'oto-gymkhana', 'Hệ OTO GYMKHANA - GIẢI VINFAST AUTOGYMKHANA CUP', NULL, NULL, NULL),
 (87, '121240140918498', 'Nguyễn Dũng Trí', '1980-11-02', '0764473953', 'trind09@yahoo.com', NULL, '40 TK20 KDC Hoàng Hải', 'https://www.facebook.com/', 'Nguyễn Văn Nam', '0958322842', 'register_files/uploads/photo_trind09@yahoo.com_B_21-11-2020_03-01-14.png|register_files/uploads/photo_trind09@yahoo.com_VMA_21-11-2020_03-01-14.jpg', NULL, 'Hello! I am iron man.', '', NULL, '2020-11-21 10:01:14', 'oto-track-attack', 'HỆ OTO Track Attack - GIẢI VINFAST TRACK ATTACK CUP', NULL, NULL, NULL),
-(88, '15', 'Nguyễn Tuấn Anh', '1995-05-15', '0936748948', 'nguyentuananh821@gmail.com', NULL, 'Tphcm', 'NG Tuấn Anh', '', '0936748948', 'register_files/uploads/photo_nguyentuananh821@gmail.com_B_27-11-2020_12-24-40.jpg|register_files/uploads/photo_nguyentuananh821@gmail.com_VMA_27-11-2020_12-24-40.jpg', NULL, 'Chưa từng', '', NULL, '2020-11-27 19:24:40', 'oto-track-attack', 'HỆ OTO Track Attack - GIẢI VINFAST TRACK ATTACK CUP', NULL, NULL, NULL);
+(88, '15', 'Nguyễn Tuấn Anh', '1995-05-15', '0936748948', 'nguyentuananh821@gmail.com', NULL, 'Tphcm', 'NG Tuấn Anh', '', '0936748948', 'register_files/uploads/photo_nguyentuananh821@gmail.com_B_27-11-2020_12-24-40.jpg|register_files/uploads/photo_nguyentuananh821@gmail.com_VMA_27-11-2020_12-24-40.jpg', NULL, 'Chưa từng', '', NULL, '2020-11-27 19:24:40', 'oto-track-attack', 'HỆ OTO Track Attack - GIẢI VINFAST TRACK ATTACK CUP', NULL, NULL, NULL),
+(89, '', 'asd', '1980-11-02', '15124124', 'abc@yahoo.com', NULL, 'asdsad', '', '', '', 'register_files/uploads/photo_abc@yahoo.com_B_27-11-2020_14-02-11.jpg|register_files/uploads/photo_abc@yahoo.com_VMA_27-11-2020_14-02-11.jpg', NULL, 'asdasdasd', '', NULL, '2020-11-27 20:02:11', 'oto-track-attack', 'HỆ OTO Track Attack - GIẢI VINFAST TRACK ATTACK CUP', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -80,7 +102,7 @@ CREATE TABLE `users` (
   `address` varchar(300) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `country` varchar(100) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -93,6 +115,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `address`, `birthday
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `caulacbo`
+--
+ALTER TABLE `caulacbo`
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `registers`
@@ -112,10 +140,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `caulacbo`
+--
+ALTER TABLE `caulacbo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `registers`
 --
 ALTER TABLE `registers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT for table `users`
