@@ -52,8 +52,8 @@
 		
 		function InitControls(){
 			HideAll();
-			$('#dashboard_link').attr('class', 'nav-link active');
-            $('#dashboard').show();
+			$('#Dashboard_pannel_link').attr('class', 'nav-link active');
+            $('#Dashboard_pannel').show();
 
 			if ( typeof from_date !== 'undefined' && Object.prototype.toString.call(from_date) == '[object String]') {
 				document.getElementById("from_date").value = from_date;
@@ -61,14 +61,6 @@
 			if ( typeof amount_of_record !== 'undefined' && $.isNumeric(amount_of_record)) {
 				$('#amount_of_record').val(amount_of_record);
 			}
-			console.log($('.dt-buttons'));
-			$('.dt-buttons').each(function( index ) {
-				console.log(index);
-				if (index == 1){
-					console.log($(this));
-					$('#caulacbo').insertBefore($(this));
-				}
-			});
 		}
 		
 		function ClearBeforeSubmit(){
@@ -81,21 +73,26 @@
 		/* Menu links */
 		function GoTo(view) {
             HideAll();
-            if (view == "Dashboard") {
-                $('#dashboard_link').attr('class', 'nav-link active');
-                $('#dashboard').show();
-            } else if (view == 'caulacbo') {
-                $('#caulacbo_link').attr('class', 'nav-link active');
-                $('#caulacbo').show();
+            if (view == "Dashboard_pannel") {
+                $('#Dashboard_pannel_link').attr('class', 'nav-link active');
+                $('#Dashboard_pannel').show();
+            } else if (view == 'caulacbo_pannel') {
+                $('#caulacbo_pannel_link').attr('class', 'nav-link active');
+                $('#caulacbo_pannel').show();
+            } else if (view == 'plan_pannel') {
+                $('#plan_pannel_link').attr('class', 'nav-link active');
+                $('#plan_pannel').show();
             }
             return false;
         }
 
         function HideAll() {
-            $('#dashboard_link').attr('class', 'nav-link');
-            $('#caulacbo_link').attr('class', 'nav-link');
-            $('#dashboard').hide();
-            $('#caulacbo').hide();
+            $('#Dashboard_pannel_link').attr('class', 'nav-link');
+            $('#caulacbo_pannel_link').attr('class', 'nav-link');
+			$('#plan_pannel_link').attr('class', 'nav-link');
+            $('#Dashboard_pannel').hide();
+            $('#caulacbo_pannel').hide();
+			$('#plan_pannel').hide();
         }
 
 		/* Menu links */
@@ -206,8 +203,9 @@
                   <ul class="navbar-nav flex-column">
                      <li class="nav-divider">Menu</li>
                      <li class="nav-item ">
-                        <a onclick="return GoTo('Dashboard');" id="dashboard_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Thông tin đăng ký thi đấu</a>
-                        <a onclick="return GoTo('caulacbo');" id="caulacbo_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách câu lạc bộ</a>
+                        <a onclick="return GoTo('Dashboard_pannel');" id="Dashboard_pannel_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Thông tin đăng ký thi đấu</a>
+                        <a onclick="return GoTo('caulacbo_pannel');" id="caulacbo_pannel_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách câu lạc bộ</a>
+						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách kế hoạch & điều lệ</a>
                      </li>
                   </ul>
                </div>
@@ -220,7 +218,7 @@
       <!-- ============================================================== -->
       <!-- wrapper  -->
       <!-- ============================================================== -->
-      <div class="dashboard-wrapper" id="dashboard">
+      <div class="dashboard-wrapper" id="Dashboard_pannel">
          <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content ">
                <div class="ecommerce-widget">
@@ -276,7 +274,10 @@
       <!-- ============================================================== -->
       <!-- end wrapper  -->
       <!-- ============================================================== -->
-      <div class="dashboard-wrapper" id="caulacbo">
+	  <!-- ============================================================== -->
+      <!-- wrapper  -->
+      <!-- ============================================================== -->
+      <div class="dashboard-wrapper" id="caulacbo_pannel">
          <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content ">
                <div class="ecommerce-widget">
@@ -311,6 +312,65 @@
                               <div class="card-body">
                                  <div class="table-responsive">
                                     <?php include 'controller/clb_dashboard.php';?>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- ============================================================== -->
+                     <!-- end basic table  -->
+                     <!-- ============================================================== -->
+                  </div>
+                  <!-- ============================================================== -->
+                  <!-- end table of all record -->
+               </div>
+            </div>
+         </div>
+         <!-- ============================================================== -->
+         <!-- end footer -->
+         <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- end wrapper  -->
+      <!-- ============================================================== -->
+	  <!-- ============================================================== -->
+      <!-- wrapper  -->
+      <!-- ============================================================== -->
+      <div class="dashboard-wrapper" id="plan_pannel">
+         <div class="dashboard-ecommerce">
+            <div class="container-fluid dashboard-content ">
+               <div class="ecommerce-widget">
+                  <!-- Table of all records  -->
+                  <!-- ============================================================== -->
+                  <div class="row">
+                     <!-- ============================================================== -->
+                     <!-- basic table  -->
+                     <!-- ============================================================== -->
+                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                           <form id="form2" action="" method="post" >
+                              <div class="card-header">
+                                 <h2 class="mb-0">Danh sách kế hoạch & điều lệ</h2>
+                                 <div class="form-group">
+                                    <label for="amount_of_record">Số dòng dữ liệu: </label>
+                                    <select name="amount_of_record" id="amount_of_record" class="form-control">
+                                       <option value="100">100</option>
+                                       <option value="500">500</option>
+                                       <option value="1000" selected>1000</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="from_date">Từ ngày: </label>
+                                    <input type="date" class="form-control" name="from_date" id="from_date" />
+                                 </div>
+                                 <div class="form-group">
+                                    <button type="submit" class="btn btn-space btn-primary" name="form2">Show</button>
+                                    <button type="submit" class="btn btn-space btn-secondary" name="form2" onclick="return ClearBeforeSubmit();">Clear</button>
+                                 </div>
+                              </div>
+                              <div class="card-body">
+                                 <div class="table-responsive">
+                                    <?php include 'controller/pla_dashboard.php';?>
                                  </div>
                               </div>
                            </form>
