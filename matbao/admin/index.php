@@ -575,33 +575,19 @@ $(window).on("load", function() {
 	<div class="contain">
 		<h4 style="text-align: center;">lịch trình chi tiết</h4>
 		<h2>GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA</h2>
-		<p style="text-transform: uppercase; color: #af2e2e; font-weight: bold; text-align: center; font-size: large;">Thời gian đăng ký hạn chót: 25/11/2020</p>
-		<p style="text-transform: uppercase; color: #af2e2e; font-weight: bold; text-align: center; font-size: large;">Thời gian chốt HDCP: 30/11/2020</p>
 		<br/>
 		<div class="plan-wrap">
 			<ul class="plan-list">
 				
 				<li class="disable">
-					<span>LỊCH TRÌNH LỄ CÔNG BỐ GIẢI ĐẤU</span>
-					<div class="plan-item">
-						<h3>26/11/2020</h3>
-						<p><img src="assets/images/i-location.png">Địa điểm: 113 Nguyễn Văn Hưởng, P. Thảo Điền, Q2, TP.HCM</p>
-						<p><img src="assets/images/i-time.png">16:00 - 17:00: Đón khách</p>
-						<p><img src="assets/images/i-time.png">17:00 - 18:00: Công bố giải đấu với đại diện của 50 đội tuyển & khách mời</p>
-						<p><img src="assets/images/i-time.png">18:00 - 22:00: Tiệc BBQ chiêu đãi và âm nhạc</p>
-						<h4>1</h4>
-					</div>
-				</li>
-
-				<li class="disable">
 					<span>LỊCH TRÌNH NGÀY THI ĐẤU VÒNG LOẠI</span>
 					<div class="plan-item">
-						<h3>08/12/2020</h3>
+						<h3>12/01/2021</h3>
 						<p><img src="assets/images/i-location.png">Địa điểm: Sân golf Tân Sơn Nhất, số 6 Tân Sơn, P.12, Q. Gò Vấp, TP.HCM</p>
 						<p style="color: #d6ef0e; font-weight: bold;">Buổi sáng:</p>
-						<p><img src="assets/images/i-time.png">05:00 - 05:30: Checkin ăn sáng</p>
-						<p><img src="assets/images/i-time.png">05:45 - 05:55: Khai mạc</p>
-						<p><img src="assets/images/i-time.png">06:00: Chính thức thi đấu vòng loại (Đấu gậy tính điểm Net)</p>
+						<p><img src="assets/images/i-time.png">05:00 - 06:00: Checkin ăn sáng</p>
+						<p><img src="assets/images/i-time.png">06:10: Khai mạc</p>
+						<p><img src="assets/images/i-time.png">06:20: Chính thức thi đấu vòng loại (Đấu gậy tính điểm Net)</p>
 						<p><img src="assets/images/i-time.png">11:30: Kết thúc giải đấu buổi sáng</p>
 						<p><img src="assets/images/i-time.png">12:30: Tiệc trao giải cá nhân & công bố kết quả đồng đội</p>
 						<p style="color: #d6ef0e; font-weight: bold;">Buổi chiều:</p>
@@ -611,14 +597,14 @@ $(window).on("load", function() {
 						<p><img src="assets/images/i-time.png">18:00: Kết thúc giải đấu buổi chiều</p>
 						<p><img src="assets/images/i-time.png">19:00: Tiệc trao giải cá nhân & công bố kết quả đồng đội</p>
 						<p><img src="assets/images/i-time.png">20:00: Bốc thăm ghép cặp thi đấu Match Play vòng chung kết</p>
-						<h4>2</h4>
+						<h4>1</h4>
 					</div>
 				</li>
-				
+
 				<li class="disable">
 					<span>LỊCH TRÌNH NGÀY THI ĐẤU VÒNG CHUNG KẾT</span>
 					<div class="plan-item">
-						<h3>09/12/2020</h3>
+						<h3>13/01/2020</h3>
 						<p><img src="assets/images/i-location.png">Địa điểm: Sân golf Tân Sơn Nhất, số 6 Tân Sơn, P.12, Q. Gò Vấp, TP.HCM</p>
 						<p style="color: #d6ef0e; font-weight: bold;">Buổi chiều:</p>
 						<p><img src="assets/images/i-time.png">10:00 - 11:00: Checkin ăn trưa</p>
@@ -627,7 +613,7 @@ $(window).on("load", function() {
 						<p><img src="assets/images/i-time.png">18:00: Kết thúc giải đấu</p>
 						<p><img src="assets/images/i-time.png">19:00: Tiệc trao giải đồng đội</p>
 						<p><img src="assets/images/i-time.png">20:00: Lễ hội âm nhạc chúc mừng giải đấu</p>
-						<h4>3</h4>
+						<h4>2</h4>
 					</div>
 				</li>
 				
