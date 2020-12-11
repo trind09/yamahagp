@@ -11,7 +11,8 @@
     line-height: 1;
 }
 .auction-card p{
-    padding-bottom:10px
+    text-align: left;
+    padding: 0px 10px;
 }
 .auction-card .price {
     color: #197114;

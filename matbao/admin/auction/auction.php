@@ -225,11 +225,10 @@ function isEmail($email)
 <div class="auction-card">
 	<img src="auction/images/products/The_Anatomy_of_a_Golffe_IV.jpg" alt="Denim Jeans" style="width:100%">
 	<h2>The Anatomy of a Golfer lV, Atelier</h2>
-	<p>Thể loại: Tác phẩm điêu khắc</p>
-	<p>Người Tặng: Ms. Lệ Hằng</p>
-	<p>Thông tin người tặng: Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</p>
-	<p>Giá khởi điểm: <span class="price"> <?php echo(money_format('%i', 8700)); ?></span></p>
-	<p class="des">The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...</p>
+	<p>-Thể loại: Tác phẩm điêu khắc</p>
+	<p>-Người Tặng: <span style="font-weight:bold">Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</span></p>
+	<p>-Giá khởi điểm: <span class="price"> <?php echo(money_format('%i', 8700)); ?></span></p>
+	<p class="des">-The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...</p>
 	<button onclick="OpenAuctionPopup();">ĐẤU GIÁ</button>
 </div>
 
@@ -244,8 +243,7 @@ function isEmail($email)
                </div>
                <div class="swal2-des">
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Thể loại:</span> Tác phẩm điêu khắc</p>
-                  <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Người tặng:</span> Ms. Lệ Hằng</p>
-                  <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Thông tin người tặng:</span> Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</p>
+                  <p style="line-height:1.5;font-weight: bold;"><span style="color:#197114;font-weight: bold;">Người tặng:</span> Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</p>
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Gía khởi điểm:</span><span style="color: #197114;font-size: 20px;"> <?php echo(money_format('%i', 8700)); ?></span></p>
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Mô tả sản phẩm:</span>The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.</p>
                </div>
