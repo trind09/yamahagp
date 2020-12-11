@@ -238,7 +238,7 @@ function isEmail($email)
             <h2 class="swal2-title" id="swal2-title">The Anatomy of a Golfer lV, Atelier</h2>
             <div class="swal2-content" style="width: 100%; display:flex;flex-wrap:wrap;justify-content:space-between">
                <div class="swal2-des">
-                  <img src="auction/images/imageAuction/The_Anatomy_of_a_Golffe_IV.jpg" style="width:100%"/>
+                  <img src="auction/images/products/The_Anatomy_of_a_Golffe_IV.jpg" style="width:100%"/>
                </div>
                <div class="swal2-des">
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Thể loại:</span> Tác phẩm điêu khắc</p>

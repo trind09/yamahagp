@@ -502,7 +502,7 @@
 		<br/><br/>
 	</div>
 	<div class="auction-card">
-		<img src="auction/images/imageAuction/The_Anatomy_of_a_Golffe_IV.jpg" alt="Denim Jeans" style="width:100%">
+		<img src="auction/images/products/The_Anatomy_of_a_Golffe_IV.jpg" alt="Denim Jeans" style="width:100%">
 		<h2>The Anatomy of a Golfer lV, Atelier</h2>
 		<p>Thể loại: Tác phẩm điêu khắc</p>
 		<p>Người Tặng: Ms. Lệ Hằng</p>
