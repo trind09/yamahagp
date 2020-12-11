@@ -38,7 +38,7 @@ CREATE TABLE `auction` (
   `position_level` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
   `pid_rate` int(11) DEFAULT NULL,
   `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `auction`

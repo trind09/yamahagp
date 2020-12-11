@@ -106,6 +106,7 @@
 		}
 </script>
 <?php
+setlocale(LC_MONETARY, 'en_US');
 if(isset($_POST['form1'])) {
 	$valid = 1;
 	$message = "";
@@ -167,26 +168,15 @@ if(isset($_POST['form1'])) {
          . "(?,?,?,?,?,?,?)";
          $statement = $pdo->prepare($sql);
          $statement->execute(array($fullname, $birthday, $phone, $email, $address, $position_level, $pid_rate));
-         $register_id = $pdo->lastInsertId();
-         if ($register_id != 0){
-            $dt = new DateTime();
-            $current_datetime = $dt->format('d-m-Y H:i:s');
-            $formated_current_datetime = str_replace(" ", "_", $current_datetime);
-            $formated_current_datetime = str_replace(":", "-", $formated_current_datetime);
-            $message = "<span style=\"text-transform: uppercase;\">Đấu giá thành công</br></br>"
+         $message = "<span style=\"text-transform: uppercase;\">Đấu giá thành công</br></br>"
             . "<b>Họ và tên: </b>" . $fullname . "</br>"
             . "<b>Ngày sinh: </b>" . $birthday . "</br>"
             . "<b>Số điện thoại: </b>" . $phone . "</br>"
-            . "<b>email: </b>" . $email . "</br>"
-            . "<b>địa chỉ: </b>" . $address . "</br>"
+            . "<b>Email: </b>" . $email . "</br>"
+            . "<b>Địa chỉ: </b>" . $address . "</br>"
             . "<b>Chức vụ: </b>" . $position_level . "</br>"
             . "<b>Số tiền đấu giá là </b>" . "<span style=\"color:green\"><b>" . money_format('%i', $pid_rate) . "</b></span></br>"
             . ".</span>";
-         }
-     
-         else {
-            $message = "Insert không thành công.";
-         }
       } catch (Exception $e) {
          $valid = 0;
          $message = $e;
@@ -231,6 +221,18 @@ function isEmail($email)
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 ?>
+
+<div class="auction-card">
+	<img src="auction/images/products/The_Anatomy_of_a_Golffe_IV.jpg" alt="Denim Jeans" style="width:100%">
+	<h2>The Anatomy of a Golfer lV, Atelier</h2>
+	<p>Thể loại: Tác phẩm điêu khắc</p>
+	<p>Người Tặng: Ms. Lệ Hằng</p>
+	<p>Thông tin người tặng: Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</p>
+	<p>Giá khởi điểm: <span class="price"> <?php echo(money_format('%i', 8700)); ?></span></p>
+	<p class="des">The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...</p>
+	<button onclick="OpenAuctionPopup();">ĐẤU GIÁ</button>
+</div>
+
 <form id="form1" action="" method="post" enctype="multipart/form-data" >
    <div class="swal2a-container swal2a-center swal2-backdrop-show" style="display: none;" id="aution_form">
       <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="width: 1200px; display: flex;">
@@ -244,7 +246,7 @@ function isEmail($email)
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Thể loại:</span> Tác phẩm điêu khắc</p>
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Người tặng:</span> Ms. Lệ Hằng</p>
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Thông tin người tặng:</span> Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</p>
-                  <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Gía thầu khởi điểm ($):</span><span style="color: #F44336;font-size: 20px;"> 8700</span></p>
+                  <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Gía khởi điểm:</span><span style="color: #197114;font-size: 20px;"> <?php echo(money_format('%i', 8700)); ?></span></p>
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Mô tả sản phẩm:</span>The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.</p>
                </div>
             </div>
@@ -272,7 +274,7 @@ function isEmail($email)
             <label for="position_level" class="swal2-input-label" id="position_level-label">Chức vụ </label>
             <input class="swal2-input" id="position_level" name="position_level" placeholder="" type="text" style="display: flex; color: black;">
             <div class="swal2-validation-message" id="position_level-validation-message"></div>
-			   <label for="pid_rate" class="swal2-input-label" id="pid_rate-label">Số tiền đấu giá($) <span style="color: red;">*</span></label>
+			   <label for="pid_rate" class="swal2-input-label" id="pid_rate-label">Số tiền đấu giá (USD) <span style="color: red;">*</span></label>
             <input class="swal2-input" id="pid_rate" name="pid_rate" placeholder="" type="text" style="display: flex; color: black;">
             <div class="swal2-validation-message" id="pid_rate-validation-message"></div>
          </div>

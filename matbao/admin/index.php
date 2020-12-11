@@ -495,22 +495,12 @@
 </section>
 
 <section id="TCBC_RACETOMIENTRUNG">
-	<?php include 'auction/auction.php';?>
 	<div class="contain" style="text-align: center;">
 		<h4 style="text-align: center;">RACE TO MIEN TRUNG </h4>
 		<h2 style="text-align: center;">Hãy cho chúng tôi biết bất cứ sản phẩm nào bạn yêu thích dưới đây, cho biết số tiền muốn đấu và số điện thoại của bạn</h2>
 		<br/><br/>
 	</div>
-	<div class="auction-card">
-		<img src="auction/images/products/The_Anatomy_of_a_Golffe_IV.jpg" alt="Denim Jeans" style="width:100%">
-		<h2>The Anatomy of a Golfer lV, Atelier</h2>
-		<p>Thể loại: Tác phẩm điêu khắc</p>
-		<p>Người Tặng: Ms. Lệ Hằng</p>
-		<p>Thông tin người tặng: Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</p>
-		<p>Giá khởi điểm: <span class="price">$ 8700</span></p>
-		<p class="des">The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...</p>
-		<button onclick="OpenAuctionPopup();">ĐẤU GIÁ</button>
-	</div>
+	<?php include 'auction/auction.php';?>
 </section>
 
 <section id="term" class="term1">
