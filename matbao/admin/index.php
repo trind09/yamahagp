@@ -309,28 +309,23 @@
 						//var swalInterval;
 						var currentSwalSliderIndex = 1;
 						var totalSlide = 0;
-						function ShowClb(image_name, total_file, title, description, hyperlink){
-							totalSlide = total_file;
+						function ShowClb(image_array, title, description, hyperlink){
+							totalSlide = image_array.length;
 							currentSwalSliderIndex = 1;
-							if (total_file || title || description || hyperlink){
+							if (title){
 								var slider = "";
-								if (total_file){
+								if (totalSlide > 0){
 									slider += "<div class='swalslider'>";
-
-									var fileName = image_name.split('.').shift();
-									var fileExtention = image_name.split('.').pop();
 
 									var slide_number = "";
 									var slide_image = "<div class='swalslides'>";
-									var i = 1;
-									for (; i <= total_file; i++) {
-										var image_number = i - 1;
-										if (image_number == 0){
-											image_number = "";
-										}
-										slide_number += "<a href='#swalslide-" + i + "' id='swallink-" + i + "'>" + i + "</a>";
-										slide_image += "<div id='swalslide-" + i + "'><img class='swalslide-img' src='" + 'assets/clbs/' + fileName + image_number + "." + fileExtention + "' /></div>";
-									}
+									var counter = 1;
+									$.each(image_array, function( index, value ) {
+										var image_url = value.replace("../", '<?php echo($domain); ?>');
+										slide_number += "<a href='#swalslide-" + index + "' id='swallink-" + index + "'>" + counter + "</a>";
+										slide_image += "<div id='swalslide-" + index + "'><img class='swalslide-img' src='" + image_url + "' /></div>";
+										counter++;
+									});
 									slide_image += "</div>";
 
 									slider += slide_number;
@@ -342,12 +337,6 @@
 
 								if (hyperlink){
 									hyperlink = "<p><a target='_blank' href='" + hyperlink + "'>Xem thêm</a></p>";
-								}
-								if (typeof description === "undefined") {
-									description = ""
-								}
-								if (typeof hyperlink === "undefined") {
-									hyperlink = ""
 								}
 								swal({
 								  title: "<i>" + title + "</i>", 
@@ -433,60 +422,26 @@
 					</style>
 					<h5 class="clbs-title" title="CLB GOLF SẼ THAM GIA NĂM 2020">CLB GOLF SẼ THAM GIA NĂM 2020</h5>
 					<ol class="list-of-clbs" type="1">
-						<li onclick="ShowClb('Untitled_page-0041.jpg');">Hội Golf Tỉnh Đồng Nai</li>
-						<li onclick="ShowClb('HỘI GOLF TỈNH BÀ RỊA - VŨNG TÀU.jpg', 2, 'HỘI GOLF TỈNH BÀ RỊA - VŨNG TÀU');">HỘI GOLF TỈNH BÀ RỊA - VŨNG TÀU</li>
-						<li onclick="ShowClb('CLB GOLF TỈNH BÌNH THUẬN.jpg', 2, 'CLB GOLF TỈNH BÌNH THUẬN');">CLB GOLF TỈNH BÌNH THUẬN</li>
-						<li onclick="ShowClb('HỘI GOLF NHA TRANG.jpg', 2, 'HỘI GOLF NHA TRANG');">HỘI GOLF NHA TRANG</li>
-						<li onclick="ShowClb('HỘI GOLF TỈNH LÂM ĐỒNG.jpg', 2, 'HỘI GOLF TỈNH LÂM ĐỒNG');">HỘI GOLF TỈNH LÂM ĐỒNG</li>
-						<li onclick="ShowClb('CLB GOLF TASMANIA.jpg', 2, 'CLB GOLF TASMANIA');">CLB GOLF TASMANIA</li>
-						<li onclick="ShowClb('CLB GOLF DOANH NHÂN TRẺ TP. HCM.jpg', 2, 'CLB GOLF DOANH NHÂN TRẺ TP. HCM');">CLB GOLF DOANH NHÂN TRẺ TP. HCM</li>
-						<li onclick="ShowClb('CLB GOLF DOANH NHÂN SÀI GÒN.jpg');">CLB GOLF DOANH NHÂN SÀI GÒN</li>
-						<li onclick="ShowClb('SAIGON OPEN GOLF CLUB.jpg');">SÀI GÒN OPEN GOLF CLUB</li>
-						<li onclick="ShowClb('CLB GOLF BẤT ĐỘNG SẢN TPHCM.jpg', 2 , 'CLB GOLF BẤT ĐỘNG SẢN TP. HCM');">CLB GOLF BẤT ĐỘNG SẢN TP. HCM</li>
-						<li onclick="ShowClb('CLB GOLF SG - TB.jpg', 2, 'CLB GOLF SG - TB');">CLB GOLF SG - TB</li>
-						<li onclick="ShowClb('CLB GOLF LADIES AND BEAUTY CLUB.jpg', 2, 'CLB GOLF LADIES & BEAUTY CLUB');">CLB GOLF LADIES & BEAUTY CLUB</li>
-						<li onclick="ShowClb('CLB GOLF MIỀN TRUNG AND FRIENDS.jpg', 2, 'CLB GOLF MIỀN TRUNG AND FRIENDS');">CLB GOLF MIỀN TRUNG & FRIENDS</li>
-						<li onclick="ShowClb('CLB GOLF VŨ VÕ.jpg', 2, 'CLB GOLF VŨ VÕ');">CLB GOLF VŨ VÕ</li>
-						<li onclick="ShowClb('CLB GOLF TÂN SƠN NHẤT.jpg', 2, 'CLB GOLF TÂN SƠN NHẤT');">CLB GOLF TÂN SƠN NHẤT</li>
-						<li onclick="ShowClb('CLB GOLF BÔNG LÚA VÀNG.jpg');">CLB GOLF BÔNG LÚA VÀNG</li>
-						<li onclick="ShowClb('CLB GOLF DOANH NHÂN VIỆT NAM.jpg', 2, 'CLB GOLF DOANH NHÂN VIỆT NAM');">CLB GOLF DOANH NHÂN VIỆT NAM</li>
-						<li onclick="ShowClb('CLB GOLF HỌ TRẦN VIỆT NAM.jpg', 2, 'CLB GOLF HỌ TRẦN VIỆT NAM');">CLB GOLF HỌ TRẦN VIỆT NAM</li>
-						<li onclick="ShowClb('CLB GOLF AND FRIENDS.jpg',2, 'CLB Golf & Friends');">CLB Golf & Friends</li>
-						<li onclick="ShowClb('CLB GOLF HỌ LÊ.jpg', 2, 'CLB GOLF HỌ LÊ');">CLB GOLF HỌ LÊ</li>
-						<li onclick="ShowClb('XỨ THANH GOLF CLUB.jpg', 2, 'XỨ THANH GOLF CLUB');">CLB Golf Xứ Thanh</li>
-						<li onclick="ShowClb('CLB GOLF CÁ CƠM - TRIPLE C.jpg', 2, 'CLB GOLF CÁ CƠM - TRIPLE C');">CLB GOLF CÁ CƠM - TRIPLE C</li>
-						<li onclick="ShowClb('CLB GOLF G78.jpg', 2, 'CLB GOLF G78');">CLB GOLF G78</li>
-						<li onclick="ShowClb('CLB GOLF G76.jpg', 2, 'CLB GOLF G76');">CLB GOLF G76</li>
-						<li onclick="ShowClb('Untitled_page-0005.jpg');">CLB Bách Khoa HCM</li>
-						<li onclick="ShowClb('CLB GOLF HỘI DOANH NGHIỆP QUẬN THỦ ĐỨC.jpg', 2, 'CLB GOLF HỘI DOANH NGHIỆP QUẬN THỦ ĐỨC');">CLB golf hội doanh nghiệp quận Thủ Đức (TBA Golf Club)</li>
-						<li onclick="ShowClb('CLB GOLF VINHOMES CENTRAL PARK.jpg', 2, 'CLB GOLF VINHOMES CENTRAL PARK GOLF CLUB ( VCPG)');">CLB GOLF VINHOMES CENTRAL PARK GOLF CLUB ( VCPG)</li>
-						<li onclick="ShowClb('CLB GOLF HERBALIFE.jpg', 2, 'CLB GOLF HERBALIFE');">CLB GOLF HERBALIFE</li>
-						<li onclick="ShowClb('CLB GOLF DOANH NHÂN NGHỆ TĨNH.jpg', 2, 'CLB GOLF DOANH NHÂN NGHỆ TĨNH');">CLB GOLF DOANH NHÂN NGHỆ TĨNH</li>
-						<li onclick="ShowClb('CLB GOLF HUẾ - SÀI GÒN.jpg', 2, 'CLB GOLF HUẾ - SÀI GÒN');">CLB GOLF HUẾ - SÀI GÒN</li>
-						<li onclick="ShowClb('CLB GOLF PHÚ MỸ HƯNG.jpg', 2, 'CLB GOLF PHÚ MỸ HƯNG');">CLB GOLF PHÚ MỸ HƯNG</li>
-						<li onclick="ShowClb('CLB GOLF BNG.jpg');">CLB GOLF BNG</li>
-						<li onclick="ShowClb('CLB GOLF LOBICO.jpg', 2, 'CLB GOLF LOBICO');">CLB GOLF LOBICO</li>
-						<li onclick="ShowClb('CLB GOLF CB.jpg', 3, 'CLB GOLF CB');">CLB GOLF CB</li>
-						<li onclick="ShowClb('CLB GOLF TCGA.jpg', 2, 'CLB GOLF TCGA VŨNG TÀU');">CLB GOLF TCGA Vũng Tàu</li>
-						<li onclick="ShowClb('CLB GOLF STANDARD GOLFERS CLUB.jpg', 2, 'CLB GOLF STANDARD GOLFERS CLUB');">CLB GOLF STANDARD GOLFERS CLUB - SGC</li>
-						<li onclick="ShowClb('CLB GOLF IT.jpg', 2, 'CLB GOLF IT');">CLB GOLF IT</li>
-						<li onclick="ShowClb('CLB GOLF KN.jpg', 2, 'KN Golf Club');">KN Golf Club</li>
-						<li onclick="ShowClb('CLB GOLF HÀ NỘI - SÀI GÒN.jpg', 2, 'CLB GOLF HÀ NỘI - SÀI GÒN');">CLB GOLF HÀ NỘI - SÀI GÒN</li>
-						<li onclick="ShowClb('CLB GOLF THÀNH PHỐ BIÊN HÒA.jpg', 2, 'CLB GOLF THÀNH PHỐ BIÊN HÒA');">CLB GOLF THÀNH PHỐ BIÊN HÒA</li>
-						<li style="color: #3c220b; cursor: auto;">CLB Golf Họ Nguyễn</li>
-						<li style="color: #3c220b; cursor: auto;">CLB Golf G&G</li>
-						<li onclick="ShowClb('CLB GOLF DOANH NGHIỆP BÌNH DƯƠNG.jpg', 2, 'CLB GOLF DOANH NGHIỆP BÌNH DƯƠNG');">CLB GOLF DOANH NGHIỆP BÌNH DƯƠNG</li>
-						<li style="color: #3c220b; cursor: auto;">CLB Golf FGC</li>
-						<li onclick="ShowClb('CLB GOLF DOANH NHÂN 2030.jpg', 2, 'CLB GOLF DOANH NHÂN 2030');">CLB GOLF DOANH NHÂN 2030</li>
-						<li onclick="ShowClb('CLB GOLF BÁCH KHOA ALUMNI.jpg', 2, 'CLB GOLF BÁCH KHOA ALUMNI');">CLB GOLF BÁCH KHOA ALUMNI</li>
-						<li onclick="ShowClb('CLB GOLF HỌ NGUYỄN PHÍA NAM.jpg', 2, 'CLB GOLF HỌ NGUYỄN PHÍA NAM');">CLB GOLF HỌ NGUYỄN PHÍA NAM</li>
-						<li onclick="ShowClb('CLB GOLF PMG.jpg', 2, 'CLB GOLF PMG');">CLB GOLF PMG</li>
-						<li onclick="ShowClb('CLB GOLF DANH NHÂN SÀI GÒN.jpg');">CLB GOLF DANH NHÂN SÀI GÒN</li>
-						<li onclick="ShowClb('CLB GOLF PRIENDS GOLF CLUB.jpg');">CLB GOLF PRIENDS GOLF CLUB</li>
-						<!-- <li>CLB Golf G20</li>
-						<li>CLB Golf GLC</li>
-						<li>CLB Golf Họ Phạm</li>
-						<li>CLB Golf Bunker</li> -->
+						<?php
+							$sql = "SELECT * FROM caulacbo";
+
+							$statement = $pdo->prepare($sql);
+							$statement->execute();
+							$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+							if (count($result) > 0)
+							{
+								foreach ($result as $row){
+									$img_url_array = GetImageLinks($row["image_name"], $domain);
+									$id = $row["id"];
+									$title = $row["title"];
+									$description = $row["description"];
+									$hyperlink = $row["hyperlink"];
+
+									echo("<li onclick='ShowClb(" . js_array($img_url_array) . ", \"" . $title . "\", \"" . $description . "\", \"" . $hyperlink . "\");'>" . $title . "</li>");
+								}
+							}
+						?>
 					</ol>
 				</div>
 			</div>

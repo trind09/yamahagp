@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php 
+include '../inc/config.php';
+include '../inc/functions.php';
+
+session_start(); 
+$view = null;
+if(isset($_GET["view"])) {
+	$view = $_GET["view"];
+}
+?>
 <html lang="en">
 
 <head>
@@ -51,10 +60,16 @@
 		window.onload = loadJQuery;
 		
 		function InitControls(){
-			HideAll();
-			$('#Dashboard_pannel_link').attr('class', 'nav-link active');
-            $('#Dashboard_pannel').show();
-
+			var view = getUrlParameter('view');
+			if (view == "reg_dashboard") {
+				$('#reg_dashboard_link').attr('class', 'nav-link active');
+            } else if (view == 'caulacbo_pannel') {
+                $('#caulacbo_pannel_link').attr('class', 'nav-link active');
+            } else if (view == 'plan_pannel') {
+                $('#plan_pannel_link').attr('class', 'nav-link active');
+            } else {
+				$('#reg_dashboard_link').attr('class', 'nav-link active');
+			}
 			if ( typeof from_date !== 'undefined' && Object.prototype.toString.call(from_date) == '[object String]') {
 				document.getElementById("from_date").value = from_date;
 			}
@@ -72,27 +87,15 @@
 
 		/* Menu links */
 		function GoTo(view) {
-            HideAll();
-            if (view == "Dashboard_pannel") {
-                $('#Dashboard_pannel_link').attr('class', 'nav-link active');
-                $('#Dashboard_pannel').show();
+            if (view == "reg_dashboard") {
+				location.href = "index.php?view=reg_dashboard";
             } else if (view == 'caulacbo_pannel') {
-                $('#caulacbo_pannel_link').attr('class', 'nav-link active');
-                $('#caulacbo_pannel').show();
+                location.href = "index.php?view=caulacbo_pannel";
             } else if (view == 'plan_pannel') {
-                $('#plan_pannel_link').attr('class', 'nav-link active');
-                $('#plan_pannel').show();
-            }
-            return false;
-        }
-
-        function HideAll() {
-            $('#Dashboard_pannel_link').attr('class', 'nav-link');
-            $('#caulacbo_pannel_link').attr('class', 'nav-link');
-			$('#plan_pannel_link').attr('class', 'nav-link');
-            $('#Dashboard_pannel').hide();
-            $('#caulacbo_pannel').hide();
-			$('#plan_pannel').hide();
+                location.href = "index.php?view=plan_pannel";
+            } else {
+				location.href = "index.php?view=reg_dashboard";
+			}
         }
 
 		/* Menu links */
@@ -100,6 +103,21 @@
 		function Logout(){
 			window.location.href = 'login.php?logout=1';
 		}
+
+		var getUrlParameter = function getUrlParameter(sParam) {
+			var sPageURL = window.location.search.substring(1),
+				sURLVariables = sPageURL.split('&'),
+				sParameterName,
+				i;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+				sParameterName = sURLVariables[i].split('=');
+
+				if (sParameterName[0] === sParam) {
+					return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+				}
+			}
+		};
 	</script>
     <title>Vietnam Racing Website</title>
 </head>
@@ -203,9 +221,9 @@
                   <ul class="navbar-nav flex-column">
                      <li class="nav-divider">Menu</li>
                      <li class="nav-item ">
-                        <a onclick="return GoTo('Dashboard_pannel');" id="Dashboard_pannel_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Thông tin đăng ký thi đấu</a>
-                        <a onclick="return GoTo('caulacbo_pannel');" id="caulacbo_pannel_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách câu lạc bộ</a>
-						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách kế hoạch & điều lệ</a>
+                        <a onclick="return GoTo('reg_dashboard');" id="reg_dashboard_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Thông tin đăng ký thi đấu</a>
+                        <a onclick="return GoTo('caulacbo_pannel');" id="caulacbo_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách câu lạc bộ</a>
+						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách kế hoạch & điều lệ</a>
                      </li>
                   </ul>
                </div>
@@ -215,183 +233,17 @@
       <!-- ============================================================== -->
       <!-- end left sidebar -->
       <!-- ============================================================== -->
-      <!-- ============================================================== -->
-      <!-- wrapper  -->
-      <!-- ============================================================== -->
-      <div class="dashboard-wrapper" id="Dashboard_pannel">
-         <div class="dashboard-ecommerce">
-            <div class="container-fluid dashboard-content ">
-               <div class="ecommerce-widget">
-                  <!-- Table of all records  -->
-                  <!-- ============================================================== -->
-                  <div class="row">
-                     <!-- ============================================================== -->
-                     <!-- basic table  -->
-                     <!-- ============================================================== -->
-                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                           <form id="form1" action="" method="post" >
-                              <div class="card-header">
-                                 <h2 class="mb-0">Danh sách đăng ký</h2>
-                                 <div class="form-group">
-                                    <label for="amount_of_record">Số dòng dữ liệu: </label>
-                                    <select name="amount_of_record" id="amount_of_record" class="form-control">
-                                       <option value="100">100</option>
-                                       <option value="500">500</option>
-                                       <option value="1000" selected>1000</option>
-                                    </select>
-                                 </div>
-                                 <div class="form-group">
-                                    <label for="from_date">Từ ngày: </label>
-                                    <input type="date" class="form-control" name="from_date" id="from_date" />
-                                 </div>
-                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-space btn-primary" name="form1">Show</button>
-                                    <button type="submit" class="btn btn-space btn-secondary" name="form1" onclick="return ClearBeforeSubmit();">Clear</button>
-                                 </div>
-                              </div>
-                              <div class="card-body">
-                                 <div class="table-responsive">
-                                    <?php include 'controller/reg_dashboard.php';?>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                     <!-- ============================================================== -->
-                     <!-- end basic table  -->
-                     <!-- ============================================================== -->
-                  </div>
-                  <!-- ============================================================== -->
-                  <!-- end table of all record -->
-               </div>
-            </div>
-         </div>
-         <!-- ============================================================== -->
-         <!-- end footer -->
-         <!-- ============================================================== -->
-      </div>
-      <!-- ============================================================== -->
-      <!-- end wrapper  -->
-      <!-- ============================================================== -->
-	  <!-- ============================================================== -->
-      <!-- wrapper  -->
-      <!-- ============================================================== -->
-      <div class="dashboard-wrapper" id="caulacbo_pannel">
-         <div class="dashboard-ecommerce">
-            <div class="container-fluid dashboard-content ">
-               <div class="ecommerce-widget">
-                  <!-- Table of all records  -->
-                  <!-- ============================================================== -->
-                  <div class="row">
-                     <!-- ============================================================== -->
-                     <!-- basic table  -->
-                     <!-- ============================================================== -->
-                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                           <form id="form2" action="" method="post" >
-                              <div class="card-header">
-                                 <h2 class="mb-0">Danh sách câu lạc bộ</h2>
-                                 <div class="form-group">
-                                    <label for="amount_of_record">Số dòng dữ liệu: </label>
-                                    <select name="amount_of_record" id="amount_of_record" class="form-control">
-                                       <option value="100">100</option>
-                                       <option value="500">500</option>
-                                       <option value="1000" selected>1000</option>
-                                    </select>
-                                 </div>
-                                 <div class="form-group">
-                                    <label for="from_date">Từ ngày: </label>
-                                    <input type="date" class="form-control" name="from_date" id="from_date" />
-                                 </div>
-                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-space btn-primary" name="form2">Show</button>
-                                    <button type="submit" class="btn btn-space btn-secondary" name="form2" onclick="return ClearBeforeSubmit();">Clear</button>
-                                 </div>
-                              </div>
-                              <div class="card-body">
-                                 <div class="table-responsive">
-                                    <?php include 'controller/clb_dashboard.php';?>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                     <!-- ============================================================== -->
-                     <!-- end basic table  -->
-                     <!-- ============================================================== -->
-                  </div>
-                  <!-- ============================================================== -->
-                  <!-- end table of all record -->
-               </div>
-            </div>
-         </div>
-         <!-- ============================================================== -->
-         <!-- end footer -->
-         <!-- ============================================================== -->
-      </div>
-      <!-- ============================================================== -->
-      <!-- end wrapper  -->
-      <!-- ============================================================== -->
-	  <!-- ============================================================== -->
-      <!-- wrapper  -->
-      <!-- ============================================================== -->
-      <div class="dashboard-wrapper" id="plan_pannel">
-         <div class="dashboard-ecommerce">
-            <div class="container-fluid dashboard-content ">
-               <div class="ecommerce-widget">
-                  <!-- Table of all records  -->
-                  <!-- ============================================================== -->
-                  <div class="row">
-                     <!-- ============================================================== -->
-                     <!-- basic table  -->
-                     <!-- ============================================================== -->
-                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                           <form id="form2" action="" method="post" >
-                              <div class="card-header">
-                                 <h2 class="mb-0">Danh sách kế hoạch & điều lệ</h2>
-                                 <div class="form-group">
-                                    <label for="amount_of_record">Số dòng dữ liệu: </label>
-                                    <select name="amount_of_record" id="amount_of_record" class="form-control">
-                                       <option value="100">100</option>
-                                       <option value="500">500</option>
-                                       <option value="1000" selected>1000</option>
-                                    </select>
-                                 </div>
-                                 <div class="form-group">
-                                    <label for="from_date">Từ ngày: </label>
-                                    <input type="date" class="form-control" name="from_date" id="from_date" />
-                                 </div>
-                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-space btn-primary" name="form2">Show</button>
-                                    <button type="submit" class="btn btn-space btn-secondary" name="form2" onclick="return ClearBeforeSubmit();">Clear</button>
-                                 </div>
-                              </div>
-                              <div class="card-body">
-                                 <div class="table-responsive">
-                                    <?php include 'controller/pla_dashboard.php';?>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                     <!-- ============================================================== -->
-                     <!-- end basic table  -->
-                     <!-- ============================================================== -->
-                  </div>
-                  <!-- ============================================================== -->
-                  <!-- end table of all record -->
-               </div>
-            </div>
-         </div>
-         <!-- ============================================================== -->
-         <!-- end footer -->
-         <!-- ============================================================== -->
-      </div>
-      <!-- ============================================================== -->
-      <!-- end wrapper  -->
-      <!-- ============================================================== -->
+      <?php 
+			if ($view == "reg_dashboard"){
+				include 'controller/reg_dashboard.php';
+			} elseif ($view == "caulacbo_pannel"){
+				include 'controller/clb_dashboard.php';
+			} elseif ($view == "plan_pannel"){
+				include 'controller/pla_dashboard.php';
+			} else {
+				include 'controller/reg_dashboard.php';
+			}
+		?>
    </div>
    <!-- ============================================================== -->
    <!-- end main wrapper  -->

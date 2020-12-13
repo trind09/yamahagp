@@ -30,18 +30,18 @@
         if($('#fullname').val() == ''){
             error_message += "Xin nhập họ và tên.<br>";
         }
-        if(!isDate($('#birthday').val())){
-            error_message += "Xin nhập ngày sinh đúng định dạng (Ví dụ 02/11/1994).<br>";
-        }
+        // if(!isDate($('#birthday').val())){
+            // error_message += "Xin nhập ngày sinh đúng định dạng (Ví dụ 02/11/1994).<br>";
+        // }
         if($('#phone').val() == ''){
             error_message += "Xin nhập số điện thoại.<br>";
         }
         if(!isEmail($('#email').val())){
             error_message += "Xin nhập email đúng định dạng.<br>";
         }
-        if($('#address').val() == ''){
-            error_message += "Xin nhập địa chỉ nơi ở hiện nay.<br>";
-        }
+        // if($('#address').val() == ''){
+            // error_message += "Xin nhập địa chỉ nơi ở hiện nay.<br>";
+        // }
         if(!isNumeric($('#pid_rate').val())){
             error_message += "Xin nhập giá tiền bằng số<br>";
         }
@@ -106,7 +106,6 @@
 		}
 </script>
 <?php
-setlocale(LC_MONETARY, 'en_US');
 if(isset($_POST['form1'])) {
 	$valid = 1;
 	$message = "";
@@ -121,27 +120,27 @@ if(isset($_POST['form1'])) {
 		$valid = 0;
 		$message .= 'Xin nhập họ và tên.<br>';
 	}
-	if(!isset($birthday)) {
-		$valid = 0;
-		$message .= 'Xin nhập ngày sinh.<br>';
-	} else {
-		$pieces = [];
-		if (strpos($birthday, '/') !== false) {
-			$pieces = explode("/", $birthday);
-		} else if (strpos($birthday, '-') !== false) {
-			$pieces = explode("-", $birthday);
-		} else if (strpos($birthday, '.') !== false) {
-			$pieces = explode(".", $birthday);
-		}
-		$year = $pieces[2 ];
-		$month = $pieces[1];
-		$day = $pieces[0];
-		$birthday = $year . "-" . $month . "-" . $day;
-		if (DateTime::createFromFormat('Y-m-d', $birthday) == FALSE) {
-			$valid = 0;
-			$message .= 'Xin nhập ngày sinh đúng định dạng.<br>';
-		}
-   }
+	// if(!isset($birthday)) {
+		// $valid = 0;
+		// $message .= 'Xin nhập ngày sinh.<br>';
+	// } else {
+		// $pieces = [];
+		// if (strpos($birthday, '/') !== false) {
+			// $pieces = explode("/", $birthday);
+		// } else if (strpos($birthday, '-') !== false) {
+			// $pieces = explode("-", $birthday);
+		// } else if (strpos($birthday, '.') !== false) {
+			// $pieces = explode(".", $birthday);
+		// }
+		// $year = $pieces[2 ];
+		// $month = $pieces[1];
+		// $day = $pieces[0];
+		// $birthday = $year . "-" . $month . "-" . $day;
+		// if (DateTime::createFromFormat('Y-m-d', $birthday) == FALSE) {
+			// $valid = 0;
+			// $message .= 'Xin nhập ngày sinh đúng định dạng.<br>';
+		// }
+   // }
 	if(!isset($phone)) {
 		$valid = 0;
 		$message .= 'Xin nhập số điện thoại.<br>';
@@ -152,10 +151,10 @@ if(isset($_POST['form1'])) {
       $message .= 'Xin nhập email đúng định dạng.<br>';
    }
 	
-	if(!isset($address)) {
-		$valid = 0;
-		$message .= 'Xin nhập địa chỉ nơi ở hiện nay.<br>';
-    }
+	//if(!isset($address)) {
+		// $valid = 0;
+		// $message .= 'Xin nhập địa chỉ nơi ở hiện nay.<br>';
+    // }
    if(!is_numeric($pid_rate)) {
 		$valid = 0;
       $message .= 'Xin nhập số tiền đấu giá.<br>';
@@ -170,12 +169,9 @@ if(isset($_POST['form1'])) {
          $statement->execute(array($fullname, $birthday, $phone, $email, $address, $position_level, $pid_rate));
          $message = "<span style=\"text-transform: uppercase;\">Đấu giá thành công</br></br>"
             . "<b>Họ và tên: </b>" . $fullname . "</br>"
-            . "<b>Ngày sinh: </b>" . $birthday . "</br>"
             . "<b>Số điện thoại: </b>" . $phone . "</br>"
             . "<b>Email: </b>" . $email . "</br>"
-            . "<b>Địa chỉ: </b>" . $address . "</br>"
-            . "<b>Chức vụ: </b>" . $position_level . "</br>"
-            . "<b>Số tiền đấu giá là </b>" . "<span style=\"color:green\"><b>" . money_format('%i', $pid_rate) . "</b></span></br>"
+            . "<b>Số tiền đấu giá là </b>" . "<span style=\"color:green\"><b>" . format_money($pid_rate, 'VND') . "</b></span></br>"
             . ".</span>";
       } catch (Exception $e) {
          $valid = 0;
@@ -213,12 +209,12 @@ if(isset($_POST['form1'])) {
          });";
       echo '</script>';
    }
+}
 
-} 
-
-function isEmail($email)
+function format_money($number, $currency)
 {
-    return filter_var($email, FILTER_VALIDATE_EMAIL);
+	$formatter = number_format($number, 2);
+    return $formatter . ' ' . $currency;
 }
 ?>
 
@@ -227,7 +223,7 @@ function isEmail($email)
 	<h2>The Anatomy of a Golfer lV, Atelier</h2>
 	<p>-Thể loại: Tác phẩm điêu khắc</p>
 	<p>-Người Tặng: <span style="font-weight:bold">Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</span></p>
-	<p>-Giá khởi điểm: <span class="price"> <?php echo(money_format('%i', 8700)); ?></span></p>
+	<p>-Giá khởi điểm: <span class="price"> <?php echo(format_money(200000000, 'VND')); ?></span></p>
 	<p class="des">-The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...</p>
 	<button onclick="OpenAuctionPopup();">ĐẤU GIÁ</button>
 </div>
@@ -244,7 +240,7 @@ function isEmail($email)
                <div class="swal2-des">
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Thể loại:</span> Tác phẩm điêu khắc</p>
                   <p style="line-height:1.5;font-weight: bold;"><span style="color:#197114;font-weight: bold;">Người tặng:</span> Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</p>
-                  <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Gía khởi điểm:</span><span style="color: #197114;font-size: 20px;"> <?php echo(money_format('%i', 8700)); ?></span></p>
+                  <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Giá khởi điểm:</span><span style="color: #197114;font-size: 20px;"> <?php echo(format_money(200000000, 'VND')); ?></span></p>
                   <p style="line-height:1.5"><span style="color:#197114;font-weight: bold;">Mô tả sản phẩm:</span>The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.</p>
                </div>
             </div>
@@ -257,22 +253,22 @@ function isEmail($email)
             <label for="fullname" class="swal2-input-label" id="fullname-label">Họ và tên <span style="color: red;">*</span></label>
             <input class="swal2-input" id="fullname" name="fullname" placeholder="" type="text" style="display: flex; color: black;">
             <div class="swal2-validation-message" id="fullname-validation-message"></div>
-            <label for="birthday" class="swal2-input-label" id="birthday-label">Ngày tháng năm sinh <span style="color: red;">*</span></label>
-            <input class="swal2-input" id="birthday" name="birthday" placeholder="dd/mm/yyyy" type="text" style="display: flex; color: black;">
-            <div class="swal2-validation-message" id="birthday-validation-message"></div>
+            <label style="display: none;" for="birthday" class="swal2-input-label" id="birthday-label">Ngày tháng năm sinh <span style="color: red;">*</span></label>
+            <input style="display: none;" class="swal2-input" id="birthday" name="birthday" placeholder="dd/mm/yyyy" type="text" style="display: flex; color: black;">
+            <div style="display: none;" class="swal2-validation-message" id="birthday-validation-message"></div>
             <label for="phone" class="swal2-input-label" id="phone-label">Số điện thoại <span style="color: red;">*</span></label>
             <input class="swal2-input" id="phone" name="phone" placeholder="" type="text" style="display: flex; color: black;">
             <div class="swal2-validation-message" id="phone-validation-message"></div>
             <label for="email" class="swal2-input-label" id="email-label">Email <span style="color: red;">*</span></label>
             <input class="swal2-input" id="email" name="email" placeholder="" type="text" style="display: flex; color: black;">
             <div class="swal2-validation-message" id="email-validation-message"></div>
-            <label for="address" class="swal2-input-label" id="address-label">Nơi ở hiện nay <span style="color: red;">*</span></label>
-            <input class="swal2-input" id="address" name="address" placeholder="" type="text" style="display: flex; color: black;">
-            <div class="swal2-validation-message" id="address-validation-message"></div>
-            <label for="position_level" class="swal2-input-label" id="position_level-label">Chức vụ </label>
-            <input class="swal2-input" id="position_level" name="position_level" placeholder="" type="text" style="display: flex; color: black;">
-            <div class="swal2-validation-message" id="position_level-validation-message"></div>
-			   <label for="pid_rate" class="swal2-input-label" id="pid_rate-label">Số tiền đấu giá (USD) <span style="color: red;">*</span></label>
+            <label style="display: none;" for="address" class="swal2-input-label" id="address-label">Nơi ở hiện nay <span style="color: red;">*</span></label>
+            <input style="display: none;" class="swal2-input" id="address" name="address" placeholder="" type="text" style="display: flex; color: black;">
+            <div style="display: none;" class="swal2-validation-message" id="address-validation-message"></div>
+            <label style="display: none;" for="position_level" class="swal2-input-label" id="position_level-label">Chức vụ </label>
+            <input style="display: none;" class="swal2-input" id="position_level" name="position_level" placeholder="" type="text" style="display: flex; color: black;">
+            <div style="display: none;" class="swal2-validation-message" id="position_level-validation-message"></div>
+			<label for="pid_rate" class="swal2-input-label" id="pid_rate-label">Số tiền đấu giá (VND) <span style="color: red;">*</span></label>
             <input class="swal2-input" id="pid_rate" name="pid_rate" placeholder="" type="text" style="display: flex; color: black;">
             <div class="swal2-validation-message" id="pid_rate-validation-message"></div>
          </div>
