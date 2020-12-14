@@ -11,6 +11,22 @@ if(isset($_GET["view"])) {
 <html lang="en">
 
 <head>
+	<!-- SEO -->
+    <title>Golf Club Championship 2020</title>
+	<meta name="description" content="GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA">
+	<meta name="keywords" content="">
+	<meta name="og:title" content="Golf Club Championship 2020">
+	<meta name="og:description" content="GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA">
+	<meta name="og:image" content="../assets/images/logo.png">
+    
+	<meta property="og:image" content="../assets/images/bg.jpg">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1024">
+	<meta property="og:image:height" content="576">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <meta name="robots" content="noodp, noydir">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -124,7 +140,7 @@ if(isset($_GET["view"])) {
 			}
 		};
 	</script>
-    <title>Vietnam Racing Website</title>
+    <title>Golf Club Championship 2020</title>
 </head>
 
 <body>
@@ -134,79 +150,12 @@ if(isset($_GET["view"])) {
    <div class="dashboard-main-wrapper">
       <div class="dashboard-header">
          <nav class="navbar navbar-expand-lg bg-white fixed-top">
-            <a href="http://vietnamracing.com.vn/" class="navbar-brand">Vietnam Racing Webite</a>
+            <a href="<?php echo($domain);?>" class="navbar-brand">Golf Club Championship 2020</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
-               <ul class="navbar-nav ml-auto navbar-right-top">
-                  <li class="nav-item dropdown notification">
-                     <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i><span class="indicator"></span></a>
-                     <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
-                        <li>
-                           <div class="notification-title">Notification</div>
-                           <div class="notification-list">
-                              <div class="list-group" runat="server" id="newest_comments"></div>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="list-footer"><a href="#" onclick="return GoTo('ViewMyComment');">Xem tất cả tin nhắn</a></div>
-                        </li>
-                     </ul>
-                  </li>
-                  <li class="nav-item dropdown connection">
-                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-th"></i></a>
-                     <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
-                        <li class="connection-list">
-                           <div class="row">
-                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                 <a title="Hướng dẫn sử dụng" href="/quanlymaudon.aspx?md_page=help" class="connection-item" id="fa_th1">
-                                 <img src="/DesktopModules/QuanLyMauDon/Source/Images/Help.png" alt="">
-                                 <span>Hướng dẫn sử dụng</span></a>
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                 <a title="Quản lý đăng ký và môn học" href="/DesktopModules/QuanLyMauDon/Source/DangKyMonHoc/CourseManagement.aspx" class="connection-item" id="fa_th2">
-                                 <img src="/DesktopModules/QuanLyMauDon/Source/Images/CourseManagement.png" alt="">
-                                 <span>Quản lý đăng ký và môn học</span></a>
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                 <a title="Quản lý danh sách đơn sinh viên" href="/quanlymaudon.aspx?md_page=ticketmanagement" class="connection-item">
-                                 <img src="/DesktopModules/QuanLyMauDon/Source/Images/clipboard-list-icon.png" alt="">
-                                 <span>Quản lý danh sách đơn sinh viên</span></a>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                 <a title="Thiết lập hệ thống Nộp Đơn" href="/quanlymaudon.aspx?md_page=systemconfiguration" class="connection-item">
-                                 <img src="/DesktopModules/QuanLyMauDon/Source/Images/200561-200.png" alt="">
-                                 <span>Thiết lập hệ thống Nộp Đơn</span></a>
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                 <a title="Văn thư" href="/vănthư.aspx" class="connection-item">
-                                 <img src="/DesktopModules/OnlineDocumentArchive/View/Images/add.png" alt=""><span>Văn thư</span></a>
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                 <a title="Báo lỗi" href="/quanlymaudon.aspx?md_page=feedback" class="connection-item">
-                                 <img src="/DesktopModules/QuanLyMauDon/Source/Images/Feedback.png" alt="">
-                                 <span>Báo lỗi</span></a>
-                              </div>
-                           </div>
-                        </li>
-                     </ul>
-                  </li>
-                  <li class="nav-item dropdown nav-user">
-                     <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     <img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle" runat="server" id="current_user_photo"/></a>
-                     <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
-                        <div class="nav-user-info">
-                           <h5 class="mb-0 text-white nav-user-name" runat="server" id="user_display_name"></h5>
-                           <span class="status"></span><span class="ml-2" runat="server" id="user_type"></span>
-                        </div>
-                        <a class="dropdown-item" href="#" runat="server" id="user_link"><i class="fas fa-user mr-2"></i>Account</a>
-                        <a class="dropdown-item" href="#" onclick="return Logout();"><i class="fas fa-power-off mr-2"></i>Logout</a>
-                     </div>
-                  </li>
-               </ul>
+               <a class="dropdown-item" href="#" onclick="return Logout();" style="text-align: right;"><i class="fas fa-power-off mr-2"></i>Logout</a>
             </div>
          </nav>
       </div>

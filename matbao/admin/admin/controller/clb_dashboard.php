@@ -374,7 +374,7 @@ function RemoveCaulacboImages($image_indexes, $id, $pdo){
                                                     <th>Mô Tả</th>
                                                     <th>Link Ngoài</th>
                                                     <th>Hình Ảnh</th>
-                                                    <th>Ngày Nhởi Tạo</th>
+                                                    <th>Ngày Khởi Tạo</th>
 													<th></th>
                                                 </tr>
                                             </thead>
@@ -455,7 +455,7 @@ function RemoveCaulacboImages($image_indexes, $id, $pdo){
                                                     <th>Mô Tả</th>
                                                     <th>Link Ngoài</th>
                                                     <th>Hình Ảnh</th>
-                                                    <th>Ngày Nhởi Tạo</th>
+                                                    <th>Ngày Khởi Tạo</th>
 													<th></th>
                                                 </tr>
                                             </tfoot>

@@ -218,15 +218,58 @@ function format_money($number, $currency)
 }
 ?>
 
-<div class="auction-card">
-	<img src="auction/images/products/The_Anatomy_of_a_Golffe_IV.jpg" alt="Denim Jeans" style="width:100%">
-	<h2>The Anatomy of a Golfer lV, Atelier</h2>
-	<p>-Thể loại: Tác phẩm điêu khắc</p>
-	<p>-Người Tặng: <span style="font-weight:bold">Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS</span></p>
-	<p>-Giá khởi điểm: <span class="price"> <?php echo(format_money(200000000, 'VND')); ?></span></p>
-	<p class="des">-The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...</p>
-	<button onclick="OpenAuctionPopup();">ĐẤU GIÁ</button>
-</div>
+<?php
+$sql = "SELECT * FROM auction_product ORDER BY create_date DESC LIMIT 10";
+$statement = $pdo->prepare($sql);
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+if (count($result) > 0)
+{
+	$counter = 1;
+
+	foreach ($result as $row)
+	{
+		$id = $row["id"];
+		$pro_name = $row["pro_name"];
+		$pro_short_description = $row["pro_short_description"];
+		$pro_description = $row["pro_description"];
+		$pro_type = $row["pro_type"];
+		$price = $row["price"];
+		$currency = $row["currency"];
+		$start_date = date_create($row["start_date"]);
+		$end_date = date_create($row["end_date"]);
+		$extra_option = $row["extra_option"];
+		$create_date = date_create($row["create_date"]);
+
+		$first_image = "";
+		$img_url_array = GetImageLinks($row["picture"], $domain);
+		if (count($img_url_array) > 0)
+		{
+			$first_image = '<img src="' . $img_url_array[0] . '" alt="' . $pro_name . '" style="width:100%"/><br/>';
+		}
+		echo ('<div class="auction-card">');
+		echo ($first_image . "
+			<h2>" . $pro_name . "</h2>" . "
+			<p>- Thể loại: " . $pro_type . "</p>" . "
+			<p>- Giá hiện tại: " . $price . "</p>" . "
+			<p>" . $extra_option . "</p>" . "
+			<p class='des'> " . $pro_short_description . "</p>" . "
+			<button onclick='OpenAuctionPopup();'>ĐẤU GIÁ</button>");
+		echo ("</div>");
+
+		$counter++;
+	}
+	if ($counter == 1)
+	{
+		echo ("No record");
+	}
+}
+else
+{
+	echo ("No record");
+}
+?>
 
 <form id="form1" action="" method="post" enctype="multipart/form-data" >
    <div class="swal2a-container swal2a-center swal2-backdrop-show" style="display: none;" id="aution_form">

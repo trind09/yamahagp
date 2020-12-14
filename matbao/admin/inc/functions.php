@@ -101,3 +101,53 @@ function js_array($array)
     $temp = array_map('js_str', $array);
     return '[' . implode(',', $temp) . ']';
 }
+
+function BuildClientDateTime($datetime){
+	$value = (new DateTime($datetime))->format('c');
+	$value = explode("+", $value);
+	return $value[0];
+}
+
+
+
+function ShowMessage($message, $arg){
+	echo ("<style>.alert {
+		  padding: 20px;
+		  background-color: #f44336;
+		  color: white;
+		  text-align: center;
+		}
+
+		.success {
+			padding: 20px;
+			background-color: green;
+			color: white;
+			text-align: center;
+		}
+
+		.closebtn {
+		  margin-left: 15px;
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  font-size: 22px;
+		  line-height: 20px;
+		  cursor: pointer;
+		  transition: 0.3s;
+		}
+
+		.closebtn:hover {
+		  color: black;
+		}</style>");
+	if($arg){
+		echo("<div class='success'>
+			  <span class='closebtn' onclick='$(this.parentElement).hide();'>&times;</span> 
+			  " . $message . "
+			</div>");
+	} else {
+		echo("<div class='alert'>
+			  <span class='closebtn' onclick='$(this.parentElement).hide();'>&times;</span> 
+			  " . $message . "
+			</div>");
+	}
+}
