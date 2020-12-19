@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 function GetLicenseFile($agr, $str, $domain){
 	$pieces = explode("|", $str);
 	foreach ($pieces as $piece) {	
@@ -149,5 +149,73 @@ function ShowMessage($message, $arg){
 			  <span class='closebtn' onclick='$(this.parentElement).hide();'>&times;</span> 
 			  " . $message . "
 			</div>");
+	}
+}
+
+function format_money($number, $currency)
+{
+	$formatter = number_format($number, 2);
+    return $formatter . ' ' . $currency;
+}
+
+function ShowSwalMessage($message, $is_error, $do_after_script){
+	if (isset($message)){
+		if (!$is_error){
+			echo '<script language="javascript">';
+			echo "$(document).ready(function() {
+				swal({
+				title: '<strong>Notification</strong>',
+				html: '" . $message . "',
+				type: 'error',
+				confirmButtonText: 'Ok'
+				}).then((result) => {
+				if (!result.isConfirmed) {
+					" . $do_after_script . "
+				}
+				});
+				});";
+			echo '</script>';
+		} else {
+			echo '<script language="javascript">';
+			echo "$(document).ready(function() {  
+				swal({
+				title: '<strong>Notification</strong>',
+				html: '". $message . "',
+				type: 'success',
+				confirmButtonText: 'Ok'
+				}).then((result) => {
+					" . $do_after_script . "
+				});
+				});";
+			echo '</script>';
+		}
+	}
+}
+
+
+function SendMail($mail, $subject, $message, $sender_email, $sender_name, $reply_to_email, $reply_to_name, $to_email, $to_name, $cc_emails){
+	$mail->setFrom($sender_email, $sender_name);
+    $mail->addAddress($to_email, $to_name);
+    $mail->addReplyTo($reply_to_email, $reply_to_name);
+	if ($cc_emails != null){
+		foreach ($cc_emails as $cc_email)
+		{
+			$mail->AddCC($cc_email);
+		}
+	}
+	
+	$mail->IsHTML(true);
+    $mail->Subject = $subject;
+
+    $mail->Body = $message;
+	$mail->AltBody = strip_tags($message);
+	try{
+		if(!$mail->Send()) {
+		  return $mail;
+		} else {
+		  return null;
+		}
+	} catch (Exception $e){
+		return $e;
 	}
 }

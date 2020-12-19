@@ -1,5 +1,21 @@
 ﻿<?php include 'inc/config.php'; ?>
 <?php include 'inc/functions.php'; ?>
+<?php session_start(); ?>
+<?php
+require 'mail/PHPMailer.php';
+require 'mail/Exception.php';
+require 'mail/SMTP.php';
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail->SMTPDebug = 0;                      // Enable verbose debug output
+$mail->isSMTP();                                            // Send using SMTP
+$mail->Host       = $smtp_host;                    // Set the SMTP server to send through
+$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+$mail->Username   = $smtp_username;                     // SMTP username
+$mail->Password   = $smtp_password;                               // SMTP password
+$mail->SMTPSecure = $smtp_secure;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+$mail->Port       = $smtp_port;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+$mail->CharSet = 'UTF-8';				//PHPMailer character encoding support
+?>
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
@@ -48,6 +64,10 @@
 		function changeVid(youtubeUrl){
 			$('.video-div').attr('src', youtubeUrl);
 		};
+
+		function ShowProfile(){
+			$('#login_form').show();
+		}
 	</script>
 	<!-- Start: Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2075FRD1R"></script>
@@ -452,7 +472,7 @@
 <section id="TCBC_RACETOMIENTRUNG">
 	<div class="contain" style="text-align: center;">
 		<h4 style="text-align: center;">RACE TO MIEN TRUNG </h4>
-		<h2 style="text-align: center;">Hãy cho chúng tôi biết bất cứ sản phẩm nào bạn yêu thích dưới đây, cho biết số tiền muốn đấu và số điện thoại của bạn</h2>
+		<h2 style="text-align: center;">Xin mời quý vị bắt đầu đấu giá những sản phẩm mình yêu thích</h2>
 		<br/><br/>
 	</div>
 	<?php include 'auction/auction.php';?>
@@ -717,17 +737,20 @@ $(window).on("load", function() {
 
 <!--Call me, register, booking ticket block-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<script type="text/javascript">
-	$(document).scroll(function() {
-	  var y = $(this).scrollTop();
-	  if (y > 600) {
-	    $('.wrap-ticket-regi').fadeIn();
-	  } else {
-	    $('.wrap-ticket-regi').fadeOut();
-	  }
-	});
-</script>
+<style>
+	@media (max-width: 767px){
+		.wrap-ticket-regi {
+			top: 2%!important;
+		}
+	}
+</style>
 <div class="wrap-phone">
+	<div class="wrap-ticket-regi" style="top:-25%">	
+		<div class="muave animate__animated animate__zoomIn animate__slower" style="width:145%"><span style="color:white">Tài khoản của tôi</span></div>
+		<div class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
+		</div>
+		<a style="cursor: pointer;" onclick="ShowProfile();"><img style="top:11%" src="assets/images/user.png"></a>
+	</div>
 	<div class="numbershow animate__animated animate__zoomIn animate__slower"><span style="color:white">☎ 0817884477</span></div>
 	<div class="phoneamination animate__animated animate__zoomIn animate__infinite animate__slower"></div>
 	<a href="tel:0817884477" title="Tel: 0817884477"><i class="material-icons call-me shak-icon">phone</i></a>

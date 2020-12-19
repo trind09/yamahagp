@@ -25,7 +25,7 @@
   height: 10px;
 }
 .swalslides::-webkit-scrollbar-thumb {
-  background: #9c2424;
+  background: #2aa71b4;
   border-radius: 10px;
 }
 .swalslides::-webkit-scrollbar-track {
@@ -57,7 +57,7 @@
   display: inline-flex;
   width: 1.5rem;
   height: 1.5rem;
-  background: #9c2424;
+  background: #2aa71b4;
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@
     top: 35%;
     right: 0;
     font-size: 25pt;
-    color: #9c2424;
+    color: #2aa71b4;
     cursor: pointer;
 }
 
@@ -87,12 +87,12 @@
     top: 35%;
     left: 0;
     font-size: 25pt;
-    color: #9c2424;
+    color: #2aa71b4;
     cursor: pointer;
 }
 
 .swal2-popup .swal2-styled.swal2-confirm {
-    background-color: #9c2424 !important;
+    background-color: #2aa71b4 !important;
 }
 
 /* Don't need button navigation */
