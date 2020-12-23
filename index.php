@@ -31,7 +31,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
-	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/desktop.css'); ?>" type="text/css" />
@@ -714,8 +714,6 @@ $(window).on("load", function() {
       <p class="copyright">© 2020 Copyright <a href="https://www.facebook.com/vietnamracingacademy" target="_blank">Vietnam Racing Academy</a>. All rights reserved.</p>
    </footer>
 </section>
-
-<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
 <script src="assets/js/underscore.js"></script>
 <script src="assets/js/jquery.history.js"></script>

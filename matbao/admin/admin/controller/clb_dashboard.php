@@ -77,10 +77,10 @@ if (isset($_POST['insert_update'])){
 				echo('<script>alert("Incorrect image extension! ' . implode ("|", array_filter($error)) . '");</script>');
 			} else {
 				$image_name = implode ("|", array_filter($image_name));
-				$sql = "INSERT INTO caulacbo (image_name, title, description, hyperlink) VALUES "
-					. "(?,?,?,?)";
+				$sql = "INSERT INTO caulacbo (image_name, title, description, history, hyperlink) VALUES "
+					. "(?,?,?,?,?)";
 					$statement = $pdo->prepare($sql);
-					$statement->execute(array($image_name, $title, $description, $hyperlink));
+					$statement->execute(array($image_name, $title, $description, "Insert by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "</br>", $hyperlink));
 					$register_id = $pdo->lastInsertId();
 		
 				if ($register_id != 0){
@@ -139,7 +139,9 @@ if (isset($_POST['insert_update'])){
 				$image_name = implode ("|", array_filter($image_name)) . '|' . implode ("|", array_filter($existing_images));
 				$image_name = trim($image_name, "|"); //Remove start and end | 
 
-				$sql = "UPDATE `caulacbo` SET `image_name`=?,`title`=?,`description`=?,`hyperlink`=? WHERE id = ?";
+				$history = "Updated by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "</br>";
+
+				$sql = "UPDATE `caulacbo` SET `image_name`=?,`title`=?,`description`=?,`hyperlink`=?, history = IFNULL(CONCAT(history, '" . $history . "'), '" . $history . "') WHERE id = ?";
 				$statement = $pdo->prepare($sql);
 				$statement->execute(array($image_name, $title, $description, $hyperlink, $id));
 				BuildUpdateFields($id, $pdo, $domain);

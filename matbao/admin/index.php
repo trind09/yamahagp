@@ -6,14 +6,13 @@ require 'mail/PHPMailer.php';
 require 'mail/Exception.php';
 require 'mail/SMTP.php';
 $mail = new PHPMailer\PHPMailer\PHPMailer();
-$mail->SMTPDebug = 0;                      // Enable verbose debug output
-$mail->isSMTP();                                            // Send using SMTP
-$mail->Host       = $smtp_host;                    // Set the SMTP server to send through
-$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-$mail->Username   = $smtp_username;                     // SMTP username
-$mail->Password   = $smtp_password;                               // SMTP password
-$mail->SMTPSecure = $smtp_secure;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-$mail->Port       = $smtp_port;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+$mail->IsSMTP();  // telling the class to use SMTP
+$mail->Mailer = "smtp";
+$mail->Host = $smtp_host;
+$mail->Port = $smtp_port;
+$mail->SMTPAuth = true; // turn on SMTP authentication
+$mail->Username = $smtp_username; // SMTP username
+$mail->Password = $smtp_password; // SMTP password
 $mail->CharSet = 'UTF-8';				//PHPMailer character encoding support
 ?>
 <html class="no-js" lang="">
@@ -47,7 +46,7 @@ $mail->CharSet = 'UTF-8';				//PHPMailer character encoding support
     <meta name="HandheldFriendly" content="true">
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
-	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" type="text/css" />
@@ -719,8 +718,6 @@ $(window).on("load", function() {
       <p class="copyright">© 2020 Copyright <a href="https://www.facebook.com/Golf-Club-Championship-2020-100887741881243" target="_blank">Golf Club Championship 2020</a>. All rights reserved.</p>
    </footer>
 </section>
-
-<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
 <script src="assets/js/underscore.js"></script>
 <script src="assets/js/jquery.history.js"></script>

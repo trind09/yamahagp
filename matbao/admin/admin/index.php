@@ -85,6 +85,8 @@ if(isset($_GET["view"])) {
                 $('#auction_link').attr('class', 'nav-link active');
             } else if (view == 'aution_product') {
                 $('#aution_product_link').attr('class', 'nav-link active');
+            } else if (view == 'customer') {
+                $('#customer_link').attr('class', 'nav-link active');
             } else if (view == 'plan_pannel') {
                 $('#plan_pannel_link').attr('class', 'nav-link active');
             } else {
@@ -113,6 +115,8 @@ if(isset($_GET["view"])) {
                 location.href = "index.php?view=caulacbo_pannel";
             } else if (view == 'auction'){
 				location.href = "index.php?view=auction";
+			} else if (view == 'customer'){
+				location.href = "index.php?view=customer";
 			} else if (view == 'aution_product'){
 				location.href = "index.php?view=aution_product";
 			} else if (view == 'plan_pannel') {
@@ -179,11 +183,12 @@ if(isset($_GET["view"])) {
                   <ul class="navbar-nav flex-column">
                      <li class="nav-divider">Menu</li>
                      <li class="nav-item ">
-                        <a onclick="return GoTo('reg_dashboard');" id="reg_dashboard_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Thông tin đăng ký thi đấu</a>
-                        <a onclick="return GoTo('caulacbo_pannel');" id="caulacbo_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách câu lạc bộ</a>
-						<a onclick="return GoTo('auction');" id="auction_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách người đấu giá</a>
+                        <a onclick="return GoTo('reg_dashboard');" id="reg_dashboard_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-address-book"></i>Thông tin đăng ký thi đấu</a>
+                        <a onclick="return GoTo('caulacbo_pannel');" id="caulacbo_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-trophy"></i>Danh sách câu lạc bộ</a>
+						<a onclick="return GoTo('auction');" id="auction_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-gavel"></i>Danh sách người đấu giá</a>
 						<a onclick="return GoTo('aution_product');" id="aution_product_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách sản phẩm đấu giá</a>
-						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách kế hoạch & điều lệ</a>
+						<a onclick="return GoTo('customer');" id="customer_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-user-circle"></i>Danh sách khách hàng</a>
+						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Danh sách kế hoạch & điều lệ</a>
                      </li>
                   </ul>
                </div>
@@ -202,6 +207,8 @@ if(isset($_GET["view"])) {
 				include 'controller/auction_dashboard.php';
 			} elseif ($view == "aution_product"){
 				include 'controller/aution_product_dashboard.php';
+			} elseif ($view == "customer"){
+				include 'controller/customer_dashboard.php';
 			} elseif ($view == "plan_pannel"){
 				include 'controller/pla_dashboard.php';
 			} else {
