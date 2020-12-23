@@ -299,27 +299,32 @@ if (!isset($_SESSION['customer_id'])) {
 		if ($valid == 0){
 			ShowSwalMessage($message, false, "$('#login_form').show();");
 		} else {
-			$sql = "SELECT * FROM customer where email = ? and password = ?;";
+			$sql = "SELECT * FROM customer where email = ?;";
 			$statement = $pdo->prepare($sql);
-			$statement->execute(array($email, $password));
+			$statement->execute(array($email));
 			$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 			if (count($result) > 0) {
 				foreach ($result as $row)
 				{
-					$id = $row["id"];
-					$_SESSION['customer_id'] = $id;
-					if ($_POST['selected_auction_product_id'] != ''){
-						//Try to catch selected product id to client to re-trigger product detail after login
-						$selected_auction_product_id = strip_tags($_POST['selected_auction_product_id']);
-						$selected_auction_product_id1 = strip_tags($_POST['selected_auction_product_id']);
-						ShowSwalMessage("Đăng nhập thành công", true, "$('#nut_dau_gia" . $selected_auction_product_id . "').click();");
-					 } else {
-					 	 ShowSwalMessage("Đăng nhập thành công", true, "ShowProfile();");
-					 }
+					$password_hash = $row["password"];
+					if (PasswordVerify($password, $password_hash)){
+						$id = $row["id"];
+						$_SESSION['customer_id'] = $id;
+						if ($_POST['selected_auction_product_id'] != ''){
+							//Try to catch selected product id to client to re-trigger product detail after login
+							$selected_auction_product_id = strip_tags($_POST['selected_auction_product_id']);
+							$selected_auction_product_id1 = strip_tags($_POST['selected_auction_product_id']);
+							ShowSwalMessage("Đăng nhập thành công", true, "$('#nut_dau_gia" . $selected_auction_product_id . "').click();");
+						 } else {
+					 		 ShowSwalMessage("Đăng nhập thành công", true, "ShowProfile();");
+						 }
+					} else {
+						ShowSwalMessage('Sai mật khẩu.', false, "$('#login_form').show();");
+					}
 				}
 			} else {
-				ShowSwalMessage('Email và mật khẩu không đúng', false, "$('#login_form').show();");
+				ShowSwalMessage('Email không tồn tại.', false, "$('#login_form').show();");
 			}
 		}
 	} else if (isset($_POST['register_form'])){
@@ -364,7 +369,7 @@ if (!isset($_SESSION['customer_id'])) {
 					 . "email, address, position_level, password) VALUES "
 					 . "(?,?,?,?,?,?,?)";
 					 $statement = $pdo->prepare($sql);
-					 $statement->execute(array($fullname, '', $phone, $email, '', '', $password));
+					 $statement->execute(array($fullname, '', $phone, $email, '', '', PasswordHash($password)));
 					 $sql = "SELECT * FROM customer where email = ?;";
 					 $register_id = $pdo->lastInsertId();
 					 $_SESSION['customer_id'] = $register_id;

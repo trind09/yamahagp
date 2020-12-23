@@ -1,7 +1,7 @@
 ﻿<?php
 if (isset($_POST['profile_form'])) {
     unset($_SESSION['customer_id']);
-	ShowSwalMessage("Bạm đã đăng xuất thành công.", false, "");
+	ShowSwalMessage("Bạn đã đăng xuất thành công.", false, "");
 	header('Location: index.php');
 }
 $customer_id = null;
@@ -98,18 +98,23 @@ if (isset($_SESSION['customer_id'])) {
 			ShowSwalMessage($message, false, "$('#update_password_form').show();");
 		} else {
 			try{
-				$sql = "SELECT * FROM customer where id = ? and password=?;";
+				$sql = "SELECT * FROM customer where id = ?;";
 				$statement = $pdo->prepare($sql);
-				$statement->execute(array($customer_id, $current_password));
+				$statement->execute(array($customer_id));
 				$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 				if (count($result) > 0) {
-					$sql = "UPDATE customer SET password=? where id = " . $customer_id;
-					$statement = $pdo->prepare($sql);
-					$statement->execute(array($new_password));
-					ShowSwalMessage("Cập nhật thành công", true, "ShowProfile();");
+					$password_hash = $result[0]["password"];
+					if (PasswordVerify($current_password, $password_hash)){
+						$sql = "UPDATE customer SET password=? where id = " . $customer_id;
+						$statement = $pdo->prepare($sql);
+						$statement->execute(array(PasswordHash($new_password)));
+						ShowSwalMessage("Cập nhật thành công", true, "ShowProfile();");
+					} else {
+						ShowSwalMessage("Mật khẩu cũ không chính xác.", false, "$('#update_password_form').show();");
+					}
 				} else {
-					ShowSwalMessage("Mật khẩu cũ không chính xác.", false, "$('#update_password_form').show();");
+					ShowSwalMessage("User không tồn tại.", false, "$('#update_password_form').show();");
 				}
 			} catch (Exception $e) {
 				ShowSwalMessage($e, false, "$('#update_password_form').show();");
@@ -134,7 +139,8 @@ if (isset($_SESSION['customer_id'])) {
 			$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 			if (count($result) > 0) {
-				$password = $result[0]["password"];
+				$customer_id = $result[0]["id"];
+				$password = RandomPassword();
 				$fullname = $result[0]["fullname"];
 				$email = $result[0]["email"];
 				$mailcontent = '<p>Dear ' . $fullname . '</p>'
@@ -147,6 +153,9 @@ if (isset($_SESSION['customer_id'])) {
 				if ($result != null){
 					ShowSwalMessage("Send mail fail. Please contact your admin!", false, "$('#send_password_form').show();");
 				} else {
+					$sql = "UPDATE customer SET password=? where id = " . $customer_id;
+					$statement = $pdo->prepare($sql);
+					$statement->execute(array(PasswordHash($password)));
 					ShowSwalMessage("Mật khẩu đã được gửi đến email của bạn.", true, "$('#login_form').show();");
 				}
 			} else {
