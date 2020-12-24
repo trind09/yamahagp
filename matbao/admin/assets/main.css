@@ -3130,8 +3130,6 @@ footer .copyright a:hover {
   background-size: cover;
   padding: 13vh 0 20px 0;
   position: relative;
-  z-index: 2;
-  margin-top: -12vh;
 }
 /* line 1209, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #gallery > * {
@@ -3559,7 +3557,6 @@ footer .copyright a:hover {
 
 /* line 1560, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .js-photo {
-  z-index: 2;
   position: relative;
 }
 
@@ -5040,7 +5037,6 @@ footer .copyright a:hover {
   /* line 1060, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */
   #gallery {
     height: 165vh;
-    margin-top: -14vh;
   }
 
   /* line 1064, ../../../../../../Digitop/2017/assets/scss/module/_reponsive.scss */

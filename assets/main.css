@@ -3140,7 +3140,6 @@ footer .copyright a:hover {
   background-size: cover;
   padding: 13vh 0 20px 0;
   position: relative;
-  z-index: 2;
 }
 /* line 1209, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 #gallery > * {
@@ -3569,7 +3568,6 @@ footer .copyright a:hover {
 
 /* line 1560, ../../../../../../Digitop/2017/assets/scss/module/_home.scss */
 .js-photo {
-  z-index: 2;
   position: relative;
 }
 

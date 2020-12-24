@@ -645,6 +645,26 @@ $(window).on("load", function() {
 </section>
 
 <section id="news">
+	<script>
+		function ShowNewsDetail(id){
+			var url = '<?php echo $domain; ?>' + 'news_detail.php?id=' + id;
+			$('#news_detail_iframe').attr('src', url);
+			$('#news_detail_panel').attr('style', 'display: -webkit-box;');
+		}
+
+		function CloseNewsDetailPanel(){
+			$('#news_detail_iframe').attr('src', '');
+			$('#news_detail_panel').attr('style', 'display: none;');
+		}
+	</script>
+	<div class="swal2a-container swal2a-center swal2-backdrop-show" style="display: none;" id="news_detail_panel">
+		<div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="width: 1200px; display: flex;">
+			<div class="swal2-content" style="text-align: center;">
+				<iframe id="news_detail_iframe" height="600px" width="100%"></iframe>
+				<button type="button" class="swal2-confirm swal2-styled" aria-label="" style="display: inline-block; background: orange !important;" onclick="CloseNewsDetailPanel();">&#10006; Đóng</button>
+			</div>
+		</div>
+	</div>
 	<div class="contain">
 		<h4 style="text-align: center;">tin tức</h4>
 		<h2>Mới Nhất</h2>

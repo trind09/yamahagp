@@ -602,50 +602,31 @@ $(window).on("load", function() {
 </section>
 
 <section id="news">
+	<script>
+        function ShowNewsDetail(id){
+            var url = '<?php echo $domain; ?>' + 'news_detail.php?id=' + id;
+            $('#news_detail_iframe').attr('src', url);
+            $('#news_detail_panel').attr('style', 'display: -webkit-box;');
+        }
+
+        function CloseNewsDetailPanel(){
+            $('#news_detail_iframe').attr('src', '');
+            $('#news_detail_panel').attr('style', 'display: none;');
+        }
+    </script>
+    <div class="swal2a-container swal2a-center swal2-backdrop-show" style="display: none;" id="news_detail_panel">
+        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="width: 1200px; display: flex;">
+            <div class="swal2-content" style="text-align: center;">
+                <iframe id="news_detail_iframe" height="600px" width="100%"></iframe>
+                <button type="button" class="swal2-confirm swal2-styled" aria-label="" style="display: inline-block; background: orange !important;" onclick="CloseNewsDetailPanel();">&#10006; Đóng</button>
+            </div>
+        </div>
+    </div>
 	<div class="contain">
 		<h4 style="text-align: center;">tin tức</h4>
 		<h2>Mới Nhất</h2>
 		<div class="js-news" role="toolbar">
-			<div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="assets/news/Giai_dua_Motul_Motor_Racing_Cup_sap.htm" tabindex="0"><img src="assets/images/Poster-Sponsor-VR-Event-3-1068x1488.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="assets/news/Giai_dua_Motul_Motor_Racing_Cup_sap.htm" tabindex="0">Giải đua Motul Motor Racing Cup sắp “Bùng nổ” tại chương trình Vietnam Racing Festival 2020</a></h4>
-					<p>Ngày 12/12 tới đây, GIẢI ĐUA MOTUL MOTOR RACING CUP hệ UB150 sẽ “BÙNG NỔ” tại Trường đua Đại Nam. Được biết giải đua này nằm trong chuỗi sự kiện VIETNAM RACING FESTIVAL 2020 do VR Academy tổ chức.</p>
-					<a href="assets/news/Giai_dua_Motul_Motor_Racing_Cup_sap.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="assets/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" tabindex="0"><img src="assets/news/images/Họp-báo-VR-Fest-2020-5-1.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="assets/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" tabindex="0">Họp báo Lễ hội đua xe VietNam Racing Fest 2020, chuyên nghiệp đầu tiên tại Việt Nam</a></h4>
-					<p>Sáng này 03/11/2020 tại sân Golf Tân Sơn Nhất – Tp.Hồ Chí Minh, vừa diễn ra họp báo công bố chiến dịch Race To Miền Trung bao gồm: Một giải Golf lớn nhất trong năm 2020 và đặc biệt là sự kiện VietNam Racing Fest 2020 (VR Fest 2020) lễ hội đua xe chuyên nghiệp lần đầu tiên tổ chức tại Việt Nam.</p>
-					<a href="assets/news/Hop_bao_le_hoi_dua_xe_VietNam_Racing_Fest_2020.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="assets/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" tabindex="0"><img src="assets/news/images/VMA47C.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="assets/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" tabindex="0">Những người Việt Nam đầu tiên nhận bằng đua xe ô tô thể thao</a></h4>
-					<p>Ngày 04/07/2020, Hiệp hội Ô tô Thể thao Việt Nam phối hợp cùng Công ty TNHH Hiệp hội Thể thao Xe động cơ (VMA) - thành viên của Liên đoàn Ô tô Quốc tế (FIA) tổ chức Lễ trao bằng đua xe ô tô thể thao cho 32 tay đua người Việt Nam tại Trường đua Công thức 1 Hà Nội, nhằm công nhận thành tích và ghi nhận nỗ lực của các VĐV đua xe ô thể thao đầu tiên của Việt Nam khi là những người tiên phong trong môn thể thao tốc độ này.</p>
-					<a href="assets/news/Nhung_nguoi_viet_nam_dau_tien_nhan_bang_dua_xe_o_to_the_thao.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
-		   <div class="js-news--detail">
-			  <div class="news-item">
-				 <p class="thumb"><a href="assets/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0"><img src="assets/images/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.jpg"></a></p>
-				 <div class="copy">
-					<h4><a href="assets/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" tabindex="0">Thông tin chương trình VIETNAM RACING FESTIAL 2020</a></h4>
-					<p>Ngày hội đua xe thể thao chuyên nghiệp do Vietnam Racing Academy - VR tổ chức nhầm phát động phong trào RACE TO MIỀN TRUNG. Chương trình với sự đồng hành của hai thương hiệu lớn VINFAST và MOTUL. Ngày hội đua xe cũng là lễ hội âm nhạc EDM hoành tráng - WHERE’S YOUR LIMIT? với sự góp mặt của nhiều ca sĩ - DJ nổi tiếng và chương trình MOTUL STUNT SHOW 2020.</p>
-					<a href="assets/news/Thong_tin_chuong_trinh_VIETNAM_RACING_FESTIAL_2020.htm" class="viewmore" tabindex="0">Xem chi tiết</a>
-				 </div>
-			  </div>
-		   </div>
+			<?php include 'news.php'; ?>
 		</div>
 	</div>
 </section>

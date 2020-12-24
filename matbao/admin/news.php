@@ -1,46 +1,51 @@
 ﻿<?php
-$dir = "assets/news";
+$sql = "SELECT * FROM news ORDER BY create_date desc;";
+$statement = $pdo->prepare($sql);
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$files = array_slice(scandir($dir), 2);
-foreach ($files as $item) {
-    if (strpos( $item, '.htm' ) !== false){
-		$new_str = '<div class="js-news--detail"><div class="news-item">';
-		$news_title = "";
-		$news_description = "";
-		$withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $item);
-		$counter = 0;
-		$handle = fopen($dir . '/texts/' . $withoutExt . '.txt', "r");
-		$externallink = "";
-		if ($handle) {
-			while (($line = fgets($handle)) !== false) {
-				if ($counter == 0){
-					$news_title = $line;
-				} else if ($counter == 1){
-					$news_description = $line;
-				} else if ($counter == 2){
-					$externallink = $line;
-				}
-				$counter++;
-			}
-			fclose($handle);
+if (count($result) > 0)
+{
+	$counter = 1;
+	foreach ($result as $row)
+	{
+		$img_url_array = GetImageLinks($row["image_name"], $domain);
+		$id = $row["id"];
+		$title = $row["title"];
+		$description = $row["description"];
+		$content = $row["content"];
+		$hyperlink = $row["hyperlink"];
+		$hyperlink = '<a target="_blank" class="viewmore" href="' . $hyperlink . '">Xem thêm</a>';
+		if ($hyperlink == ''){
+			$hyperlink = '<a class="viewmore" style="cursor: pointer;">Xem thêm</a>';
 		}
-
-		if ($externallink != ""){
-			$new_str .= '<p class="thumb"><a href="' . $externallink . '"><img src="assets/news/images/' . $withoutExt . '.jpg"></a></p>';
-			$new_str .= '<div class="copy">';
-			$new_str .= '<h4><a href="'. $externallink . '" tabindex="0">' . $news_title . '</a></h4>';
-			$new_str .= '<p>' . $news_description . '</p>';
-			$new_str .= '<a href="' . $externallink . '" class="viewmore">Xem chi tiết</a>';
-		} else {
-			$new_str .= '<p class="thumb"><a href="assets/news/' . $item . '"><img src="assets/news/images/' . $withoutExt . '.jpg"></a></p>';
-			$new_str .= '<div class="copy">';
-			$new_str .= '<h4><a href="assets/news/' . $item . '">' . $news_title . '</a></h4>';
-			$new_str .= '<p>' . $news_description . '</p>';
-			$new_str .= '<a href="assets/news/' . $item . '" class="viewmore">Xem chi tiết</a>';
+		if ($content != ''){
+			$hyperlink = '<a target="_blank" class="viewmore" onclick="ShowNewsDetail(' . $id . ');" style="cursor: pointer;">Xem thêm</a>';
 		}
-		$new_str .= '</div></div></div>';
+		$first_image = "";
+		$img_url_array = GetImageLinks($row["image_name"], $domain);
+		if (count($img_url_array) > 0)
+		{
+			$first_image = '<img src="' . $img_url_array[0] . '" alt="' . $title . '" style="width:100%"/>';
+		}
+		echo ("<div class='news-item'>
+        <p class='thumb'>" . $first_image . "</p>
+        <div class='copy'>
+            <h4>". $title . "</h4>
+            <p>" . $description . "</p>
+            " . $hyperlink . "
+        </div>
+        </div>");
 
-		echo($new_str);
+		$counter++;
 	}
+	if ($counter == 1)
+	{
+		echo ("No record");
+	}
+}
+else
+{
+	echo ("No record");
 }
 ?>
