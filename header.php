@@ -1,4 +1,4 @@
-<?php include 'inc/config.php'; ?>
+﻿<?php include 'inc/config.php'; ?>
 <?php include 'inc/functions.php'; ?>
 <html class="no-js" lang="">
 <head>
@@ -31,17 +31,15 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
-	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-	<link rel="stylesheet" href="<?php echo auto_version('assets/index1/main1.css'); ?>" type="text/css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/desktop.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-	<script>
-		function changeVid(youtubeUrl){
-			$('.video-div').attr('src', youtubeUrl);
-		};
-	</script>
 	<!-- Start: Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2075FRD1R"></script>
     <script>
@@ -71,7 +69,8 @@
     /></noscript>
     <!-- End: Facebook Pixel Code -->
 </head>
-<body>
+<body style="background: #010300;">
+	<?php include 'racing_register.php';?>
     <header id="header">
       <div class="contain">
         <nav>
@@ -95,5 +94,3 @@
         </div>  
       </div>
     </header>
-</body>
-</html>
