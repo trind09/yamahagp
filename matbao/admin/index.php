@@ -727,7 +727,20 @@ $(window).on("load", function() {
 	  }
 	});
 </script>
+<style>
+	@media (max-width: 767px){
+	.wrap-ticket-regi {
+		top: 2%!important;
+	}
+	}
+</style>
 <div class="wrap-phone">
+	<div class="wrap-ticket-regi" style="top:-25%">	
+		<div class="muave animate__animated animate__zoomIn animate__slower" style="width:140%"><span style="color:white">Sản phẩm đấu giá</span></div>
+		<div class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
+		</div>
+		<a href="https://ticketbox.vn/vr-fest-2020#booking"><img style="top:11%" src="assets/images/ticket.png"></a>
+	</div>
 	<div class="numbershow animate__animated animate__zoomIn animate__slower"><span style="color:white">☎ 0817884477</span></div>
 	<div class="phoneamination animate__animated animate__zoomIn animate__infinite animate__slower"></div>
 	<a href="tel:0817884477" title="Tel: 0817884477"><i class="material-icons call-me shak-icon">phone</i></a>
