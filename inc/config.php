@@ -15,7 +15,6 @@ $site_name = "Golf Club Championship 2020";
 $smtp_host = "smtp.gmail.com";
 $smtp_port = 587;
 $smtp_username = 'admin@vietnamracing.com.vn';
-$smtp_password = 'chi5bao@123';
 $smtp_secure = 'tls';
 
 //Query to alter table to utf8 collation
