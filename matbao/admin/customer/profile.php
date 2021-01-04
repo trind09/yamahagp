@@ -56,19 +56,32 @@ if (isset($_SESSION['customer_id'])) {
 			ShowSwalMessage($message, false, "$('#update_profile_form').show();");
 		} else {
 			try{
-				$sql = "UPDATE customer SET fullname=?, phone = ? where id=?";
+				$sql = "SELECT * FROM customer where phone = ?;";
 				$statement = $pdo->prepare($sql);
-				$statement->execute(array($fullname, $phone, $customer_id));
-				ShowSwalMessage("Cập nhật thành công", true, "ShowProfile();");
-				echo('<script>
-				var customer_id = "' . $customer_id . '";
-				function ShowProfile(){
-					$("#p-fullname").html("' . $fullname . '");
-					$("#p-email").html("' . $email . '");
-					$("#p-phone").html("' . $phone . '");
-					$("#profile_form").show();
+				$statement->execute(array($phone));
+				$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+				if (count($result) > 0) {
+					foreach ($result as $row)
+					{
+						ShowSwalMessage("Số điện thoại đã được đăng ký. Xin đổi số điện thoại khác!", false, "$('#update_profile_form').show();");
+					}
 				}
-				</script>');
+				else {
+					$sql = "UPDATE customer SET fullname=?, phone = ? where id=?";
+					$statement = $pdo->prepare($sql);
+					$statement->execute(array($fullname, $phone, $customer_id));
+					ShowSwalMessage("Cập nhật thành công", true, "ShowProfile();");
+					echo('<script>
+					var customer_id = "' . $customer_id . '";
+					function ShowProfile(){
+						$("#p-fullname").html("' . $fullname . '");
+						$("#p-email").html("' . $email . '");
+						$("#p-phone").html("' . $phone . '");
+						$("#profile_form").show();
+					}
+					</script>');
+				}
 			} catch (Exception $e) {
 				ShowSwalMessage($e, false, "$('#update_profile_form').show();");
 			}

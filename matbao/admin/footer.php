@@ -31,7 +31,7 @@
 	}
 </style>
 <div class="wrap-phone">
-	<div class="wrap-ticket-regi" style="top:-25%">	
+	<div class="wrap-ticket-regi" style="top:-25%;<?php if (!$enable_auction_login) { echo 'display: none;'; } ?>">	
 		<div class="muave animate__animated animate__zoomIn animate__slower" style="width:145%"><span style="color:white">Tài khoản của tôi</span></div>
 		<div class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
 		</div>

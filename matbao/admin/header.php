@@ -58,6 +58,7 @@ $mail->CharSet = 'UTF-8';				//PHPMailer character encoding support
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/mobile.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/swal-slider.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/css/auction.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo auto_version('assets/css/social-share.css'); ?>" type="text/css" />
 
 	<script>
 		function changeVid(youtubeUrl){
