@@ -160,15 +160,15 @@ $( document ).ready(function() {
 				<div data-to="50% 0px" data-ts="preserve-3d" data-t="0" style="left:-20px;top:0px;width:1920px;height:960px;position:absolute;">
 					<img onclick="location.href = '#TCBC_RACETOMIENTRUNG';" data-to="50% 50%" data-t="1" style="left: 30%; top: 12%; width: 42%; height: 133px; position: absolute; opacity: 1; cursor: pointer; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: auto;" src="assets/images/RaceToMienTrung1.png" />
 					<div style="position: absolute; top: 22%; left: 27%; width: 44%;">
-						<a href="#TCBC_RACETOMIENTRUNG" class="animated-button1 btn-pannel-1" style="font-weight: bold;width: 100%;height:161px;background-image: linear-gradient(to right, rgb(75 255 0 / 34%), #A6E02F, rgb(75 255 0 / 34%));z-index: 1;font-size: 42pt;color: white;font-style: italic;font-family: 'FontAwesome';"><span></span><span></span><span></span><span></span>ĐẤU GIÁ<br/>
-						<span style="z-index: 1;font-size: 12pt;font-style: normal;width: 100%;left: 0;">Click here</span></a>
+						<a href="#TCBC_RACETOMIENTRUNG" class="animated-button1 btn-pannel-1" style="font-weight: bold;width: 100%;height:161px;background-image: linear-gradient(to right, rgb(33 43 29 / 34%), rgb(166, 224, 47), rgba(75, 255, 0, 0.34));z-index: 1;font-size: 42pt;color: white;font-style: italic;font-family: 'FontAwesome';font-weight:bold;font-style:normal"><span></span><span></span><span></span><span></span>ĐẤU GIÁ<br/>
+						<span style="z-index: 1;font-size: 12pt;font-style: normal;width: 100%;left: 0;font-style:italic">Click here</span></a>
 					</div>
 					<img onclick="location.href = '<?php echo($domain); ?>';" data-to="50% 50%" data-t="3" style="left:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/GolfClup.png" />
 					<img onclick="location.href = 'http://vietnamracing.com.vn/';"data-to="50% 50%" data-t="2" style="right:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/VietnamRacing.png" />
 					<div data-to="50% -200px" data-t="5" data-arr="4" style="left:18%;top:43%;text-transform: uppercase;width:100%;height:230px;position:absolute;opacity:0;color:white;font-size:16pt;font-weight:900;line-height:1.2;text-shadow:2px 2px #38003a;">
 						<div><a href="<?php echo($domain); ?>" class="animated-button1 btn-pannel-2" style="background-image: linear-gradient(to right, rgba(255,0,0,0), #A6E02F, rgb(75 255 0 / 34%)); color: white;"><span></span><span></span><span></span><span></span>GOLF &#10148;</a></div>
 						<div style="position: absolute; top: 0; right: 67%; font-size:26pt; color: white; padding-top: 27px;">&</div>
-						<div style="position: absolute; top: 0; right: 33%;"><a href="http://vietnamracing.com.vn/" class="animated-button1 btn-pannel-3" style="background-image: linear-gradient(to right, rgb(75 255 0 / 34%), #A6E02F, rgb(75 255 0 / 34%)); color: white;"><span></span><span></span><span></span><span></span>Racing &#10148;</a></div>
+						<div style="position: absolute; top: 0; right: 33%;"><a href="http://vietnamracing.com.vn/" class="animated-button1 btn-pannel-3" style="background-image: linear-gradient(to right, rgb(33 43 29 / 34%), rgb(166, 224, 47), rgba(75, 255, 0, 0.34)); color: white;"><span></span><span></span><span></span><span></span>Racing &#10148;</a></div>
 					</div>
 				</div>
 			</div>
