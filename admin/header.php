@@ -1,4 +1,4 @@
-﻿<head>
+<head>
 	<!-- SEO -->
     <title>Golf Club Championship 2020</title>
 	<meta name="description" content="GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA">
@@ -52,7 +52,7 @@
 		}
     </style>
 	<script>
-		function loadJQuery(){
+	function loadJQuery(){
 			var waitForLoad = function () {
 				if (typeof jQuery != "undefined") {
 					InitControls();     
@@ -81,6 +81,8 @@
                 $('#customer_link').attr('class', 'nav-link active');
             } else if (view == 'plan_pannel') {
                 $('#plan_pannel_link').attr('class', 'nav-link active');
+            } else if (view == 'gallery') {
+                $('#gallery_link').attr('class', 'nav-link active');
             } else {
 				$('#reg_dashboard_link').attr('class', 'nav-link active');
 			}
@@ -115,6 +117,8 @@
 				location.href = "index.php?view=aution_product";
 			} else if (view == 'plan_pannel') {
                 location.href = "index.php?view=plan_pannel";
+            } else if (view == 'gallery') {
+                location.href = "index.php?view=gallery";
             }
 			else {
 				location.href = "index.php?view=reg_dashboard";
