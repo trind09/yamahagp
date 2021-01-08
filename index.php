@@ -509,8 +509,12 @@ $(window).on("load", function() {
 	<script>
         function ShowNewsDetail(id){
             var url = '<?php echo $domain; ?>' + 'news_detail.php?id=' + id;
-            $('#news_detail_iframe').attr('src', url);
-            $('#news_detail_panel').attr('style', 'display: -webkit-box;');
+			//To use news page in iframe
+            //$('#news_detail_iframe').attr('src', url);
+            //$('#news_detail_panel').attr('style', 'display: -webkit-box;');
+
+			//To open news detail page on new window
+			window.open(url);
         }
 
         function CloseNewsDetailPanel(){

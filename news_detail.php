@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<?php
@@ -24,7 +25,27 @@
 				$id = $row["id"];
 				$title = $row["title"];
 				$content = $row["content"];
-				echo ("<h1>" . $title . "</h1><br/>
+				$description = $row["description"];
+				$description = str_replace('\'', "", $description);
+				$image_name = $row["image_name"];
+				$image_urls = explode("|", $image_name);
+				$image_url = "";
+				if (count($image_urls) > 0){
+					$image_url = $domain . str_replace("../", "", $image_urls[0]);
+				}
+				$script = '<script> $(document).ready(function() {
+							document.title = "' . $title . '";
+								});
+								$("head").append("<meta name=\'description\' content=\'' . $description . '\'>");
+								$("head").append("<meta name=\'og:title\' content=\'' . $title . '\'>");
+								$("head").append("<meta name=\'og:description\' content=\'' . $description . '\'>");
+								$("head").append("<meta name=\'og:image\' content=\'' . $image_url . '\'>");
+								$("head").append("<meta property=\'og:image\' content=\'' . $image_url . '\'>");
+								$("head").append("<meta property=\'og:image:type\' content=\'image/png\'>");
+								$("head").append("<meta property=\'og:image:width\' content=\'1024\'>");
+								$("head").append("<meta property=\'og:image:height\' content=\'576\'>");
+							</script>';
+				echo ($script . "<h1>" . $title . "</h1><br/>
 				<div>" . $content . "</div>");
 
 				$counter++;
