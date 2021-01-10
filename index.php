@@ -538,8 +538,6 @@ $(window).on("load", function() {
 <section id="gallery" class="display">
    <script type="text/javascript">
 		function ViewPigsizeImage(img_url){
-			var src = $(element).attr("src");
-			var larger_src = src.replace("/small/", "/large/");
 			swal({
 			  imageUrl: img_url,
 			  imageWidth: '100%',
@@ -558,40 +556,52 @@ $(window).on("load", function() {
 		    $statement = $pdo->prepare($sql);
 		    $statement->execute();
 		    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-            if(count($result ) > 0 ){
+            if(count($result) > 0 ){
                 $galary_element = "";
                 $select_element = '<select id="type-photo-select">';
                 $i=1;
                 foreach ($result as $row){
 				    $title_gallery = $row["title_gallery"];
                     $image_url = $row["image_url"];
-                    $thumbnail_url = $row["thumbnail_url"];
                     $external_album_hyperlink = $row["external_album_hyperlink"];
 
-				    $select_element .= "<option value='$i'>" . $title_gallery . "</option>";
+					if ($i === 1){
+						$select_element .= "<option selected value='$i'>" . $title_gallery . "</option>";
+					} else {
+						$select_element .= "<option value='$i'>" . $title_gallery . "</option>";
+					}
 
                     $image_urls = explode("|", $image_url);
-                    $thumbnail_urls = explode("|", $thumbnail_url);
-                    if (count($image_urls) == count($thumbnail_urls)){
-                        $galary_element = '<div class="gallery-item display" id="type-photo' . $i . '" style="display: none;">'
-                            . '<div class="gallery-item-wrap">'
-                            . '<div class="gallery-photo js-photo">';
-                        for ($x = 0; $x < count($thumbnail_urls); $x++) {
-                            $thumb_url = $thumbnail_urls[$x];
-                            $thumb_url = $domain . str_replace('../', '', $thumb_url);
-                            $fullimg_url = $domain . $image_urls[$x];
-                            $galary_element .= '<div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="' . $thumb_url . '" onclick="ViewPigsizeImage(\'' . $fullimg_url . '\');"></div>';
-                        }
-                        if (isset($external_album_hyperlink)){
-                            $galary_element .= '</div></div><a class="btn" href="' . $external_album_hyperlink . '">Xem thêm</a></div>';
-                        }
-                        else {
-                            $galary_element .= '</div></div></div>';
-                        }
+					$thumbnail_urls = array();
+					foreach ($image_urls as $img_url){
+						$img_url = str_replace('/large/', '/small/', $img_url);
+						array_push($thumbnail_urls, $img_url);
+					}
+
+					if ($i === 1){
+						$galary_element .= '<div class="gallery-item display" id="type-photo' . $i . '">'
+							. '<div class="gallery-item-wrap">'
+							. '<div class="gallery-photo js-photo">';
+					} else {
+						$galary_element .= '<div class="gallery-item display" id="type-photo' . $i . '" style="display: none;">'
+							. '<div class="gallery-item-wrap">'
+							. '<div class="gallery-photo js-photo">';
+					}
+                    for ($x = 0; $x < count($thumbnail_urls); $x++) {
+                        $thumb_url = $thumbnail_urls[$x];
+                        $thumb_url = $domain . str_replace('../', '', $thumb_url);
+                        $fullimg_url = $domain . str_replace('../', '', $image_urls[$x]);
+                        $galary_element .= '<div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="' . $thumb_url . '" onclick="ViewPigsizeImage(\'' . $fullimg_url . '\');"></div>';
+                    }
+                    if (isset($external_album_hyperlink)){
+                        $galary_element .= '</div></div><a class="btn" href="' . $external_album_hyperlink . '">Xem thêm</a></div>';
+                    }
+                    else {
+                        $galary_element .= '</div></div></div>';
                     }
                     $i++;
 			    }
-                $select_element = '</select>';
+                $select_element .= '</select>';
                 echo($select_element);
                 echo($galary_element);
             }

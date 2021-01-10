@@ -4,7 +4,8 @@ $amount_of_record = 1000;
 $from_date = "";
 $pre_script_variables = "";
 
-$virtual_path = "../assets/gallery/";
+$gallery_image_path = "../assets/gallery/large/";
+$gallery_thumb_path = "../assets/gallery/small/";
 $temp_directory = "../assets/gallery/temp/";
 $id = "";
 $title_gallery = "";
@@ -53,17 +54,20 @@ if (isset($_POST['insert_update'])){
 					$file_name=$_FILES["files"]["name"][$key];
 					$file_tmp=$_FILES["files"]["tmp_name"][$key];
 					$ext=pathinfo($file_name,PATHINFO_EXTENSION);
-
 					if(in_array($ext,$extension)) {
-						if(!file_exists($virtual_path.$file_name)) {
-							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key], $virtual_path.$file_name);
-							array_push($image_name, $virtual_path . $file_name);
+						if(!file_exists($gallery_image_path.$file_name)) {
+							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key], $gallery_image_path.$file_name);
+							array_push($image_name, $gallery_image_path . $file_name);
+							$colors=array(255, 255, 255); //white
+							CreateThumbnail($gallery_image_path . $file_name, $gallery_thumb_path . $file_name, 416, 227, $ext, $colors);
 						}
 						else {
 							$filename=basename($file_name,$ext);
 							$newFileName=$filename.time().".".$ext;
-							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],$virtual_path.$newFileName);
-							array_push($image_name, $virtual_path . $newFileName);
+							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],$gallery_image_path.$newFileName);
+							array_push($image_name, $gallery_image_path . $newFileName);
+							$colors=array(255, 255, 255); //white
+							CreateThumbnail($gallery_image_path . $newFileName, $gallery_thumb_path . $newFileName, 416, 227, $ext, $colors);
 						}
 					}
 					else {
@@ -75,6 +79,9 @@ if (isset($_POST['insert_update'])){
 			if (count($error) > 0){
 				//remove uploaded files if error
 				foreach ($image_name as &$value) {
+					unlink($value);
+					//Delete all thumpnails
+					$value = str_replace('/large/', '/small/', $value);
 					unlink($value);
 				}
 				echo('<script>alert("Incorrect image extension! ' . implode ("|", array_filter($error)) . '");</script>');
@@ -108,15 +115,19 @@ if (isset($_POST['insert_update'])){
 					$ext=pathinfo($file_name,PATHINFO_EXTENSION);
 
 					if(in_array($ext,$extension)) {
-						if(!file_exists($virtual_path.$file_name)) {
-							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key], $virtual_path.$file_name);
-							array_push($image_name, $virtual_path . $file_name);
+						if(!file_exists($gallery_image_path.$file_name)) {
+							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key], $gallery_image_path.$file_name);
+							array_push($image_name, $gallery_image_path . $file_name);
+							$colors=array(255, 255, 255);
+							CreateThumbnail($gallery_image_path . $file_name, $gallery_thumb_path . $file_name, 416, 227, $ext, $colors);
 						}
 						else {
 							$filename=basename($file_name,$ext);
 							$newFileName=$filename.time().".".$ext;
-							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],$virtual_path.$newFileName);
-							array_push($image_name, $virtual_path . $newFileName);
+							move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],$gallery_image_path.$newFileName);
+							array_push($image_name, $gallery_image_path . $newFileName);
+							$colors=array(255, 255, 255);
+							CreateThumbnail($gallery_image_path . $newFileName, $gallery_thumb_path . $newFileName, 416, 227, $ext, $colors);
 						}
 					}
 					else {
@@ -129,6 +140,9 @@ if (isset($_POST['insert_update'])){
 				//remove uploaded files if error
 				foreach ($image_name as &$value) {
 					unlink($value);
+					//Delete all thumpnails
+					$value = str_replace('/large/', '/small/', $value);
+					unlink($value);
 				}
 				ShowMessage('Incorrect image extension! ' . implode ("|", array_filter($error)), false);
 			} else {
@@ -138,7 +152,7 @@ if (isset($_POST['insert_update'])){
 					$remove_image_indexes = strip_tags($_POST['remove_image_indexes']);
 					$remove_image_indexes = explode("|", $remove_image_indexes);
 					$remove_image_indexes = array_filter($remove_image_indexes, 'strlen');
-					$existing_images = RemoveCaulacboImages($remove_image_indexes, $id, $pdo);
+					$existing_images = RemoveGalaryImages($remove_image_indexes, $id, $pdo);
 				}
 				$image_name = implode ("|", array_filter($image_name)) . '|' . implode ("|", array_filter($existing_images));
 				$image_name = trim($image_name, "|"); //Remove start and end | 
@@ -170,9 +184,13 @@ function DeleteRecord($id, $pdo){
 
 			if (count($result) > 0)
 			{
+				//Delete all images
 				$image_name = $result[0]["image_url"];
 				$pieces = array_filter(explode("|", $image_name));
 				foreach ($pieces as $piece) {
+					unlink($piece);
+					//Delete all thumpnails
+					$piece = str_replace('/large/', '/small/', $piece);
 					unlink($piece);
 				}
 			}
@@ -197,6 +215,7 @@ function ValidateData($post_data){
 	}
 	return $message;
 }
+
 function BuildUpdateFields($id, $pdo, $domain){
 	global $image_url; global $id; global  $title_gallery; global $description; global $external_album_hyperlink ; 
 	if ($id != ''){
@@ -231,7 +250,7 @@ function BuildUpdateFields($id, $pdo, $domain){
 	}
 }
 
-function RemoveCaulacboImages($image_indexes, $id, $pdo){
+function RemoveGalaryImages($image_indexes, $id, $pdo){
 	$array = array();
 	$sql = "SELECT * FROM gallery WHERE id = " . $id;
 
@@ -247,6 +266,9 @@ function RemoveCaulacboImages($image_indexes, $id, $pdo){
 			$counter = 0;
 			foreach ($pieces as $piece) {
 				if(IsItemInArray($counter, $image_indexes)) {
+					unlink($piece);
+					//Remove thumpnails
+					$piece = str_replace('/large/', '/small/', $piece);
 					unlink($piece);
 				} else {
 					array_push($array,$piece);
