@@ -553,11 +553,9 @@ $(window).on("load", function() {
 
 <section id="gallery" class="display">
    <script type="text/javascript">
-		function ViewPigsizeImage(element){
-			var src = $(element).attr("src");
-			var larger_src = src.replace("/small/", "/large/");
+		function ViewPigsizeImage(img_url){
 			swal({
-			  imageUrl: larger_src,
+			  imageUrl: img_url,
 			  imageWidth: '100%',
 			  width: '1200px',
 			  imageAlt: 'BG Gallery',
@@ -569,40 +567,61 @@ $(window).on("load", function() {
 		<ul class="gallery-tabs" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">HÌNH ẢNH CHƯƠNG TRÌNH</li>
 		</ul>
-		<select id="type-photo-select">
-		  <option value="1">1.	GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA ALBUM 1</option>
-		  <option value="2">2.	GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA ALBUM 2</option>
-	   </select>
-	   <div class="gallery-item display" id="type-photo1" style="display: none;">
-		   <div class="gallery-item-wrap">
-			  <div class="gallery-photo js-photo">
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957389029_bdaaacca5693b573a1b10ab6aa2fc280.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957401391_9ed54e51bfadc32c148ae7321bb2361d.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957411606_e330a9c4ea4d39fc7c54b0d2c19ceaec.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957414455_273a6f59fd6df6c09090a5c432271017.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957417518_8c847d233e348c48e09256f3b7ed892e.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957424484_a9af29b4e05612c05e63a408d36faa0f.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957435992_10025a99da5fcbb60164adff1b8f5a93.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957436595_92bea7185e5cff6d398b3a71e5de47f4.jpg" onclick="ViewPigsizeImage(this);"></div>
-			  </div>
-		   </div>
-		   <a class="btn" href="https://drive.google.com/drive/folders/1pznlvLfmi1NOdjKBXhVkFvbAyGrjYVMD">Xem thêm</a>
-		</div>
-		<div class="gallery-item display" id="type-photo2" style="display: none;">
-		   <div class="gallery-item-wrap">
-			  <div class="gallery-photo js-photo">
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957442519_6ad066eb4c45859743a8d8809b281acf.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957448731_757d89cb21a9b5b3a04f5840b76291e4.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957460101_ee46fd8de052c4d39ad226034fa41f0e.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957463002_b1c236ce2ae09484d9c9300b0e999492.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957467762_620f3e8fb8b8841b1071c7ff29652f07.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957476987_9b2f8c71f95d9c9f0cfafabbbebe2a1c.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957489212_3e683181b3aa89faf7753465354824e3.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/z2201957424484_a9af29b4e05612c05e63a408d36faa0f.jpg" onclick="ViewPigsizeImage(this);"></div>
-			  </div>
-		   </div>
-		   <a class="btn" href="https://drive.google.com/drive/folders/1pznlvLfmi1NOdjKBXhVkFvbAyGrjYVMD">Xem thêm</a>
-		</div>
+		<?php 
+            $sql = "SELECT * FROM gallery";
+		    $statement = $pdo->prepare($sql);
+		    $statement->execute();
+		    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            if(count($result) > 0 ){
+                $galary_element = "";
+                $select_element = '<select id="type-photo-select">';
+                $i=1;
+                foreach ($result as $row){
+				    $title_gallery = $row["title_gallery"];
+                    $image_url = $row["image_url"];
+                    $external_album_hyperlink = $row["external_album_hyperlink"];
+
+					if ($i === 1){
+						$select_element .= "<option selected value='$i'>" . $title_gallery . "</option>";
+					} else {
+						$select_element .= "<option value='$i'>" . $title_gallery . "</option>";
+					}
+
+                    $image_urls = explode("|", $image_url);
+					$thumbnail_urls = array();
+					foreach ($image_urls as $img_url){
+						$img_url = str_replace('/large/', '/small/', $img_url);
+						array_push($thumbnail_urls, $img_url);
+					}
+
+					if ($i === 1){
+						$galary_element .= '<div class="gallery-item display" id="type-photo' . $i . '">'
+							. '<div class="gallery-item-wrap">'
+							. '<div class="gallery-photo js-photo">';
+					} else {
+						$galary_element .= '<div class="gallery-item display" id="type-photo' . $i . '" style="display: none;">'
+							. '<div class="gallery-item-wrap">'
+							. '<div class="gallery-photo js-photo">';
+					}
+                    for ($x = 0; $x < count($thumbnail_urls); $x++) {
+                        $thumb_url = $thumbnail_urls[$x];
+                        $thumb_url = $domain . str_replace('../', '', $thumb_url);
+                        $fullimg_url = $domain . str_replace('../', '', $image_urls[$x]);
+                        $galary_element .= '<div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="' . $thumb_url . '" onclick="ViewPigsizeImage(\'' . $fullimg_url . '\');"></div>';
+                    }
+                    if (isset($external_album_hyperlink)){
+                        $galary_element .= '</div></div><a class="btn" href="' . $external_album_hyperlink . '">Xem thêm</a></div>';
+                    }
+                    else {
+                        $galary_element .= '</div></div></div>';
+                    }
+                    $i++;
+			    }
+                $select_element .= '</select>';
+                echo($select_element);
+                echo($galary_element);
+            }
+        ?>
 	</div>
 </section>
 <?php include 'footer.php'; ?>
