@@ -12,7 +12,8 @@ $pdo = new PDO("mysql:host={$dbhost};dbname={$dbname}", $dbuser, $dbpass, array(
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 //Site info
-$site_name = "Golf Club Championship 2020";
+$site_name = "Golf Club Championship";
+$site_description = "Golf Club Championship 2020";
 
 //SMTP
 $smtp_host = "smtp.gmail.com";

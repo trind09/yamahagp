@@ -1,10 +1,10 @@
 ﻿<head>
 	<!-- SEO -->
-    <title>Golf Club Championship 2020</title>
-	<meta name="description" content="GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA">
+    <title><?php echo($site_name); ?></title>
+	<meta name="description" content="<?php echo($site_description); ?>">
 	<meta name="keywords" content="">
-	<meta name="og:title" content="Golf Club Championship 2020">
-	<meta name="og:description" content="GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA">
+	<meta name="og:title" content="<?php echo($site_name); ?>">
+	<meta name="og:description" content="<?php echo($site_description); ?>">
 	<meta name="og:image" content="../assets/images/logo.png">
     
 	<meta property="og:image" content="../assets/images/bg.jpg">
@@ -81,6 +81,8 @@
                 $('#customer_link').attr('class', 'nav-link active');
             } else if (view == 'plan_pannel') {
                 $('#plan_pannel_link').attr('class', 'nav-link active');
+            } else if (view == 'gallery') {
+                $('#gallery_link').attr('class', 'nav-link active');
             } else {
 				$('#reg_dashboard_link').attr('class', 'nav-link active');
 			}
@@ -115,8 +117,9 @@
 				location.href = "index.php?view=aution_product";
 			} else if (view == 'plan_pannel') {
                 location.href = "index.php?view=plan_pannel";
-            }
-			else {
+            } else if (view == 'gallery') {
+                location.href = "index.php?view=gallery";
+			} else {
 				location.href = "index.php?view=reg_dashboard";
 			}
         }

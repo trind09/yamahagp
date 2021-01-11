@@ -541,11 +541,9 @@ $(window).on("load", function() {
 
 <section id="gallery" class="display">
    <script type="text/javascript">
-		function ViewPigsizeImage(element){
-			var src = $(element).attr("src");
-			var larger_src = src.replace("/small/", "/large/");
+		function ViewPigsizeImage(img_url){
 			swal({
-			  imageUrl: larger_src,
+			  imageUrl: img_url,
 			  imageWidth: '100%',
 			  width: '1200px',
 			  imageAlt: 'BG Gallery',
@@ -557,40 +555,61 @@ $(window).on("load", function() {
 		<ul class="gallery-tabs" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">HÌNH ẢNH CHƯƠNG TRÌNH</li>
 		</ul>
-		<select id="type-photo-select">
-		  <option value="1">1.	HỌP BÁO KỸ THUẬT NGÀY HỘI ĐUA XE VIETNAM RACING FESTIVAL 2020</option>
-		  <option value="2">2.	PHÁT ĐỘNG PHONG TRÀO ĐUA XE THỂ THAO VIỆT NAM</option>
-	   </select>
-	   <div class="gallery-item display" id="type-photo1" style="display: none;">
-		   <div class="gallery-item-wrap">
-			  <div class="gallery-photo js-photo">
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2669.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2729.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2394.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2445.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2688.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_1797.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2168.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/PHU_2843.jpg" onclick="ViewPigsizeImage(this);"></div>
-			  </div>
-		   </div>
-		   <a class="btn" href="#">Xem thêm</a>
-		</div>
-		<div class="gallery-item display" id="type-photo2" style="display: none;">
-		   <div class="gallery-item-wrap">
-			  <div class="gallery-photo js-photo">
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-30.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-31.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-32.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-33.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-25.jpg" onclick="ViewPigsizeImage(this);"></div>
-				 <div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="assets/gallery/small/viber_image_2020-11-10_12-32-26.jpg" onclick="ViewPigsizeImage(this);"></div>
-			  </div>
-		   </div>
-		   <a class="btn" href="#">Xem thêm</a>
-		</div>
+		<?php 
+            $sql = "SELECT * FROM gallery";
+		    $statement = $pdo->prepare($sql);
+		    $statement->execute();
+		    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            if(count($result) > 0 ){
+                $galary_element = "";
+                $select_element = '<select id="type-photo-select">';
+                $i=1;
+                foreach ($result as $row){
+				    $title_gallery = $row["title_gallery"];
+                    $image_url = $row["image_url"];
+                    $external_album_hyperlink = $row["external_album_hyperlink"];
+
+					if ($i === 1){
+						$select_element .= "<option selected value='$i'>" . $title_gallery . "</option>";
+					} else {
+						$select_element .= "<option value='$i'>" . $title_gallery . "</option>";
+					}
+
+                    $image_urls = explode("|", $image_url);
+					$thumbnail_urls = array();
+					foreach ($image_urls as $img_url){
+						$img_url = str_replace('/large/', '/small/', $img_url);
+						array_push($thumbnail_urls, $img_url);
+					}
+
+					if ($i === 1){
+						$galary_element .= '<div class="gallery-item display" id="type-photo' . $i . '">'
+							. '<div class="gallery-item-wrap">'
+							. '<div class="gallery-photo js-photo">';
+					} else {
+						$galary_element .= '<div class="gallery-item display" id="type-photo' . $i . '" style="display: none;">'
+							. '<div class="gallery-item-wrap">'
+							. '<div class="gallery-photo js-photo">';
+					}
+                    for ($x = 0; $x < count($thumbnail_urls); $x++) {
+                        $thumb_url = $thumbnail_urls[$x];
+                        $thumb_url = $domain . str_replace('../', '', $thumb_url);
+                        $fullimg_url = $domain . str_replace('../', '', $image_urls[$x]);
+                        $galary_element .= '<div class="js-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"><img style="cursor: pointer;" src="' . $thumb_url . '" onclick="ViewPigsizeImage(\'' . $fullimg_url . '\');"></div>';
+                    }
+                    if (isset($external_album_hyperlink)){
+                        $galary_element .= '</div></div><a class="btn" href="' . $external_album_hyperlink . '">Xem thêm</a></div>';
+                    }
+                    else {
+                        $galary_element .= '</div></div></div>';
+                    }
+                    $i++;
+			    }
+                $select_element .= '</select>';
+                echo($select_element);
+                echo($galary_element);
+            }
+        ?>
 	</div>
 </section>
 <?php include 'footer.php'; ?>
