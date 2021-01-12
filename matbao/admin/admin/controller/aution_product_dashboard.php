@@ -44,7 +44,7 @@ if (isset($_POST['insert_update'])){
 		ShowMessage($message, false);
 		$pro_name = strip_tags($_POST['pro_name']);
 		$pro_short_description = strip_tags($_POST['pro_short_description']);
-		$pro_description = strip_tags($_POST['pro_description']);
+		$pro_description = $_POST['pro_description'];
 		$price = strip_tags($_POST['price']);
 		$start_date = strip_tags($_POST['start_date']);
 		$end_date = strip_tags($_POST['end_date']);
@@ -53,7 +53,7 @@ if (isset($_POST['insert_update'])){
 		$id = strip_tags($_POST['id']);
 		$pro_name = strip_tags($_POST['pro_name']);
 		$pro_short_description = strip_tags($_POST['pro_short_description']);
-		$pro_description = strip_tags($_POST['pro_description']);
+		$pro_description = $_POST['pro_description'];
 		$pro_type = strip_tags($_POST['pro_type']);
 		$price = strip_tags($_POST['price']);
 		$currency = strip_tags($_POST['currency']);
@@ -333,7 +333,7 @@ function RemoveAutionProductImages($image_indexes, $id, $pdo){
 		$('#remove_image_indexes').val('');
 		$('#pro_name').val('');
 		$('#pro_short_description').val('');
-		$('#pro_description').val('');
+		$('#editor1').code('');
 		$('#pro_type').val('');
 		$('#price').val('');
 		$('#currency').val('');
@@ -428,7 +428,7 @@ function RemoveAutionProductImages($image_indexes, $id, $pdo){
                                     </div>
 									<div class="form-group">
                                         <label for="pro_description">Mô tả: </label>
-										<textarea class="form-control" id="pro_description" name="pro_description" rows="4" cols="50"><?php echo($pro_description); ?></textarea>
+										<textarea class="form-control" id="editor1" name="pro_description" rows="4" cols="50"><?php echo($pro_description); ?></textarea>
                                     </div>
 									<div class="form-group">
                                         <label for="pro_type">Loại sản phẩm: </label>
@@ -495,7 +495,6 @@ function RemoveAutionProductImages($image_indexes, $id, $pdo){
                                                     <th>#</th>
                                                     <th>Tên sản phẩm</th>
 													<th>Mô Tả ngắn gọn</th>
-                                                    <th>Mô Tả</th>
                                                     <th>Loại sản phẩm</th>
                                                     <th>Giá</th>
 													<th>Đơn vị tiền tệ</th>
@@ -548,7 +547,6 @@ function RemoveAutionProductImages($image_indexes, $id, $pdo){
 															echo ("<td>" . $counter . "</td>" . "
 																<td><div class='scrollable'>" . $pro_name . "</div></td>" . "
 																<td><div class='scrollable'>" . $pro_short_description . "</div></td>" . "
-																<td><div class='scrollable'>" . $pro_description . "</div></td>" . "
 																<td><div class='scrollable'>" . $pro_type . "</div></td>" . "
 																<td><div class='scrollable'>" . $price . "</div></td>" . "
 																<td><div class='scrollable'>" . $currency . "</div></td>" . "
@@ -591,7 +589,6 @@ function RemoveAutionProductImages($image_indexes, $id, $pdo){
 												<th>#</th>
                                                     <th>Tên sản phẩm</th>
 													<th>Mô Tả ngắn gọn</th>
-                                                    <th>Mô tả</th>
                                                     <th>Loại sản phẩm</th>
                                                     <th>Giá</th>
 													<th>Tiền tệ</th>

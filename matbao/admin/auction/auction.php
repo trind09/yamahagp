@@ -927,7 +927,7 @@ function GetListOfAuction($pdo, $auction_product_id, $start_date, $end_date){
 				   <p style="line-height:1.5" id="pro_type"></p>
 				   <p style="line-height:1.5;font-weight: bold;" id="extra_option"></p>
 				   <p style="line-height:1.5" id="price"></p>
-				   <p style="line-height:1.5" id="pro_description"></p>
+				   <div style="line-height:1.5" id="pro_description"></div>
 				</div>
 			 </div>
 		  </div>
