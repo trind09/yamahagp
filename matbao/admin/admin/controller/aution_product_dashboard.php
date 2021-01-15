@@ -434,7 +434,7 @@ function RemoveAutionProductImages($image_indexes, $id, $pdo){
                                         <label for="pro_type">Loại sản phẩm: </label>
 										<select name="pro_type" id="pro_type" class="form-control">
 											<?php 
-												$arr = array('Tác phẩm điêu khắc', 'Tác phẩm nghệ thuật');
+												$arr = array('Tác phẩm điêu khắc', 'Tác phẩm nghệ thuật', 'Du lịch');
 												foreach ($arr as $value) {
 													if($value == $pro_type){
 														echo("<option selected>" . $value . "</option>");
