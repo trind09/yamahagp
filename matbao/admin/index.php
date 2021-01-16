@@ -417,10 +417,10 @@ $(window).on("load", function() {
 });
 </script>
 <section id="events" class="display" style="display: none;">
-	<div class="contain">
+	<div class="contain" style="text-align: center;">
 		<h4 style="text-align: center;">Sự kiện</h4>
 		<h2>GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA</h2>
-		<img style="width: 100%;" src="assets/sukien/events.png">
+		<img style="width: 70%;" src="assets/sukien/events.png">
 </section>
 
 <section id="plan" class="display">

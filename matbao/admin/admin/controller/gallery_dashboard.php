@@ -87,10 +87,11 @@ if (isset($_POST['insert_update'])){
 				echo('<script>alert("Incorrect image extension! ' . implode ("|", array_filter($error)) . '");</script>');
 			} else {
 				$image_name = implode ("|", array_filter($image_name));
-				$sql = "INSERT INTO gallery (image_url, title_gallery, description, external_album_hyperlink) VALUES "
-					. "(?,?,?,?)";
+				$history = "Insert by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
+				$sql = "INSERT INTO gallery (image_url, title_gallery, description, external_album_hyperlink, history) VALUES "
+					. "(?,?,?,?,?)";
 					$statement = $pdo->prepare($sql);
-					$statement->execute(array($image_name,  $title_gallery, $description, $external_album_hyperlink));
+					$statement->execute(array($image_name,  $title_gallery, $description, $external_album_hyperlink, $history));
 					$register_id = $pdo->lastInsertId();
 		
 				if ($register_id != 0){
@@ -156,8 +157,10 @@ if (isset($_POST['insert_update'])){
 				}
 				$image_name = implode ("|", array_filter($image_name)) . '|' . implode ("|", array_filter($existing_images));
 				$image_name = trim($image_name, "|"); //Remove start and end | 
-
-				$sql = "UPDATE `gallery` SET `image_url`=?,`title_gallery`=?,`description`=?,`external_album_hyperlink`=? WHERE id = ?";
+				
+				$history = "Update by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
+				
+				$sql = "UPDATE `gallery` SET `image_url`=?,`title_gallery`=?,`description`=?,`external_album_hyperlink`=?, history = IFNULL(CONCAT(history, '" . $history . "'), '" . $history . "') WHERE id = ?";
 				$statement = $pdo->prepare($sql);
 				$statement->execute(array($image_name,  $title_gallery, $description, $external_album_hyperlink, $id));
 				BuildUpdateFields($id, $pdo, $domain);

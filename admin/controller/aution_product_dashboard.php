@@ -165,11 +165,11 @@ if (isset($_POST['insert_update'])){
 				}
 				$picture = implode ("|", array_filter($picture)) . '|' . implode ("|", array_filter($existing_images));
 				$picture = trim($picture, "|"); //Remove start and end | 
-				$history = $_POST['history'] . "Update by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
+				$history = "Update by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
 
-				$sql = "UPDATE `auction_product` SET `picture`=?,`pro_name`=?,`pro_short_description`=?,`pro_description`=?,`pro_type`=?,`price`=?,`currency`=?,`start_date`=?,`end_date`=?,`extra_option`=?,`history`=? WHERE id = ?";
+				$sql = "UPDATE `auction_product` SET `picture`=?,`pro_name`=?,`pro_short_description`=?,`pro_description`=?,`pro_type`=?,`price`=?,`currency`=?,`start_date`=?,`end_date`=?,`extra_option`=?, history = IFNULL(CONCAT(history, '" . $history . "'), '" . $history . "') WHERE id = ?";
 				$statement = $pdo->prepare($sql);
-				$statement->execute(array($picture, $pro_name, $pro_short_description, $pro_description, $pro_type, $price, $currency, $start_date, $end_date, $extra_option, $history, $id));
+				$statement->execute(array($picture, $pro_name, $pro_short_description, $pro_description, $pro_type, $price, $currency, $start_date, $end_date, $extra_option, $id));
 				BuildUpdateFields($id, $pdo, $domain);
 				ShowMessage('Successful', true);
 			}

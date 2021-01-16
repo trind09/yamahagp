@@ -87,10 +87,11 @@ if (isset($_POST['insert_update'])){
 				echo('<script>alert("Incorrect image extension! ' . implode ("|", array_filter($error)) . '");</script>');
 			} else {
 				$image_name = implode ("|", array_filter($image_name));
-				$sql = "INSERT INTO news (image_name, title, description, content, hyperlink, author) VALUES "
-					. "(?,?,?,?,?,?)";
+				$history = "Insert by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
+				$sql = "INSERT INTO news (image_name, title, description, content, hyperlink, author, history) VALUES "
+					. "(?,?,?,?,?,?,?)";
 					$statement = $pdo->prepare($sql);
-					$statement->execute(array($image_name, $title, $description, $content, $hyperlink, $author));
+					$statement->execute(array($image_name, $title, $description, $content, $hyperlink, $author, $history));
 					$register_id = $pdo->lastInsertId();
 		
 				if ($register_id != 0){
@@ -149,8 +150,10 @@ if (isset($_POST['insert_update'])){
 				}
 				$image_name = implode ("|", array_filter($image_name)) . '|' . implode ("|", array_filter($existing_images));
 				$image_name = trim($image_name, "|"); //Remove start and end | 
+				
+				$history = "Update by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
 
-				$sql = "UPDATE `news` SET `image_name`=?,`title`=?,`description`=?,`content`=?,`hyperlink`=?, `author`=? WHERE id = ?";
+				$sql = "UPDATE `news` SET `image_name`=?,`title`=?,`description`=?,`content`=?,`hyperlink`=?, `author`=?, history = IFNULL(CONCAT(history, '" . $history . "'), '" . $history . "') WHERE id = ?";
 				$statement = $pdo->prepare($sql);
 				$statement->execute(array($image_name, $title, $description, $content, $hyperlink, $author, $id));
 				BuildUpdateFields($id, $pdo, $domain);
