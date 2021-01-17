@@ -381,32 +381,49 @@
 	<div class="contain">
 		<h4 style="text-align: center;">KẾ HOẠCH TỔ CHỨC GIẢI VÔ ĐỊCH CÁC CLB GOLF 2020</h4>
 		<h2 style="text-align: center; margin-bottom: 40px;">GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA</h2>
-		<ul class="gallery-tabs js-term--tabs">
-			<li class="active" style="width: 33.3%;">Video</li>
-			<li class="" style="width: 33.3%;">Kế hoạch</li>	
-			<li class="" style="width: 33.3%;">Điều lệ</li>	
-		</ul>
-		<div class="term-contain display">
-			<div class="video">
-				<div class="video-container">
-					<iframe class="video-container-responsive-iframe" src="https://drive.google.com/file/d/1XKvrvgsUFJYmygSekObgCWAth2KqxPsT/preview"></iframe>
-				</div>
-			</div>
-		</div>
-		<div class="term-contain ">
-			<div class="video">
-				<div class="video-container" style="height: 500px;">
-					<iframe class="video-container-responsive-iframe" src="https://drive.google.com/file/d/1I06apgfMPmpAPf1-2kOZZthad7cStTvY/preview"></iframe>
-				</div>
-			</div>
-		</div>
-		<div class="term-contain ">
-			<div class="video">
-				<div class="video-container" style="height: 500px;">
-					<iframe class="video-container-responsive-iframe" src="https://drive.google.com/file/d/1TvFbxltrLv0HpMauBwz0feLk8dpHAvPt/preview"></iframe>
-				</div>
-			</div>
-		</div>
+		<?php
+			$sql = "SELECT * FROM plan";
+
+			$statement = $pdo->prepare($sql);
+			$statement->execute();
+			$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $term_contain = '';
+            $element_plan = '<ul class="gallery-tabs js-term--tabs">';
+			if (count($result) > 0)
+			{
+                $i=1;
+				foreach ($result as $row){
+					$id = $row["id"];
+					$title = $row["title"];
+					$hyperlink = $row["hyperlink"];
+                    if($i === 1){
+                        $element_plan .= '<li class="active" style="width: 33.3%;" id="'.$i.'">'. $title .'</li>';
+                    }
+                    else{
+                    $element_plan .= '<li style="width: 33.3%;" id="'.$i.'">'. $title .'</li>';
+                    }
+                    if($i === 1){
+                        $term_contain .= '<div class="term-contain display id="'.$i.'"">' . '
+			                          <div class="video">' . '
+				                      <div class="video-container">' . '
+					                  <iframe class="video-container-responsive-iframe" src="' . $hyperlink . '/preview"></iframe>';
+                        $term_contain  .= '</div></div></div>';
+                    }
+                    else {
+                     $term_contain .= '<div class="term-contain">' . '
+			                          <div class="video">' . '
+				                      <div class="video-container">' . '
+					                  <iframe class="video-container-responsive-iframe" src="' . $hyperlink . '/preview"></iframe>';
+                        $term_contain  .= '</div></div></div>';
+                    }
+					$i++;
+				}
+
+			}
+            $element_plan .= '</ul>';
+            echo($element_plan);
+            echo($term_contain);
+		?>
 	</div>
 </section>
 

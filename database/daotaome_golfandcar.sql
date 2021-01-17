@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 24, 2020 at 11:00 AM
+-- Generation Time: Jan 17, 2021 at 04:32 PM
 -- Server version: 5.7.32-log
 -- PHP Version: 7.3.6
 
@@ -37,13 +37,6 @@ CREATE TABLE `auction` (
   `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `auction`
---
-
-INSERT INTO `auction` (`id`, `aution_product_id`, `customer_id`, `root_price`, `pid_rate`, `create_date`) VALUES
-(102, 28, 24, 100000000.00, 2000000000.00, '2020-12-19 09:42:29');
-
 -- --------------------------------------------------------
 
 --
@@ -71,7 +64,10 @@ CREATE TABLE `auction_product` (
 --
 
 INSERT INTO `auction_product` (`id`, `pro_name`, `pro_short_description`, `pro_description`, `pro_type`, `price`, `currency`, `start_date`, `end_date`, `picture`, `extra_option`, `history`, `create_date`) VALUES
-(12, 'THE ANATOMY OF A GOLFER LV, ATELIER', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.', 'Tác phẩm điêu khắc', 200000000.00, 'VND', '2020-12-17 22:01:45', '2021-04-10 12:00:00', '../assets/aution_product/The_Anatomy_of_a_Golffe_IV[1].jpg', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMSUpdate by admin - 2020-12-14 15:41:01<br/>Update by admin - 2020-12-14 20:11:02<br/>Update by admin - 2020-12-15 09:24:11<br/>Update by admin - 2020-12-18 11:46:02<br/>Update by admin - 2020-12-18 15:02:42<br/>Update by admin - 2020-12-18 15:06:07<br/>Update by admin - 2020-12-19 02:13:30<br/>Update by admin - 2020-12-19 02:13:48<br/>Update by admin - 2020-12-19 13:58:20<br/>', '2020-12-14 20:14:17');
+(12, 'THE ANATOMY OF A GOLFER LV, ATELIER', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.', 'Tác phẩm điêu khắc', 200000000.00, 'VND', '2020-12-17 22:01:45', '2021-04-10 12:00:00', '../assets/aution_product/The_Anatomy_of_a_Golffe_IV[1].jpg', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMSUpdate by admin - 2020-12-14 15:41:01<br/>Update by admin - 2020-12-14 20:11:02<br/>Update by admin - 2020-12-15 09:24:11<br/>Update by admin - 2020-12-18 11:46:02<br/>Update by admin - 2020-12-18 15:02:42<br/>Update by admin - 2020-12-18 15:06:07<br/>Update by admin - 2020-12-19 02:13:30<br/>Update by admin - 2020-12-19 02:13:48<br/>Update by admin - 2020-12-19 13:58:20<br/>', '2020-12-14 20:14:17'),
+(13, 'PEBBLE BEACH LEOPARDWOOD MODERN CLASSIC BY DAVID MUSTY PUTTERS', 'Với những thiết kế bởi các nhà chế tác từ David Musty, không chỉ tạo ra những chiếc gậy gạt bóng đẹp mắt, họ còn luôn theo đuổi mục tiêu tạo ra nhựng chiếc gậy gạt bóng có chức năng tốt nhất trên thị trường.', '<p><span style=\"color: rgb(34, 34, 34); font-family: \"Segoe UI\", SegoeuiPc, \"San Francisco\", \"Helvetica Neue\", Helvetica, \"Lucida Grande\", Roboto, Ubuntu, Tahoma, \"Microsoft Sans Serif\", Arial, sans-serif; font-size: 15px; white-space: pre-wrap;\">Đối với những thiết kế của nhà chế tác David Musty, ông không chỉ tạo ra những chiếc gậy gạt bóng đẹp mắt, mà còn luôn theo đuổi mục tiêu tạo ra những chiếc gậy gạt bóng có chức năng tốt nhất  trên thị trường. Các đặc tính tự nhiên của gỗ cho phép David Musty đặt một hệ thống trọng lượng thông minh dựa trên quán tính giúp tạo ra một cú đánh hoàn hảo. Với trọng tâm được nâng lên, chế tác của David Musty đã truyền năng lượng đến đường trọng tâm của quả bóng, tạo ra lực lăn nhất quán về phía trước, một yếu tố rất quan trọng trong mỗi cú đánh bóng.\r\n\r\nThanh đập bóng bằng gỗ rắn chắc tạo ra cảm giác chuẩn xác và điểm va chạm mở rộng một cách hoàn hảo. Xóa bỏ những lực nẩy thường xảy ra trên thanh đập bóng bằng kim loại thông thường.\r\n\r\nCác đặc điểm:\r\n- Có khắc logo Pebble Beach bằng tia laser\r\n- Được làm thủ công từ gỗ Leopardwood cho hiệu suất cao\r\n- Tay nắm bằng da quấn trên trục kim loại</span></p><p><br></p><p>Đường bóng trên gậy gạt thông thường<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/b3e3e393c77e35a4a3f3cbd1e429b5dc.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Trọng tâm thấp hơn tạo ra xoáy ngược và nhảy vọt trên đường bóng.</p><p><br></p><p><b>Đường bóng trên gậy gạt David Musty<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/bd686fd640be98efaae0091fa301e613.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Trọng tâm được nâng lên tạo ra lực lăn bóng hoàn hảo về phía trước.</b></p><p><br></p><p>Điểm va chạm trên gậy gạt bóng thông thường<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/42a0e188f5033bc65bf8d78622277c4e.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Hầu hết các gậy gạt bóng thông thường đều có điểm va chạm nhỏ không nhất quán.</p><p><br></p><p><b>Điểm va chạm trên gậy gạt bóng David Musty<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/0a09c8844ba8f0936c20bd791130d6b6.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Gậy gạt bóng David Musty có điểm va chạm với bóng mở rộng cho phép bóng lăn một cách ổn định.</b></p>', 'Tác phẩm điêu khắc', 1000.00, 'USD', '2021-01-12 17:14:48', '2021-04-10 18:00:00', '../assets/aution_product/7943_golf_mustyputter_l[1].jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-12 17:17:05<br/>Update by admin - 2021-01-12 17:23:09<br/>Update by admin - 2021-01-12 17:23:43<br/>Update by admin - 2021-01-12 21:59:22<br/>Update by admin - 2021-01-12 22:00:08<br/>Update by admin - 2021-01-13 02:51:40<br/>Update by  - 2021-01-13 07:31:49<br/>Update by admin - 2021-01-13 08:11:03<br/>', '2021-01-13 00:17:05'),
+(14, '2021 Masters Golf Travel Packages (Practice Round Packages)', 'Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.', '<p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Gói Masters 2021, bao gồm các dịch vụ:</p><p>- Master Badges cho các vòng đã chọn của bạn</p><p>- Lựa chọn chỗ ở đạt tiêu chuẩn Hạng Nhất</p><p>- Dịch vụ đưa đón theo nhóm 2 chiều hàng ngày đến Augusta</p><p>- Địa điểm Khách sạn độc quyền (tùy chọn)</p><p>- Bữa sáng Miễn phí Hàng ngày</p><p>- Tiệc chiêu đãi Buổi tối hàng ngày</p><p>- Tổ chức tour Road trips</p><p>- Các chuyên gia sẽ lập kế hoạch du lịch trước chuyến đi và dịch vụ trợ giúp đặc biệt cho các nhóm tham gia Roadtrips</p>', 'Du lịch', 2295.00, 'USD', '2021-01-13 07:48:41', '2021-04-10 18:00:00', '../assets/aution_product/masters-hero7[1].jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-13 08:02:49<br/>Update by admin - 2021-01-13 08:09:01<br/>Update by admin - 2021-01-13 08:10:13<br/>Update by admin - 2021-01-13 08:10:23<br/>Update by admin - 2021-01-13 08:15:57<br/>', '2021-01-13 15:02:49'),
+(15, '2021 Masters Golf Travel Packages (Tournament Round Packages)', 'Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.', '<p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Golf Masters 2021 sẽ là một trong những sự kiện độc nhất trong giới thể thao. Các gói trải nghiệm có thể tùy chỉnh và lựa chọn những khách sạn tốt nhất của Georgia như Ritz-Carlton Reynolds và một danh sách dài các dịch vụ bổ sung khác. Với nhiều năm kinh nghiệm tham gia các sự kiện lớn nhất thế giới, bao gồm nhiều giải đấu Masters, Gói trải nghiệm được chăm chút một cách hoàn hảo và đảm bảo các golfer có trải nghiệm chơi golf tuyệt vời nhất.</p><p><br></p><p>Gói Masters 2021, bao gồm các dịch vụ:</p><p>- Master Badges cho các vòng đã chọn của bạn</p><p>- Lựa chọn chỗ ở đạt tiêu chuẩn Hạng Nhất</p><p>- Dịch vụ đưa đón theo nhóm 2 chiều hàng ngày đến Augusta</p><p>- Địa điểm Khách sạn độc quyền (tùy chọn)</p><p>- Bữa sáng Miễn phí Hàng ngày</p><p>- Tiệc chiêu đãi Buổi tối hàng ngày</p><p>- Tổ chức tour Road trips</p><p>- Các chuyên gia sẽ lập kế hoạch du lịch trước chuyến đi và dịch vụ trợ giúp đặc biệt cho các nhóm tham gia Roadtrips</p>', 'Du lịch', 3755.00, 'USD', '2021-01-13 08:02:49', '2021-04-10 18:00:00', '../assets/aution_product/masters-hero7[1].1610525091.jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-13 08:04:51<br/>Update by admin - 2021-01-13 08:06:01<br/>Update by admin - 2021-01-13 08:08:12<br/>Update by admin - 2021-01-13 08:10:46<br/>Update by admin - 2021-01-13 08:15:34<br/>', '2021-01-13 15:04:51');
 
 -- --------------------------------------------------------
 
@@ -94,7 +90,7 @@ CREATE TABLE `caulacbo` (
 --
 
 INSERT INTO `caulacbo` (`id`, `image_name`, `title`, `description`, `hyperlink`, `history`, `create_date`) VALUES
-(27, '', 'Hội Golf Tỉnh Đồng Nai', '', '', NULL, '2020-12-13 09:25:51'),
+(27, '', 'Hội Golf Tỉnh Đồng Nai', '', '', 'Updated by admin - 2021-01-16 14:40:05</br>Updated by admin - 2021-01-16 14:40:10</br>', '2020-12-13 09:25:51'),
 (28, '../assets/clbs/z2224189151927_55aff970e80d61f2d03c7cb2737761d0.jpg|../assets/clbs/HỘI GOLF TỈNH BÀ RỊA - VŨNG TÀU.jpg|../assets/clbs/HỘI GOLF TỈNH BÀ RỊA - VŨNG TÀU1.jpg', 'HỘI GOLF TỈNH BÀ RỊA - VŨNG TÀU', '', '', NULL, '2020-12-13 09:26:43'),
 (29, '../assets/clbs/CLB GOLF TỈNH BÌNH THUẬN.jpg|../assets/clbs/CLB GOLF TỈNH BÌNH THUẬN1.jpg', 'CLB GOLF TỈNH BÌNH THUẬN', '', '', NULL, '2020-12-13 09:27:15'),
 (30, '../assets/clbs/z2224191254720_c31c7c51fae937c5526b5bd39a4ff832.jpg|../assets/clbs/HỘI GOLF NHA TRANG.jpg|../assets/clbs/HỘI GOLF NHA TRANG1.jpg', 'HỘI GOLF NHA TRANG', '', '', NULL, '2020-12-13 09:27:42'),
@@ -168,9 +164,36 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `fullname`, `birthday`, `phone`, `email`, `address`, `position_level`, `password`, `create_date`) VALUES
-(24, 'Thiên Thai Võ', '0000-00-00', '0987959209', 'vohuyenthienthai94@gmail.com', '', '', '$2y$10$3qdQuqfz2uHXpM9dDdT4teFjNERCcIuvJYh10BqSPK/LlEi3PXP8G', '2020-12-19 09:16:48'),
-(25, 'Võ huyền thiên thư', '0000-00-00', '0969293136', 'vohuyenthienthu@gmail.com', '', '', '$2y$10$c2TPyEGK1zevdbJO8D5Rsew0EvJU1Axyrcn1yMevpzTroPuOHqpa.', '2020-12-19 21:01:17'),
-(28, 'Nguyen Dung Tri', '0000-00-00', '076464664664', 'trind09@yahoo.com', '', '', '$2y$10$ePoxAe8Drnmx87AKzLkDa.tV8PGDXB9vu..7gGTzeqIDlEYbKr9Vu', '2020-12-23 16:48:43');
+(24, 'vo Huyền Thien Thu', '0000-00-00', '0987959209', 'vohuyenthienthai94@gmail.com', '', '', '$2y$10$3qdQuqfz2uHXpM9dDdT4teFjNERCcIuvJYh10BqSPK/LlEi3PXP8G', '2020-12-19 09:16:48'),
+(25, 'Võ Huyền Thiên Thư', '0000-00-00', '0969293136', 'vohuyenthienthu@gmail.com', '', '', '$2y$10$c2TPyEGK1zevdbJO8D5Rsew0EvJU1Axyrcn1yMevpzTroPuOHqpa.', '2020-12-19 21:01:17'),
+(28, 'Nguyen Dung Tri', '0000-00-00', '076464664664', 'trind09@yahoo.com', '', '', '$2y$10$ePoxAe8Drnmx87AKzLkDa.tV8PGDXB9vu..7gGTzeqIDlEYbKr9Vu', '2020-12-23 16:48:43'),
+(29, 'Vo Huyền Thiên Thai', '0000-00-00', '0987959208', '', '', '', '$2y$10$y1uKg35AoRI6GPrrqKHBauIQMidz2FLlmj09q2HK9FiIjA6VohWPa', '2021-01-01 10:12:10'),
+(30, 'bb', '0000-00-00', '09789687565', '', '', '', '$2y$10$KDkhmZDmU9oYUhyTM5CRQuxHBQH0rfIZ/0mDX15E3s6sFdbVusl1a', '2021-01-04 12:22:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `title_gallery` varchar(300) DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
+  `image_url` varchar(2000) DEFAULT NULL,
+  `thumbnail_url` varchar(2000) DEFAULT NULL,
+  `external_album_hyperlink` varchar(1000) DEFAULT NULL,
+  `history` varchar(5000) DEFAULT NULL,
+  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `title_gallery`, `description`, `image_url`, `thumbnail_url`, `external_album_hyperlink`, `history`, `create_date`) VALUES
+(2, 'GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CUP TASMANIA - ALBUM 1', '', '../assets/gallery/large/z2201957389029_bdaaacca5693b573a1b10ab6aa2fc280.jpg|../assets/gallery/large/z2201957401391_9ed54e51bfadc32c148ae7321bb2361d.jpg|../assets/gallery/large/z2201957411606_e330a9c4ea4d39fc7c54b0d2c19ceaec.jpg|../assets/gallery/large/z2201957414455_273a6f59fd6df6c09090a5c432271017.jpg|../assets/gallery/large/z2201957417518_8c847d233e348c48e09256f3b7ed892e.jpg|../assets/gallery/large/z2201957424484_a9af29b4e05612c05e63a408d36faa0f.jpg|../assets/gallery/large/z2201957435992_10025a99da5fcbb60164adff1b8f5a93.jpg|../assets/gallery/large/z2201957436595_92bea7185e5cff6d398b3a71e5de47f4.jpg', NULL, 'https://drive.google.com/drive/folders/1pznlvLfmi1NOdjKBXhVkFvbAyGrjYVMD', NULL, '2021-01-11 21:22:23'),
+(8, 'GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CUP TASMANIA - ALBUM 2', '', '../assets/gallery/large/z2201957442519_6ad066eb4c45859743a8d8809b281acf.1610375639.jpg|../assets/gallery/large/z2201957448731_757d89cb21a9b5b3a04f5840b76291e4.1610375639.jpg|../assets/gallery/large/z2201957460101_ee46fd8de052c4d39ad226034fa41f0e.1610375640.jpg|../assets/gallery/large/z2201957463002_b1c236ce2ae09484d9c9300b0e999492.1610375640.jpg|../assets/gallery/large/z2201957467762_620f3e8fb8b8841b1071c7ff29652f07.1610375640.jpg|../assets/gallery/large/z2201957476987_9b2f8c71f95d9c9f0cfafabbbebe2a1c.1610375640.jpg|../assets/gallery/large/z2201957489212_3e683181b3aa89faf7753465354824e3.1610375640.jpg', NULL, 'https://drive.google.com/drive/folders/1pznlvLfmi1NOdjKBXhVkFvbAyGrjYVMD', 'Update by admin - 2021-01-16 15:02:49<br/>', '2021-01-11 21:33:48');
 
 -- --------------------------------------------------------
 
@@ -186,27 +209,28 @@ CREATE TABLE `news` (
   `content` text,
   `hyperlink` varchar(300) DEFAULT NULL,
   `author` varchar(100) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `history` varchar(5000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id`, `image_name`, `title`, `description`, `content`, `hyperlink`, `author`, `create_date`) VALUES
-(29, '../assets/news/images/albumgolfnewsst-gs2c4881-1606447274851-16064472773001931337640.jpg', '50 CLB tham dự giải golf tranh cúp Tasmania', 'Vào tối ngày 29/11, ban tổ chức giải Vô địch các CLB Golf tranh cúp Tasmania lần thứ hai đã tổ chức buổi họp báo với sự tham dự của đại diện CLB cùng những đơn vị tài trợ đồng hành. Theo kế hoạch, giải đấu sẽ diễn ra trong hai ngày 8-9/12 trên sân golf Tân Sơn Nhất và nằm trong chuỗi sự kiện thể thao Race To Mien Trung.', NULL, 'https://ictvietnam.vn/50-clb-tham-du-giai-golf-tranh-cup-tasmania-20201127102541564.htm', '', '2020-12-16 22:48:49'),
-(30, '../assets/news/images/12.jpg', 'Chuỗi sự kiện thể thao hướng về miền Trung trong tháng 12', 'Tháng 12 này sẽ diễn ra hai sự kiện thể thao đình đám là giải Vô Địch Các CLB Golf tranh Cúp Tasmania và Lễ hội đua xe thể thao lớn nhất Việt Nam được tổ chức theo chuẩn VMA. ', NULL, 'https://kinhtethitruong.vn/chuoi-su-kien-the-thao-huong-ve-mien-trung-trong-thang-12-40889.html', '', '2020-12-16 22:49:38'),
-(31, '../assets/news/images/race-to-mien-trung3-1123.jpg', 'Cơ hội “săn” HIO 40 tỷ tại giải vô địch các CLB Golf tranh Cúp Tasmania', '(GolfViet) – Giải Vô địch các CLB golf tranh Cúp Tasmania lần thứ 2 sẽ diễn ra vào ngày 08,09/12/2020 tại sân golf Tân Sơn Nhất.', NULL, 'https://golfviet.vn/co-hoi-san-hio-40-ty-tai-giai-vo-dich-cac-clb-golf-tranh-cup-tasmania-d5021.html', '', '2020-12-16 22:51:23'),
-(32, '../assets/news/images/albumgolfnewsst-gs2c4881-1606447274851-16064472773001931337640.1608134026.jpg', 'Giải Vô Địch các CLB Golf hướng về miền Trung', 'Giải vô địch các CLB Golf lần thứ 2 diễn ra ngày 8-9/12 với sự tham dự của 650 golfer đến từ nhiều tỉnh thành trong cả nước.', NULL, 'https://vietnamnet.vn/vn/the-thao/cac-mon-khac/giai-vo-dich-cac-clb-golf-huong-ve-mien-trung-693111.html', '', '2020-12-16 22:53:46'),
-(33, '../assets/news/images/albumgolfnewsst-gs2c4881-1606447274851-16064472773001931337640.1608134115.jpg', 'Giải vô địch golf quy mô lớn', 'Trong 2 ngày 8, 9/12, sẽ diễn ra sự kiện giải Vô địch các CLB golf phía Nam, với sự tham dự của 50 đội đến từ nhiều địa phương khác nhau.', NULL, 'https://dantri.com.vn/the-thao/giai-vo-dich-golf-quy-mo-lon-20201127225621863.htm', '', '2020-12-16 22:55:15'),
-(34, '../assets/news/images/z2201957411606_e330a9c4ea4d39fc7c54b0d2c19ceaec.jpg', '﻿50 CLB Golf tranh tài tại giải Giải Vô địch các CLB Cup Tasmania 2020.', 'Vào tối ngày 26/11, ban tổ chức giải Vô địch các CLB Golf tranh cúp Tasmania lần thứ hai đã tổ chức buổi họp báo với sự tham dự của đại diện CLB cùng những đơn vị tài trợ đồng hành. ', NULL, 'https://www.golfnews.vn/50-clb-golf-tranh-tai-tai-giai-giai-vo-dich-cac-clb-cup-tasmania-2020.html', '', '2020-12-16 22:56:45'),
-(35, '../assets/news/images/lecongbogiaigolf27112020.jpg', '﻿Hai sự kiện thể thao hướng về miền Trung trong tháng 12', 'Ngày 26.11.2020, Ban tổ chức chương trình Race to mien Trung (RTMT) đã tổ chức lễ công bố hai sự kiện thể thao lớn trong tháng 12.2020.', NULL, 'https://1thegioi.vn/hai-su-kien-the-thao-huong-ve-mien-trung-trong-thang-12-157006.html', '', '2020-12-16 22:58:11'),
-(36, '../assets/news/images/le-cong-vinh-chuyen-nghe-danh-golf-giai-clb-race-to-mien-trung.1608134418.jpg', 'Lê Công Vinh \'chuyển nghề\' đánh golf giải CLB ‘Race to mien Trung’', 'Cựu danh thủ bóng đá Việt Nam Lê Công Vinh cùng 649 golfer góp mặt tranh tài ở giải vô địch các CLB golf-Cúp Tasmania trong chuỗi sự kiện “Race to mien Trung”.', NULL, 'https://thanhnien.vn/the-thao/toan-canh-the-thao/le-cong-vinh-chuyen-nghe-danh-golf-giai-clb-race-to-mien-trung-125268.html', '', '2020-12-16 23:00:18'),
-(37, '../assets/news/images/9c-9102-1606469875.jpg', 'Lễ hội golf phong trào lớn nhất phía Nam', 'Giải vô địch các CLB golf phía Nam, với hơn 600 golfer từ 50 hội nhóm, hứa hẹn trở thành lễ hội golf phong trào lớn nhất cả nước dịp cuối năm nay.', NULL, 'https://vnexpress.net/le-hoi-golf-phong-trao-lon-nhat-phia-nam-4198193.html', '', '2020-12-16 23:01:10'),
-(38, '../assets/news/images/1-14545995.jpg', 'Tháng 12 diễn ra sự kiện thể thao lớn nhất năm gây quỹ từ thiện cho các tỉnh miền Trung', 'Tháng 12 này sẽ diễn ra hai sự kiện thể thao đình đám là giải Vô địch các CLB Golf tranh Cúp Tasmania và Lễ hội đua xe thể thao lớn nhất Việt Nam được tổ chức theo chuẩn VMA.', NULL, 'https://giadinhvietnam.com/thang-12-dien-ra-su-kien-the-thao-lon-nhat-nam-gay-quy-tu-thien-cho-cac-tinh-mien-trung-d164077.html?', '', '2020-12-16 23:17:02'),
-(39, '../assets/news/images/things-you-need-to-know-about-the-series-of-sporting.1608135489.jpg', 'Thêm tấm lòng hướng về đồng bào miền Trung', '(Thethaovanhoa.vn)- Chiều 26/11 tại TP.HCM, BTC giải vô địch Các CLB Golf tranh Cúp Tasmania và Lễ hội đua xe thể thao lớn nhất Việt Nam đã tổ chức buổi họp báo giới thiệu chương trình và chuỗi sự kiện gây quỹ ủng hộ đồng bào miền Trung bị ảnh hưởng bởi lũ lụt.', NULL, 'https://thethaovanhoa.vn/the-thao/them-tam-long-huong-ve-dong-bao-mien-trung-n20201127144503371.htm', '', '2020-12-16 23:18:09'),
-(40, '../assets/news/images/z2201957411606_e330a9c4ea4d39fc7c54b0d2c19ceaec.1608135673.jpg', 'Things you need to know about the series of sporting events “RACE TO MIEN TRUNG”', 'It’s the reason that “RACE TO MIEN TRUNG” (Race to Central Vietnam) was chosen to become the key message of this series of sports events, as an encouragement from the organizing committee to ignite and spread the positive values to the fan clubs and the Vietnamese in general.', NULL, 'https://vietnaminsider.vn/things-you-need-to-know-about-the-series-of-sporting-events-race-to-mien-trung/', '', '2020-12-16 23:21:13'),
-(41, '../assets/news/images/z2197979732016_6130c4bb28dc31416ada46221416fff7.jpg', 'Treo 40 tỷ đồng cho HIO tại giải Vô địch các CLB tranh cúp Tasmania 2020 ', 'Chiều nay, lễ công bố giải golf “Vô địch CLB tranh cúp Tasmania lần thứ 2” đã diễn ra với đại diện của của 50 CLB khu vực phía Nam tham gia tranh đấu trong hai ngày 8-9.12 tại sân golf Tân Sơn Nhất tới đây. Giải đấu nằm trong chuỗi sự kiện thể thao “Race to Mien Trung” cùng hoạt động Lễ Hội Đua Xe Thể Thao lần đầu tiên được tổ chức tại Việt Nam diễn ra vào ngày 12.12 tại trường đua Đại Nam.', NULL, 'https://vietnamgolfmagazine.net/vi/treo-40-ty-dong-cho-hio-tai-giai-vo-dich-cac-clb-tranh-cup-tasmania-2020', '', '2020-12-16 23:22:38');
+INSERT INTO `news` (`id`, `image_name`, `title`, `description`, `content`, `hyperlink`, `author`, `create_date`, `history`) VALUES
+(29, '../assets/news/images/albumgolfnewsst-gs2c4881-1606447274851-16064472773001931337640.jpg', '50 CLB tham dự giải golf tranh cúp Tasmania', 'Vào tối ngày 29/11, ban tổ chức giải Vô địch các CLB Golf tranh cúp Tasmania lần thứ hai đã tổ chức buổi họp báo với sự tham dự của đại diện CLB cùng những đơn vị tài trợ đồng hành. Theo kế hoạch, giải đấu sẽ diễn ra trong hai ngày 8-9/12 trên sân golf Tân Sơn Nhất và nằm trong chuỗi sự kiện thể thao Race To Mien Trung.', NULL, 'https://ictvietnam.vn/50-clb-tham-du-giai-golf-tranh-cup-tasmania-20201127102541564.htm', '', '2020-12-16 22:48:49', NULL),
+(30, '../assets/news/images/12.jpg', 'Chuỗi sự kiện thể thao hướng về miền Trung trong tháng 12', 'Tháng 12 này sẽ diễn ra hai sự kiện thể thao đình đám là giải Vô Địch Các CLB Golf tranh Cúp Tasmania và Lễ hội đua xe thể thao lớn nhất Việt Nam được tổ chức theo chuẩn VMA. ', NULL, 'https://kinhtethitruong.vn/chuoi-su-kien-the-thao-huong-ve-mien-trung-trong-thang-12-40889.html', '', '2020-12-16 22:49:38', NULL),
+(31, '../assets/news/images/race-to-mien-trung3-1123.jpg', 'Cơ hội “săn” HIO 40 tỷ tại giải vô địch các CLB Golf tranh Cúp Tasmania', '(GolfViet) – Giải Vô địch các CLB golf tranh Cúp Tasmania lần thứ 2 sẽ diễn ra vào ngày 08,09/12/2020 tại sân golf Tân Sơn Nhất.', NULL, 'https://golfviet.vn/co-hoi-san-hio-40-ty-tai-giai-vo-dich-cac-clb-golf-tranh-cup-tasmania-d5021.html', '', '2020-12-16 22:51:23', NULL),
+(32, '../assets/news/images/albumgolfnewsst-gs2c4881-1606447274851-16064472773001931337640.1608134026.jpg', 'Giải Vô Địch các CLB Golf hướng về miền Trung', 'Giải vô địch các CLB Golf lần thứ 2 diễn ra ngày 8-9/12 với sự tham dự của 650 golfer đến từ nhiều tỉnh thành trong cả nước.', NULL, 'https://vietnamnet.vn/vn/the-thao/cac-mon-khac/giai-vo-dich-cac-clb-golf-huong-ve-mien-trung-693111.html', '', '2020-12-16 22:53:46', NULL),
+(33, '../assets/news/images/albumgolfnewsst-gs2c4881-1606447274851-16064472773001931337640.1608134115.jpg', 'Giải vô địch golf quy mô lớn', 'Trong 2 ngày 8, 9/12, sẽ diễn ra sự kiện giải Vô địch các CLB golf phía Nam, với sự tham dự của 50 đội đến từ nhiều địa phương khác nhau.', NULL, 'https://dantri.com.vn/the-thao/giai-vo-dich-golf-quy-mo-lon-20201127225621863.htm', '', '2020-12-16 22:55:15', NULL),
+(34, '../assets/news/images/z2201957411606_e330a9c4ea4d39fc7c54b0d2c19ceaec.jpg', '﻿50 CLB Golf tranh tài tại giải Giải Vô địch các CLB Cup Tasmania 2020.', 'Vào tối ngày 26/11, ban tổ chức giải Vô địch các CLB Golf tranh cúp Tasmania lần thứ hai đã tổ chức buổi họp báo với sự tham dự của đại diện CLB cùng những đơn vị tài trợ đồng hành. ', NULL, 'https://www.golfnews.vn/50-clb-golf-tranh-tai-tai-giai-giai-vo-dich-cac-clb-cup-tasmania-2020.html', '', '2020-12-16 22:56:45', NULL),
+(35, '../assets/news/images/lecongbogiaigolf27112020.jpg', '﻿Hai sự kiện thể thao hướng về miền Trung trong tháng 12', 'Ngày 26.11.2020, Ban tổ chức chương trình Race to mien Trung (RTMT) đã tổ chức lễ công bố hai sự kiện thể thao lớn trong tháng 12.2020.', NULL, 'https://1thegioi.vn/hai-su-kien-the-thao-huong-ve-mien-trung-trong-thang-12-157006.html', '', '2020-12-16 22:58:11', NULL),
+(36, '../assets/news/images/le-cong-vinh-chuyen-nghe-danh-golf-giai-clb-race-to-mien-trung.1608134418.jpg', 'Lê Công Vinh \'chuyển nghề\' đánh golf giải CLB ‘Race to mien Trung’', 'Cựu danh thủ bóng đá Việt Nam Lê Công Vinh cùng 649 golfer góp mặt tranh tài ở giải vô địch các CLB golf-Cúp Tasmania trong chuỗi sự kiện “Race to mien Trung”.', NULL, 'https://thanhnien.vn/the-thao/toan-canh-the-thao/le-cong-vinh-chuyen-nghe-danh-golf-giai-clb-race-to-mien-trung-125268.html', '', '2020-12-16 23:00:18', NULL),
+(37, '../assets/news/images/9c-9102-1606469875.jpg', 'Lễ hội golf phong trào lớn nhất phía Nam', 'Giải vô địch các CLB golf phía Nam, với hơn 600 golfer từ 50 hội nhóm, hứa hẹn trở thành lễ hội golf phong trào lớn nhất cả nước dịp cuối năm nay.', NULL, 'https://vnexpress.net/le-hoi-golf-phong-trao-lon-nhat-phia-nam-4198193.html', '', '2020-12-16 23:01:10', NULL),
+(38, '../assets/news/images/1-14545995.jpg', 'Tháng 12 diễn ra sự kiện thể thao lớn nhất năm gây quỹ từ thiện cho các tỉnh miền Trung', 'Tháng 12 này sẽ diễn ra hai sự kiện thể thao đình đám là giải Vô địch các CLB Golf tranh Cúp Tasmania và Lễ hội đua xe thể thao lớn nhất Việt Nam được tổ chức theo chuẩn VMA.', NULL, 'https://giadinhvietnam.com/thang-12-dien-ra-su-kien-the-thao-lon-nhat-nam-gay-quy-tu-thien-cho-cac-tinh-mien-trung-d164077.html?', '', '2020-12-16 23:17:02', NULL),
+(39, '../assets/news/images/things-you-need-to-know-about-the-series-of-sporting.1608135489.jpg', 'Thêm tấm lòng hướng về đồng bào miền Trung', '(Thethaovanhoa.vn)- Chiều 26/11 tại TP.HCM, BTC giải vô địch Các CLB Golf tranh Cúp Tasmania và Lễ hội đua xe thể thao lớn nhất Việt Nam đã tổ chức buổi họp báo giới thiệu chương trình và chuỗi sự kiện gây quỹ ủng hộ đồng bào miền Trung bị ảnh hưởng bởi lũ lụt.', NULL, 'https://thethaovanhoa.vn/the-thao/them-tam-long-huong-ve-dong-bao-mien-trung-n20201127144503371.htm', '', '2020-12-16 23:18:09', NULL),
+(40, '../assets/news/images/z2201957411606_e330a9c4ea4d39fc7c54b0d2c19ceaec.1608135673.jpg', 'Things you need to know about the series of sporting events “RACE TO MIEN TRUNG”', 'It’s the reason that “RACE TO MIEN TRUNG” (Race to Central Vietnam) was chosen to become the key message of this series of sports events, as an encouragement from the organizing committee to ignite and spread the positive values to the fan clubs and the Vietnamese in general.', NULL, 'https://vietnaminsider.vn/things-you-need-to-know-about-the-series-of-sporting-events-race-to-mien-trung/', '', '2020-12-16 23:21:13', NULL),
+(41, '../assets/news/images/z2197979732016_6130c4bb28dc31416ada46221416fff7.jpg', 'Treo 40 tỷ đồng cho HIO tại giải Vô địch các CLB tranh cúp Tasmania 2020', 'Chiều nay, lễ công bố giải golf “Vô địch CLB tranh cúp Tasmania lần thứ 2” đã diễn ra với đại diện của của 50 CLB khu vực phía Nam tham gia tranh đấu trong hai ngày 8-9.12 tại sân golf Tân Sơn Nhất tới đây. Giải đấu nằm trong chuỗi sự kiện thể thao “Race to Mien Trung” cùng hoạt động Lễ Hội Đua Xe Thể Thao lần đầu tiên được tổ chức tại Việt Nam diễn ra vào ngày 12.12 tại trường đua Đại Nam.', '', 'https://vietnamgolfmagazine.net/vi/treo-40-ty-dong-cho-hio-tai-giai-vo-dich-cac-clb-tranh-cup-tasmania-2020', '', '2020-12-16 23:22:38', 'Update by admin - 2021-01-16 14:55:39<br/>');
 
 -- --------------------------------------------------------
 
@@ -216,18 +240,21 @@ INSERT INTO `news` (`id`, `image_name`, `title`, `description`, `content`, `hype
 
 CREATE TABLE `plan` (
   `id` int(11) NOT NULL,
-  `title_plan` varchar(300) DEFAULT NULL,
-  `plan_description` varchar(1000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `title` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `hyperlink` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
+  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `history` varchar(5000) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `plan`
 --
 
-INSERT INTO `plan` (`id`, `title_plan`, `plan_description`, `create_date`) VALUES
-(4, 'video', 'sukien', '2020-12-10 10:23:16'),
-(5, 'video1', 'sukien1', '2020-12-10 10:23:16');
+INSERT INTO `plan` (`id`, `title`, `description`, `hyperlink`, `create_date`, `history`) VALUES
+(6, 'Video', NULL, 'https://drive.google.com/file/d/1XKvrvgsUFJYmygSekObgCWAth2KqxPsT', '2021-01-17 14:16:07', 'Insert by admin - 2021-01-17 08:16:07<br/>Update by admin - 2021-01-17 09:47:09<br/>'),
+(7, 'Kế hoạch', NULL, 'https://drive.google.com/file/d/1I06apgfMPmpAPf1-2kOZZthad7cStTvY', '2021-01-17 14:16:25', 'Insert by admin - 2021-01-17 08:16:25<br/>Update by admin - 2021-01-17 09:35:44<br/>Update by admin - 2021-01-17 09:47:01<br/>'),
+(8, 'Điều lệ', NULL, 'https://drive.google.com/file/d/1TvFbxltrLv0HpMauBwz0feLk8dpHAvPt', '2021-01-17 14:16:42', 'Insert by admin - 2021-01-17 08:16:42<br/>Update by admin - 2021-01-17 09:36:02<br/>Update by admin - 2021-01-17 09:46:53<br/>');
 
 -- --------------------------------------------------------
 
@@ -326,6 +353,12 @@ ALTER TABLE `customer`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
@@ -358,25 +391,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `auction`
 --
 ALTER TABLE `auction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `auction_product`
 --
 ALTER TABLE `auction_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `caulacbo`
 --
 ALTER TABLE `caulacbo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -388,7 +427,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `plan`
 --
 ALTER TABLE `plan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `registers`
