@@ -1,36 +1,8 @@
 ﻿<?php include 'inc/config.php'; ?>
 <?php include 'inc/functions.php'; ?>
+<!DOCTYPE html>
 <html class="no-js" lang="">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <!-- SEO -->
-    <title>Vietnam Racing Festival 2020</title>
-	<meta name="description" content="Where's your limit?">
-	<meta name="keywords" content="">
-	<meta name="og:title" content="Vietnam Racing Festival 2020">
-	<meta name="og:description" content="Where's your limit?">
-	<meta name="og:image" content="assets/images/logo.png">
-    
-	<meta property="og:image" content="assets/images/bg.jpg">
-	<meta property="og:image:type" content="image/png">
-	<meta property="og:image:width" content="1024">
-	<meta property="og:image:height" content="576">
-
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <meta name="robots" content="noodp, noydir">
-
-    <!-- No Google Translate toolbar -->
-
-    <meta name="google" content="notranslate">
-
-    <!-- Viewport and mobile -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="320">
-    <meta http-equiv="cleartype" content="on">
 	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<link rel="stylesheet" href="<?php echo auto_version('assets/main.css'); ?>" type="text/css" />
 	<link rel="stylesheet" href="<?php echo auto_version('assets/index.css'); ?>" type="text/css" />
@@ -68,29 +40,35 @@
     src="https://www.facebook.com/tr?id=2740220276218425&ev=PageView&noscript=1"
     /></noscript>
     <!-- End: Facebook Pixel Code -->
+	
+	<script>
+	//Update meta tags
+	
+	$('head').append('<meta charset="utf-8">');
+	$('head').append('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
+	
+	//SEO
+	$('head').append('<title><?php echo $site_name; ?></title>');
+	$('head').append('<meta name="description" content="<?php echo $site_description; ?>">');
+	$('head').append('<meta name="keywords" content="">');
+	$('head').append('<meta name="og:title" content="<?php echo $site_name; ?>">');
+	$('head').append('<meta name="og:description" content="<?php echo $site_description; ?>">');
+	$('head').append('<meta name="og:image" content="<?php echo $site_image; ?>">');
+	
+    $('head').append('<meta property="og:image" content="<?php echo $site_image; ?>">');
+	$('head').append('<meta property="og:image:type" content="image/png">');
+	$('head').append('<meta property="og:image:width" content="1024">');
+	$('head').append('<meta property="og:image:height" content="576">');
+	$('head').append('<link rel="icon" type="image/png" href="<?php echo $site_favicon; ?>">');
+	$('head').append('<meta name="robots" content="noodp, noydir">');
+	
+	//No Google Translate toolbar
+	$('head').append('<meta name="google" content="notranslate">');
+
+	//Viewport and mobile
+	$('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">');
+	$('head').append('<meta name="HandheldFriendly" content="true">');
+	$('head').append('<meta name="MobileOptimized" content="320">');
+	$('head').append('<meta http-equiv="cleartype" content="on">');
+	</script>
 </head>
-<body style="background: #010300;">
-	<?php include 'racing_register.php';?>
-    <header id="header">
-      <div class="contain">
-        <nav>
-          <ul id="nav" style="visibility: inherit; opacity: 1;">
-            <li><a href="#aboutus" class="nav-left" role="aboutus"><span>giới thiệu</span></a></li>
-            <li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
-            <li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
-            <li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '<?php echo($domain); ?>';"><a href="<?php echo($domain); ?>"></a></li>
-            <li><a href="#term" class="nav-right" role="term"><span>thể lệ <br>thi đấu</span></a></li>
-            <li><a href="#news" class="nav-right" role="news"><span>tin tức</span></a></li>
-            <li><a href="#gallery" class="nav-right" role="gallery"><span>HÌNH ẢNH <br>&amp; KẾT QUẢ</span></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header-mb">
-        <a href="<?php echo($domain); ?>" class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0);"></a>
-         <div class="menu-toggle-wrapper" aria-hidden="true">
-          <button class="btn-menu menu-closed">
-             <span class="menu-icon"></span>
-          </button>
-        </div>  
-      </div>
-    </header>

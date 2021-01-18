@@ -14,6 +14,8 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //Site info
 $site_name = "Vietnam Racing Festival 2020";
 $site_description = "Where is your limit?";
+$site_image = "assets/images/site_image.png";
+$site_favicon = "assets/images/favicon.png";
 
 //SMTP
 $smtp_host = "smtp.gmail.com";

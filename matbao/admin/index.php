@@ -1,4 +1,29 @@
 ﻿<?php include 'header.php'; ?>
+<body style="background: #efefef; background: url(assets/images/p-bg.jpg);">
+<header id="header">
+  <div class="contain">
+	<nav>
+	  <ul id="nav" style="visibility: inherit; opacity: 1;">
+		<li><a href="#aboutus" class="nav-left" role="aboutus"><span>giới thiệu</span></a></li>
+		<li><a href="#events" class="nav-left" role="events"><span>Sự kiện</span></a></li>
+		<li><a href="#plan" class="nav-left" role="plan"><span>lịch thi đấu</span></a></li>
+		<li class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0); cursor: pointer;" onclick="location.href = '<?php echo($domain); ?>';"><a href="<?php echo($domain); ?>"></a></li>
+		<li><a href="#term" class="nav-right" role="term"><span>Giải đấu</span></a></li>
+		<li><a href="#news" class="nav-right" role="news"><span>tin tức</span></a></li>
+		<li><a href="#gallery" class="nav-right" role="gallery"><span>HÌNH ẢNH <br>&amp; KẾT QUẢ</span></a></li>
+	  </ul>
+	</nav>
+  </div>
+  <div class="header-mb">
+	<a href="<?php echo($domain); ?>" class="logo" style="visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0);"></a>
+	 <div class="menu-toggle-wrapper" aria-hidden="true">
+	  <button class="btn-menu menu-closed">
+		 <span class="menu-icon"></span>
+	  </button>
+	</div>  
+  </div>
+</header>
+	
 <section id="pHome">
 	<script type="text/javascript">
 		var _folder = '/';

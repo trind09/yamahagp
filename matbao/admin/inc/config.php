@@ -1,9 +1,9 @@
 <?php
-$domain = "http://localhost/yamahagp/matbao/admin/";
-$root = "E:/xampp7/htdocs/yamahagp/";
-$dbhost = 'localhost';
+$domain = "http://localhost:8080/yamahagp/matbao/admin/";
+$root = "C:/xampp/htdocs/yamahagp/";
+$dbhost = 'localhost:8080';
 // Database Name
-$dbname = 'ilear871_vietnam_racing_festival';
+$dbname = 'daotaome_golfandcar';
 // Database Username
 $dbuser = 'root';
 // Database Password
@@ -12,8 +12,10 @@ $pdo = new PDO("mysql:host={$dbhost};dbname={$dbname}", $dbuser, $dbpass, array(
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 //Site info
-$site_name = "Golf Club Championship";
-$site_description = "Golf Club Championship 2020";
+$site_name = "Golf Club Championship 2020";
+$site_description = "GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA";
+$site_image = "assets/images/logo.png";
+$site_favicon = "assets/images/favicon.png";
 
 //SMTP
 $smtp_host = "smtp.gmail.com";
