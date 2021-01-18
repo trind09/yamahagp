@@ -15,6 +15,7 @@ $mail->Username = $smtp_username; // SMTP username
 $mail->Password = $smtp_password; // SMTP password
 $mail->CharSet = 'UTF-8';				//PHPMailer character encoding support
 ?>
+<!DOCTYPE html>
 <html class="no-js" lang="">
 <head>
 	<meta charset="utf-8">
