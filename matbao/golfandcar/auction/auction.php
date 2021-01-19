@@ -214,7 +214,7 @@ function showDivs(n) {
 
 	function ShareAuction(){
 		var aution_product_id = $('#aution_product_id').val();
-		var auction_link = '<?php echo $domain; ?>?aid=' + aution_product_id;
+		var auction_link = '<?php echo $domain; ?>auction/item.php?aid=' + aution_product_id;
 		var pro_name = $('#pro_name').html();
 		var pro_short_description = $('#pro_short_description' + aution_product_id).html();
 		var aution_product_image = $('#aution_product_image').val();
@@ -232,7 +232,7 @@ function showDivs(n) {
 
 	function CopyAuctionLink(){
 		var aution_product_id = $('#aution_product_id').val();
-		var auction_link = '<?php echo $domain; ?>?aid=' + aution_product_id;
+		var auction_link = '<?php echo $domain; ?>auction/item.php?aid=' + aution_product_id;
 		var $temp = $("<input>");
 		$("body").append($temp);
 		$temp.val(auction_link).select();
