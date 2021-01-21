@@ -89,116 +89,64 @@
 		<h2>GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA</h2>
 		<div class="about-contain display">
 			<div class="copy-about">
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-1');" title="Về chúng tôi">Về chúng tôi ►</h5>
-					<p class="aboutus-content aboutus-content-1" style="display: none;">Năm 2019 khởi đầu cho sự kiện quy tụ các Golfer hàng đầu thuộc nhiều CLB golf tại TP Hồ Chí Minh và các tỉnh phía Nam tạo nên sự kiện Vô Địch Các CLB Golf Phía Nam tranh cúp Tasmania, năm 2020 tiếp nối sự thành công đó là sự đầu tư chỉn chu hơn từ phía ban tổ chức cũng như 50 CLB Golf tham dự sẽ tạo nên một ngày hội golf phương Nam sẽ diễn ra ngày 8 và ngày 9’tháng 12 năm 2020 với gần 700 Golfer tham dự.</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-2');" title="Câu chuyện">Câu chuyện ►</h5>
-					<p class="aboutus-content aboutus-content-2" style="display: none;">Sự kiện Vô Địch Các CLB Golf ra đời nhằm thay đổi thói quen golf của các Golfer xưa nay đó là chỉ chơi với chính mình và ít mở rộng giao thương kết nối, thì đây sẽ là cầu nối để các CLB Golf khắp nơi xây dựng văn hoá , phong cách và màu cờ sắc áo của đội mình và hơn hết là tinh thần đồng đội được đề cao hơn hết cho một chiến thắng tập thể thay vì thành tích cá nhân.</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-3');" title="Định hướng">Định hướng ►</h5>
-					<p class="aboutus-content aboutus-content-3" style="display: none;">Đây sẽ là sự kiện được tổ chức định kỳ hàng năm , mỗi năm sẽ có đầu tư mạnh mẽ hơn về chất lượng chuyên môn cũng như tài chính mạnh hơn nhằm đem đến một ngày hội golf thực sự của các Golfer phía Nam.</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-4');" title="Giá trị cốt lõi">Giá trị cốt lõi ►</h5>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Chuyên Nghiệp</p>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Đam Mê</p>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Điêu Luyện</p>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Tinh Thần Thể Thao</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-5');" title="Tầm nhìn tương lai">Tầm nhìn tương lai ►</h5>
-					<p class="aboutus-content aboutus-content-5" style="display: none;">Chúng tôi thực hiện sứ mệnh truyền tải cảm hứng golf đến cộng đồng Golfer toàn quốc , tạo ra hiệu ứng tốt để phát triển phong trào golf , đưa golf trở nên phổ thông hơn với người Việt chúng ta, là cầu nối để kết nối giao thương giữa các Golfer trong nước và quốc tế.</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-6');" title="Danh sách nhà tài trợ">Danh sách nhà tài trợ ►</h5>
-					<script>
-						$( document ).ready(function() {
-							var currentDevice = getDeviceType();
-							if (currentDevice != "desktop"){
-								$('#sponsors1').remove();
-							} else {
-								$('#sponsors2').remove();
-							}
-						});
-					</script>
-					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center; background: rgb(18 109 12); padding-bottom: 5px;" id="sponsors1"><img style='width: 100%;' src='assets/images/sponsors.png' /></div>
-					<div class="aboutus-content aboutus-content-6" style="display: none; text-align: center; background: rgb(18 109 12); padding-bottom: 5px;" id="sponsors2">
-						<img style='width: 100%;' src='assets/images/sponsors1.png' />
-						<img style='width: 100%; padding-top: 10px;' src='assets/images/sponsors2.png' />
-						<img style='width: 100%; padding-top: 10px;' src='assets/images/sponsors3.png' />
-						<img style='width: 100%;' src='assets/images/sponsors4.png' />
-					</div>
-				</div>
-				<div class="aboutus-users">
-					<div class="about-us">
-						<div class="row">
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-							  <div class="aboutus-image" title="VŨ THÀNH HUẾ" style="background-image: url('assets/images/person1.jpg');"></div>
-							  <div class="aboutus-card-container">
-								<h2>VŨ THÀNH HUẾ</h2>
-								<p>Chủ tịch tập đoàn Tasmania & Partner - Chủ tịch giải đấu</p>
-							  </div>
-							</div>
-						  </div>
+                <?php 
+                $sql = "SELECT * FROM aboutus";
+		        $statement = $pdo->prepare($sql);
+		        $statement->execute();
+		        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                if(count($result) > 0 ){
+                    $aboutus_paragraph = '';
+                    $i=1;
+                    foreach ($result as $row){
+				        $title = $row["title"];
+                        $description = $row["description"];
+                        $aboutus_paragraph .= '<div class="aboutus-paragraph aboutus_com">
+                                                        <h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, \'aboutus-content-' .$i. '\');" title="'. $title .'"> '. $title .'  ►</h5>
+					                                    <div class="aboutus-content aboutus-content-' .$i. '" style="display: none;"> '. $description .' </div>
+                                                    </div>';   
+ 
+                        $i++;
+			        }
+                    echo(' <style>
+                                .aboutus_com ul li {list-style: inherit; margin-left: 20px;}
+                                .aboutus_com .aboutus-content img {
+                                 text-align: center; background: rgb(18 109 12); padding-bottom: 5px;}
+                           </style>');
+                    echo($aboutus_paragraph);    
 
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-							  <div class="aboutus-image" title="Vi Quốc Tuấn" style="background-image: url('<?php echo auto_version('assets/images/person3.jpg'); ?>');"></div>
-							  <div class="aboutus-card-container">
-								<h2>Vi Quốc Tuấn</h2>
-								<p>Phó chủ tịch tập đoàn Tasmania, Phó chủ tịch Hiệp Hội Golf Việt Nam, Chủ tịch Hội Golf Hải Phòng, Phó chủ tịch giải đấu</p>
-							  </div>
-							</div>
-						  </div>
+                }
+                ?>
+                <?php 
+                $sql = "SELECT * FROM member";
+		        $statement = $pdo->prepare($sql);
+		        $statement->execute();
+		        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                if(count($result) > 0 ){
+                    $aboutus_users = '<div class="aboutus-users">';
+                    $aboutus_users .= '<div class="about-us">';
+                    $aboutus_users .= '<div class="row" style="display:flex; flex-wrap:wrap">';
+                    $i=1;
+                    foreach ($result as $row){
+				        $name = $row["name"];
+                        $description = $row["description"];
+                        $picture =  $row["picture"];
+                        $img_url_array = $domain . str_replace('../', '', $picture);
+                        $aboutus_users .= '<div class="aboutus-column">
+							                    <div class="aboutus-card">
+							                        <div class="aboutus-image" title="' .$name. '" style="background-image: url(\''. $img_url_array .'\');"></div>
+							                        <div class="aboutus-card-container">
+								                        <h2>' . $name . '</h2>
+								                        <p>' . $description . '</p>
+							                        </div>
+							                    </div>
+						                    </div>';
+                        $i++;
+			        }
+                    $aboutus_users .= '</div></div></div>'; 
+                    echo($aboutus_users);    
 
-							<div class="aboutus-column">
-								<div class="aboutus-card">
-								  <div class="aboutus-image" title="Trần Ngọc Hải" style="background-image: url('assets/images/person6.jpg');"></div>
-								  <div class="aboutus-card-container">
-									<h2>Trần Ngọc Hải</h2>
-									<p>Phó chủ tịch HĐQT, Tổng giám đốc công ty Cp Đầu tư Long Biên - Phó chủ tịch giải đấu </p>
-								  </div>
-								</div>
-							</div>
-						  
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-							  <div class="aboutus-image" title="Hoàng Trọng Khánh" style="background-image: url('assets/images/person4.jpg');"></div>
-							  <div class="aboutus-card-container">
-								<h2>Hoàng Trọng Khánh</h2>
-								<p>Tổng Giám Đốc KMTC Việt Nam - Phó chủ tịch giải đấu</p>
-							  </div>
-							</div>
-						  </div>
-						</div>
-
-						<div class="row">
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-								<div class="aboutus-image" title="TRỊNH VĂN THÀNH" style="background-image: url('assets/images/person2.jpg');"></div>
-								  <div class="aboutus-card-container">
-									<h2>TRỊNH VĂN THÀNH</h2>
-									<p>Chủ tịch Cty Golf Pro - Trưởng BTC Giải</p>
-								  </div>
-								</div>
-							</div>
-
-							<div class="aboutus-column">
-								<div class="aboutus-card">
-								  <div class="aboutus-image" title="Dương Quang Huy" style="background-image: url('assets/images/person5.jpg');"></div>
-								  <div class="aboutus-card-container">
-									<h2>Dương Quang Huy</h2>
-									<p>Giám đốc Golf sân golf TSN - Tổng trọng tài giải đấu </p>
-								  </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                }
+                ?>
 				<div class="aboutus-paragraph">
 					<script>
 						//var swalTimeOut;

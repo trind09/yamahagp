@@ -52,6 +52,8 @@ if(isset($_GET["view"])) {
 						<a onclick="return GoTo('customer');" id="customer_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-user-circle"></i>Danh sách khách hàng</a>
 						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Danh sách kế hoạch & điều lệ</a>
 						<a onclick="return GoTo('gallery');" id="gallery_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Thư viện ảnh</a>
+                        <a onclick="return GoTo('aboutus');" id="aboutus_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Giới Thiệu Công Ty</a>
+                        <a onclick="return GoTo('member');" id="member_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Thành viên công ty</a>
                      </li>
                   </ul>
                </div>
@@ -78,6 +80,10 @@ if(isset($_GET["view"])) {
 				include 'controller/pla_dashboard.php';
 			} elseif ($view == "gallery"){
                 include 'controller/gallery_dashboard.php';
+			} elseif ($view == "aboutus"){
+                include 'controller/aboutus_dashboard.php';
+			}elseif ($view == "member"){
+                include 'controller/member_dashboard.php';
 			} else {
 				include 'controller/reg_dashboard.php';
 			}
