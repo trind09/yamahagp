@@ -1,4 +1,4 @@
-﻿<head>
+<head>
 	<!-- SEO -->
     <title><?php echo($site_name); ?></title>
 	<meta name="description" content="<?php echo($site_description); ?>">
@@ -83,7 +83,11 @@
                 $('#plan_pannel_link').attr('class', 'nav-link active');
             } else if (view == 'gallery') {
                 $('#gallery_link').attr('class', 'nav-link active');
-            } else {
+            } else if (view == 'aboutus') {
+                $('#aboutus_link').attr('class', 'nav-link active');
+            } else if (view == 'member') {
+                $('#member_link').attr('class', 'nav-link active');
+			} else {
 				$('#reg_dashboard_link').attr('class', 'nav-link active');
 			}
 			if ( typeof from_date !== 'undefined' && Object.prototype.toString.call(from_date) == '[object String]') {
@@ -119,6 +123,10 @@
                 location.href = "index.php?view=plan_pannel";
             } else if (view == 'gallery') {
                 location.href = "index.php?view=gallery";
+            } else if (view == 'aboutus') {
+                location.href = "index.php?view=aboutus";
+			} else if (view == 'member') {
+                location.href = "index.php?view=member";
 			} else {
 				location.href = "index.php?view=reg_dashboard";
 			}

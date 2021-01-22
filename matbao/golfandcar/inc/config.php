@@ -1,6 +1,6 @@
 <?php
-$domain = "http://localhost:8080/yamahagp/matbao/admin/";
-$root = "C:/xampp/htdocs/yamahagp/";
+$domain = "http://localhost:8080/yamahagp/matbao/golfandcar/";
+$root = "C:/xampp/htdocs/yamahagp/matbao/golfandcar/";
 $dbhost = 'localhost:8080';
 // Database Name
 $dbname = 'daotaome_golfandcar';
