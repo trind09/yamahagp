@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2021 at 12:42 PM
+-- Generation Time: Jan 22, 2021 at 10:08 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -42,12 +42,10 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id`, `name`, `description`, `history`, `create_date`, `picture`) VALUES
-(14, 'VŨ THÀNH HUẾ', '<p><span style=\"color: rgb(128, 128, 128); font-family: Verdana, sans-serif; font-size: 15px; text-align: center;\">Chủ tịch tập đoàn Tasmania &amp; Partner - Chủ tịch giải đấu</span></p>', 'Insert by admin - 2021-01-21 05:56:52<br/>', '2021-01-21 11:56:52', '../assets/member/person1[1].jpg'),
-(15, 'VI QUỐC TUẤN', '<p><span style=\"color: rgb(128, 128, 128); font-family: Verdana, sans-serif; font-size: 15px; text-align: center;\">Phó chủ tịch tập đoàn Tasmania, Phó chủ tịch Hiệp Hội Golf Việt Nam, Chủ tịch Hội Golf Hải Phòng, Phó chủ tịch giải đấu</span></p>', 'Insert by admin - 2021-01-21 05:58:33<br/>', '2021-01-21 11:58:33', '../assets/member/person3[1].jpg'),
-(16, 'TRẦN NGỌC HẢI', 'Phó chủ tịch HĐQT, Tổng giám đốc công ty Cp Đầu tư Long Biên - Phó chủ tịch giải đấu', 'Insert by admin - 2021-01-21 06:29:36<br/>Update by admin - 2021-01-21 06:30:43<br/>Update by admin - 2021-01-21 06:30:51<br/>Update by admin - 2021-01-21 12:11:52<br/>Update by admin - 2021-01-21 12:12:34<br/>', '2021-01-21 12:29:36', '../assets/member/person6[3].jpg'),
-(21, 'HOÀNG TRỌNG KHÁNH', 'Tổng Giám Đốc KMTC Việt Nam - Phó chủ tịch giải đấu', 'Insert by admin - 2021-01-21 06:36:04<br/>Update by admin - 2021-01-21 06:36:24<br/>Update by admin - 2021-01-21 06:36:26<br/>', '2021-01-21 12:36:04', '../assets/member/person4[1].1611207384.jpg'),
-(22, 'TRỊNH VĂN THÀNH', 'Chủ tịch Cty Golf Pro - Trưởng BTC Giải', 'Insert by admin - 2021-01-21 06:37:17<br/>', '2021-01-21 12:37:17', '../assets/member/person2[1].jpg'),
-(23, 'DƯƠNG QUANG HUY', 'Giám đốc Golf sân golf TSN - Tổng trọng tài giải đấu', 'Insert by admin - 2021-01-21 06:38:11<br/>Update by admin - 2021-01-21 12:13:45<br/>Update by admin - 2021-01-21 12:14:41<br/>Update by admin - 2021-01-21 12:14:49<br/>Update by admin - 2021-01-21 12:22:42<br/>Update by admin - 2021-01-21 12:22:55<br/>', '2021-01-21 12:38:11', '../assets/member/person5[1][1].jpg');
+(25, 'GIA BẢO NGUYỄN', 'Founder', 'Insert by admin - 2021-01-22 09:59:48<br/>', '2021-01-22 15:59:48', '../assets/member/person1.jpg'),
+(26, 'DUY TRẦN', 'Co-Founder', 'Insert by admin - 2021-01-22 10:00:25<br/>', '2021-01-22 16:00:25', '../assets/member/person2.jpg'),
+(27, 'RICH PHẠM', 'Co-Founder', 'Insert by admin - 2021-01-22 10:00:58<br/>', '2021-01-22 16:00:58', '../assets/member/person3.jpg'),
+(28, 'VINH NGUYỄN', 'Co-Founder', 'Insert by admin - 2021-01-22 10:01:31<br/>', '2021-01-22 16:01:31', '../assets/member/person4.jpg');
 
 --
 -- Indexes for dumped tables
@@ -67,7 +65,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

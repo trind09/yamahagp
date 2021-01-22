@@ -119,73 +119,64 @@
 		<h2>VIETNAM RACING FESTIVAL 2020</h2>
 		<div class="about-contain display">
 			<div class="copy-about">
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-1');" title="Về chúng tôi">Về chúng tôi ►</h5>
-					<p class="aboutus-content aboutus-content-1" style="display: none;">Năm 2020, Học viện Đua xe Việt Nam - Vietnam Racing Academy (VR) được thành lập bởi một nhóm doanh nhân với niềm đam mê mãnh liệt với đua xe thể thao. Được hỗ trợ bởi VMA - ASN duy nhất của Liên Đoàn Ô tô Quốc tế FIA tại Việt Nam.</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-2');" title="Câu chuyện">Câu chuyện ►</h5>
-					<p class="aboutus-content aboutus-content-2" style="display: none;">Học viện Đua xe Việt Nam (VR) ra đời bởi những con người tâm huyết, trăn trở với nền thể thao đua xe nước nhà. Luôn mong muốn Việt Nam có những tay đua đủ chuyên môn để thi đấu trong khu vực cũng như quốc tế.</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-3');" title="Định hướng">Định hướng ►</h5>
-					<p class="aboutus-content aboutus-content-3" style="display: none;">Học viện Vietnam Racing Academy được thành lập để định hướng và đào tạo các tay đua chuyên nghiệp, đồng thời tổ chức các cuộc thi để thúc đẩy môn đua xe thể thao nước nhà trên một nền tảng vững chắc, bài bản nhằm thúc đẩy môn đua xe thể thao tại Việt Nam.</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-4');" title="Giá trị cốt lõi">Giá trị cốt lõi ►</h5>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Chuyên Nghiệp</p>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Đam Mê</p>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Điêu Luyện</p>
-					<p class="aboutus-content aboutus-content-4" style="display: none;">-	Tinh Thần Thể Thao</p>
-				</div>
-				<div class="aboutus-paragraph">
-					<h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, 'aboutus-content-5');" title="Tầm nhìn tương lai">Tầm nhìn tương lai ►</h5>
-					<p class="aboutus-content aboutus-content-5" style="display: none;">Quảng bá và cấu trúc hóa văn hóa đua xe thể thao tại Việt Nam, cũng như mang đến nhiều cơ hội cho các danh nghiệp trong nước và ngoài nước quảng bá thương hiệu trong môi trường an toàn và công bằng.</p>
-				</div>
-				<div class="aboutus-users">
-					<div class="about-us">
-						<div class="row">
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-							  <div class="aboutus-image" title="GIA BẢO NGUYỄN" style="background-image: url('assets/images/person1.jpg');"></div>
-							  <div class="aboutus-card-container">
-								<h2>GIA BẢO NGUYỄN</h2>
-								<p>Founder</p>
-							  </div>
-							</div>
-						  </div>
+                <?php 
+                $sql = "SELECT * FROM aboutus";
+                $statement = $pdo->prepare($sql);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                if(count($result) > 0 ){
+                    $aboutus_paragraph = '';
+                    $i=1;
+                    foreach ($result as $row){
+                        $title = $row["title"];
+                        $description = $row["description"];
+                        $aboutus_paragraph .= '<div class="aboutus-paragraph aboutus_com">
+                                                        <h5 class="aboutus-title" style="cursor: pointer;" onclick="ShowAboutusContent(this, \'aboutus-content-' .$i. '\');" title="'. $title .'"> '. $title .'  ►</h5>
+                                                        <div class="aboutus-content aboutus-content-' .$i. '" style="display: none;"> '. $description .' </div>
+                                                    </div>';   
+ 
+                        $i++;
+                    }
+                    echo(' <style>
+                                .aboutus_com ul li {list-style: inherit; margin-left: 20px;}
+                                .aboutus_com .aboutus-content img {
+                                 text-align: center; background: rgb(18 109 12); padding-bottom: 5px;}
+                           </style>');
+                    echo($aboutus_paragraph);    
 
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-							  <div class="aboutus-image" title="DUY TRẦN" style="background-image: url('assets/images/person2.jpg');"></div>
-							  <div class="aboutus-card-container">
-								<h2>DUY TRẦN</h2>
-								<p>Co-Founder</p>
-							  </div>
-							</div>
-						  </div>
-						  
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-							  <div class="aboutus-image" title="RICH PHẠM" style="background-image: url('assets/images/person3.jpg');"></div>
-							  <div class="aboutus-card-container">
-								<h2>RICH PHẠM</h2>
-								<p>Co-Founder</p>
-							  </div>
-							</div>
-						  </div>
-						  <div class="aboutus-column">
-							<div class="aboutus-card">
-							  <div class="aboutus-image" title="VINH NGUYỄN" style="background-image: url('assets/images/person4.jpg');"></div>
-							  <div class="aboutus-card-container">
-								<h2>VINH NGUYỄN</h2>
-								<p>Co-Founder</p>
-							  </div>
-							</div>
-						  </div>
-						</div>
-					</div>
-				</div>
+                }
+                ?>
+                <?php 
+                $sql = "SELECT * FROM member";
+                $statement = $pdo->prepare($sql);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                if(count($result) > 0 ){
+                    $aboutus_users = '<div class="aboutus-users">';
+                    $aboutus_users .= '<div class="about-us">';
+                    $aboutus_users .= '<div class="row" style="display:flex; flex-wrap:wrap">';
+                    $i=1;
+                    foreach ($result as $row){
+                        $name = $row["name"];
+                        $description = $row["description"];
+                        $picture =  $row["picture"];
+                        $img_url_array = $domain . str_replace('../', '', $picture);
+                        $aboutus_users .= '<div class="aboutus-column">
+                                                <div class="aboutus-card">
+                                                    <div class="aboutus-image" title="' .$name. '" style="background-image: url(\''. $img_url_array .'\');"></div>
+                                                    <div class="aboutus-card-container">
+                                                        <h2>' . $name . '</h2>
+                                                        <p>' . $description . '</p>
+                                                    </div>
+                                                </div>
+                                            </div>';
+                        $i++;
+                    }
+                    $aboutus_users .= '</div></div></div>'; 
+                    echo($aboutus_users);    
+
+                }
+                ?>
 			</div>
 		</div>
 	</div>
