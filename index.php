@@ -222,102 +222,113 @@ $(window).on("load", function() {
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">Event Hightlights</li>
 		</ul>
-		<div class="about-contain display register-contain">
-			<div class="js-highlights js-slider" role="toolbar" style="height: 500px; text-align: center;">
-				 <div class="slider-box">
-					<p>Đường Đua</p>
-					<img src="assets/sukien/Truong_dua_tieu_chuan.jpg"/>
-					<h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">Đường Đua Chuẩn An Toàn VMA</h5>
-				 </div>
-				 <div class="slider-box">
-					<p>Trọng Tài</p>
-					<img src="assets/sukien/1907178_vietnam.jpg"/>
-					<h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">Trọng Tài Được Huấn Luyện & Cấp Bằng VMA</h5>
-				 </div>
-				 <div class="slider-box">
-					<p>Trưng Bày</p>
-					<img src="assets/sukien/Sieu_xe.jpg"/>
-					<h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">Trưng Bày Siêu Xe & Test Drive</h5>
-				 </div>
-				 <div class="slider-box">
-					<p>VIP Lounge</p>
-					<img src="assets/sukien/VIP_Lounge_01.jpg"/>
-				 </div>
-			</div>
-		</div>
+        <?php
+         $sql = "SELECT * FROM event WHERE category='EVENT HIGHTLIGHTS'";
+            $statement = $pdo->prepare($sql);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            if(count($result) > 0 ){
+                $event_slide = '<div class="about-contain display register-contain">';
+                $event_slide .= '<div class="js-highlights js-slider" role="toolbar" style="height: 500px; text-align: center;">';
+                $i=1;
+                foreach ($result as $row){
+                    $title = $row["title"];
+                    $description = $row["description"];
+                    $picture =  $row["picture"];
+                    $img_url_array = $domain . str_replace('../', '', $picture);
+                    $event_slide .= ' <div class="slider-box">
+					                        <p>' . $title . '</p>
+					                        <img src="'. $img_url_array .'"/>
+					                        <h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">'. $description .'</h5>
+				                            </div>';
+                    $i++;
+                }
+                $event_slide .= '</div></div>'; 
+                echo($event_slide);    
+
+            }
+        ?>
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
 			<li class="active" style="width: 100%;">Line up</li>
 		</ul>
-		<div class="about-contain display register-contain">
-			<div class="js-rappers js-slider" role="toolbar" style="height: 500px; text-align: center;">
-				<div class="slider-box">
-					<p>Rapper Karik</p>
-					<img src="assets/sukien/Karik.jpg">
-				</div>
-				<div class="slider-box">
-					<p>Rapper Dế Choắt</p>
-					<img src="assets/sukien/DECHOAT.jpg">
-				</div>
-				<div class="slider-box">
-					<p>Rapper Yuno BigBoi</p>
-					<img src="assets/sukien/YunoBigboi.jpg">
-				</div>
-				<div class="slider-box">
-					<p>Rapper Lowkey</p>
-					<img src="assets/sukien/LowKey.jpg"/>
-				 </div>
-				 <div class="slider-box">
-					<p>Rapper Mess</p>
-					<img src="assets/sukien/Mes.jpg">
-				</div>
-				 <div class="slider-box">
-					<p>Rapper KOO</p>
-					<img src="assets/sukien/KOO.jpg">
-				</div>
-				 <div class="slider-box">
-					<p>Rapper Kenji</p>
-					<img src="assets/sukien/Kenji.jpg">
-				</div>
-			</div>
-			<div class="js-djs js-slider" role="toolbar" style="height: 500px; text-align: center;">
-				<div class="slider-box">
-					<p>DJ Vinjaz</p>
-					<img src="assets/sukien/DJ_VINJAZ_01.jpg">
-				</div>
-				<div class="slider-box">
-					<p>DJ Mie</p>
-					<img src="assets/sukien/Mie.jpg">
-				</div>
-				<div class="slider-box">
-					<p>DJ Lại Thanh Hương</p>
-					<img src="assets/sukien/DJThanhHuong.jpg">
-				</div>
-				<div class="slider-box">
-					<p>DJ Nicky</p>
-					<img src="assets/sukien/DJ_Nicky.jpg">
-				</div>
-				<div class="slider-box">
-					<p>DJ Tio</p>
-					<img src="assets/sukien/DJ_Tio.jpg">
-				</div>
-				<div class="slider-box">
-					<p>DJ Miki</p>
-					<img src="assets/sukien/DJ_Miki.jpg">
-				</div>
-			</div>
-			<div class="js-mcs js-slider" role="toolbar" style="height: 500px; text-align: center;">
-				<div class="slider-box">
-					<p>MC Goku</p>
-					<img src="assets/sukien/MCGOKU.jpg">
-				</div>
-				<div class="slider-box">
-					<p>MC LIL 'Vinx</p>
-					<img src="assets/sukien/MC_LIL_Vinx.jpg">
-				</div>
-			</div>
-		</div>
-</section>
+        <div class="about-contain display register-contain">
+            <?php
+             $sql = "SELECT * FROM event WHERE category='CA SĨ'";
+                $statement = $pdo->prepare($sql);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                if(count($result) > 0 ){
+                    $event_slide = '<div class="js-highlights js-slider" role="toolbar" style="height: 500px; text-align: center;">';
+                    $i=1;
+                    foreach ($result as $row){
+                        $title = $row["title"];
+                        $description = $row["description"];
+                        $picture =  $row["picture"];
+                        $img_url_array = $domain . str_replace('../', '', $picture);
+                        $event_slide .= ' <div class="slider-box">
+					                            <p>' . $title . '</p>
+					                            <img src="'. $img_url_array .'"/>
+					                            <h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">'. $description .'</h5>
+				                           </div>';
+                        $i++;
+                    }
+                    $event_slide .= '</div>'; 
+                    echo($event_slide);    
 
+                }
+            ?>
+            <?php
+            $sql = "SELECT * FROM event WHERE category='DJ'";
+                $statement = $pdo->prepare($sql);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                if(count($result) > 0 ){
+                    $event_slide = '<div class="js-highlights js-slider" role="toolbar" style="height: 500px; text-align: center;">';
+                    $i=1;
+                    foreach ($result as $row){
+                        $title = $row["title"];
+                        $description = $row["description"];
+                        $picture =  $row["picture"];
+                        $img_url_array = $domain . str_replace('../', '', $picture);
+                        $event_slide .= ' <div class="slider-box">
+					                            <p>' . $title . '</p>
+					                            <img src="'. $img_url_array .'"/>
+					                            <h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">'. $description .'</h5>
+				                           </div>';
+                        $i++;
+                    }
+                    $event_slide .= '</div>'; 
+                    echo($event_slide);    
+
+                }
+            ?>
+            <?php
+            $sql = "SELECT * FROM event WHERE category='MC'";
+                $statement = $pdo->prepare($sql);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                if(count($result) > 0 ){
+                    $event_slide = '<div class="js-highlights js-slider" role="toolbar" style="height: 500px; text-align: center;">';
+                    $i=1;
+                    foreach ($result as $row){
+                        $title = $row["title"];
+                        $description = $row["description"];
+                        $picture =  $row["picture"];
+                        $img_url_array = $domain . str_replace('../', '', $picture);
+                        $event_slide .= ' <div class="slider-box">
+					                            <p>' . $title . '</p>
+					                            <img src="'. $img_url_array .'"/>
+					                            <h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">'. $description .'</h5>
+				                           </div>';
+                        $i++;
+                    }
+                    $event_slide .= '</div>'; 
+                    echo($event_slide);    
+
+                }
+            ?>
+        </div>
+</section>
 <section id="register" class="display">
 		<h2>Đăng ký thi đấu</h2>
 		<ul class="gallery-tabs js-about--tabs1" style="transform: matrix(1, 0, -0.26795, 1, 0, 0);">
