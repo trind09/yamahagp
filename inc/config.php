@@ -27,6 +27,7 @@ $smtp_secure = 'tls';
 //Site settings
 $enable_auction_login = false; //If false customer cannot login
 $enable_auto_auction_register = true; //If true it allow customer to do auction without login and register
+$enable_slide_video_and_buy_ticket = false; //If true it allow customer to do auction without login and register
 
 //Query to alter table to utf8 collation
 //ALTER DATABASE dbname CHARACTER SET utf8 COLLATE utf8_unicode_ci;

@@ -216,10 +216,12 @@ $( document ).ready(function() {
 	}, 2200);
 });
 </script>
-<div class="pannel-buttons">
-	<a id="pannel-button1" class="btn-sm animated-button victoria-one" href="#register" role="register">Đăng ký thi đấu</a>
-	<a id="pannel-button2" class="btn-sm animated-button victoria-one" href="https://ticketbox.vn/vr-fest-2020#booking">Mua vé</a>
-	<a id="pannel-button3" class="btn-sm animated-button victoria-one" onclick="showVideo('vietnam-racing');" href="#">Watch video</a>
-</div>
+<?php if ($enable_slide_video_and_buy_ticket){ ?>
+	<div class="pannel-buttons">
+		<a id="pannel-button1" class="btn-sm animated-button victoria-one" href="#register" role="register">Đăng ký thi đấu</a>
+		<a id="pannel-button2" class="btn-sm animated-button victoria-one" href="https://ticketbox.vn/vr-fest-2020#booking">Mua vé</a>
+		<a id="pannel-button3" class="btn-sm animated-button victoria-one" onclick="showVideo('vietnam-racing');" href="#">Watch video</a>
+	</div>
+<?php }?>
 <script type="text/javascript">jssor_1_slider_init();
 </script>
