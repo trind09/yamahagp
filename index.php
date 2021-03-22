@@ -236,10 +236,10 @@ $(window).on("load", function() {
                     $description = $row["description"];
                     $picture =  $row["picture"];
                     $img_url_array = $domain . str_replace('../', '', $picture);
-                    $event_slide .= ' <div class="slider-box">
+                    $event_slide .= ' <div class="slider-box" style="box-sizing: border-box;position: relative;">
 					                        <p>' . $title . '</p>
 					                        <img src="'. $img_url_array .'"/>
-					                        <h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">'. $description .'</h5>
+					                        <div style="position: absolute; z-index: 1001; color: #33c331; top: 80px; font-size: 13px;"><h5 style="width:96%; margin: 0 auto">'. $description .'</h5></div>
 				                            </div>';
                     $i++;
                 }
