@@ -36,13 +36,17 @@
 </script>
 <div class="wrap-phone">
 	<div class="wrap-ticket-regi" style="display: none">
+		<?php if ($enable_slide_video_and_buy_ticket){ ?>
 		<div class="muave animate__animated animate__zoomIn animate__slower"><span>Mua Vé</span></div>
-		<div class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
-		</div>
+		<div class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower"></div>
 		<a href="https://ticketbox.vn/vr-fest-2020#booking"><img class="img-ticket" src="assets/images/ticket.png"></a>
+		<?php } else { ?>
+		<div style="display: none;" class="muave animate__animated animate__zoomIn animate__slower"><span>Mua Vé</span></div>
+		<div style="background: none; border: none;" class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower"></div>
+		<a style="display: none;" href="https://ticketbox.vn/vr-fest-2020#booking"><img style="display: none;" class="img-ticket" src="assets/images/ticket.png"></a>
+		<?php } ?>
 		<div class="dangky animate__animated animate__zoomIn  animate__slower"><span>Đăng Ký Thi Đấu</span></div>
-		<div class="wrap-regi phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower">
-		</div>
+		<div class="wrap-regi phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower"></div>
 		<a href="#register" role="register" class="js-joinnow"><img class="img-regi" src="assets/images/register.png"></a>
 	</div>
 

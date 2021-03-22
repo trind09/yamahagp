@@ -238,8 +238,8 @@ $(window).on("load", function() {
                     $img_url_array = $domain . str_replace('../', '', $picture);
                     $event_slide .= ' <div class="slider-box" style="box-sizing: border-box;position: relative;">
 					                        <p>' . $title . '</p>
-					                        <img src="'. $img_url_array .'"/>
-					                        <div style="position: absolute; z-index: 1001; color: #33c331; top: 80px; font-size: 13px;"><h5 style="width:96%; margin: 0 auto">'. $description .'</h5></div>
+					                        <img style="height: 462px; width: 100%;" src="'. $img_url_array .'"/>
+					                        <div style="position: absolute; z-index: 1001; color: #33c331; top: 80px; font-size: 13px; width: 100%;"><h5 style="width:96%; margin: 0 auto">'. $description .'</h5></div>
 				                            </div>';
                     $i++;
                 }
