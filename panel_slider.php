@@ -1,4 +1,4 @@
-<!-- #region Jssor Slider Begin -->
+﻿<!-- #region Jssor Slider Begin -->
 <!-- Generator: Jssor Slider Composer -->
 <!-- Source: https://www.jssor.com/premium/full-width/full-width.slider/=edit -->
 <script src="assets/js/jssor.slider.min.js" type="text/javascript"></script>
