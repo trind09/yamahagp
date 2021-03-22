@@ -1,4 +1,4 @@
-﻿<!-- #region Jssor Slider Begin -->
+<!-- #region Jssor Slider Begin -->
 <!-- Generator: Jssor Slider Composer -->
 <!-- Source: https://www.jssor.com/premium/full-width/full-width.slider/=edit -->
 <script src="assets/js/jssor.slider.min.js" type="text/javascript"></script>
@@ -156,7 +156,6 @@ function hideVideo(videoId){
 		<div><img data-u="image" src="assets/pannel/20201201_191327.jpg" /></div>
 		<div><img data-u="image" src="assets/pannel/20201201_191212.jpg" /></div>
 		<div><img data-u="image" src="assets/pannel/20201201_191151.jpg" /></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191054.jpg" /></div>
 	</div>
 	<!-- Bullet Navigator -->
 	<div data-u="navigator" class="jssorb057" style="position:absolute;bottom:18px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
