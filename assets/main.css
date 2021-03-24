@@ -5527,7 +5527,7 @@ footer .copyright a:hover {
 @media screen and (max-width: 567px) {
   /* line 109, ../../../../../../Digitop/2017/assets/scss/module/_v2.scss */
   #pHome {
-    padding-top: 50px;
+    padding-top: 0px;
   }
 
   /* line 112, ../../../../../../Digitop/2017/assets/scss/module/_v2.scss */

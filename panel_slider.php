@@ -221,6 +221,23 @@ $( document ).ready(function() {
 		<a id="pannel-button2" class="btn-sm animated-button victoria-one" href="https://ticketbox.vn/vr-fest-2020#booking">Mua vé</a>
 		<a id="pannel-button3" class="btn-sm animated-button victoria-one" onclick="showVideo('vietnam-racing');" href="#">Watch video</a>
 	</div>
-<?php }?>
+<?php } else { ?>
+	<style>
+		.racing_register_button {
+			width: 30%;
+			height: 30%;
+			background: url("assets/images/DangKyThiDauButton2.png") no-repeat;
+			background-size: 30%;
+			display: inline-block;
+			cursor: pointer;
+			top: 53% !important;
+		}
+		.racing_register_button:hover {
+			background: url("assets/images/DangKyThiDauButton1.png") no-repeat;
+			background-size: 30%;
+		}
+	</style>
+	<div class="pannel-buttons racing_register_button" onclick="location.href='<?php echo $domain; ?>#register';"></div>
+<?php } ?>
 <script type="text/javascript">jssor_1_slider_init();
 </script>
