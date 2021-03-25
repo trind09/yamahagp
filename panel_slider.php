@@ -237,7 +237,7 @@ $( document ).ready(function() {
 			background-size: 30%;
 		}
 	</style>
-	<div class="pannel-buttons racing_register_button" onclick="location.href='<?php echo $domain; ?>#register';"></div>
+	<div class="pannel-buttons racing_register_button" onclick="location.href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w';"></div>
 <?php } ?>
 <script type="text/javascript">jssor_1_slider_init();
 </script>

@@ -1,7 +1,6 @@
 ﻿<?php include 'header.php'; ?>
 
 <body style="background: #010300;">
-<?php include 'racing_register.php';?>
 <header id="header">
   <div class="contain">
 	<nav>
@@ -340,15 +339,12 @@ $(window).on("load", function() {
 					<h2>Moto</h2>
 					<div class="copy copy-a" style="background: url(assets/images/motorlogo.png);">
 						<div class="note">
-							<h6>Motul Motor Racing Cup</h6>
-							<p>Hệ 300 - 400cc</p>
-							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('semipro-300-400cc');" class="registry-link">- Semi-Pro</a></p>
+							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Motul motor racing cup UB150</a></h6>
+							<p><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Hệ Pro</a></p>
+							<p><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Hệ Semi Pro</a></p>
 						</div>
 						<div class="note">
-							<h6>Motul Motor Racing Cup</h6>
-							<p>Hệ UB150</p>
-							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-pro');" class="registry-link">- Pro</a></p>
-							<p><a style="cursor: pointer;" onclick="OpenRegisterPopup('moto-ub150-semipro');" class="registry-link">- Semi-Pro</a></p>
+							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Motul motor Autogymkhana Cup</a></h6>
 						</div>
 					</div>
 				</li>
@@ -356,8 +352,7 @@ $(window).on("load", function() {
 					<h2>Go kart</h2>
 					<div class="copy copy-a" style="background: url(assets/images/go-kartlogo.png);">
 						<div class="note">
-							<h6 style="margin-bottom: 0px;"><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">VR Go-Kart Cup Hệ 2 THÌ</a></h6>
-							<h6 style="margin-bottom: 0px;"><a href='#' onclick="return ShowRegistryBox('4 Thi');" class="registry-link">VR Go-Kart Cup Hệ 4 THÌ</a></h6>
+							<h6 style="margin-bottom: 0px;"><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Go-Kart Cup Hệ 2 THÌ</a></h6>
 						</div>
 					</div>
 				</li>
@@ -365,9 +360,8 @@ $(window).on("load", function() {
 					<h2>Oto</h2>
 					<div class="copy copy-a" style="background: url(assets/images/otologo.png);">
 						<div class="note">
-							<h6><a style="cursor: pointer;" onclick="ShowExpiredRegistryMessage();" class="registry-link">Vinfast Autogymkhana Cup</a></h6>
-							<h6><a style="cursor: pointer;" onclick="OpenRegisterPopup('oto-track-attack');" class="registry-link">Vinfast Track Attact Cup</a></h6>
-							<h6><a href='#' onclick="return ShowExpiredRegistryMessage();" class="registry-link">VR Drift Battle</a></h6>
+							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Autogymkhana Cup</a></h6>
+							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Drift Cup</a></h6>
 						</div>
 					</div>
 				</li>
@@ -375,7 +369,7 @@ $(window).on("load", function() {
 					<h2>Roller Sport</h2>
 					<div class="copy copy-a" style="background: url(assets/images/rollerlogo.png);">
 						<div class="note">
-							<h6><a href='#' onclick="OpenRegisterPopup('vr-roller-sport-cup');" class="registry-link">VR Roller Sport Cup</a></h6>
+							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Roller Sport Cup</a></h6>
 						</div>
 					</div>
 				</li>
@@ -396,8 +390,14 @@ $(window).on("load", function() {
 					<span>Lịch thi đấu</span>
 					<div class="plan-item">
 						<h3>Vòng loại</h3>
-						<p><img src="assets/images/i-time.png">6/12/2020 Vòng loại giải MOTUL MOTOR RACING CUP</p>
-						<p><img src="assets/images/i-time.png">11/12/2020 Vòng loại VINFAST AUTOGYMKHANA, VINFAST TRACK ATTACK CUP</p>
+						<p><img src="assets/images/i-time.png">01/05/2021<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại VR Autogymkhana Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul motor Autogymkhana Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul motor racing cup UB150<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại VR Go – kart Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Roller Sport Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Drift Cup<br/>
+						</p>
 						<p><img src="assets/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
 						<h4>1</h4>
 					</div>
@@ -407,14 +407,11 @@ $(window).on("load", function() {
 					<span>Lịch thi đấu</span>
 					<div class="plan-item">
 						<h3>Vòng chung kết</h3>
-						<p><img src="assets/images/i-time.png">12/12/2020<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Chung kết các giải đua<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- VINFAST AUTOGYMKHANA<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- VINFAST TRACK ATTACK CUP<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- MOTUL MOTOR RACING CUP<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- ROLLER SPORT<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- VR GO-KART CUP<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- VR DRIFT BATTLE<br/>
+						<p><img src="assets/images/i-time.png">02/05/2021<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul motor Autogymkhana Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul motor racing cup UB150<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR AutoGymkhana Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Go – kart Cup<br/>
 						</p>
 						<p><img src="assets/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
 						<h4>2</h4>
