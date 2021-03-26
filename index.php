@@ -344,7 +344,7 @@ $(window).on("load", function() {
 							<p><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Hệ Semi Pro</a></p>
 						</div>
 						<div class="note">
-							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Motul motor Autogymkhana Cup</a></h6>
+							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Motul motor gymkhana cup</a></h6>
 						</div>
 					</div>
 				</li>
@@ -392,13 +392,13 @@ $(window).on("load", function() {
 						<h3>Vòng loại</h3>
 						<p><img src="assets/images/i-time.png">01/05/2021<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại VR Autogymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul motor Autogymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul motor racing cup UB150<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại VR Go – kart Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul Motor Gymkhana Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul Motor Racing Cup UB150<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại VR Go – Kart Cup<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Roller Sport Cup<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Drift Cup<br/>
 						</p>
-						<p><img src="assets/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
+						<p><img src="assets/images/i-location.png">Trường Đua Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
 						<h4>1</h4>
 					</div>
 				</li>
@@ -408,12 +408,12 @@ $(window).on("load", function() {
 					<div class="plan-item">
 						<h3>Vòng chung kết</h3>
 						<p><img src="assets/images/i-time.png">02/05/2021<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul motor Autogymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul motor racing cup UB150<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul Motor Gymkhana Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul Motor Racing Cup UB150<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR AutoGymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Go – kart Cup<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Go – Kart Cup<br/>
 						</p>
-						<p><img src="assets/images/i-location.png">Trường Đua Xe Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
+						<p><img src="assets/images/i-location.png">Trường Đua Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
 						<h4>2</h4>
 					</div>
 				</li>
