@@ -2,10 +2,10 @@
 -- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jan 17, 2021 at 04:32 PM
--- Server version: 5.7.32-log
--- PHP Version: 7.3.6
+-- Host: 127.0.0.1:3306
+-- Generation Time: Apr 22, 2021 at 11:30 AM
+-- Server version: 10.4.14-MariaDB-cll-lve
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,8 +19,34 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `daotaome_golfandcar`
+-- Database: `u888166303_golfandcar`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aboutus`
+--
+
+CREATE TABLE `aboutus` (
+  `id` int(11) NOT NULL,
+  `title` varchar(500) DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
+  `history` varchar(5000) DEFAULT NULL,
+  `create_date` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `aboutus`
+--
+
+INSERT INTO `aboutus` (`id`, `title`, `description`, `history`, `create_date`) VALUES
+(2, 'VỀ CHÚNG TÔI', '<p><span style=\"font-family: &quot;Times New Roman&quot;;\">Năm 2019 khởi đầu cho sự kiện quy tụ các Golfer hàng đầu thuộc nhiều CLB golf tại TP Hồ Chí Minh và các tỉnh phía Nam tạo nên sự kiện Vô Địch Các CLB Golf Phía Nam tranh cúp Tasmania, năm 2020 tiếp nối sự thành công đó là sự đầu tư chỉn chu hơn từ phía ban tổ chức cũng như 50 CLB Golf tham dự sẽ tạo nên một ngày hội golf phương Nam sẽ diễn ra ngày 8 và ngày 9’tháng 12 năm 2020 với gần 700 Golfer tham dự.</span></p>', 'Insert by admin - 2021-01-17 14:15:26<br/>Update by admin - 2021-01-17 14:24:12<br/>Update by admin - 2021-01-17 14:24:27<br/>Update by admin - 2021-01-17 14:24:50<br/>Update by admin - 2021-01-18 09:53:52<br/>Update by admin - 2021-01-18 09:56:03<br/>Update by admin - 2021-01-18 09:56:39<br/>Update by admin - 2021-01-18 09:57:16<br/>Update by admin - 2021-01-18 09:57:44<br/>Update by admin - 2021-01-18 10:01:54<br/>', '2021-01-17 20:15:26'),
+(4, 'CÂU CHUYỆN', '<p><span style=\"font-family: &quot;Times New Roman&quot;;\" times=\"\" new=\"\" roman\";\"=\"\">Sự kiện Vô Địch Các CLB Golf ra đời nhằm thay đổi thói quen golf của các Golfer xưa nay đó là chỉ chơi với chính mình và ít mở rộng giao thương kết nối, thì đây sẽ là cầu nối để các CLB Golf khắp nơi xây dựng văn hoá , phong cách và màu cờ sắc áo của đội mình và hơn hết là tinh thần đồng đội được đề cao hơn hết cho một chiến thắng tập thể thay vì thành tích cá nhân.</span></p>', 'Insert by admin - 2021-01-17 14:25:26<br/>Update by admin - 2021-01-17 14:25:43<br/>', '2021-01-17 20:25:26'),
+(5, 'ĐỊNH HƯỚNG', '<p><span style=\"font-family: &quot;Times New Roman&quot;;\">Đây sẽ là sự kiện được tổ chức định kỳ hàng năm , mỗi năm sẽ có đầu tư mạnh mẽ hơn về chất lượng chuyên môn cũng như tài chính mạnh hơn nhằm đem đến một ngày hội golf thực sự của các Golfer phía Nam.</span></p>', 'Insert by admin - 2021-01-17 14:26:52<br/>Update by admin - 2021-01-18 09:59:35<br/>', '2021-01-17 20:26:52'),
+(6, 'GIÁ TRỊ CỐT LÕI', '<ul><li><span style=\"font-family: &quot;Times New Roman&quot;;\">Chuyên nghiệp</span></li><li><span style=\"font-family: &quot;Times New Roman&quot;;\">Đam mê</span></li><li><span style=\"font-family: &quot;Times New Roman&quot;;\">Điêu luyện</span></li><li><span style=\"font-family: &quot;Times New Roman&quot;;\">Tinh thần thể thao</span></li></ul>', 'Insert by admin - 2021-01-17 14:28:16<br/>Update by admin - 2021-01-18 10:00:13<br/>', '2021-01-17 20:28:16'),
+(7, 'TẦM NHÌN TƯƠNG LAI', '<p><span style=\"font-family: &quot;Times New Roman&quot;;\">Chúng tôi thực hiện sứ mệnh truyền tải cảm hứng golf đến cộng đồng Golfer toàn quốc , tạo ra hiệu ứng tốt để phát triển phong trào golf , đưa golf trở nên phổ thông hơn với người Việt chúng ta, là cầu nối để kết nối giao thương giữa các Golfer trong nước và quốc tế.</span></p>', 'Insert by admin - 2021-01-17 14:29:16<br/>Update by admin - 2021-01-18 09:42:20<br/>Update by admin - 2021-01-18 09:42:54<br/>Update by admin - 2021-01-18 09:51:22<br/>Update by admin - 2021-01-18 09:52:31<br/>Update by admin - 2021-01-18 10:00:52<br/>', '2021-01-17 20:29:16'),
+(8, 'DANH SÁCH NHÀ TÀI TRỢ', '<p style=\"text-align: left;\">     <img src=\"https://golfandcar.vn/assets/images/sponsors.png\" style=\"width: 100%;\"></p>', 'Insert by admin - 2021-01-17 14:44:48<br/>Update by admin - 2021-01-17 14:45:56<br/>Update by admin - 2021-01-17 14:47:00<br/>Update by admin - 2021-01-18 03:09:59<br/>Update by admin - 2021-01-18 03:10:18<br/>Update by admin - 2021-01-18 09:35:14<br/>Update by admin - 2021-01-22 03:01:53<br/>', '2021-01-17 20:44:48');
 
 -- --------------------------------------------------------
 
@@ -34,7 +60,7 @@ CREATE TABLE `auction` (
   `customer_id` int(11) DEFAULT NULL,
   `root_price` decimal(13,2) DEFAULT NULL,
   `pid_rate` decimal(13,2) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -56,7 +82,7 @@ CREATE TABLE `auction_product` (
   `picture` varchar(300) DEFAULT NULL,
   `extra_option` varchar(300) DEFAULT NULL,
   `history` varchar(5000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -64,10 +90,10 @@ CREATE TABLE `auction_product` (
 --
 
 INSERT INTO `auction_product` (`id`, `pro_name`, `pro_short_description`, `pro_description`, `pro_type`, `price`, `currency`, `start_date`, `end_date`, `picture`, `extra_option`, `history`, `create_date`) VALUES
-(12, 'THE ANATOMY OF A GOLFER LV, ATELIER', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.', 'Tác phẩm điêu khắc', 200000000.00, 'VND', '2020-12-17 22:01:45', '2021-04-10 12:00:00', '../assets/aution_product/The_Anatomy_of_a_Golffe_IV[1].jpg', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMSUpdate by admin - 2020-12-14 15:41:01<br/>Update by admin - 2020-12-14 20:11:02<br/>Update by admin - 2020-12-15 09:24:11<br/>Update by admin - 2020-12-18 11:46:02<br/>Update by admin - 2020-12-18 15:02:42<br/>Update by admin - 2020-12-18 15:06:07<br/>Update by admin - 2020-12-19 02:13:30<br/>Update by admin - 2020-12-19 02:13:48<br/>Update by admin - 2020-12-19 13:58:20<br/>', '2020-12-14 20:14:17'),
-(13, 'PEBBLE BEACH LEOPARDWOOD MODERN CLASSIC BY DAVID MUSTY PUTTERS', 'Với những thiết kế bởi các nhà chế tác từ David Musty, không chỉ tạo ra những chiếc gậy gạt bóng đẹp mắt, họ còn luôn theo đuổi mục tiêu tạo ra nhựng chiếc gậy gạt bóng có chức năng tốt nhất trên thị trường.', '<p><span style=\"color: rgb(34, 34, 34); font-family: \"Segoe UI\", SegoeuiPc, \"San Francisco\", \"Helvetica Neue\", Helvetica, \"Lucida Grande\", Roboto, Ubuntu, Tahoma, \"Microsoft Sans Serif\", Arial, sans-serif; font-size: 15px; white-space: pre-wrap;\">Đối với những thiết kế của nhà chế tác David Musty, ông không chỉ tạo ra những chiếc gậy gạt bóng đẹp mắt, mà còn luôn theo đuổi mục tiêu tạo ra những chiếc gậy gạt bóng có chức năng tốt nhất  trên thị trường. Các đặc tính tự nhiên của gỗ cho phép David Musty đặt một hệ thống trọng lượng thông minh dựa trên quán tính giúp tạo ra một cú đánh hoàn hảo. Với trọng tâm được nâng lên, chế tác của David Musty đã truyền năng lượng đến đường trọng tâm của quả bóng, tạo ra lực lăn nhất quán về phía trước, một yếu tố rất quan trọng trong mỗi cú đánh bóng.\r\n\r\nThanh đập bóng bằng gỗ rắn chắc tạo ra cảm giác chuẩn xác và điểm va chạm mở rộng một cách hoàn hảo. Xóa bỏ những lực nẩy thường xảy ra trên thanh đập bóng bằng kim loại thông thường.\r\n\r\nCác đặc điểm:\r\n- Có khắc logo Pebble Beach bằng tia laser\r\n- Được làm thủ công từ gỗ Leopardwood cho hiệu suất cao\r\n- Tay nắm bằng da quấn trên trục kim loại</span></p><p><br></p><p>Đường bóng trên gậy gạt thông thường<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/b3e3e393c77e35a4a3f3cbd1e429b5dc.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Trọng tâm thấp hơn tạo ra xoáy ngược và nhảy vọt trên đường bóng.</p><p><br></p><p><b>Đường bóng trên gậy gạt David Musty<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/bd686fd640be98efaae0091fa301e613.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Trọng tâm được nâng lên tạo ra lực lăn bóng hoàn hảo về phía trước.</b></p><p><br></p><p>Điểm va chạm trên gậy gạt bóng thông thường<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/42a0e188f5033bc65bf8d78622277c4e.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Hầu hết các gậy gạt bóng thông thường đều có điểm va chạm nhỏ không nhất quán.</p><p><br></p><p><b>Điểm va chạm trên gậy gạt bóng David Musty<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/0a09c8844ba8f0936c20bd791130d6b6.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Gậy gạt bóng David Musty có điểm va chạm với bóng mở rộng cho phép bóng lăn một cách ổn định.</b></p>', 'Tác phẩm điêu khắc', 1000.00, 'USD', '2021-01-12 17:14:48', '2021-04-10 18:00:00', '../assets/aution_product/7943_golf_mustyputter_l[1].jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-12 17:17:05<br/>Update by admin - 2021-01-12 17:23:09<br/>Update by admin - 2021-01-12 17:23:43<br/>Update by admin - 2021-01-12 21:59:22<br/>Update by admin - 2021-01-12 22:00:08<br/>Update by admin - 2021-01-13 02:51:40<br/>Update by  - 2021-01-13 07:31:49<br/>Update by admin - 2021-01-13 08:11:03<br/>', '2021-01-13 00:17:05'),
-(14, '2021 Masters Golf Travel Packages (Practice Round Packages)', 'Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.', '<p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Gói Masters 2021, bao gồm các dịch vụ:</p><p>- Master Badges cho các vòng đã chọn của bạn</p><p>- Lựa chọn chỗ ở đạt tiêu chuẩn Hạng Nhất</p><p>- Dịch vụ đưa đón theo nhóm 2 chiều hàng ngày đến Augusta</p><p>- Địa điểm Khách sạn độc quyền (tùy chọn)</p><p>- Bữa sáng Miễn phí Hàng ngày</p><p>- Tiệc chiêu đãi Buổi tối hàng ngày</p><p>- Tổ chức tour Road trips</p><p>- Các chuyên gia sẽ lập kế hoạch du lịch trước chuyến đi và dịch vụ trợ giúp đặc biệt cho các nhóm tham gia Roadtrips</p>', 'Du lịch', 2295.00, 'USD', '2021-01-13 07:48:41', '2021-04-10 18:00:00', '../assets/aution_product/masters-hero7[1].jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-13 08:02:49<br/>Update by admin - 2021-01-13 08:09:01<br/>Update by admin - 2021-01-13 08:10:13<br/>Update by admin - 2021-01-13 08:10:23<br/>Update by admin - 2021-01-13 08:15:57<br/>', '2021-01-13 15:02:49'),
-(15, '2021 Masters Golf Travel Packages (Tournament Round Packages)', 'Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.', '<p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Golf Masters 2021 sẽ là một trong những sự kiện độc nhất trong giới thể thao. Các gói trải nghiệm có thể tùy chỉnh và lựa chọn những khách sạn tốt nhất của Georgia như Ritz-Carlton Reynolds và một danh sách dài các dịch vụ bổ sung khác. Với nhiều năm kinh nghiệm tham gia các sự kiện lớn nhất thế giới, bao gồm nhiều giải đấu Masters, Gói trải nghiệm được chăm chút một cách hoàn hảo và đảm bảo các golfer có trải nghiệm chơi golf tuyệt vời nhất.</p><p><br></p><p>Gói Masters 2021, bao gồm các dịch vụ:</p><p>- Master Badges cho các vòng đã chọn của bạn</p><p>- Lựa chọn chỗ ở đạt tiêu chuẩn Hạng Nhất</p><p>- Dịch vụ đưa đón theo nhóm 2 chiều hàng ngày đến Augusta</p><p>- Địa điểm Khách sạn độc quyền (tùy chọn)</p><p>- Bữa sáng Miễn phí Hàng ngày</p><p>- Tiệc chiêu đãi Buổi tối hàng ngày</p><p>- Tổ chức tour Road trips</p><p>- Các chuyên gia sẽ lập kế hoạch du lịch trước chuyến đi và dịch vụ trợ giúp đặc biệt cho các nhóm tham gia Roadtrips</p>', 'Du lịch', 3755.00, 'USD', '2021-01-13 08:02:49', '2021-04-10 18:00:00', '../assets/aution_product/masters-hero7[1].1610525091.jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-13 08:04:51<br/>Update by admin - 2021-01-13 08:06:01<br/>Update by admin - 2021-01-13 08:08:12<br/>Update by admin - 2021-01-13 08:10:46<br/>Update by admin - 2021-01-13 08:15:34<br/>', '2021-01-13 15:04:51');
+(12, 'THE ANATOMY OF A GOLFER LV, ATELIER', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.', 'Tác phẩm điêu khắc', '200000000.00', 'VND', '2020-12-17 22:01:45', '2021-04-10 12:00:00', '../assets/aution_product/The_Anatomy_of_a_Golffe_IV[1].jpg', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMSUpdate by admin - 2020-12-14 15:41:01<br/>Update by admin - 2020-12-14 20:11:02<br/>Update by admin - 2020-12-15 09:24:11<br/>Update by admin - 2020-12-18 11:46:02<br/>Update by admin - 2020-12-18 15:02:42<br/>Update by admin - 2020-12-18 15:06:07<br/>Update by admin - 2020-12-19 02:13:30<br/>Update by admin - 2020-12-19 02:13:48<br/>Update by admin - 2020-12-19 13:58:20<br/>', '2020-12-14 20:14:17'),
+(13, 'PEBBLE BEACH LEOPARDWOOD MODERN CLASSIC BY DAVID MUSTY PUTTERS', 'Với những thiết kế bởi các nhà chế tác từ David Musty, không chỉ tạo ra những chiếc gậy gạt bóng đẹp mắt, họ còn luôn theo đuổi mục tiêu tạo ra nhựng chiếc gậy gạt bóng có chức năng tốt nhất trên thị trường.', '<p><span style=\"color: rgb(34, 34, 34); font-family: \"Segoe UI\", SegoeuiPc, \"San Francisco\", \"Helvetica Neue\", Helvetica, \"Lucida Grande\", Roboto, Ubuntu, Tahoma, \"Microsoft Sans Serif\", Arial, sans-serif; font-size: 15px; white-space: pre-wrap;\">Đối với những thiết kế của nhà chế tác David Musty, ông không chỉ tạo ra những chiếc gậy gạt bóng đẹp mắt, mà còn luôn theo đuổi mục tiêu tạo ra những chiếc gậy gạt bóng có chức năng tốt nhất  trên thị trường. Các đặc tính tự nhiên của gỗ cho phép David Musty đặt một hệ thống trọng lượng thông minh dựa trên quán tính giúp tạo ra một cú đánh hoàn hảo. Với trọng tâm được nâng lên, chế tác của David Musty đã truyền năng lượng đến đường trọng tâm của quả bóng, tạo ra lực lăn nhất quán về phía trước, một yếu tố rất quan trọng trong mỗi cú đánh bóng.\r\n\r\nThanh đập bóng bằng gỗ rắn chắc tạo ra cảm giác chuẩn xác và điểm va chạm mở rộng một cách hoàn hảo. Xóa bỏ những lực nẩy thường xảy ra trên thanh đập bóng bằng kim loại thông thường.\r\n\r\nCác đặc điểm:\r\n- Có khắc logo Pebble Beach bằng tia laser\r\n- Được làm thủ công từ gỗ Leopardwood cho hiệu suất cao\r\n- Tay nắm bằng da quấn trên trục kim loại</span></p><p><br></p><p>Đường bóng trên gậy gạt thông thường<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/b3e3e393c77e35a4a3f3cbd1e429b5dc.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Trọng tâm thấp hơn tạo ra xoáy ngược và nhảy vọt trên đường bóng.</p><p><br></p><p><b>Đường bóng trên gậy gạt David Musty<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/bd686fd640be98efaae0091fa301e613.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Trọng tâm được nâng lên tạo ra lực lăn bóng hoàn hảo về phía trước.</b></p><p><br></p><p>Điểm va chạm trên gậy gạt bóng thông thường<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/42a0e188f5033bc65bf8d78622277c4e.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Hầu hết các gậy gạt bóng thông thường đều có điểm va chạm nhỏ không nhất quán.</p><p><br></p><p><b>Điểm va chạm trên gậy gạt bóng David Musty<br><img src=\"http://golfandcar.vn/admin/assets/summernote_imgs/0a09c8844ba8f0936c20bd791130d6b6.jpg\" data-filename=\"\" style=\"width: 300px;\"><br>Gậy gạt bóng David Musty có điểm va chạm với bóng mở rộng cho phép bóng lăn một cách ổn định.</b></p>', 'Tác phẩm điêu khắc', '1000.00', 'USD', '2021-01-12 17:14:48', '2021-04-10 18:00:00', '../assets/aution_product/7943_golf_mustyputter_l[1].jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-12 17:17:05<br/>Update by admin - 2021-01-12 17:23:09<br/>Update by admin - 2021-01-12 17:23:43<br/>Update by admin - 2021-01-12 21:59:22<br/>Update by admin - 2021-01-12 22:00:08<br/>Update by admin - 2021-01-13 02:51:40<br/>Update by  - 2021-01-13 07:31:49<br/>Update by admin - 2021-01-13 08:11:03<br/>', '2021-01-13 00:17:05'),
+(14, '2021 Masters Golf Travel Packages (Practice Round Packages)', 'Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.', '<p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Gói Masters 2021, bao gồm các dịch vụ:</p><p>- Master Badges cho các vòng đã chọn của bạn</p><p>- Lựa chọn chỗ ở đạt tiêu chuẩn Hạng Nhất</p><p>- Dịch vụ đưa đón theo nhóm 2 chiều hàng ngày đến Augusta</p><p>- Địa điểm Khách sạn độc quyền (tùy chọn)</p><p>- Bữa sáng Miễn phí Hàng ngày</p><p>- Tiệc chiêu đãi Buổi tối hàng ngày</p><p>- Tổ chức tour Road trips</p><p>- Các chuyên gia sẽ lập kế hoạch du lịch trước chuyến đi và dịch vụ trợ giúp đặc biệt cho các nhóm tham gia Roadtrips</p>', 'Du lịch', '2295.00', 'USD', '2021-01-13 07:48:41', '2021-04-10 18:00:00', '../assets/aution_product/masters-hero7[1].jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-13 08:02:49<br/>Update by admin - 2021-01-13 08:09:01<br/>Update by admin - 2021-01-13 08:10:13<br/>Update by admin - 2021-01-13 08:10:23<br/>Update by admin - 2021-01-13 08:15:57<br/>', '2021-01-13 15:02:49'),
+(15, '2021 Masters Golf Travel Packages (Tournament Round Packages)', 'Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.', '<p>Trải nghiệm giải đấu danh giá nhất của bộ môn Golf tại Giải vô địch Golf Masters 2021 tại Augusta, Georgia.  Một trong những gói trải nghiệm sang trọng nhất về Master Badges (vé), chỗ ở hạng nhất của Augusta, dịch vụ đưa đón 2 chiều cho các khóa học và dịch vụ độc quyền được phục vụ bởi những nhân viên giàu kinh nghiệm nhất.</p><p><br></p><p>Golf Masters 2021 sẽ là một trong những sự kiện độc nhất trong giới thể thao. Các gói trải nghiệm có thể tùy chỉnh và lựa chọn những khách sạn tốt nhất của Georgia như Ritz-Carlton Reynolds và một danh sách dài các dịch vụ bổ sung khác. Với nhiều năm kinh nghiệm tham gia các sự kiện lớn nhất thế giới, bao gồm nhiều giải đấu Masters, Gói trải nghiệm được chăm chút một cách hoàn hảo và đảm bảo các golfer có trải nghiệm chơi golf tuyệt vời nhất.</p><p><br></p><p>Gói Masters 2021, bao gồm các dịch vụ:</p><p>- Master Badges cho các vòng đã chọn của bạn</p><p>- Lựa chọn chỗ ở đạt tiêu chuẩn Hạng Nhất</p><p>- Dịch vụ đưa đón theo nhóm 2 chiều hàng ngày đến Augusta</p><p>- Địa điểm Khách sạn độc quyền (tùy chọn)</p><p>- Bữa sáng Miễn phí Hàng ngày</p><p>- Tiệc chiêu đãi Buổi tối hàng ngày</p><p>- Tổ chức tour Road trips</p><p>- Các chuyên gia sẽ lập kế hoạch du lịch trước chuyến đi và dịch vụ trợ giúp đặc biệt cho các nhóm tham gia Roadtrips</p>', 'Du lịch', '3755.00', 'USD', '2021-01-13 08:02:49', '2021-04-10 18:00:00', '../assets/aution_product/masters-hero7[1].1610525091.jpg', 'Người tặng: Ms. Nguyễn Gia Bảo - Sáng lập học viên Đua Xe thể thao VRA', 'Insert by admin - 2021-01-13 08:04:51<br/>Update by admin - 2021-01-13 08:06:01<br/>Update by admin - 2021-01-13 08:08:12<br/>Update by admin - 2021-01-13 08:10:46<br/>Update by admin - 2021-01-13 08:15:34<br/>', '2021-01-13 15:04:51');
 
 -- --------------------------------------------------------
 
@@ -82,7 +108,7 @@ CREATE TABLE `caulacbo` (
   `description` varchar(2000) DEFAULT NULL,
   `hyperlink` varchar(300) DEFAULT NULL,
   `history` varchar(5000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -156,7 +182,7 @@ CREATE TABLE `customer` (
   `address` varchar(500) DEFAULT NULL,
   `position_level` varchar(200) DEFAULT NULL,
   `password` varchar(128) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -173,6 +199,46 @@ INSERT INTO `customer` (`id`, `fullname`, `birthday`, `phone`, `email`, `address
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `event`
+--
+
+CREATE TABLE `event` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `description` varchar(300) DEFAULT NULL,
+  `history` varchar(5000) DEFAULT NULL,
+  `create_date` datetime DEFAULT current_timestamp(),
+  `picture` varchar(2000) DEFAULT NULL,
+  `category` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`id`, `title`, `description`, `history`, `create_date`, `picture`, `category`) VALUES
+(9, 'Đường Đua', 'Đường Đua Chuẩn An Toàn VMA', 'Insert by admin - 2021-01-23 11:01:16<br/>Update by admin - 2021-01-23 11:07:07<br/>Update by admin - 2021-01-23 11:07:24<br/>Update by admin - 2021-01-24 12:24:12<br/>Update by admin - 2021-01-26 14:04:00<br/>', '2021-01-23 17:01:16', '../assets/event/Truong_dua_tieu_chuan.jpg', 'EVENT HIGHTLIGHTS'),
+(10, 'Trọng Tài', 'Trọng Tài Được Huấn Luyện & Cấp Bằng VMA', 'Insert by admin - 2021-01-23 11:03:00<br/>Update by admin - 2021-01-24 12:24:06<br/>Update by admin - 2021-01-26 14:04:07<br/>', '2021-01-23 17:03:00', '../assets/event/1907178_vietnam.1611396180.jpg', 'EVENT HIGHTLIGHTS'),
+(11, 'Trưng Bày', 'Trưng Bày Siêu Xe & Test Drive', 'Insert by admin - 2021-01-23 11:03:39<br/>Update by admin - 2021-01-23 11:05:56<br/>Update by admin - 2021-01-23 11:06:06<br/>Update by admin - 2021-01-24 12:23:57<br/>Update by admin - 2021-01-26 14:04:26<br/>', '2021-01-23 17:03:39', '../assets/event/Sieu_xe.jpg', 'EVENT HIGHTLIGHTS'),
+(12, 'VIP Lounge', '', 'Insert by admin - 2021-01-23 11:05:43<br/>Update by admin - 2021-01-24 12:23:47<br/>Update by admin - 2021-01-26 14:03:48<br/>', '2021-01-23 17:05:43', '../assets/event/VIP_Lounge_01.1611396343.jpg', 'EVENT HIGHTLIGHTS'),
+(13, 'Rapper Karik', '', 'Insert by admin - 2021-01-23 11:06:59<br/>Update by admin - 2021-01-23 11:07:33<br/>', '2021-01-23 17:06:59', '../assets/event/Karik.jpg', 'CA SĨ'),
+(14, 'Rapper Dế Choắt', '', 'Insert by admin - 2021-01-23 11:08:07<br/>', '2021-01-23 17:08:07', '../assets/event/DECHOAT.jpg', 'CA SĨ'),
+(15, 'Rapper Yuno BigBoi', '', 'Insert by admin - 2021-01-24 12:26:39<br/>', '2021-01-24 18:26:39', '../assets/event/YunoBigboi.jpg', 'CA SĨ'),
+(16, 'Rapper Lowkey', '', 'Insert by admin - 2021-01-24 12:27:33<br/>', '2021-01-24 18:27:33', '../assets/event/LowKey.jpg', 'CA SĨ'),
+(17, 'Rapper Mess', '', 'Insert by admin - 2021-01-24 12:28:02<br/>', '2021-01-24 18:28:02', '../assets/event/Mes.jpg', 'CA SĨ'),
+(18, 'Rapper KOO', '', 'Insert by admin - 2021-01-24 12:28:33<br/>', '2021-01-24 18:28:33', '../assets/event/KOO.jpg', 'CA SĨ'),
+(19, 'Rapper Kenji', '', 'Insert by admin - 2021-01-24 12:29:05<br/>', '2021-01-24 18:29:05', '../assets/event/Kenji.jpg', 'CA SĨ'),
+(20, 'DJ Vinjaz', '', 'Insert by admin - 2021-01-24 12:29:45<br/>', '2021-01-24 18:29:45', '../assets/event/DJ_VINJAZ_01.jpg', 'DJ'),
+(21, 'DJ Mie', '', 'Insert by admin - 2021-01-24 12:30:28<br/>', '2021-01-24 18:30:28', '../assets/event/Mie.jpg', 'DJ'),
+(22, 'DJ Lại Thanh Hương', '', 'Insert by admin - 2021-01-24 12:31:00<br/>', '2021-01-24 18:31:00', '../assets/event/DJThanhHuong.jpg', 'DJ'),
+(23, 'MC Goku', '', 'Insert by admin - 2021-01-24 12:31:27<br/>', '2021-01-24 18:31:27', '../assets/event/MCGOKU.jpg', 'MC'),
+(24, 'MC LIL \'Vinx', '', 'Insert by admin - 2021-01-24 12:31:47<br/>', '2021-01-24 18:31:47', '../assets/event/MC_LIL_Vinx.jpg', 'MC'),
+(25, 'DJ Nicky', '', 'Insert by admin - 2021-01-24 12:44:45<br/>Update by admin - 2021-01-24 12:46:02<br/>', '2021-01-24 18:44:45', '../assets/event/DJ_Nicky.jpg', 'DJ'),
+(26, 'DJ Tio', '', 'Insert by admin - 2021-01-24 12:45:08<br/>Update by admin - 2021-01-24 12:46:22<br/>', '2021-01-24 18:45:08', '../assets/event/DJ_Tio.jpg', 'DJ');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `gallery`
 --
 
@@ -184,7 +250,7 @@ CREATE TABLE `gallery` (
   `thumbnail_url` varchar(2000) DEFAULT NULL,
   `external_album_hyperlink` varchar(1000) DEFAULT NULL,
   `history` varchar(5000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -198,6 +264,33 @@ INSERT INTO `gallery` (`id`, `title_gallery`, `description`, `image_url`, `thumb
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `member`
+--
+
+CREATE TABLE `member` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `history` varchar(5000) DEFAULT NULL,
+  `create_date` datetime DEFAULT current_timestamp(),
+  `picture` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`id`, `name`, `description`, `history`, `create_date`, `picture`) VALUES
+(14, 'VŨ THÀNH HUẾ', '<p><span style=\"color: rgb(128, 128, 128); font-family: Verdana, sans-serif; font-size: 15px; text-align: center;\">Chủ tịch tập đoàn Tasmania &amp; Partner - Chủ tịch giải đấu</span></p>', 'Insert by admin - 2021-01-21 05:56:52<br/>', '2021-01-21 11:56:52', '../assets/member/person1[1].jpg'),
+(15, 'VI QUỐC TUẤN', '<p><span style=\"color: rgb(128, 128, 128); font-family: Verdana, sans-serif; font-size: 15px; text-align: center;\">Phó chủ tịch tập đoàn Tasmania, Phó chủ tịch Hiệp Hội Golf Việt Nam, Chủ tịch Hội Golf Hải Phòng, Phó chủ tịch giải đấu</span></p>', 'Insert by admin - 2021-01-21 05:58:33<br/>', '2021-01-21 11:58:33', '../assets/member/person3[1].jpg'),
+(16, 'TRẦN NGỌC HẢI', 'Phó chủ tịch HĐQT, Tổng giám đốc công ty Cp Đầu tư Long Biên - Phó chủ tịch giải đấu', 'Insert by admin - 2021-01-21 06:29:36<br/>Update by admin - 2021-01-21 06:30:43<br/>Update by admin - 2021-01-21 06:30:51<br/>Update by admin - 2021-01-21 12:11:52<br/>Update by admin - 2021-01-21 12:12:34<br/>', '2021-01-21 12:29:36', '../assets/member/person6[3].jpg'),
+(21, 'HOÀNG TRỌNG KHÁNH', 'Tổng Giám Đốc KMTC Việt Nam - Phó chủ tịch giải đấu', 'Insert by admin - 2021-01-21 06:36:04<br/>Update by admin - 2021-01-21 06:36:24<br/>Update by admin - 2021-01-21 06:36:26<br/>', '2021-01-21 12:36:04', '../assets/member/person4[1].1611207384.jpg'),
+(22, 'TRỊNH VĂN THÀNH', 'Chủ tịch Cty Golf Pro - Trưởng BTC Giải', 'Insert by admin - 2021-01-21 06:37:17<br/>', '2021-01-21 12:37:17', '../assets/member/person2[1].jpg'),
+(23, 'DƯƠNG QUANG HUY', 'Giám đốc Golf sân golf TSN - Tổng trọng tài giải đấu', 'Insert by admin - 2021-01-21 06:38:11<br/>Update by admin - 2021-01-21 12:13:45<br/>Update by admin - 2021-01-21 12:14:41<br/>Update by admin - 2021-01-21 12:14:49<br/>Update by admin - 2021-01-21 12:22:42<br/>Update by admin - 2021-01-21 12:22:55<br/>', '2021-01-21 12:38:11', '../assets/member/person5[1][1].jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `news`
 --
 
@@ -206,10 +299,10 @@ CREATE TABLE `news` (
   `image_name` varchar(300) DEFAULT NULL,
   `title` varchar(300) DEFAULT NULL,
   `description` varchar(1000) DEFAULT NULL,
-  `content` text,
+  `content` text DEFAULT NULL,
   `hyperlink` varchar(300) DEFAULT NULL,
   `author` varchar(100) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp(),
   `history` varchar(5000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -243,7 +336,7 @@ CREATE TABLE `plan` (
   `title` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
   `description` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
   `hyperlink` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp(),
   `history` varchar(5000) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -279,7 +372,7 @@ CREATE TABLE `registers` (
   `comment1` varchar(1000) DEFAULT NULL,
   `comment2` varchar(1000) DEFAULT NULL,
   `comment3` varchar(1000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp(),
   `form_id` varchar(100) DEFAULT NULL,
   `form_name` varchar(400) DEFAULT NULL,
   `extra_column1` varchar(300) DEFAULT NULL,
@@ -314,7 +407,7 @@ CREATE TABLE `users` (
   `address` varchar(300) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `country` varchar(100) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -327,6 +420,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `address`, `birthday
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `aboutus`
+--
+ALTER TABLE `aboutus`
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `auction`
@@ -353,10 +452,22 @@ ALTER TABLE `customer`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `member`
+--
+ALTER TABLE `member`
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `news`
@@ -388,6 +499,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `aboutus`
+--
+ALTER TABLE `aboutus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `auction`
 --
 ALTER TABLE `auction`
@@ -397,13 +514,13 @@ ALTER TABLE `auction`
 -- AUTO_INCREMENT for table `auction_product`
 --
 ALTER TABLE `auction_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `caulacbo`
 --
 ALTER TABLE `caulacbo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -412,22 +529,34 @@ ALTER TABLE `customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+
+--
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `member`
+--
+ALTER TABLE `member`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `plan`
 --
 ALTER TABLE `plan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `registers`

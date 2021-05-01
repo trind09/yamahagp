@@ -1,12 +1,12 @@
 ﻿<footer style="margin-top: 50px;">
     <p class="socials" style="margin-top: 20px;">
-        <a href="https://www.facebook.com/vietnamracingacademy" class="fb" target="_blank"></a> 
-        <a href="#" class="ytb" target="_blank"></a>
+        <a href="<?php echo $site_facebook; ?>" class="fb" target="_blank"></a> 
+        <a href="<?php echo $site_youtube; ?>" class="ytb" target="_blank"></a>
     </p>
-	<p><img src="assets/images/i-location.png" style="width: 15px; height: 15px;"> 87 Nguyễn Cơ Thạch, Khu đô thị Sala, Phường An Lợi Đông, Quận 2, Thành phố Hồ Chí Minh, Việt Nam</p>
-	<p><img src="assets/images/i-phone.png" style="width: 15px; height: 15px;"> <a href="tel:+84-907879999">+84-907879999</a></p>
-	<p><img src="assets/images/i-email.png" style="width: 15px; height: 15px;"> <a href="mailto:vietnam.racing.academy@gmail.com">vietnam.racing.academy@gmail.com</a></p>
-    <p class="copyright">© 2020 Copyright <a href="https://www.facebook.com/vietnamracingacademy" target="_blank">Vietnam Racing Academy</a>. All rights reserved.</p>
+	<p><img src="assets/images/i-location.png" style="width: 15px; height: 15px;"> <?php echo $site_address; ?></p>
+	<p><img src="assets/images/i-phone.png" style="width: 15px; height: 15px;"> <a href="tel:<?php echo $site_phone_number; ?>"><?php echo $site_phone_number; ?></a></p>
+	<p><img src="assets/images/i-email.png" style="width: 15px; height: 15px;"> <a href="mailto:<?php echo $site_email; ?>"><?php echo $site_email; ?></a></p>
+    <p class="copyright"><?php echo $site_copyright; ?></p>
 </footer>
 
 <script src="assets/js/underscore.js"></script>
@@ -36,7 +36,7 @@
 </script>
 <div class="wrap-phone">
 	<div class="wrap-ticket-regi" style="display: none">
-		<?php if ($enable_slide_video_and_buy_ticket){ ?>
+		<?php if (strtolower($enable_slide_video_and_buy_ticket) == 'true'){ ?>
 		<div class="muave animate__animated animate__zoomIn animate__slower"><span>Mua Vé</span></div>
 		<div class="wrap-ticket phoneamination-new ticket animate__animated animate__zoomIn animate__infinite animate__slower"></div>
 		<a href="https://ticketbox.vn/vr-fest-2020#booking"><img class="img-ticket" src="assets/images/ticket.png"></a>
@@ -50,9 +50,9 @@
 		<a href="#" onclick="window.location.href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w';" class="js-joinnow"><img class="img-regi" src="assets/images/register.png"></a>
 	</div>
 
-	<div class="numbershow animate__animated animate__zoomIn animate__slower"><span style="color:white">☎ 0909337777</span></div>
+	<div class="numbershow animate__animated animate__zoomIn animate__slower"><span style="color:white">☎ <?php echo $site_phone_number; ?></span></div>
 	<div class="phoneamination animate__animated animate__zoomIn animate__infinite animate__slower"></div>
-	<a href="tel:0909337777" title="Tel: 0909337777"><i class="material-icons call-me shak-icon">phone</i></a>
+	<a href="tel:<?php echo $site_phone_number; ?>" title="Tel: <?php echo $site_phone_number; ?>"><i class="material-icons call-me shak-icon">phone</i></a>
 </div>
 <!--Call me block-->
 
@@ -62,28 +62,7 @@
 <div class="wrap-phone">
 	<div class="phoneamination phoneamination1 animate__animated animate__zoomIn  animate__infinite animate__slower"></div>
 	<div id="fb-root"></div>
-  <script>
-	window.fbAsyncInit = function() {
-	  FB.init({
-		xfbml            : true,
-		version          : 'v9.0'
-	  });
-	};
-
-	(function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
-	js = d.createElement(s); js.id = id;
-	js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-	fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
-  <!-- Your Chat Plugin code -->
-  <div class="fb-customerchat shak-icon"
-	attribution=setup_tool
-	page_id="104362934697822"
-	theme_color="#67b868">
-  </div>
+  <?php echo $site_facebook_messenger; ?>
 </div>
 	  
 </body></html>

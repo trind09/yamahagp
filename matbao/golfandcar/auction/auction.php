@@ -50,7 +50,7 @@ function showDivs(n) {
 				ShowPidForm(id);
 			} else {
 				$('#selected_auction_product_id').val(id);
-				if ('<?php echo $enable_auction_login; ?>' == ''){
+				if ('<?php echo strtolower($enable_auction_login); ?>' == 'false'){
 					ShowPidForm(id);
 				} else {
 					$('#login_form').show();
@@ -58,7 +58,7 @@ function showDivs(n) {
 			}
 		} catch(err) {
 			$('#selected_auction_product_id').val(id);
-			if ('<?php echo $enable_auction_login; ?>' == ''){
+			if ('<?php echo strtolower($enable_auction_login); ?>' == 'false'){
 				ShowPidForm(id);
 			} else {
 				$('#login_form').show();
@@ -132,7 +132,7 @@ function showDivs(n) {
 			$('#product_image_array').html(image_slider);
 			currentDiv(1);
 		}
-		if ('<?php echo $enable_auto_auction_register; ?>' == '1'){
+		if ('<?php echo strtolower($enable_auto_auction_register); ?>' == 'true'){
 			$('#flash_auction_fullname').attr('style','display: flex; color: black;');
 			$('#flash_auction_fullname-label').show();
 			$('#flash_auction_phone').attr('style','display: flex; color: black;');
@@ -165,7 +165,7 @@ function showDivs(n) {
 
    function ProcessAuction(){
 		var error_message = "";
-		if ('<?php echo $enable_auto_auction_register; ?>' == '1'){
+		if ('<?php echo strtolower($enable_auto_auction_register); ?>' == 'true'){
 			var name = $('#flash_auction_fullname').val();
 			if(name == ''){
 				error_message += "Xin điền họ và tên của bạn.<br>";
@@ -406,7 +406,7 @@ function showDivs(n) {
 $selected_auction_product_id = "";
 $selected_auction_product_id1 = "";
 if (!isset($_SESSION['customer_id'])) {
-	if ($enable_auto_auction_register && isset($_POST['pid_form'])){
+	if (strtolower($enable_auto_auction_register) == 'true' && isset($_POST['pid_form'])){
 		$valid = 1;
 		$message = "";
 		$flash_auction_fullname = strip_tags($_POST['flash_auction_fullname']);

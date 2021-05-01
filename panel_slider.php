@@ -150,12 +150,17 @@ function hideVideo(videoId){
 		<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="assets/images/spin.svg" />
 	</div>
 	<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1920px;height:960px;overflow:hidden;">
-		<div><img data-u="image" src="assets/pannel/20201201_191433.jpg" /></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191416.jpg" /></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191358.jpg" /></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191327.jpg" /></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191212.jpg" /></div>
-		<div><img data-u="image" src="assets/pannel/20201201_191151.jpg" /></div>
+		<?php
+			if ($slider_images){
+				$img_url_array = GetImageLinks($slider_images, $domain);
+				foreach ($img_url_array as $img_url)
+				{
+					echo '<div><img data-u="image" src="' . $img_url . '" /></div>';
+				}
+			} else {
+				echo '<div><img data-u="image" src="assets/pannel/site_slider1.jpg" /></div><div><img data-u="image" src="assets/pannel/site_slider2.jpg" /></div>';
+			}
+		?>
 	</div>
 	<!-- Bullet Navigator -->
 	<div data-u="navigator" class="jssorb057" style="position:absolute;bottom:18px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
@@ -215,29 +220,14 @@ $( document ).ready(function() {
 	}, 2200);
 });
 </script>
-<?php if ($enable_slide_video_and_buy_ticket){ ?>
+<?php if (strtolower($enable_slide_video_and_buy_ticket) == 'true'){ ?>
 	<div class="pannel-buttons">
 		<a id="pannel-button1" class="btn-sm animated-button victoria-one" href="#register" role="register">Đăng ký thi đấu</a>
 		<a id="pannel-button2" class="btn-sm animated-button victoria-one" href="https://ticketbox.vn/vr-fest-2020#booking">Mua vé</a>
 		<a id="pannel-button3" class="btn-sm animated-button victoria-one" onclick="showVideo('vietnam-racing');" href="#">Watch video</a>
 	</div>
 <?php } else { ?>
-	<style>
-		.racing_register_button {
-			width: 30%;
-			height: 30%;
-			background: url("assets/images/DangKyThiDauButton2.png") no-repeat;
-			background-size: 30%;
-			display: inline-block;
-			cursor: pointer;
-			top: 53% !important;
-		}
-		.racing_register_button:hover {
-			background: url("assets/images/DangKyThiDauButton1.png") no-repeat;
-			background-size: 30%;
-		}
-	</style>
-	<div class="pannel-buttons racing_register_button" onclick="location.href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w';"></div>
+	<?php echo $custom_script_on_slider; ?>
 <?php } ?>
 <script type="text/javascript">jssor_1_slider_init();
 </script>

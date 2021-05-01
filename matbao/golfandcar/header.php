@@ -1,5 +1,56 @@
 <?php include 'inc/config.php'; ?>
 <?php include 'inc/functions.php'; ?>
+<?php
+	$site_name = "";
+	$site_description = "";
+	$site_image = "";
+	$site_favicon = "";
+	$site_logo = "";
+	$slider_images = "";
+	$site_phone_number = "";
+	$site_facebook_messenger = "";
+	$site_address = "";
+	$site_email = "";
+	$site_copyright = "";
+	$site_facebook = "";
+	$site_youtube = "";
+	$smtp_host = "";
+	$smtp_port = "";
+	$smtp_username = "";
+	$smtp_password = "";
+	$smtp_secure = "";
+	$slider_three_golden_links = "";
+	$slider_three_golden_pictures = "";
+	$enable_auction_login = "";
+	$enable_auto_auction_register = "";
+	if (!empty($settings)) {
+		$site_name = GetSettingByKey($settings, 'Site Name');
+		$site_description = GetSettingByKey($settings, 'Site Description');
+		$site_image = GetSettingByKey($settings, 'Site Image');
+		$site_image = $domain . str_replace("../", "",$site_image);
+		$site_favicon = GetSettingByKey($settings, 'Site Favicon');
+		$site_favicon = $domain . str_replace("../", "",$site_favicon);
+		$site_logo = GetSettingByKey($settings, 'Site Logo');
+		$site_logo = $domain . str_replace("../", "",$site_logo);
+		$slider_images = GetSettingByKey($settings, 'Site Slider');
+		$site_phone_number = GetSettingByKey($settings, 'Site Phone Number');
+		$site_facebook_messenger = GetSettingByKey($settings, 'Site Facebook Messenger');
+		$site_address = GetSettingByKey($settings, 'Site Address');
+		$site_email = GetSettingByKey($settings, 'Site Email');
+		$site_copyright = GetSettingByKey($settings, 'Site Copyright');
+		$site_facebook = GetSettingByKey($settings, 'Site Facebook');
+		$site_youtube = GetSettingByKey($settings, 'Site Youtube');
+		$smtp_host = GetSettingByKey($settings, 'SMTP Host');
+		$smtp_port = GetSettingByKey($settings, 'SMTP Port');
+		$smtp_username = GetSettingByKey($settings, 'SMTP Username');
+		$smtp_password = GetSettingByKey($settings, 'SMTP Password');
+		$smtp_secure = GetSettingByKey($settings, 'SMTP Secure');
+		$slider_three_golden_links = GetSettingByKey($settings, 'Slider - Three Golden Links');
+		$slider_three_golden_pictures = GetSettingByKey($settings, 'Slider - Three Golden Pictures');
+		$enable_auction_login = GetSettingByKey($settings, 'Enable Auction Login');
+		$enable_auto_auction_register = GetSettingByKey($settings, 'Enable Auto Auction Register');
+	}
+?>
 <?php session_start(); ?>
 <?php
 require 'mail/PHPMailer.php';

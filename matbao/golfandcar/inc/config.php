@@ -1,9 +1,9 @@
 <?php
-$domain = "http://localhost:8080/yamahagp/matbao/golfandcar/";
+$domain = "http://localhost/yamahagp/matbao/golfandcar/";
 $root = "C:/xampp/htdocs/yamahagp/matbao/golfandcar/";
-$dbhost = 'localhost:8080';
+$dbhost = 'localhost';
 // Database Name
-$dbname = 'daotaome_golfandcar';
+$dbname = 'u888166303_golfandcar';
 // Database Username
 $dbuser = 'root';
 // Database Password
@@ -16,17 +16,6 @@ $site_name = "Golf Club Championship 2020";
 $site_description = "GIẢI VÔ ĐỊCH CÁC CLB GOLF TRANH CÚP TASMANIA";
 $site_image = "assets/images/logo.png";
 $site_favicon = "assets/images/favicon.png";
-
-//SMTP
-$smtp_host = "smtp.gmail.com";
-$smtp_port = 587;
-$smtp_username = 'admin@vietnamracing.com.vn';
-$smtp_password = 'chi5bao@123';
-$smtp_secure = 'tls';
-
-//Site settings
-$enable_auction_login = false; //If false customer cannot login
-$enable_auto_auction_register = true; //If true it allow customer to do auction without login and register
 
 
 //Query to alter table to utf8 collation

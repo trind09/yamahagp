@@ -1,4 +1,39 @@
-﻿<!-- #region Jssor Slider Begin -->
+﻿<?php
+	$bgjpg = "";
+	if ($slider_images){
+		$img_url_array = GetImageLinks($slider_images, $domain);
+		foreach ($img_url_array as $img_url)
+		{
+			$bgjpg = $img_url;
+		}
+	} else {
+		$bgjpg = "assets/images/bg.jpg";
+	}
+
+	$golden_pictures = array();
+	if ($slider_three_golden_pictures){
+		$img_url_array = GetImageLinks($slider_three_golden_pictures, $domain);
+		foreach ($img_url_array as $img_url)
+		{
+			array_push($golden_pictures,  $img_url);
+		}
+	}
+
+	$golden_urls = array();
+	$golden_texts = array();
+	if ($slider_three_golden_links){
+		$doc = new DOMDocument();
+		$html_data  = mb_convert_encoding($slider_three_golden_links , 'HTML-ENTITIES', 'UTF-8'); 
+		$doc->loadHTML($html_data);    
+		$selector = new DOMXPath($doc);
+		$result = $selector->query('//a');
+		foreach($result as $node) {
+			array_push($golden_urls,  $node->getAttribute('href'));
+			array_push($golden_texts,  $node->nodeValue);
+		}
+	}
+?>
+<!-- #region Jssor Slider Begin -->
 <!-- Generator: Jssor Slider Composer -->
 <!-- Source: https://www.jssor.com/premium/full-width/full-width.slider/=edit -->
 <script src="assets/js/jssor.slider.min.js" type="text/javascript"></script>
@@ -155,20 +190,20 @@ $( document ).ready(function() {
 	</div>
 	<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1920px;height:960px;overflow:hidden;">
 		<div>
-			<img data-u="image" src="assets/images/bg.jpg" />
+			<img data-u="image" src="<?php echo $bgjpg; ?>" />
 			<div data-ts="flat" data-p="1260" style="left:0px;top:0px;width:1920px;height:960px;position:absolute;">
 				<div data-to="50% 0px" data-ts="preserve-3d" data-t="0" style="left:-20px;top:0px;width:1920px;height:960px;position:absolute;">
-					<img onclick="location.href = '#TCBC_RACETOMIENTRUNG';" data-to="50% 50%" data-t="1" style="left: 30%; top: 12%; width: 42%; height: 133px; position: absolute; opacity: 1; cursor: pointer; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: auto;" src="assets/images/RaceToMienTrung1.png" />
+					<img onclick="location.href = '<?php echo $golden_urls[0]; ?>';" data-to="50% 50%" data-t="1" style="left: 30%; top: 12%; width: 42%; height: 133px; position: absolute; opacity: 1; cursor: pointer; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: auto;" src="<?php echo $golden_pictures[0]; ?>" />
 					<div style="position: absolute; top: 22%; left: 37%; width: 500px;">
-						<a href="#TCBC_RACETOMIENTRUNG" class="animated-button1 btn-pannel-1" style="font-weight: bold;width: 100%;height:109px;background-image: linear-gradient(to right, rgb(33 43 29 / 34%), #A6E02F, rgb(33 43 29 / 34%));z-index: 1;font-size: 30pt;color: white;font-weight:bold;font-style:normal"><span></span><span></span><span></span><span></span>ĐẤU GIÁ<br/>
+						<a href="<?php echo $golden_urls[0]; ?>" class="animated-button1 btn-pannel-1" style="font-weight: bold;width: 100%;height:109px;background-image: linear-gradient(to right, rgb(33 43 29 / 34%), #A6E02F, rgb(33 43 29 / 34%));z-index: 1;font-size: 30pt;color: white;font-weight:bold;font-style:normal"><span></span><span></span><span></span><span></span><?php echo $golden_texts[0]; ?><br/>
 						<span style="z-index: 1;font-size: 10pt;font-style: normal;width: 100%;left: 0; text-transform: none; font-weight: normal;">Click here</span></a>
 					</div>
-					<img onclick="location.href = '<?php echo($domain); ?>';" data-to="50% 50%" data-t="3" style="left:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/GolfClup.png" />
-					<img onclick="location.href = 'http://vietnamracing.com.vn/';"data-to="50% 50%" data-t="2" style="right:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="assets/images/VietnamRacing.png" />
+					<img onclick="location.href = '<?php echo $golden_urls[1]; ?>';" data-to="50% 50%" data-t="3" style="left:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="<?php echo $golden_pictures[1]; ?>" />
+					<img onclick="location.href = '<?php echo $golden_urls[2]; ?>';"data-to="50% 50%" data-t="2" style="right:5%;top:50%;width:35%;height:400px;position:absolute;opacity:0;cursor:pointer;" src="<?php echo $golden_pictures[2]; ?>" />
 					<div data-to="50% -200px" data-t="5" data-arr="4" style="left:13%;top:39%;text-transform: uppercase;width:100%;height:230px;position:absolute;opacity:0;color:white;font-size:30pt;font-weight:900;line-height:1.2;">
-						<div><a href="<?php echo($domain); ?>" class="animated-button1 btn-pannel-2" style="width: 400px; height:90px; background-image: linear-gradient(to right, rgb(33 43 29 / 34%), #A6E02F, rgb(33 43 29 / 34%)); color: white; font-size:30pt;"><span></span><span></span><span></span><span></span>GOLF &#10148;</a></div>
+						<div><a href="<?php echo $golden_urls[1]; ?>" class="animated-button1 btn-pannel-2" style="width: 400px; height:90px; background-image: linear-gradient(to right, rgb(33 43 29 / 34%), #A6E02F, rgb(33 43 29 / 34%)); color: white; font-size:30pt;"><span></span><span></span><span></span><span></span><?php echo $golden_texts[1]; ?> &#10148;</a></div>
 						<div style="position: absolute; top: 0; right: 62%; font-size:30pt; color: white; padding-top: 27px;">&</div>
-						<div style="position: absolute; top: 0; right: 24%;"><a href="http://vietnamracing.com.vn/" class="animated-button1 btn-pannel-3" style="width: 400px; height:90px; background-image: linear-gradient(to right, rgb(33 43 29 / 34%), #A6E02F, rgb(33 43 29 / 34%)); color: white; font-size:30pt;"><span></span><span></span><span></span><span></span>Racing &#10148;</a></div>
+						<div style="position: absolute; top: 0; right: 24%;"><a href="<?php echo $golden_urls[2]; ?>" class="animated-button1 btn-pannel-3" style="width: 400px; height:90px; background-image: linear-gradient(to right, rgb(33 43 29 / 34%), #A6E02F, rgb(33 43 29 / 34%)); color: white; font-size:30pt;"><span></span><span></span><span></span><span></span><?php echo $golden_texts[2]; ?> &#10148;</a></div>
 					</div>
 				</div>
 			</div>

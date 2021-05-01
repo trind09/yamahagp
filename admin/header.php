@@ -1,18 +1,32 @@
 <head>
 	<!-- SEO -->
+	<?php
+		$site_name = "";
+		$site_description = "";
+		$site_image = "";
+		$site_favicon = "";
+		if (!empty($settings)) {
+			$site_name = GetSettingByKey($settings, 'Site Name');
+			$site_description = GetSettingByKey($settings, 'Site Description');
+			$site_image = GetSettingByKey($settings, 'Site Image');
+			$site_image = $domain . str_replace("../", "",$site_image);
+			$site_favicon = GetSettingByKey($settings, 'Site Favicon');
+			$site_favicon = $domain . str_replace("../", "",$site_favicon);
+		}
+	?>
     <title><?php echo($site_name); ?></title>
 	<meta name="description" content="<?php echo($site_description); ?>">
 	<meta name="keywords" content="">
 	<meta name="og:title" content="<?php echo($site_name); ?>">
 	<meta name="og:description" content="<?php echo($site_description); ?>">
-	<meta name="og:image" content="../assets/images/logo.png">
+	<meta name="og:image" content="<?php echo($site_image); ?>">
     
-	<meta property="og:image" content="../assets/images/bg.jpg">
-	<meta property="og:image:type" content="image/png">
+	<meta property="og:image" content="<?php echo($site_image); ?>">
+	<meta property="og:image:type" content="image/jpg">
 	<meta property="og:image:width" content="1024">
 	<meta property="og:image:height" content="576">
 
-    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo($site_favicon); ?>">
     <meta name="robots" content="noodp, noydir">
 
     <!-- Required meta tags -->
@@ -89,6 +103,8 @@
                 $('#member_link').attr('class', 'nav-link active');
 			} else if (view == 'event') {
                 $('#event_link').attr('class', 'nav-link active');
+			} else if (view == 'setting') {
+                $('#setting_link').attr('class', 'nav-link active');
 			} else {
 				$('#reg_dashboard_link').attr('class', 'nav-link active');
 			}
@@ -131,6 +147,8 @@
                 location.href = "index.php?view=member";
 			} else if (view == 'event') {
                 location.href = "index.php?view=event";
+			} else if (view == 'setting') {
+                location.href = "index.php?view=setting";
 			} else {
 				location.href = "index.php?view=reg_dashboard";
 			}

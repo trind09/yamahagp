@@ -2,10 +2,10 @@
 -- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jan 17, 2021 at 04:37 PM
--- Server version: 5.7.32-log
--- PHP Version: 7.3.6
+-- Host: 127.0.0.1:3306
+-- Generation Time: Apr 22, 2021 at 11:31 AM
+-- Server version: 10.4.14-MariaDB-cll-lve
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,8 +19,33 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ilear871_vietnam_racing_festival`
+-- Database: `u888166303_vietnamracing`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aboutus`
+--
+
+CREATE TABLE `aboutus` (
+  `id` int(11) NOT NULL,
+  `title` varchar(500) DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
+  `history` varchar(5000) DEFAULT NULL,
+  `create_date` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `aboutus`
+--
+
+INSERT INTO `aboutus` (`id`, `title`, `description`, `history`, `create_date`) VALUES
+(2, 'VỀ CHÚNG TÔI', '<p class=\"MsoNormal\">Năm 2020, Học viện Đua xe Việt Nam - Vietnam Racing Academy (VR) được thành lập bởi một nhóm doanh nhân với niềm đam mê mãnh liệt với đua xe thể thao. Được hỗ trợ bởi VMA - ASN duy nhất của Liên Đoàn Ô tô Quốc tế FIA tại Việt Nam.<o:p></o:p></p>', 'Insert by admin - 2021-01-17 14:15:26<br/>Update by admin - 2021-01-17 14:24:12<br/>Update by admin - 2021-01-17 14:24:27<br/>Update by admin - 2021-01-17 14:24:50<br/>Update by admin - 2021-01-18 09:53:52<br/>Update by admin - 2021-01-18 09:56:03<br/>Update by admin - 2021-01-18 09:56:39<br/>Update by admin - 2021-01-18 09:57:16<br/>Update by admin - 2021-01-18 09:57:44<br/>Update by admin - 2021-01-18 10:01:54<br/>Update by admin - 2021-01-22 09:48:26<br/>Update by admin - 2021-03-22 02:41:58<br/>', '2021-01-17 20:15:26'),
+(4, 'CÂU CHUYỆN', '<p><span style=\"font-family: \" times=\"\" new=\"\" roman\";\"=\"\">Học viện Đua xe Việt Nam (VR) ra đời bởi những con người tâm huyết, trăn trở với nền thể thao đua xe nước nhà. Luôn mong muốn Việt Nam có những tay đua đủ chuyên môn để thi đấu trong khu vực cũng như quốc tế.</span></p>', 'Insert by admin - 2021-01-17 14:25:26<br/>Update by admin - 2021-01-17 14:25:43<br/>Update by admin - 2021-01-22 09:49:33<br/>Update by admin - 2021-03-22 02:42:13<br/>', '2021-01-17 20:25:26'),
+(5, 'ĐỊNH HƯỚNG', '<p><span style=\"font-family: \" times=\"\" new=\"\" roman\";\"=\"\">Học viện Vietnam Racing Academy được thành lập để định hướng và đào tạo các tay đua chuyên nghiệp, đồng thời tổ chức các cuộc thi để thúc đẩy môn đua xe thể thao nước nhà trên một nền tảng vững chắc, bài bản nhằm thúc đẩy môn đua xe thể thao tại Việt Nam.</span></p>', 'Insert by admin - 2021-01-17 14:26:52<br/>Update by admin - 2021-01-18 09:59:35<br/>Update by admin - 2021-01-22 09:50:02<br/>Update by admin - 2021-03-22 02:42:30<br/>', '2021-01-17 20:26:52'),
+(6, 'GIÁ TRỊ CỐT LÕI', '<ul><li><span style=\"font-family: \" times=\"\" new=\"\" roman\";\"=\"\">Chuyên nghiệp</span></li><li><span style=\"font-family: \" times=\"\" new=\"\" roman\";\"=\"\">Đam mê</span></li><li><span times=\"\" new=\"\" roman\";\"=\"\">Tinh thần thể thao</span></li><li><span style=\"font-family: \" times=\"\" new=\"\" roman\";\"=\"\">Điêu luyện</span></li></ul>', 'Insert by admin - 2021-01-17 14:28:16<br/>Update by admin - 2021-01-18 10:00:13<br/>Update by admin - 2021-03-22 02:43:06<br/>Update by admin - 2021-03-22 02:43:32<br/>', '2021-01-17 20:28:16'),
+(7, 'TẦM NHÌN TƯƠNG LAI', '<p><span style=\"font-family: \" times=\"\" new=\"\" roman\";\"=\"\">Quảng bá và cấu trúc hóa văn hóa đua xe thể thao tại Việt Nam, cũng như mang đến nhiều cơ hội cho các danh nghiệp trong nước và ngoài nước quảng bá thương hiệu trong môi trường an toàn và công bằng.</span></p>', 'Insert by admin - 2021-01-17 14:29:16<br/>Update by admin - 2021-01-18 09:42:20<br/>Update by admin - 2021-01-18 09:42:54<br/>Update by admin - 2021-01-18 09:51:22<br/>Update by admin - 2021-01-18 09:52:31<br/>Update by admin - 2021-01-18 10:00:52<br/>Update by admin - 2021-01-22 09:50:51<br/>Update by admin - 2021-03-22 02:44:02<br/>', '2021-01-17 20:29:16');
 
 -- --------------------------------------------------------
 
@@ -34,7 +59,7 @@ CREATE TABLE `auction` (
   `customer_id` int(11) DEFAULT NULL,
   `root_price` decimal(13,2) DEFAULT NULL,
   `pid_rate` decimal(13,2) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -42,7 +67,7 @@ CREATE TABLE `auction` (
 --
 
 INSERT INTO `auction` (`id`, `aution_product_id`, `customer_id`, `root_price`, `pid_rate`, `create_date`) VALUES
-(102, 28, 24, 100000000.00, 2000000000.00, '2020-12-19 09:42:29');
+(102, 28, 24, '100000000.00', '2000000000.00', '2020-12-19 09:42:29');
 
 -- --------------------------------------------------------
 
@@ -63,7 +88,7 @@ CREATE TABLE `auction_product` (
   `picture` varchar(300) DEFAULT NULL,
   `extra_option` varchar(300) DEFAULT NULL,
   `history` varchar(5000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -71,7 +96,7 @@ CREATE TABLE `auction_product` (
 --
 
 INSERT INTO `auction_product` (`id`, `pro_name`, `pro_short_description`, `pro_description`, `pro_type`, `price`, `currency`, `start_date`, `end_date`, `picture`, `extra_option`, `history`, `create_date`) VALUES
-(12, 'THE ANATOMY OF A GOLFER LV, ATELIER', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.', 'Tác phẩm điêu khắc', 200000000.00, 'VND', '2020-12-17 22:01:45', '2021-04-10 12:00:00', '../assets/aution_product/The_Anatomy_of_a_Golffe_IV[1].jpg', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMSUpdate by admin - 2020-12-14 15:41:01<br/>Update by admin - 2020-12-14 20:11:02<br/>Update by admin - 2020-12-15 09:24:11<br/>Update by admin - 2020-12-18 11:46:02<br/>Update by admin - 2020-12-18 15:02:42<br/>Update by admin - 2020-12-18 15:06:07<br/>Update by admin - 2020-12-19 02:13:30<br/>Update by admin - 2020-12-19 02:13:48<br/>Update by admin - 2020-12-19 13:58:20<br/>', '2020-12-14 20:14:17');
+(12, 'THE ANATOMY OF A GOLFER LV, ATELIER', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông ...', 'The Anatomy of a Golfer lV, Atelier là tác phẩm đầu tiên trong loạt các tay golf của Richard MacDonald được lấy cảm hứng từ việc tạo ra tác phẩm điêu khắc anh hùng của ông, MOMENTUM, đánh dấu Kỷ niệm 100 năm Giải đấu Golf mở rộng Hoa Kỳ tại Pebble Beach Golf Links lịch sử vào năm 2000 Giải phẫu của một Golfer lV, Atelier mô tả tất cả năm chuyển động của cú swing - từ chuyển động quay ngược lại đến tiếp tục đánh. Mỗi tác phẩm điêu khắc trong loạt bài ca ngợi chủ nghĩa thể thao và sự tập trung cần thiết để chiến thắng trong một trong những môn thể thao thách thức nhất của thời đại chúng ta.', 'Tác phẩm điêu khắc', '200000000.00', 'VND', '2020-12-17 22:01:45', '2021-04-10 12:00:00', '../assets/aution_product/The_Anatomy_of_a_Golffe_IV[1].jpg', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMS', 'Người tặng: Ms. Lệ Hằng - Chủ Tịch Câu Lạc Bộ Từ Thiện OPEN ARMSUpdate by admin - 2020-12-14 15:41:01<br/>Update by admin - 2020-12-14 20:11:02<br/>Update by admin - 2020-12-15 09:24:11<br/>Update by admin - 2020-12-18 11:46:02<br/>Update by admin - 2020-12-18 15:02:42<br/>Update by admin - 2020-12-18 15:06:07<br/>Update by admin - 2020-12-19 02:13:30<br/>Update by admin - 2020-12-19 02:13:48<br/>Update by admin - 2020-12-19 13:58:20<br/>', '2020-12-14 20:14:17');
 
 -- --------------------------------------------------------
 
@@ -86,7 +111,7 @@ CREATE TABLE `caulacbo` (
   `description` varchar(2000) DEFAULT NULL,
   `hyperlink` varchar(300) DEFAULT NULL,
   `history` varchar(5000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -160,7 +185,7 @@ CREATE TABLE `customer` (
   `address` varchar(500) DEFAULT NULL,
   `position_level` varchar(200) DEFAULT NULL,
   `password` varchar(128) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -171,6 +196,45 @@ INSERT INTO `customer` (`id`, `fullname`, `birthday`, `phone`, `email`, `address
 (24, 'Thiên Thai Võ', '0000-00-00', '0987959209', 'vohuyenthienthai94@gmail.com', '', '', '$2y$10$3qdQuqfz2uHXpM9dDdT4teFjNERCcIuvJYh10BqSPK/LlEi3PXP8G', '2020-12-19 09:16:48'),
 (25, 'Võ huyền thiên thư', '0000-00-00', '0969293136', 'vohuyenthienthu@gmail.com', '', '', '$2y$10$c2TPyEGK1zevdbJO8D5Rsew0EvJU1Axyrcn1yMevpzTroPuOHqpa.', '2020-12-19 21:01:17'),
 (28, 'Nguyen Dung Tri', '0000-00-00', '076464664664', 'trind09@yahoo.com', '', '', '$2y$10$ePoxAe8Drnmx87AKzLkDa.tV8PGDXB9vu..7gGTzeqIDlEYbKr9Vu', '2020-12-23 16:48:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event`
+--
+
+CREATE TABLE `event` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `description` varchar(300) DEFAULT NULL,
+  `history` varchar(5000) DEFAULT NULL,
+  `create_date` datetime DEFAULT current_timestamp(),
+  `picture` varchar(2000) DEFAULT NULL,
+  `category` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`id`, `title`, `description`, `history`, `create_date`, `picture`, `category`) VALUES
+(9, 'Đường Đua', 'Những màn tranh tài gay cấn', 'Insert by admin - 2021-01-23 11:01:16<br/>Update by admin - 2021-01-23 11:07:07<br/>Update by admin - 2021-01-23 11:07:24<br/>Update by admin - 2021-01-24 12:24:12<br/>Update by admin - 2021-01-26 14:04:00<br/>Update by admin - 2021-03-22 02:57:37<br/>Update by admin - 2021-03-22 08:05:14<br/>Update by admin - 2021-03-23 10:35:18<br/>Update by admin - 2021-03-23 10:37:12<br/>', '2021-01-23 17:01:16', '../assets/event/ua xe.1616495832.jpeg', 'EVENT HIGHTLIGHTS'),
+(11, 'Trưng Bày', 'Trưng bày siêu xe và các sản phẩm phụ tùng độc đáo', 'Insert by admin - 2021-01-23 11:03:39<br/>Update by admin - 2021-01-23 11:05:56<br/>Update by admin - 2021-01-23 11:06:06<br/>Update by admin - 2021-01-24 12:23:57<br/>Update by admin - 2021-01-26 14:04:26<br/>Update by admin - 2021-03-22 08:08:34<br/>Update by admin - 2021-03-23 10:35:00<br/>', '2021-01-23 17:03:39', '../assets/event/trưng bày.jpeg', 'EVENT HIGHTLIGHTS'),
+(12, 'VIP Lounge', 'Trải nghiệm dịch vụ Vip đến từ nhãn hàng rượu danh tiếng trên thế giới', 'Insert by admin - 2021-01-23 11:05:43<br/>Update by admin - 2021-01-24 12:23:47<br/>Update by admin - 2021-01-26 14:03:48<br/>Update by admin - 2021-03-22 08:09:29<br/>Update by admin - 2021-03-23 10:34:46<br/>', '2021-01-23 17:05:43', '../assets/event/vip lounge.1616495686.jpg', 'EVENT HIGHTLIGHTS'),
+(13, 'Rapper Karik', '', 'Insert by admin - 2021-01-23 11:06:59<br/>Update by admin - 2021-01-23 11:07:33<br/>Update by admin - 2021-03-23 10:25:13<br/>Update by admin - 2021-03-23 10:25:17<br/>Update by admin - 2021-03-23 10:27:02<br/>Update by admin - 2021-03-23 10:27:33<br/>Update by admin - 2021-03-23 10:27:47<br/>Update by admin - 2021-03-23 10:28:14<br/>Update by admin - 2021-03-23 10:29:06<br/>Update by admin - 2021-03-23 10:29:51<br/>Update by admin - 2021-03-23 10:30:38<br/>Update by admin - 2021-03-23 10:31:44<br/>Update by admin - 2021-03-23 10:43:24<br/>Update by admin - 2021-03-23 10:43:27<br/>Update by admin - 2021-03-23 10:43:47<br/>Update by admin - 2021-03-23 11:00:02<br/>Update by admin - 2021-03-23 11:34:48<br/>', '2021-01-23 17:06:59', '../assets/event/karik2.1616499288.jpg', 'RAPER'),
+(15, 'Rapper Yuno BigBoi', '', 'Insert by admin - 2021-01-24 12:26:39<br/>Update by admin - 2021-03-23 10:36:44<br/>Update by admin - 2021-03-23 11:04:20<br/>Update by admin - 2021-03-23 11:16:49<br/>Update by admin - 2021-03-23 11:19:38<br/>', '2021-01-24 18:26:39', '../assets/event/YunoBigboy.jpg', 'RAPER'),
+(16, 'Rapper Lowkey', '', 'Insert by admin - 2021-01-24 12:27:33<br/>Update by admin - 2021-03-23 10:36:25<br/>Update by admin - 2021-03-23 11:04:53<br/>', '2021-01-24 18:27:33', '../assets/event/Low-Key.jpg', 'RAPER'),
+(17, 'Rapper Mess', '', 'Insert by admin - 2021-01-24 12:28:02<br/>Update by admin - 2021-03-23 10:35:59<br/>Update by admin - 2021-03-23 11:05:19<br/>Update by admin - 2021-03-23 11:33:09<br/>Update by admin - 2021-03-23 11:33:25<br/>Update by admin - 2021-03-23 11:33:35<br/>Update by admin - 2021-03-23 11:36:38<br/>', '2021-01-24 18:28:02', '../assets/event/Mes2.jpg', 'RAPER'),
+(18, 'Rapper KOO', '', 'Insert by admin - 2021-01-24 12:28:33<br/>Update by admin - 2021-03-23 10:35:41<br/>Update by admin - 2021-03-23 10:59:33<br/>Update by admin - 2021-03-23 11:32:51<br/>', '2021-01-24 18:28:33', '../assets/event/KOO.jpg', 'RAPER'),
+(19, 'Rapper Kenji', '', 'Insert by admin - 2021-01-24 12:29:05<br/>Update by admin - 2021-03-23 10:35:31<br/>Update by admin - 2021-03-23 10:43:44<br/>Update by admin - 2021-03-23 10:55:49<br/>Update by admin - 2021-03-23 10:59:16<br/>Update by admin - 2021-03-23 11:32:37<br/>Update by admin - 2021-03-23 11:35:46<br/>', '2021-01-24 18:29:05', '../assets/event/Kenji.jpg', 'RAPER'),
+(20, 'DJ Vinjaz', '', 'Insert by admin - 2021-01-24 12:29:45<br/>Update by admin - 2021-03-23 10:24:06<br/>Update by admin - 2021-03-23 10:24:18<br/>Update by admin - 2021-03-23 10:26:26<br/>Update by admin - 2021-03-23 10:56:51<br/>Update by admin - 2021-03-23 11:31:21<br/>', '2021-01-24 18:29:45', '../assets/event/DJ-VINJAZ-01.jpg', 'DJ'),
+(21, 'DJ Mie', '', 'Insert by admin - 2021-01-24 12:30:28<br/>Update by admin - 2021-03-23 10:31:22<br/>Update by admin - 2021-03-23 10:56:28<br/>Update by admin - 2021-03-23 11:31:06<br/>', '2021-01-24 18:30:28', '../assets/event/Mie2.1616499066.jpg', 'DJ'),
+(22, 'DJ Lại Thanh Hương', '', 'Insert by admin - 2021-01-24 12:31:00<br/>Update by admin - 2021-03-23 10:28:37<br/>Update by admin - 2021-03-23 10:28:45<br/>Update by admin - 2021-03-23 10:29:30<br/>Update by admin - 2021-03-23 10:57:08<br/>Update by admin - 2021-03-23 11:30:31<br/>', '2021-01-24 18:31:00', '../assets/event/DJThanh-Hương.jpg', 'DJ'),
+(23, 'MC Goku', '', 'Insert by admin - 2021-01-24 12:31:27<br/>Update by admin - 2021-03-23 10:33:08<br/>Update by admin - 2021-03-23 11:32:09<br/>', '2021-01-24 18:31:27', '../assets/event/MCGOKU.jpg', 'MC'),
+(24, 'MC LIL \'Vinx', '', 'Insert by admin - 2021-01-24 12:31:47<br/>Update by admin - 2021-03-23 10:32:43<br/>Update by admin - 2021-03-23 11:31:56<br/>', '2021-01-24 18:31:47', '../assets/event/MC-LIL_Vinx.1616499116.jpg', 'MC'),
+(25, 'DJ Nicky', '', 'Insert by admin - 2021-01-24 12:44:45<br/>Update by admin - 2021-01-24 12:46:02<br/>Update by admin - 2021-03-23 10:32:11<br/>Update by admin - 2021-03-23 10:57:44<br/>Update by admin - 2021-03-23 11:16:32<br/>Update by admin - 2021-03-23 11:19:56<br/>', '2021-01-24 18:44:45', '../assets/event/Nicky.1616498396.jpg', 'DJ'),
+(26, 'DJ Tio', '', 'Insert by admin - 2021-01-24 12:45:08<br/>Update by admin - 2021-01-24 12:46:22<br/>Update by admin - 2021-03-23 10:30:20<br/>Update by admin - 2021-03-23 10:56:09<br/>Update by admin - 2021-03-23 11:30:49<br/>', '2021-01-24 18:45:08', '../assets/event/DJ-Tio.jpg', 'DJ'),
+(80, 'Lễ hội âm nhạc', 'Lễ hội âm nhạc hoành tráng hấp dẫn', 'Insert by admin - 2021-03-22 08:07:51<br/>Update by admin - 2021-03-23 10:34:29<br/>', '2021-03-22 08:07:51', '../assets/event/lễ hội âm nhạc.jpg', 'EVENT HIGHTLIGHTS');
 
 -- --------------------------------------------------------
 
@@ -186,7 +250,7 @@ CREATE TABLE `gallery` (
   `thumbnail_url` varchar(2000) DEFAULT NULL,
   `external_album_hyperlink` varchar(1000) DEFAULT NULL,
   `history` varchar(5000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -200,6 +264,30 @@ INSERT INTO `gallery` (`id`, `title_gallery`, `description`, `image_url`, `thumb
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `member`
+--
+
+CREATE TABLE `member` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `history` varchar(5000) DEFAULT NULL,
+  `create_date` datetime DEFAULT current_timestamp(),
+  `picture` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`id`, `name`, `description`, `history`, `create_date`, `picture`) VALUES
+(25, 'GIA BẢO NGUYỄN', 'Founder', 'Insert by admin - 2021-01-22 09:59:48<br/>', '2021-01-22 15:59:48', '../assets/member/person1.jpg'),
+(27, 'RICH PHẠM', 'Co-Founder', 'Insert by admin - 2021-01-22 10:00:58<br/>', '2021-01-22 16:00:58', '../assets/member/person3.jpg'),
+(28, 'VINH NGUYỄN', 'Co-Founder', 'Insert by admin - 2021-01-22 10:01:31<br/>Update by admin - 2021-03-22 04:34:07<br/>Update by admin - 2021-03-22 04:34:17<br/>Update by admin - 2021-03-22 04:34:59<br/>', '2021-01-22 16:01:31', '../assets/member/a vinh 2.1616387699.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `news`
 --
 
@@ -208,10 +296,10 @@ CREATE TABLE `news` (
   `image_name` varchar(300) DEFAULT NULL,
   `title` varchar(300) DEFAULT NULL,
   `description` varchar(1000) DEFAULT NULL,
-  `content` text,
+  `content` text DEFAULT NULL,
   `hyperlink` varchar(300) DEFAULT NULL,
   `author` varchar(100) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp(),
   `history` varchar(5000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -241,7 +329,7 @@ CREATE TABLE `plan` (
   `title` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
   `description` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
   `hyperlink` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp(),
   `history` varchar(5000) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -277,7 +365,7 @@ CREATE TABLE `registers` (
   `comment1` varchar(1000) DEFAULT NULL,
   `comment2` varchar(1000) DEFAULT NULL,
   `comment3` varchar(1000) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp(),
   `form_id` varchar(100) DEFAULT NULL,
   `form_name` varchar(400) DEFAULT NULL,
   `extra_column1` varchar(300) DEFAULT NULL,
@@ -301,6 +389,44 @@ INSERT INTO `registers` (`id`, `number`, `fullname`, `birthday`, `phone`, `email
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `setting`
+--
+
+CREATE TABLE `setting` (
+  `id` int(11) NOT NULL,
+  `name` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `value` varchar(5000) CHARACTER SET utf8 DEFAULT NULL,
+  `history` varchar(5000) CHARACTER SET utf8 DEFAULT NULL,
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `setting`
+--
+
+INSERT INTO `setting` (`id`, `name`, `value`, `history`, `create_date`) VALUES
+(82, 'Site Logo', '../assets/setting/site_logo.png', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(83, 'Site Favicon', '../assets/setting/site_favicon.png', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(84, 'Site Slider', '../assets/setting/site_slider1.jpg|../assets/setting/site_slider2.jpg|../assets/setting/site_slider3.jpg|../assets/setting/site_slider4.jpg|../assets/setting/site_slider5.jpg|../assets/setting/site_slider6.jpg', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(85, 'Site Phone Number', '0909337777', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(86, 'Site Address', '87 Nguyễn Cơ Thạch, Khu đô thị Sala, Phường An Lợi Đông, Quận 2, Thành phố Hồ Chí Minh, Việt Nam', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(87, 'Site Email', 'vietnam.racing.academy@gmail.com', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(88, 'Site Copyright', '© 2020 Copyright Vietnam Racing Academy. All rights reserved.', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(89, 'Site Facebook', 'https://www.facebook.com/vietnamracingacademy', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(90, 'Site Youtube', '#', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(91, 'Site Name', 'Vietnam Racing Festival 2020', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(92, 'Site Description', 'Where is your limit?', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(93, 'Site Image', '../assets/setting/site_image.jpg', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(94, 'Site Facebook Messenger', '<script> window.fbAsyncInit = function() { FB.init({ xfbml : true, version : \'v9.0\' }); };(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = \'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js\'; fjs.parentNode.insertBefore(js, fjs); }(document, \'script\', \'facebook-jssdk\'));</script><!-- Your Chat Plugin code --> <div class=\"fb-customerchat shak-icon\" attribution=setup_tool page_id=\"104362934697822\" theme_color=\"#67b868\"> </div>', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(95, 'SMTP Host', 'smtp.gmail.com', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(96, 'SMTP Port', '587', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(97, 'SMTP Username', 'admin@vietnamracing.com.vn', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(98, 'SMTP Password', 'chi5bao@123', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43'),
+(99, 'SMTP Secure', 'tls', 'Insert by admin - 2021-04-22 11:04:43<br/>', '2021-04-22 11:04:43');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -312,7 +438,7 @@ CREATE TABLE `users` (
   `address` varchar(300) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `country` varchar(100) DEFAULT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -325,6 +451,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `address`, `birthday
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `aboutus`
+--
+ALTER TABLE `aboutus`
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `auction`
@@ -351,10 +483,22 @@ ALTER TABLE `customer`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `member`
+--
+ALTER TABLE `member`
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `news`
@@ -376,6 +520,12 @@ ALTER TABLE `registers`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `setting`
+--
+ALTER TABLE `setting`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -384,6 +534,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `aboutus`
+--
+ALTER TABLE `aboutus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `auction`
@@ -395,13 +551,13 @@ ALTER TABLE `auction`
 -- AUTO_INCREMENT for table `auction_product`
 --
 ALTER TABLE `auction_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `caulacbo`
 --
 ALTER TABLE `caulacbo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -410,28 +566,46 @@ ALTER TABLE `customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+
+--
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `member`
+--
+ALTER TABLE `member`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `plan`
 --
 ALTER TABLE `plan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `registers`
 --
 ALTER TABLE `registers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+
+--
+-- AUTO_INCREMENT for table `setting`
+--
+ALTER TABLE `setting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `users`

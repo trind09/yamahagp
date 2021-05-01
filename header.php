@@ -1,5 +1,52 @@
 ﻿<?php include 'inc/config.php'; ?>
 <?php include 'inc/functions.php'; ?>
+<?php
+	$site_name = "";
+	$site_description = "";
+	$site_image = "";
+	$site_favicon = "";
+	$site_logo = "";
+	$slider_images = "";
+	$site_phone_number = "";
+	$site_facebook_messenger = "";
+	$site_address = "";
+	$site_email = "";
+	$site_copyright = "";
+	$site_facebook = "";
+	$site_youtube = "";
+	$smtp_host = "";
+	$smtp_port = "";
+	$smtp_username = "";
+	$smtp_password = "";
+	$smtp_secure = "";
+	$enable_slide_video_and_buy_ticket = "";
+	$custom_script_on_slider = "";
+	if (!empty($settings)) {
+		$site_name = GetSettingByKey($settings, 'Site Name');
+		$site_description = GetSettingByKey($settings, 'Site Description');
+		$site_image = GetSettingByKey($settings, 'Site Image');
+		$site_image = $domain . str_replace("../", "",$site_image);
+		$site_favicon = GetSettingByKey($settings, 'Site Favicon');
+		$site_favicon = $domain . str_replace("../", "",$site_favicon);
+		$site_logo = GetSettingByKey($settings, 'Site Logo');
+		$site_logo = $domain . str_replace("../", "",$site_logo);
+		$slider_images = GetSettingByKey($settings, 'Site Slider');
+		$site_phone_number = GetSettingByKey($settings, 'Site Phone Number');
+		$site_facebook_messenger = GetSettingByKey($settings, 'Site Facebook Messenger');
+		$site_address = GetSettingByKey($settings, 'Site Address');
+		$site_email = GetSettingByKey($settings, 'Site Email');
+		$site_copyright = GetSettingByKey($settings, 'Site Copyright');
+		$site_facebook = GetSettingByKey($settings, 'Site Facebook');
+		$site_youtube = GetSettingByKey($settings, 'Site Youtube');
+		$smtp_host = GetSettingByKey($settings, 'SMTP Host');
+		$smtp_port = GetSettingByKey($settings, 'SMTP Port');
+		$smtp_username = GetSettingByKey($settings, 'SMTP Username');
+		$smtp_password = GetSettingByKey($settings, 'SMTP Password');
+		$smtp_secure = GetSettingByKey($settings, 'SMTP Secure');
+		$enable_slide_video_and_buy_ticket = GetSettingByKey($settings, 'Enable Slide Video and Buy Ticket');
+		$custom_script_on_slider = GetSettingByKey($settings, 'Custom Script On Slider');
+	}
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="">
 <head>
@@ -43,7 +90,6 @@
 	
 	<script>
 	//Update meta tags
-	
 	$('head').append('<meta charset="utf-8">');
 	$('head').append('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
 	
@@ -56,7 +102,7 @@
 	$('head').append('<meta name="og:image" content="<?php echo $site_image; ?>">');
 	
     $('head').append('<meta property="og:image" content="<?php echo $site_image; ?>">');
-	$('head').append('<meta property="og:image:type" content="image/png">');
+	$('head').append('<meta property="og:image:type" content="image/jpg">');
 	$('head').append('<meta property="og:image:width" content="1024">');
 	$('head').append('<meta property="og:image:height" content="576">');
 	$('head').append('<link rel="icon" type="image/png" href="<?php echo $site_favicon; ?>">');

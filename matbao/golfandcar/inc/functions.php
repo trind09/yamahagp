@@ -34,6 +34,14 @@ function GetImageLinks($str, $domain){
 	return $arr;
 }
 
+function IsFileString($str){
+	if(strpos($str, "../") !== false){
+		return true;
+	} else{
+		return false;
+	}
+}
+
 function IsArrayEmpty($arr){
 	if (is_array($arr)){
 		if (count($arr) > 0){
@@ -302,4 +310,31 @@ function CreateThumbnail($filepath, $thumbpath, $thumbnail_width, $thumbnail_hei
 	
     $imgt($new_image, $thumbpath);
     return file_exists($thumbpath);
+}
+
+$settings = array();
+GetSettings($pdo);
+function GetSettings($pdo){
+	global $settings;
+	$sql = "SELECT * FROM `setting`"; 
+	$statement = $pdo->prepare($sql); 
+	$statement->execute();
+	$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+	if (count($result) > 0)
+	{
+		foreach ($result as $row)
+		{
+			array_push($settings, array($row['name'] => $row['value']));
+		}
+	}
+}
+
+function GetSettingByKey($settings, $key){
+	foreach ($settings as $item) {
+		if(isset($item[$key])){
+			return $item[$key];
+		}
+	}
+	return null;
 }

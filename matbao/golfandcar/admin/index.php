@@ -61,6 +61,9 @@ if(isset($_GET["view"])) {
 						<a onclick="return GoTo('event');" id="event_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
                              <i class="fa fa-address-card"></i>Events
                         </a>
+						<a onclick="return GoTo('setting');" id="setting_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
+                             <i class="fa fa-address-card"></i>Thiết lập hệ thống
+                        </a>
                      </li>
                   </ul>
                </div>
@@ -93,6 +96,8 @@ if(isset($_GET["view"])) {
                 include 'controller/member_dashboard.php';
 			} elseif ($view == "event"){
                 include 'controller/event_dashboard.php';
+			} elseif ($view == "setting"){
+                include 'controller/setting_dashboard.php';
 			} else {
 				include 'controller/reg_dashboard.php';
 			}
