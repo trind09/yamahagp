@@ -95,6 +95,8 @@
                 $('#customer_link').attr('class', 'nav-link active');
             } else if (view == 'plan_pannel') {
                 $('#plan_pannel_link').attr('class', 'nav-link active');
+            } else if (view == 'competition_rules') {
+                $('#competition_rules_link').attr('class', 'nav-link active');
             } else if (view == 'gallery') {
                 $('#gallery_link').attr('class', 'nav-link active');
             } else if (view == 'aboutus') {
@@ -114,6 +116,21 @@
 			if ( typeof amount_of_record !== 'undefined' && $.isNumeric(amount_of_record)) {
 				$('#amount_of_record').val(amount_of_record);
 			}
+
+			//Setup page name
+			var menu_items = document.querySelectorAll('[aria-controls="submenu-1"]');
+			[].forEach.call(menu_items, function(item) {
+				var text = item.text;
+				text = text.trimLeft();
+				text = text.trimRight();
+				var className = item.className;
+				className = className.trimLeft();
+				className = className.trimRight();
+				if (className == 'nav-link active'){
+					var x = document.getElementById('page-title');
+					x.innerText = text;
+				}
+			});
 		}
 		
 		function ClearBeforeSubmit(){
@@ -139,6 +156,8 @@
 				location.href = "index.php?view=aution_product";
 			} else if (view == 'plan_pannel') {
                 location.href = "index.php?view=plan_pannel";
+            } else if (view == 'competition_rules') {
+                location.href = "index.php?view=competition_rules";
             } else if (view == 'gallery') {
                 location.href = "index.php?view=gallery";
             } else if (view == 'aboutus') {

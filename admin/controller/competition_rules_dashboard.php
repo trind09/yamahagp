@@ -4,13 +4,9 @@ $amount_of_record = 1000;
 $from_date = "";
 $pre_script_variables = "";
 
-$plan_file_path = "../assets/plan/";
 $id = "";
 $title = "";
-$description = "";
 $hyperlink = "";
-$is_file = true;
-$error=array();
 $remove_image_indexes = "";
 
 if (isset($_POST['amount_of_record']))
@@ -37,124 +33,46 @@ if (isset($_POST['insert_update'])){
 	if ($message != ""){
 		ShowMessage($message, false);
 		$title = strip_tags($_POST['title']);
-		$description = strip_tags($_POST['description']);
-	} else {
+		$hyperlink = strip_tags($_POST['hyperlink']);
+	} 	
+	else {
 		$id = strip_tags($_POST['id']);
 		$title = strip_tags($_POST['title']);
-		$description = strip_tags($_POST['description']);
-		GetHyperlink($pdo);
-		if (count($error) == 0){
-			//Case insert, id is always null
-			if ($id == ''){
+		$hyperlink = strip_tags($_POST['hyperlink']);
+		//Case insert, id is always null
+		if ($id == ''){
 				$history = "Insert by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
-				$sql = "INSERT INTO plan (title,description,hyperlink, history) VALUES "
-					. "(?,?,?,?)";
+				$sql = "INSERT INTO plan (title,hyperlink, history) VALUES "
+					. "(?,?,?)";
 					$statement = $pdo->prepare($sql);
-					$statement->execute(array( $title, $description, $hyperlink, $history));
+					$statement->execute(array( $title, $hyperlink, $history));
 					$register_id = $pdo->lastInsertId();
 		
 				if ($register_id != 0){
 					$title = "";
-					$description = "";
 					$hyperlink = "";
 					echo('<script>alert("Successful");</script>');
 				} else {
 					echo('<script>alert("Fail!");</script>');
 				}
-			} else {
-				//Case update, id is always has value
-				$error=array();
-				$history = "Update by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
+		} else {
+			//Case update, id is always has value
+            $error=array();
+			$history = "Update by " . $_SESSION['username'] . " - " . date("Y-m-d H:i:s") . "<br/>";
 
-				$sql = "UPDATE `plan` SET `title`=?,`description`=?,`hyperlink`=?, history = IFNULL(CONCAT(history, '" . $history . "'), '" . $history . "') WHERE id = ?";
-				$statement = $pdo->prepare($sql);
-				$statement->execute(array($title, $description, $hyperlink, $id));
-				BuildUpdateFields($id, $pdo, $domain);
-				ShowMessage('Successful', true);
+			$sql = "UPDATE `plan` SET `title`=?,`hyperlink`=?, history = IFNULL(CONCAT(history, '" . $history . "'), '" . $history . "') WHERE id = ?";
+			$statement = $pdo->prepare($sql);
+			$statement->execute(array($title, $hyperlink, $id));
+			BuildUpdateFields($id, $pdo, $domain);
+			ShowMessage('Successful', true);
 			}
 		}
-	}
 } else if (isset($_POST['update_button'])){
 	$id = strip_tags($_POST['id']);
 	BuildUpdateFields($id, $pdo, $domain);
 } else if (isset($_POST['delete_button'])){
 	$id = strip_tags($_POST['id']);
 	DeleteRecord($id, $pdo);
-}
-
-function GetHyperlink($pdo){
-	global $hyperlink; global $plan_file_path; global $id; global $error;
-	if (!file_exists($plan_file_path)) {
-		mkdir($plan_file_path, 0777, true);
-	}
-	$hyperlink_option = strip_tags($_POST['hyperlink_option']);
-
-	if ($hyperlink_option == '0'){
-		$image_name = array();
-		$error=array();
-		if($_FILES['files']['name'][0] != ""){
-			$extension=array("jpeg","jpg","png","gif","doc","docx","xls","xlsx","pdf","ppt","pptx","txt");
-			foreach($_FILES["files"]["tmp_name"] as $key=>$tmp_name) {
-				$file_name=$_FILES["files"]["name"][$key];
-				$file_tmp=$_FILES["files"]["tmp_name"][$key];
-				$ext=pathinfo($file_name,PATHINFO_EXTENSION);
-				if(in_array($ext,$extension)) {
-					if(!file_exists($plan_file_path.$file_name)) {
-						move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key], $plan_file_path.$file_name);
-						array_push($image_name, $plan_file_path . $file_name);
-					}
-					else {
-						$filename=basename($file_name,$ext);
-						$newFileName=$filename.time().".".$ext;
-						move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],$plan_file_path.$newFileName);
-						array_push($image_name, $plan_file_path . $newFileName);
-					}
-				}
-				else {
-					array_push($error,"$file_name, ");
-					break;
-				}
-			}
-		}
-		if (count($error) > 0){
-			echo('<script>alert("Incorrect image extension! ' . implode ("|", array_filter($error)) . '");</script>');
-		} else {
-			if (count($image_name) > 0)
-			{
-				$hyperlink = $image_name[0];
-				if ($id != ''){
-					RemoveOldFiles($pdo);
-				}
-			} else {
-				$hyperlink = "";
-			}
-		}
-	} else {
-		$hyperlink = strip_tags($_POST['hyperlink']);
-		if ($id != ''){
-			RemoveOldFiles($pdo);
-		}
-	}
-}
-
-function RemoveOldFiles($pdo){
-	global $id; 
-	$sql = "SELECT * FROM plan WHERE id = " . $id;
-
-	$statement = $pdo->prepare($sql);
-	$statement->execute();
-	$result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-	if (count($result) > 0)
-	{
-		foreach ($result as $row)
-		{
-			$hyperlink = $row["hyperlink"];
-			if(file_exists($hyperlink)) {
-				unlink($hyperlink);
-			}
-		}
-	}
 }
 
 function DeleteRecord($id, $pdo){
@@ -184,11 +102,14 @@ function ValidateData($post_data){
 	if ($title == ""){
 		$message .= "Xin điền tiêu đề</br>";
 	}
+	$hyperlink = strip_tags($post_data['hyperlink']);
+	if ($hyperlink == ''){
+		$message .= "Xin điền lin URL</br>";
+	}
 	return $message;
 }
-
 function BuildUpdateFields($id, $pdo, $domain){
-	global $id; global $title; global $description; global $hyperlink; global $is_file;
+	global $id; global $title; global $hyperlink;
 	if ($id != ''){
 		$sql = "SELECT * FROM plan WHERE id = " . $id;
 
@@ -202,17 +123,7 @@ function BuildUpdateFields($id, $pdo, $domain){
 			{
 				$id = $row["id"];
 				$title = $row["title"];
-				$description = $row["description"];
 				$hyperlink = $row["hyperlink"];
-				if ($hyperlink == ""){
-					$is_file = false;
-				} else {
-					if (filter_var($hyperlink, FILTER_VALIDATE_URL)) { 
-						$is_file = false;
-					} else {
-						$is_file = true;
-					}
-				}
 			}
 		}
 	}
@@ -300,65 +211,12 @@ function BuildUpdateFields($id, $pdo, $domain){
 									<button type="submit" id="update_button" name="update_button" style="display: none;"></button>
 									<button type="submit" id="delete_button" name="delete_button" style="display: none;"></button>
                                     <div class="form-group">
-                                        <label for="title">Tiêu đề: <span style="color: red;">*</span></label>
+                                        <label for="title">Tiêu đề kế hoạch: <span style="color: red;">*</span></label>
                                         <input type="text" class="form-control" name="title" id="title" value="<?php echo($title); ?>" />
                                     </div>
 									<div class="form-group">
-                                        <label for="description">Nội dung: </label>
-										<textarea class="form-control" id="description" name="description" rows="4" cols="50"><?php echo($description); ?></textarea>
-                                    </div>
-									<div class="form-group">
-										<script>
-											function loadJQuery(){
-												var waitForLoad = function () {
-													if (typeof jQuery != "undefined") {
-														setupCheckboxForUploadMode();     
-													} else {
-														window.setTimeout(waitForLoad, 500);
-													}
-												 };
-												 window.setTimeout(waitForLoad, 500);   
-											}
-
-											window.onload = loadJQuery;
-
-											function setupCheckboxForUploadMode(){
-												$(".select_upload_file_mode").change(function() {
-													if(this.checked) {
-														if (this.value == 0){
-															$('#files').show();
-															$('#hyperlink').hide();
-														} else {
-															$('#files').hide();
-															$('#hyperlink').show();
-														}
-													}
-													$('.select_upload_file_mode').not(this).prop('checked', false);
-												});
-											}
-										</script>
-                                        <label for="files">Tập tin: </label>
-										<?php if ($is_file){?>
-											<input type="file" class="form-control" name="files[]" id="files">
-											<input type="text" class="form-control" name="hyperlink" id="hyperlink" value="<?php echo($hyperlink); ?>" style="display:none;"/>
-										<?php } else {?>
-											<input type="file" class="form-control" name="files[]" id="files" style="display:none;">
-											<input type="text" class="form-control" name="hyperlink" id="hyperlink" value="<?php echo($hyperlink); ?>" />
-										<?php }?>
-										<div id="file_panel"><?php echo($hyperlink) ?></div>
-                                    </div>
-									<div class="form-group">
-										<?php if ($is_file){?>
-											<input class="select_upload_file_mode" type="radio" checked id="hyperlink_option1" name="hyperlink_option" value="0" style="display: table-row;">
-											<label for="hyperlink_option1"> Tải lên tập tin</label><br>
-											<input class="select_upload_file_mode" type="radio" id="hyperlink_option2" name="hyperlink_option" value="1" style="display: table-row;">
-											<label for="hyperlink_option2"> Đường dẫn ngoài</label><br>
-										<?php } else {?>
-											<input class="select_upload_file_mode" type="radio" id="hyperlink_option1" name="hyperlink_option" value="0" style="display: table-row;">
-											<label for="hyperlink_option1"> Tải lên tập tin</label><br>
-											<input class="select_upload_file_mode" type="radio" checked id="hyperlink_option2" name="hyperlink_option" value="1" style="display: table-row;">
-											<label for="hyperlink_option2"> Đường dẫn ngoài</label><br>
-										<?php }?>
+                                        <label for="hyperlink">URL: <span style="color: red;">*</span></label>
+                                        <input type="text" class="form-control" name="hyperlink" id="hyperlink" value="<?php echo($hyperlink); ?>" />
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-space btn-success" id="insert_update" name="insert_update">Submit</button>
@@ -372,8 +230,7 @@ function BuildUpdateFields($id, $pdo, $domain){
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Tiêu đề</th>
-													<th>Nội dung</th>
+                                                    <th>Tiêu đề kế hoạc</th>
                                                     <th>Link Ngoài</th>
                                                     <th>Ngày Khởi Tạo</th>
 													<th></th>
@@ -404,13 +261,11 @@ function BuildUpdateFields($id, $pdo, $domain){
 															$id = $row["id"];
 															$title = $row["title"];
 															$hyperlink = $row["hyperlink"];
-															$description = $row["description"];
 															$create_date = date_create($row["create_date"]);
 
 															echo ("<tr>");
 															echo ("<td>" . $counter . "</td>" . "
 																<td><div class='scrollable'>" . $title . "</div></td>" . "
-																<td><div class='scrollable'>" . $description . "</div></td>" . "
 																<td><div class='scrollable'>" . $hyperlink . "</div></td>" . "
 																<td><div class='scrollable'>" . date_format($create_date, "d-m-Y H:i:s") . "</div></td>" . "
 																<td><div class='scrollable'><a id='" . $id . "' style='cursor: pointer; color: green;' onclick='UpdateRecord(this);'>Update</a>" . "
@@ -445,8 +300,7 @@ function BuildUpdateFields($id, $pdo, $domain){
                                             <tfoot>
                                                 <tr>
 												    <th>#</th>
-                                                    <th>Tiêu đề</th>
-													<th>Nội dung</th>
+                                                    <th>Tiêu đề kế hoạc</th>
                                                     <th>Link Ngoài</th>
                                                     <th>Ngày Khởi Tạo</th>
 													<th></th>

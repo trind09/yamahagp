@@ -176,7 +176,7 @@ function BuildUpdateFields($id, $pdo, $domain){
                             <form id="clb" action="" method="post" enctype='multipart/form-data'>
                                 <!-- Header controls -->
                                 <div class="card-header">
-                                    <h2 class="mb-0">Danh sách sản phẩm đấu giá</h2>
+                                    <h2 class="mb-0" id="page-title">Giới thiệu công ty</h2>
                                     <div class="form-group">
                                         <label for="amount_of_record">Số dòng dữ liệu: </label>
                                         <select name="amount_of_record" id="amount_of_record" class="form-control">

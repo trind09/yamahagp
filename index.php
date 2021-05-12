@@ -476,6 +476,30 @@ $(window).on("load", function() {
 		</ul>
 		<div class="about-contain display term-content">
 			<ul class="race-league">
+				<?php
+				 $sql = "SELECT * FROM plan;";
+					$statement = $pdo->prepare($sql);
+					$statement->execute();
+					$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+					if(count($result) > 0 ){
+						foreach ($result as $row){
+							$plan_item = '<li><div class="copy">';
+							$title = $row["title"];
+							$description = $row["description"];
+							$hyperlink =  $row["hyperlink"];
+							if (strpos($hyperlink, '../') !== false) {
+								$hyperlink = $domain . str_replace('../', '', $hyperlink);
+							}
+							$plan_item .= '<h5>' . $title . '</h5>';
+							$plan_item .= '<p>' . $description . '</p>';
+							$plan_item .= '<p><a class="red_link" href="assets/docs/ĐIEU_LE_VINFAST_AUTOGYMKHANA_CUP.pdf" target="_blank">Xem Thêm >></a></p>';
+							$i++;
+						}
+						$event_slide .= '</div>'; 
+						echo($event_slide);    
+
+					}
+				?>
 				<li>
 					<div class="copy">
 						<h5>ĐIỀU LỆ GIẢI VINFAST AUTOGYMKHANA CUP</h5>
