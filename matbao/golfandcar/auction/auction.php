@@ -36,6 +36,9 @@ function showDivs(n) {
 }
 </script>
 <script>
+	var enable_auction_login = '<?php echo strtolower($enable_auction_login); ?>';
+	var enable_auto_auction_register = '<?php echo strtolower($enable_auto_auction_register); ?>';
+	
 	$(document).ready(function() {
 		var aid =  getParameterByName('aid');
 		if (aid != ''){
@@ -50,7 +53,7 @@ function showDivs(n) {
 				ShowPidForm(id);
 			} else {
 				$('#selected_auction_product_id').val(id);
-				if ('<?php echo strtolower($enable_auction_login); ?>' == 'false'){
+				if (enable_auction_login == 'false'){
 					ShowPidForm(id);
 				} else {
 					$('#login_form').show();
@@ -58,7 +61,7 @@ function showDivs(n) {
 			}
 		} catch(err) {
 			$('#selected_auction_product_id').val(id);
-			if ('<?php echo strtolower($enable_auction_login); ?>' == 'false'){
+			if (enable_auction_login == 'false'){
 				ShowPidForm(id);
 			} else {
 				$('#login_form').show();
@@ -77,6 +80,8 @@ function showDivs(n) {
 		$('#pro_type').html('<span style="color:#197114;font-weight: bold;">Thể loại: ' + pro_type + '</span>');
 		var price = $('#price' + id).html();
 		var price_number = $('#price_number' + id).val();
+		var price_currency = $('#price_currency' + id).val();
+		$('#customer_currency').html(price_currency);
 		$('#price').html('<span style="color: #0bbb19;font-size: 15pt;font-weight: bold;">Giá hiện tại: ' + price + '<input type="hidden" id="price_number" value="' + price_number + '" /></span></span>');
 		var extra_option = $('#extra_option' + id).html();
 		$('#extra_option').html(extra_option);
@@ -132,7 +137,7 @@ function showDivs(n) {
 			$('#product_image_array').html(image_slider);
 			currentDiv(1);
 		}
-		if ('<?php echo strtolower($enable_auto_auction_register); ?>' == 'true'){
+		if (enable_auto_auction_register == 'true'){
 			$('#flash_auction_fullname').attr('style','display: flex; color: black;');
 			$('#flash_auction_fullname-label').show();
 			$('#flash_auction_phone').attr('style','display: flex; color: black;');
@@ -165,7 +170,7 @@ function showDivs(n) {
 
    function ProcessAuction(){
 		var error_message = "";
-		if ('<?php echo strtolower($enable_auto_auction_register); ?>' == 'true'){
+		if (enable_auto_auction_register == 'true'){
 			var name = $('#flash_auction_fullname').val();
 			if(name == ''){
 				error_message += "Xin điền họ và tên của bạn.<br>";
@@ -406,7 +411,7 @@ function showDivs(n) {
 $selected_auction_product_id = "";
 $selected_auction_product_id1 = "";
 if (!isset($_SESSION['customer_id'])) {
-	if (strtolower($enable_auto_auction_register) == 'true' && isset($_POST['pid_form'])){
+	if ($enable_auto_auction_register == 'true' && isset($_POST['pid_form'])){
 		$valid = 1;
 		$message = "";
 		$flash_auction_fullname = strip_tags($_POST['flash_auction_fullname']);
@@ -766,7 +771,7 @@ if (count($result) > 0)
 							<h6 style="color: #f4ed2d; margin-bottom: 0;" id="pro_name' . $id . '">' . $pro_name . '</h6>
 							<p style="color: #CDDC39; font-size: 14px;">- Thể loại: <span id="pro_type' . $id . '" style="color: #CDDC39; font-size: 14px;">' . $pro_type . '</span></p>
 							<p style="color: aliceblue; font-size: 12pt; border: 1px solid;">- Giá hiện tại: <span id="price' . $id . '" style="color: aliceblue;font-size: 12pt;">' . format_money($price, $currency) . '</span></p>
-							<input type="hidden" id="price_number' . $id . '" value="' . $price . '"/>
+							<input type="hidden" id="price_number' . $id . '" value="' . $price . '"/><input type="hidden" id="price_currency' . $id . '" value="' . $currency . '"/>
 							<p style="color: #3df900; font-size: 11pt;" id="extra_option' . $id . '">' . $extra_option . '</p>
 							<p style="color: #ffffff; font-size: 12pt;" id="pro_short_description' . $id . '">' . $pro_short_description . '</p>
 							' . $nut_dau_gia . '
@@ -941,7 +946,7 @@ function GetListOfAuction($pdo, $auction_product_id, $start_date, $end_date){
 			 <input class="swal2-input" id="flash_auction_fullname" name="flash_auction_fullname" placeholder="" type="text" style="display: none; color: black;">
 			 <label for="flash_auction_phone" class="swal2-input-label" id="flash_auction_phone-label" style="display: none;">Số điện thoại <span style="color: red;">*</span></label>
 			 <input class="swal2-input" id="flash_auction_phone" name="flash_auction_phone" placeholder="" type="text" style="display: none; color: black;">
-			 <label for="pid_rate" class="swal2-input-label" id="pid_rate-label">Số tiền đấu giá (VND) <span style="color: red;">*</span></label>
+			 <label for="pid_rate" class="swal2-input-label" id="pid_rate-label">Số tiền đấu giá (<span id="customer_currency"></span>) <span style="color: red;">*</span></label>
 			 <input class="swal2-input" id="pid_rate" name="pid_rate" placeholder="" type="text" style="display: flex; color: black;">
 			 <div class="swal2-validation-message" id="pid_rate-validation-message"></div>
 		  </div>

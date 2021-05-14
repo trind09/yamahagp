@@ -482,8 +482,9 @@ $(window).on("load", function() {
 					$statement->execute();
 					$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 					if(count($result) > 0 ){
+						$plan_item = "";
 						foreach ($result as $row){
-							$plan_item = '<li><div class="copy">';
+							$plan_item .= '<li><div class="copy">';
 							$title = $row["title"];
 							$description = $row["description"];
 							$hyperlink =  $row["hyperlink"];
@@ -492,63 +493,13 @@ $(window).on("load", function() {
 							}
 							$plan_item .= '<h5>' . $title . '</h5>';
 							$plan_item .= '<p>' . $description . '</p>';
-							$plan_item .= '<p><a class="red_link" href="assets/docs/ĐIEU_LE_VINFAST_AUTOGYMKHANA_CUP.pdf" target="_blank">Xem Thêm >></a></p>';
+							$plan_item .= '<p><a class="red_link" href="' . $hyperlink . '" target="_blank">Xem Thêm >></a></p>';
+							$plan_item .= '</div></li>';
 							$i++;
-						}
-						$event_slide .= '</div>'; 
-						echo($event_slide);    
-
+						} 
+						echo($plan_item);    
 					}
 				?>
-				<li>
-					<div class="copy">
-						<h5>ĐIỀU LỆ GIẢI VINFAST AUTOGYMKHANA CUP</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="assets/docs/ĐIEU_LE_VINFAST_AUTOGYMKHANA_CUP.pdf" target="_blank">Xem Thêm >></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="copy">
-						<h5>ĐIỀU LỆ GIẢI VINFAST TRACK ATTACT CUP</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="assets/docs/ĐIEU_LE_VINFAST_TRACK_ATTACK_CUP.pdf" target="_blank">Xem Thêm >></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="copy">
-						<h5>ĐIỀU LỆ GIẢI VR Drift Battle</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_VR_DRIFT_BATTLE.pdf" target="_blank">Xem Thêm >></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="copy">
-						<h5>ĐIỀU LỆ GIẢI MOTUL MOTOR RACING CUP HỆ 300 - 400CC</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_300_400cc.pdf" target="_blank">Xem Thêm >></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="copy">
-						<h5>ĐIỀU LỆ GIẢI MOTUL MOTOR RACING CUP HỆ UB150</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_MOTUL_MOTOR_RACING_CUP_UB150.pdf" target="_blank">Xem Thêm >></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="copy">
-						<h5>ĐIỀU LỆ GIẢI VR GO-KART CUP</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="assets/docs/ĐIEU_LE_CAC_GIAI_GO_KART_CUP.pdf" target="_blank">Xem Thêm >></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="copy">
-						<h5>ĐIỀU LỆ GIẢI VR Roller Sport Cup</h5>
-						<p>Các quy định và lịch tập luyện trong quá trình tham gia thi đấu giải</p>
-						<p><a class="red_link" href="assets/docs/The_thuc_VR_ROLLER_SPORTS.pdf" target="_blank">Xem Thêm >></a></p>
-					</div>
-				</li>
 			</ul>
 		</div>
 	</div>

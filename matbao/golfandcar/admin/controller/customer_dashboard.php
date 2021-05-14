@@ -11,7 +11,7 @@
                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div class="card">
                      <div class="card-header">
-                        <h2 class="mb-0">Danh sách khách hàng</h2>
+                        <h2 class="mb-0" id="page-title">Danh sách khách hàng</h2>
                         <div class="form-group">
                            <label for="amount_of_record">Số dòng dữ liệu: </label>
                            <select name="amount_of_record" id="amount_of_record" class="form-control">

@@ -51,6 +51,7 @@ if(isset($_GET["view"])) {
 						<a onclick="return GoTo('aution_product');" id="aution_product_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách sản phẩm đấu giá</a>
 						<a onclick="return GoTo('customer');" id="customer_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-user-circle"></i>Danh sách khách hàng</a>
 						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Danh sách kế hoạch & điều lệ</a>
+						<a onclick="return GoTo('competition_rules');" id="competition_rules_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Thể lệ thi đấu</a>
 						<a onclick="return GoTo('gallery');" id="gallery_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Thư viện ảnh</a>
                         <a onclick="return GoTo('aboutus');" id="aboutus_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
                              <i class="fa fa-address-card"></i>Giới Thiệu Công Ty
@@ -88,6 +89,8 @@ if(isset($_GET["view"])) {
 				include 'controller/customer_dashboard.php';
 			} elseif ($view == "plan_pannel"){
 				include 'controller/pla_dashboard.php';
+			} elseif ($view == "competition_rules"){
+				include 'controller/competition_rules_dashboard.php';
 			} elseif ($view == "gallery"){
                 include 'controller/gallery_dashboard.php';
             } elseif ($view == "aboutus"){
