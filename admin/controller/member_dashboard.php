@@ -363,7 +363,7 @@ function RemoveAutionProductImages($image_indexes, $id, $pdo){
                                         <label for="name">Tên thành viên công ty: <span style="color: red;">*</span></label>
                                         <input type="text" class="form-control" name="name" id="name" value="<?php echo($name); ?>" />
                                     </div><div class="form-group">
-                                              <label for="description">Chức vụ: <span style="color: red;">*</span></label>
+                                              <label for="description">Mô tả: <span style="color: red;">*</span></label>
                                         <input type="text" class="form-control" name="description" id="description" value="<?php echo($description); ?>" />
                                     </div>
 									<div class="form-group">

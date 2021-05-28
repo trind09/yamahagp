@@ -312,10 +312,10 @@ $(window).on("load", function() {
                         $title = $row["title"];
                         $description = $row["description"];
                         $picture =  $row["picture"];
-                        $img_url_array = $domain . str_replace('../', '', $picture);
+                        $img_url = $domain . str_replace('../', '', $picture);
                         $event_slide .= ' <div class="slider-box" style="height: auto !important;">
 					                            <p>' . $title . '</p>
-					                            <img style="height: auto; width: 100%;" src="'. $img_url_array .'"/>
+					                            <img style="height: auto; width: 100%;" src="'. $img_url .'"/>
 					                            <h5 style="position: absolute; z-index: 1001; color: #33c331; top: 80px; margin-left: 12px; font-size: 13px;">'. $description .'</h5>
 				                           </div>';
                         $i++;
@@ -334,44 +334,31 @@ $(window).on("load", function() {
 		</ul>
 		<div class="about-contain display register-contain">
 			<ul class="race-league">
-				<li>
-					<h2>Moto</h2>
-					<div class="copy copy-a" style="background: url(assets/images/motorlogo.png);">
-						<div class="note">
-							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Motul motor racing cup UB150</a></h6>
-							<p><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Hệ Pro</a></p>
-							<p><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Hệ Semi Pro</a></p>
-						</div>
-						<div class="note">
-							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">Motul motor gymkhana cup</a></h6>
-						</div>
-					</div>
-				</li>
-				<li>
-					<h2>Go kart</h2>
-					<div class="copy copy-a" style="background: url(assets/images/go-kartlogo.png);">
-						<div class="note">
-							<h6 style="margin-bottom: 0px;"><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Go-Kart Cup Hệ 2 THÌ</a></h6>
-						</div>
-					</div>
-				</li>
-				<li>
-					<h2>Oto</h2>
-					<div class="copy copy-a" style="background: url(assets/images/otologo.png);">
-						<div class="note">
-							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Autogymkhana Cup</a></h6>
-							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Drift Cup</a></h6>
-						</div>
-					</div>
-				</li>
-				<li>
-					<h2>Roller Sport</h2>
-					<div class="copy copy-a" style="background: url(assets/images/rollerlogo.png);">
-						<div class="note">
-							<h6><a href='https://docs.google.com/forms/d/19GkT4zTwKXRzjjSt0BaKU5cQPh38QSvxIXJwEfdzZ5w' class="registry-link">VR Roller Sport Cup</a></h6>
-						</div>
-					</div>
-				</li>
+				<?php
+					$sql = "SELECT * FROM competition_category ORDER BY create_date DESC";
+					$statement = $pdo->prepare($sql);
+					$statement->execute();
+					$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+					if(count($result) > 0 ){
+						$competition_category_slide = '';
+						$i=1;
+						foreach ($result as $row){
+							$name = $row["name"];
+							$description = $row["description"];
+							$picture =  $row["picture"];
+							$img_url = $domain . str_replace('../', '', $picture);
+							$competition_category_slide .= '<li>';
+							$competition_category_slide .= '<h2>' . $name . '</h2>';
+							$competition_category_slide .= '<div class="copy copy-a" style="background: url(' . $img_url . ');">';
+							$competition_category_slide .= $description;
+							$competition_category_slide .= '</div>';
+							$competition_category_slide .= '</li>';
+							$i++;
+						}
+						echo($competition_category_slide);    
+
+					}
+				?>
 			</ul>
 		</div>
 	</div>
@@ -384,39 +371,37 @@ $(window).on("load", function() {
 
 		<div class="plan-wrap">
 			<ul class="plan-list">
-				
-				<li class="disable" style="transform: matrix(1, 0, -0.17632, 0.99999, 0, 0);">
-					<span>Lịch thi đấu</span>
-					<div class="plan-item">
-						<h3>Vòng loại</h3>
-						<p><img src="assets/images/i-time.png">01/05/2021<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại VR Autogymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul Motor Gymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại Motul Motor Racing Cup UB150<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng loại VR Go – Kart Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Roller Sport Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Drift Cup<br/>
-						</p>
-						<p><img src="assets/images/i-location.png">Trường Đua Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
-						<h4>1</h4>
-					</div>
-				</li>
+				<?php
+					$sql = "SELECT * FROM match_schedule ORDER BY create_date DESC";
+					$statement = $pdo->prepare($sql);
+					$statement->execute();
+					$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+					if(count($result) > 0 ){
+						$match_schedule_slide = '';
+						$i=1;
+						foreach ($result as $row){
+							$title = $row["title"];
+							$description = $row["description"];
+							$address =  $row["address"];
+							$time =  $row["time"];
+							$time = date("d-m-Y", strtotime($time));  
+							$match_schedule_slide .= '<li class="disable" style="transform: matrix(1, 0, -0.17632, 0.99999, 0, 0);">';
+							$match_schedule_slide .= '<span>Lịch thi đấu</span>';
+							$match_schedule_slide .= '<div class="plan-item">';
+							$match_schedule_slide .= '<h3>' . $title . '</h3>';
+							$match_schedule_slide .= '<p><img src="assets/images/i-time.png">' . $time . '<br/>';
+							$match_schedule_slide .= $description;
+							$match_schedule_slide .= '</p>';
+							$match_schedule_slide .= '<p><img src="assets/images/i-location.png">' . $address . '</p>';
+							$match_schedule_slide .= '<h4>' . $i . '</h4>';
+							$match_schedule_slide .= '</div>';
+							$match_schedule_slide .= '</li>';
+							$i++;
+						}
+						echo($match_schedule_slide);    
 
-				<li class="disable" style="transform: matrix(1, 0, -0.17632, 0.99999, 0, 0);">
-					<span>Lịch thi đấu</span>
-					<div class="plan-item">
-						<h3>Vòng chung kết</h3>
-						<p><img src="assets/images/i-time.png">02/05/2021<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul Motor Gymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết Motul Motor Racing Cup UB150<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR AutoGymkhana Cup<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;- Vòng chung kết VR Go – Kart Cup<br/>
-						</p>
-						<p><img src="assets/images/i-location.png">Trường Đua Đại Nam, Bình Dương, Xã Hiệp An, Thủ Dầu Một, Bình Dương.</p>
-						<h4>2</h4>
-					</div>
-				</li>
-
+					}
+				?>
 			</ul>
 		</div>
 	</div>

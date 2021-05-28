@@ -320,7 +320,7 @@ function BuildUpdateFields($id, $pdo, $domain){
 												 window.setTimeout(waitForLoad, 500);   
 											}
 
-											window.onload = loadJQuery;
+											document.addEventListener('DOMContentLoaded', loadJQuery);
 
 											function setupCheckboxForUploadMode(){
 												$(".select_upload_file_mode").change(function() {

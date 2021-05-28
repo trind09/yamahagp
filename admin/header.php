@@ -5,6 +5,7 @@
 		$site_description = "";
 		$site_image = "";
 		$site_favicon = "";
+		$site_template = "";
 		if (!empty($settings)) {
 			$site_name = GetSettingByKey($settings, 'Site Name');
 			$site_description = GetSettingByKey($settings, 'Site Description');
@@ -12,6 +13,7 @@
 			$site_image = $domain . str_replace("../", "",$site_image);
 			$site_favicon = GetSettingByKey($settings, 'Site Favicon');
 			$site_favicon = $domain . str_replace("../", "",$site_favicon);
+			$site_template = GetSettingByKey($settings, 'Site Template');
 		}
 	?>
     <title><?php echo($site_name); ?></title>
@@ -69,12 +71,12 @@
 		function loadJQuery(){
 			var waitForLoad = function () {
 				if (typeof jQuery != "undefined") {
-					InitControls();     
+					InitControls();
 				} else {
 					window.setTimeout(waitForLoad, 500);
 				}
 			 };
-			 window.setTimeout(waitForLoad, 500);   
+			 window.setTimeout(waitForLoad, 500);
 		}
 
 		window.onload = loadJQuery;
@@ -107,8 +109,10 @@
                 $('#event_link').attr('class', 'nav-link active');
 			} else if (view == 'setting') {
                 $('#setting_link').attr('class', 'nav-link active');
-			} else {
-				$('#reg_dashboard_link').attr('class', 'nav-link active');
+			} else if (view == 'match_schedule') {
+                $('#match_schedule_link').attr('class', 'nav-link active');
+			} else if (view == 'competition_category') {
+                $('#competition_category_link').attr('class', 'nav-link active');
 			}
 			if ( typeof from_date !== 'undefined' && Object.prototype.toString.call(from_date) == '[object String]') {
 				document.getElementById("from_date").value = from_date;
@@ -131,6 +135,11 @@
 					x.innerText = text;
 				}
 			});
+
+			//setup datetime picker for controller page
+			$( "#datetimepicker" ).datetimepicker({
+				format:'Y.m.d H:i'
+			});
 		}
 		
 		function ClearBeforeSubmit(){
@@ -138,7 +147,6 @@
 			$('#from_date').val('');
 			return true;
 		}
-
 
 		/* Menu links */
 		function GoTo(view) {
@@ -168,8 +176,10 @@
                 location.href = "index.php?view=event";
 			} else if (view == 'setting') {
                 location.href = "index.php?view=setting";
-			} else {
-				location.href = "index.php?view=reg_dashboard";
+			} else if (view == 'match_schedule') {
+                location.href = "index.php?view=match_schedule";
+			} else if (view == 'competition_category') {
+                location.href = "index.php?view=competition_category";
 			}
         }
 

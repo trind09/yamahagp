@@ -44,27 +44,34 @@ if(isset($_GET["view"])) {
                   <ul class="navbar-nav flex-column">
                      <li class="nav-divider">Menu</li>
                      <li class="nav-item">
-                        <a onclick="return GoTo('reg_dashboard');" id="reg_dashboard_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-address-book"></i>Thông tin đăng ký thi đấu</a>
+                        <a onclick="return GoTo('reg_dashboard');" id="reg_dashboard_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'golfandcar') echo 'display:none;'; ?>"><i class="far fa-address-book"></i>Thông tin đăng ký thi đấu</a>
 						<a onclick="return GoTo('news');" id="news_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-newspaper"></i>Danh sách bản tin</a>
-                        <a onclick="return GoTo('caulacbo_pannel');" id="caulacbo_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-trophy"></i>Danh sách câu lạc bộ</a>
-						<a onclick="return GoTo('auction');" id="auction_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-gavel"></i>Danh sách người đấu giá</a>
-						<a onclick="return GoTo('aution_product');" id="aution_product_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-chart-bar"></i>Danh sách sản phẩm đấu giá</a>
-						<a onclick="return GoTo('customer');" id="customer_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-user-circle"></i>Danh sách khách hàng</a>
-						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Danh sách kế hoạch & điều lệ</a>
-						<a onclick="return GoTo('competition_rules');" id="competition_rules_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Thể lệ thi đấu</a>
-						<a onclick="return GoTo('gallery');" id="gallery_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-address-card"></i>Thư viện ảnh</a>
+                        <a onclick="return GoTo('caulacbo_pannel');" id="caulacbo_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'vietnamracing') echo 'display:none;'; ?>"><i class="fa fa-trophy"></i>Danh sách câu lạc bộ</a>
+						<a onclick="return GoTo('auction');" id="auction_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'vietnamracing') echo 'display:none;'; ?>"><i class="fa fa-gavel"></i>Danh sách người đấu giá</a>
+						<a onclick="return GoTo('aution_product');" id="aution_product_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'vietnamracing') echo 'display:none;'; ?>"><i class="fa fa-cubes"></i>Danh sách sản phẩm đấu giá</a>
+						<a onclick="return GoTo('customer');" id="customer_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'vietnamracing') echo 'display:none;'; ?>"><i class="fa fa-user-circle"></i>Danh sách khách hàng</a>
+						<a onclick="return GoTo('plan_pannel');" id="plan_pannel_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'golfandcar') echo 'display:none;'; ?>"><i class="fa fa-snowflake"></i>Thể lệ thi đấu</a>
+						<a onclick="return GoTo('competition_rules');" id="competition_rules_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'vietnamracing') echo 'display:none;'; ?>"><i class="fa fa-snowflake"></i>Danh sách kế hoạch & điều lệ</a>
+						<a onclick="return GoTo('gallery');" id="gallery_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-file-image"></i>Thư viện ảnh</a>
                         <a onclick="return GoTo('aboutus');" id="aboutus_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
-                             <i class="fa fa-address-card"></i>Giới Thiệu Công Ty
+                             <i class="fa fa-info-circle"></i>Giới Thiệu Công Ty
                         </a>
                         <a onclick="return GoTo('member');" id="member_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
-                             <i class="fa fa-address-card"></i>Thành viên công ty
+                             <i class="fa fa-users"></i>Thành viên công ty
                         </a>
-						<a onclick="return GoTo('event');" id="event_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
-                             <i class="fa fa-address-card"></i>Events
+						<a onclick="return GoTo('event');" id="event_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'golfandcar') echo 'display:none;'; ?>">
+                             <i class="fa fa-calendar"></i>Events
+                        </a>
+						<a onclick="return GoTo('match_schedule');" id="match_schedule_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'golfandcar') echo 'display:none;'; ?>">
+                             <i class="fa fa-calendar-times"></i>Lịch trình thi đấu
+                        </a>
+						<a onclick="return GoTo('competition_category');" id="competition_category_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1" style="<?php if ($site_template == 'golfandcar') echo 'display:none;'; ?>">
+                             <i class="fa fa-braille"></i>Hạng mục thi đấu
                         </a>
 						<a onclick="return GoTo('setting');" id="setting_link" class="nav-link" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
-                             <i class="fa fa-address-card"></i>Thiết lập hệ thống
+                             <i class="fa fa-cog"></i>Thiết lập hệ thống
                         </a>
+						<!-- https://fontawesome.com/v4.7.0/icons/ -->
                      </li>
                   </ul>
                </div>
@@ -101,8 +108,12 @@ if(isset($_GET["view"])) {
                 include 'controller/event_dashboard.php';
 			} elseif ($view == "setting"){
                 include 'controller/setting_dashboard.php';
+			} elseif ($view == "match_schedule"){
+                include 'controller/match_schedule_dashboard.php';
+			} elseif ($view == "competition_category"){
+                include 'controller/competition_category_dashboard.php';
 			} else {
-				include 'controller/reg_dashboard.php';
+				include 'controller/default.php';
 			}
        ?>
    </div>

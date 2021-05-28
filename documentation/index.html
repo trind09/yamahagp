@@ -1,0 +1,732 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>Hướng dẫn sử dụng webite PDT</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="font-size: 14pt; color: black;">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('#mode').addEventListener('click',()=>{
+                document.querySelector('html').classList.toggle('dark');
+            })
+        });
+
+
+    </script>
+
+    <div id="wrapper">
+
+        <div id="mode" >
+            <div class="dark">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>lightmode</title>
+                    <path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path>
+                </svg>
+            </div>
+            <div class="light">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>darkmode</title>
+                    <path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>Hướng dẫn sử dụng Website Vietnam Racing</h1>
+                            <p class="lead">Thông tin về việc hướng dẫn sử dụng tất các các module trên Website Vietnam Racing</p>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#line0">Giới thiệu</a></li>
+                            <li><a href="#line1">Thay đổi hình ảnh Slider</a></li>
+                            <li><a href="#line2">Thay đổi logo</a></li>
+                            <li><a href="#line3">Thay đổi Favicon</a></li>
+							<li><a href="#line7">Thay đổi Site Name</a></li>
+                            <li><a href="#line4">Chỉnh sữa Footer</a></li>
+                            <li><a href="#line5">Giới thiệu công ty</a></li>
+                            <li><a href="#line6">Thành viên công ty</a></li>
+                            <li><a href="#line8">Event</a></li>
+							<li><a href="#line9">Thể lệ thi đấu</a></li>
+							<li><a href="#line10">Bản tin</a></li>
+							<li><a href="#line11">Thư viện ảnh</a></li>
+							<li><a href="#line12">Lịch trình thi đấu</a></li>
+							<li><a href="#line13">Hạng mục thi đấu</a></li>
+                        </ul>
+                    </nav >
+                </div>
+                <div class="col-md-9">
+                    <section id="line0"class="welcome">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Giới thiệu<hr></h2>
+                                <div class="row">
+
+                                   <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Item Name : </strong>Website 
+												VietNam Racing</li>
+												<li><strong>Link Web</strong> : 
+												https://vietnamracing.com.vn/</li>
+                                                <li><strong>Item Version : </strong> v 1.0</li>
+                                                <li><strong>Author  : </strong> <a href="https://ttk.technology/" target="_blank">TTK Technology Services</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <hr>
+                                        <div>
+                                            <p>
+                                                L&#7901;i &#273;&#7847;u tiên, C&#7843;m &#417;n b&#7841;n r&#7845;t nhi&#7873;u vì &#273;ã s&#7917; d&#7909;ng trang web này và là khách hàng thân thi&#7871;t c&#7911;a tôi. <strong>B&#7841;n th&#7853;t tuy&#7879;t v&#7901;i!</strong>
+                                            </p>
+
+                                            <p>Tài li&#7879;u này nh&#7857;m giúp b&#7841;n hi&#7875;u t&#7915;ng b&#432;&#7899;c s&#7917; d&#7909;ng trang web 
+											VietNam Racing. Vui lòng xem k&#7929; tài li&#7879;u &#273;&#7875; hi&#7875;u cách th&#7913;c ho&#7841;t &#273;&#7897;ng c&#7911;a trang web này.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line1" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Thay đổi hình ảnh Slider<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+								<img border="0" src="images/vnracing/wpyt7rmy.jpg"><br /><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p<br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Vào m&#7909;c &quot;Thi&#7871;t l&#7853;p h&#7879; th&#7889;ng&quot; ch&#7885;n [3.Site 
+									Slider] nh&#7845;n nút &quot;Update&quot; &#273;&#7875; thay &#273;&#7893;i hình 
+									&#7843;nh Slider<br>
+									<img border="0" src="images/vnracing/wp6eq7g4.jpg"><br>
+									<br>Trong khung Ch&#7881;nh s&#7919;a slider, nh&#7853;p d&#7919; 
+									li&#7879;u field 'Hình &#7843;nh' nh&#7845;n nút 'Choose Files' 
+									&#273;&#7875; thêm &#7843;nh và 'Xóa' &#273;&#7875; xóa &#7843;nh, Sau &#273;ó nh&#7845;n 
+									nút 'Submit'.<br>
+									<img border="0" src="images/vnracing/wprglxxe.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Name: tên c&#7911;a m&#7909;c c&#7847;n ch&#7881;nh s&#7919;a (bỏ trống)<br>
+&nbsp;&nbsp;&nbsp; Value: (bỏ trống)<br>
+&nbsp;&nbsp;&nbsp; Hình &#7843;nh: có thể upload một hay nhiều ảnh</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line2" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Thay đổi logo<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wpdr3v5h.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p<br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Vào m&#7909;c &quot;Thi&#7871;t l&#7853;p h&#7879; th&#7889;ng&quot; ch&#7885;n 
+									[1.Site Logo] nh&#7845;n nút &quot;Update&quot; &#273;&#7875; thay &#273;&#7893;i Logo<br>
+									<img border="0" src="images/vnracing/wpk4ubuo.jpg"><br>
+									<br>Trong khung Ch&#7881;nh s&#7919;a Logo, nh&#7853;p d&#7919; 
+									li&#7879;u field 'Hình &#7843;nh', chọn 'Choose Files' 
+									&#273;&#7875; thêm &#7843;nh và 'Xóa' &#273;&#7875; xóa &#7843;nh, Sau &#273;ó nh&#7845;n 
+									nút 'Submit'.<br>
+									<img border="0" src="images/vnracing/wpojrpvb.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Name: tên c&#7911;a m&#7909;c c&#7847;n ch&#7881;nh s&#7919;a (bỏ trống)<br>
+&nbsp;&nbsp;&nbsp; Value: (bỏ trống)<br>
+&nbsp;&nbsp;&nbsp; Hình &#7843;nh: thay &#273;&#7893;i Logo (Upload 1 ảnh).</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line3" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Thay đổi ảnh Favicon<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wposzxsi.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p<br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Vào m&#7909;c &quot;Thi&#7871;t l&#7853;p h&#7879; th&#7889;ng&quot; ch&#7885;n 
+									[2.Site Favicon] nh&#7845;n nút &quot;Update&quot; &#273;&#7875; thay &#273;&#7893;i 
+									Favicon.<br>
+									<img border="0" src="images/vnracing/wp5x0n02.jpg"><br>
+									<br>Trong khung Ch&#7881;nh s&#7919;a 
+									Favicon, nh&#7853;p d&#7919; 
+									li&#7879;u field 'Hình &#7843;nh', chọn 'Choose Files' 
+									&#273;&#7875; thêm &#7843;nh và 'Xóa' &#273;&#7875; xóa &#7843;nh, Sau &#273;ó nh&#7845;n 
+									nút 'Submit'.<br>
+									<img border="0" src="images/vnracing/wpsnikgv.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Name: tên c&#7911;a m&#7909;c c&#7847;n ch&#7881;nh s&#7919;a 
+									(b&#7887; tr&#7889;ng)<br>
+&nbsp;&nbsp;&nbsp; Value: (b&#7887; tr&#7889;ng)<br>
+&nbsp;&nbsp;&nbsp; Hình &#7843;nh: thay &#273;&#7893;i Favicon (Upload 1 ảnh).</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="line7" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Thay đổi Site Name<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wps8ibp4.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p<br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Vào m&#7909;c &quot;Thi&#7871;t l&#7853;p h&#7879; th&#7889;ng&quot; ch&#7885;n 
+									m&#7909;c [Site Name] sau &#273;ó nh&#7845;n nút &quot;Update&quot; &#273;&#7875; thay &#273;&#7893;i 
+									các field.<br>
+									<img border="0" src="images/vnracing/wpuxz7mb.jpg"><br>
+									<br>Trong khung Ch&#7881;nh s&#7919;a Site 
+									Name, nh&#7853;p d&#7919; 
+									li&#7879;u field 'Value' sau &#273;ó nh&#7845;n 
+									nút 'Submit'.<br>
+									<img border="0" src="images/vnracing/wpgmsw9n.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Name: tên c&#7911;a m&#7909;c c&#7847;n ch&#7881;nh s&#7919;a 
+									(b&#7887; tr&#7889;ng)<br>
+&nbsp;&nbsp;&nbsp; Value: nh&#7853;p thông tin<br>
+&nbsp;&nbsp;&nbsp; Hình &#7843;nh: (b&#7887; tr&#7889;ng)<br>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line4" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Chỉnh sữa Footer<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wpshw2y0.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p<br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Vào m&#7909;c &quot;Thi&#7871;t l&#7853;p h&#7879; th&#7889;ng&quot; ch&#7885;n 
+									t&#7915;ng [Site Phone Number] [	<br>
+									Site Address] [Site Email] [Site Copyright] 
+									[Site Facebook] [	<br>
+									Site Youtube] sau &#273;ó nh&#7845;n nút &quot;Update&quot; &#273;&#7875; thay &#273;&#7893;i 
+									các field.<br>
+									<img border="0" src="images/vnracing/wpxm80z1.jpg"><br>
+									<br>Trong khung Ch&#7881;nh s&#7919;a Site 
+									Phone Number, nh&#7853;p d&#7919; 
+									li&#7879;u field 'Value' sau &#273;ó nh&#7845;n 
+									nút 'Submit'.<br>
+									<img border="0" src="images/vnracing/wps30q9s.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Name: tên c&#7911;a m&#7909;c c&#7847;n ch&#7881;nh s&#7919;a 
+									(b&#7887; tr&#7889;ng)<br>
+&nbsp;&nbsp;&nbsp; Value: nh&#7853;p thông tin<br>
+&nbsp;&nbsp;&nbsp; Hình &#7843;nh: (b&#7887; tr&#7889;ng)<br>
+									Các Site khác c&#361;ng làm t&#432;&#7907;ng t&#7921; nh&#432; file 
+									Site Phone Number.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line5" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Giới thiệu công ty<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wp9wc91p.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;Gi&#7899;i Thi&#7879;u Công Ty&quot; &#273;i&#7873;n thông tin 
+									vào các field sau &#273;ó nh&#7845;n &quot;submit&quot;<br>
+									<img border="0" src="images/vnracing/wpequzcz.jpg"><br>
+									<br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Tiêu &#273;&#7873; gi&#7899;i thi&#7879;u công ty: &#273;i&#7873;n tiêu &#273;&#7873; gi&#7899;i thi&#7879;u.<br>
+&nbsp;&nbsp;&nbsp; Mô t&#7843;: mô t&#7843; nôi dung chi ti&#7871;t.<br>
+									Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c thêm 
+									m&#7899;i phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wpl7o6gi.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c &quot;Gi&#7899;i Thi&#7879;u Công Ty&quot; tìm dòng mu&#7889;n 
+									ch&#7881;nh s&#7919;a sau &#273;ó nh&#7845;n &quot;Update&quot;&nbsp; và nh&#7845;n 
+									&quot;Delete&quot; xóa dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wpl7o6gi.jpg"></li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line6" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Thành viên công ty<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wp5x248i.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;Thành viên công ty&quot; &#273;i&#7873;n thông tin 
+									vào các field sau &#273;ó nh&#7845;n &quot;Submit&quot;<br>
+									<img border="0" src="images/vnracing/wpn0t99x.jpg"><br>
+									<br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Tên thành viên công ty: tên thành viên.<br>
+&nbsp;&nbsp;&nbsp; Ch&#7913;c v&#7909;: ch&#7913;c v&#7909; t&#7841;i công ty.<br>
+&nbsp;&nbsp;&nbsp; &#7842;nh thành viên công ty: chọn và tải ảnh lên (Upload 1 ảnh).<br>
+									<br>
+									Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c thêm 
+									m&#7899;i phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wp5wj0k8.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c &quot;Thành viên công ty&quot; tìm dòng mu&#7889;n 
+									ch&#7881;nh s&#7919;a sau &#273;ó nh&#7845;n &quot;Update&quot;&nbsp; và nh&#7845;n 
+									&quot;Delete&quot; xóa dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wpymmrqo.jpg"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="line8" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Events<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wp8bcx8d.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;Events&quot; &#273;i&#7873;n thông tin vào các 
+									field sau &#273;ó nh&#7845;n &quot;Submit&quot;<br>
+									<img border="0" src="images/vnracing/wp72ydnd.jpg"><br>
+									<br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Danh m&#7909;c: Ch&#7885;n danh m&#7909;c phù h&#7907;p v&#7899;i s&#7921; ki&#7879;n t&#7893; ch&#7913;c<br>
+&nbsp;&nbsp;&nbsp; Tên hình &#7843;nh: tên b&#7913;c &#7843;nh cho s&#7921; ki&#7879;n.<br>
+&nbsp;&nbsp;&nbsp; Mô t&#7843; hình &#7843;nh: mô t&#7843; n&#7897;i dung s&#7921; ki&#7879;n.<br>
+&nbsp;&nbsp;&nbsp; Hình &#7843;nh: t&#7843;i &#7843;nh lên (Upload 1 &#7843;nh).<br>
+									<br>Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c 
+									thêm m&#7899;i phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wpijsbxt.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c &quot;Events&quot; tìm dòng mu&#7889;n ch&#7881;nh s&#7919;a sau 
+									&#273;ó nh&#7845;n &quot;Update&quot;&nbsp; và nh&#7845;n &quot;Delete&quot; xóa 
+									dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wp99ee8r.jpg"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="line9" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Thể lệ thi đấu<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wpltbt2e.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;Danh sách k&#7871; ho&#7841;ch &amp; &#273;i&#7873;u l&#7879;&quot; &#273;i&#7873;n 
+									thông tin vào các field sau &#273;ó nh&#7845;n &quot;Submit&quot;<br>
+									<img border="0" src="images/vnracing/wpbp674e.jpg"><br>
+									<br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Tiêu &#273;&#7873;: tên &#273;i&#7873;u l&#7879; thi &#273;&#7845;u<br>
+&nbsp;&nbsp;&nbsp; N&#7897;i dung: mô t&#7843; ng&#7855;n<br>
+&nbsp;&nbsp;&nbsp; T&#7853;p tin: có 2 cách g&#7855;n Link xem thêm là &quot;T&#7843;i t&#7853;p tin lên&quot; và 
+									&quot;&#272;&#432;&#7901;ng d&#7851;n link ngoài&quot;.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. &quot;T&#7843;i t&#7853;p tin lên&quot;: n&#7871;u 
+									file &#273;i&#7873;u l&#7879; &#273;&#432;&#7907;c l&#432;u trong máy tín.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. &quot;&#272;&#432;&#7901;ng d&#7851;n link ngoài&quot;: 
+									ch&#7885;n &#273;&#432;&#7901;ng d&#7851;n t&#7915; google.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c thêm m&#7899;i 
+									phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wp6emnc6.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c &quot;Danh sách k&#7871; ho&#7841;ch &amp; &#273;i&#7873;u l&#7879;&quot; tìm 
+									dòng mu&#7889;n ch&#7881;nh s&#7919;a sau &#273;ó nh&#7845;n &quot;Update&quot;&nbsp; 
+									và nh&#7845;n &quot;Delete&quot; xóa dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wpv42tve.jpg"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="line10" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Bản tin<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+							<img border="0" src="images/vnracing/wpphflee.jpg"></p>
+<p><br />
+<p>
+Sau khi click nút &quot;Xem thêm&quot; thì s&#7869; d&#7851;n t&#7899;i n&#7897;i dung chi ti&#7871;t c&#7911;a bài tin nh&#432; 
+hình phía d&#432;&#7899;i.</p>
+<p>
+
+                                <img border="0" src="images/vnracing/wptnysdh.jpg"></p>
+<p><br />
+                                </p>
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;Danh sách b&#7843;n tin&quot; &#273;i&#7873;n 
+									thông tin vào các field sau &#273;ó nh&#7845;n &quot;Submit&quot;<br>
+									<img border="0" src="images/vnracing/wpqqqgj2.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Tên b&#7843;n tin: tên n&#7897;i dung c&#7911;a b&#7843;n tin.<br>
+&nbsp;&nbsp;&nbsp; Mô t&#7843;: mô t&#7843; ng&#7855;n<br>
+&nbsp;&nbsp;&nbsp; N&#7897;i dung: mô t&#7843; chi ti&#7871;t bài vi&#7871;t. (N&#7871;u Link bài tin là &#273;&#432;&#7901;ng 
+									d&#7851;n trên Google thì ta b&#7887; tr&#7889;ng field này.)<br>
+&nbsp;&nbsp;&nbsp; Tác gi&#7843;: ng&#432;&#7901;i &#273;&#259;ng bài tin. (có th&#7875; b&#7887; tr&#7889;ng).<br>
+&nbsp;&nbsp;&nbsp; URL: Link Google d&#7851;n tái bài tin (chèn link URL n&#7871;u b&#7841;n b&#7887; 
+									tr&#7889;ng m&#7909;c &quot;N&#7897;i dung&quot; c&#7911;a bìa tin.<br>
+&nbsp;&nbsp;&nbsp; T&#7843;i &#7843;nh lên: ch&#7885;n 1 t&#7845;m &#7843;nh cho ph&#7847;n gi&#7899;i thi&#7879;u bài tin.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+									<br>Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c thêm m&#7899;i 
+									phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wp7guwyv.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c "Danh sách bản tin" tìm 
+									dòng mu&#7889;n ch&#7881;nh s&#7919;a sau &#273;ó nh&#7845;n &quot;Update&quot;&nbsp; 
+									và nh&#7845;n &quot;Delete&quot; xóa dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wpz5atjg.jpg"><br>
+&nbsp;</li>
+									<li style="font-size:22; font-weight:normal;">
+									Cách ch&#7881;nh s&#7919;a field &quot;N&#7897;i dung&quot;.<br>
+									<img border="0" src="images/vnracing/wpiwqxo1.jpg"><br>
+									<br>
+									Dùng thanh Toolbar &#273;&#7875; ch&#7881;nh s&#7919;a text, chèn 
+									hình và video. Nếu copy text từ trên mạng bạn nên xóa hết tất cả các định dạng sẵn có của text đó.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="line11" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Thư viện ảnh<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wpkxuqfy.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;Th&#432; vi&#7879;n &#7843;nh&quot; &#273;i&#7873;n 
+									thông tin vào các field sau &#273;ó nh&#7845;n &quot;Submit&quot; 
+									(click 'Xóa' &#273;&#7875; b&#7887; nh&#7919;ng t&#7845;m hình không mong 
+									mu&#7889;n)<br>
+									<img border="0" src="images/vnracing/wpjr012l.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Tiêu &#273;&#7875; hình &#7843;nh: tiêu &#273;&#7873; cho nh&#7919;ng t&#7845;m hình t&#7841;i s&#7921; ki&#7879;n<br>
+&nbsp;&nbsp;&nbsp; Mô t&#7843;: (b&#7887; tr&#7889;ng)<br>
+&nbsp;&nbsp;&nbsp; T&#7843;i &#7843;nh lên: ch&#7885;n m&#7897;t hay nhi&#7873;u t&#7845;m hình.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+									<br>Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c thêm m&#7899;i 
+									phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wpjkoq62.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c &quot;Th&#432; vi&#7879;n&quot; tìm 
+									dòng mu&#7889;n ch&#7881;nh s&#7919;a sau &#273;ó nh&#7845;n &quot;Update&quot;&nbsp; 
+									và nh&#7845;n &quot;Delete&quot; xóa dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wpsoqjpm.jpg"><br>
+&nbsp;</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="line12" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Lịch trình thi đấu<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wps7s4lb.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;L&#7883;ch trình thi &#273;&#7845;u&quot; &#273;i&#7873;n 
+									thông tin vào các field sau &#273;ó nh&#7845;n 
+									&quot;Submit&quot;.
+									<img border="0" src="images/vnracing/wp1y411x.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Tiêu &#273;&#7875;: tiêu &#273;&#7873; thi &#273;&#7845;u<br>
+&nbsp;&nbsp;&nbsp; Mô t&#7843;: &#273;i&#7873;n thông tin chi ti&#7871;t<br>
+&nbsp;&nbsp;&nbsp; &#272;&#7883;a &#273;i&#7875;m: &#273;&#7883;a &#273;i&#7875;m thi d&#7845;u<br>
+&nbsp;&nbsp;&nbsp; Th&#7901;i &#273;i&#7875;m: th&#7901;i gian t&#7893; ch&#7913;c s&#7921; ki&#7879;n.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+									<br>Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c thêm m&#7899;i 
+									phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wp6sr2ps.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c &quot;L&#7883;ch trình thi &#273;&#7845;u&quot; tìm 
+									dòng mu&#7889;n ch&#7881;nh s&#7919;a sau &#273;ó nh&#7845;n &quot;Update&quot;&nbsp; 
+									và nh&#7845;n &quot;Delete&quot; xóa dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wpqemuwi.jpg"><br>
+&nbsp;</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="line13" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Hạng mục thi đấu<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img border="0" src="images/vnracing/wpknxq6b.jpg"><br />
+                                <ol>
+                                    <li style="font-size:22; font-weight:normal;">&#272;&#259;ng nh&#7853;p h&#7879; th&#7889;ng<br />
+									https://vietnamracing.com.vn/admin/login.php
+									<img border="0" src="images/vnracing/wphxndoo.jpg">
+									<br>
+									Nh&#7853;p username và password &#273;&#7875; &#273;&#259;ng nh&#7853;p</li>
+									<li style="font-size:22; font-weight:normal;">
+									Thêm m&#7899;i.<br>
+									Vào m&#7909;c &quot;H&#7841;ng m&#7909;c thi &#273;&#7845;u&quot; &#273;i&#7873;n 
+									thông tin vào các field sau &#273;ó nh&#7845;n &quot;Submit&quot;<br>
+									<img border="0" src="images/vnracing/wpdnz6j1.jpg"><br>
+									Chú thích các field<br>
+&nbsp;&nbsp;&nbsp; Tên h&#7841;ng m&#7909;c: tên h&#7841;ng m&#7909;c thi &#273;&#7845;u<br>
+&nbsp;&nbsp;&nbsp; N&#7897;i dung: mô t&#7843; chi ti&#7871;t bài vi&#7871;t.<br>
+&nbsp;&nbsp;&nbsp; &#7842;nh &#273;&#7841;i di&#7879;n: ch&#7885;n 1 t&#7845;m &#7843;nh cho h&#7841;ng&nbsp; 
+									m&#7909;c thi &#273;&#7845;u.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+									<br>Sau khi thành công s&#7869; có 1 dòng &#273;&#432;&#7907;c thêm m&#7899;i 
+									phía d&#432;&#7899;i.<br>
+									<img border="0" src="images/vnracing/wpr38l8q.jpg"><br>&nbsp;
+                                    </li>
+									<li style="font-size:22; font-weight:normal;">
+									Update và Delete.<br>
+									Vào m&#7909;c &quot;H&#7841;ng m&#7909;c thi &#273;&#7845;u&quot; tìm 
+									dòng mu&#7889;n ch&#7881;nh s&#7919;a sau &#273;ó nh&#7845;n &quot;Update&quot;&nbsp; 
+									và nh&#7845;n &quot;Delete&quot; xóa dòng theo mong mu&#7889;n.<br>
+									<img border="0" src="images/vnracing/wpzz5bcn.jpg"><br>
+&nbsp;</li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- // end .col -->
+
+            </div>
+            <!-- // end .row -->
+
+        </div>
+        <!-- // end container -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+    <!-- CUSTOM PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>
